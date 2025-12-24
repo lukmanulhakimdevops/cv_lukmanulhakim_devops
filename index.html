@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive CV | Lukmanul Hakim - Subject Matter of DevSecOps Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: The application is designed as a single-page, vertically scrolling portfolio. The core is an interactive horizontal timeline of the professional experience. Clicking a role on the timeline dynamically updates a details section below it. This approach breaks down the dense 13+ year history into manageable, user-driven segments. Following the timeline, a filterable dashboard of competencies and a data visualization of industry experience provide quick, scannable insights. This structure was chosen to transform passive reading into an active, engaging exploration, which is more effective for busy executives and recruiters. -->
+    <!-- Visualization & Content Choices: 
+        - Professional Experience: Report Info -> Chronological job history. Goal -> Organize & show change over time. Viz/Method -> Interactive horizontal timeline controlling a dynamic content display. Interaction -> Click timeline element to show details. Justification -> Makes a long history digestible and engaging. Library -> Vanilla JS.
+        - Competencies: Report Info -> Categorized skills. Goal -> Organize & allow comparison. Viz/Method -> Filterable grid of competency cards. Interaction -> Click filter buttons to show/hide categories. Justification -> Allows users to quickly assess skills in specific areas (e.g., 'Financial Acumen'). Library -> Vanilla JS.
+        - Industry Experience: Report Info -> Implicit data from job history. Goal -> Inform & compare. Viz/Method -> Horizontal Bar Chart. Interaction -> Hover for tooltips. Justification -> Visually summarizes the breadth of experience across different sectors, a key strategic insight. Library -> Chart.js.
+        - All other text: Report Info -> Summaries, education. Goal -> Inform. Viz/Method -> Styled HTML text blocks. No SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .timeline-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            background-color: #dee2e6;
+            border-radius: 50%;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        .timeline-item.active::after, .timeline-item:hover::after {
+            background-color: #0369a1;
+            transform: translateX(-50%) scale(1.2);
+        }
+        .timeline-item.education::after {
+            background-color: #64748b;
+        }
+        .timeline-item.education.active::after, .timeline-item.education:hover::after {
+             background-color: #1e3a8a;
+        }
+        .timeline-line {
+            position: absolute;
+            bottom: 13px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #dee2e6;
+            z-index: 0;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .competency-card, .tech-skill-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .competency-card.highlight, .tech-skill-card.highlight {
+            border-color: #0369a1;
+            transform: scale(1.05);
+            box-shadow: 0 4px 14px 0 rgba(3, 105, 161, 0.2);
+            opacity: 1;
+        }
+        .competency-card.fade, .tech-skill-card.fade {
+            opacity: 0.4;
+            transform: scale(0.98);
+        }
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-gray-800">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center py-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-sky-800 tracking-tight">LUKMANUL HAKIM</h1>
+            <p class="mt-4 text-xl sm:text-2xl text-gray-600">Strategic Technology Leader | Subject Matter Expert of DevSecOps</p>
+            <div class="mt-6 flex justify-center items-center space-x-6 text-sm text-gray-500">
+                <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-700 transition">LinkedIn Profile</a>
+                <span>&bull;</span>
+                <span>Bogor, West Java, Indonesia</span>
+            </div>
+        </header>
+
+        <!-- Executive Summary Section -->
+        <section id="summary" class="my-16">
+             <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                 <h2 class="text-2xl font-bold text-center text-sky-800 mb-6">Executive Summary</h2>
+                 <p class="text-center text-gray-700 leading-relaxed text-justify">
+                     Visionary and results-driven technology executive with a career spanning over 13 years, featuring 9+ years of hands-on and leadership experience in directing IT infrastructure strategy, digital transformation, and high-performance engineering teams. Proven track record in architecting scalable, secure, and cost-efficient technology ecosystems that align with and drive business objectives. Expertise in technology roadmapping, budget management (CAPEX/OPEX), and fostering a culture of innovation and excellence.
+                 </p>
+            </div>
+        </section>
+
+        <!-- Career Journey Section -->
+        <section id="journey" class="my-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-800">Career Journey</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Explore my 13+ year career evolution. Click on any role in the interactive timeline below to view the corresponding strategic responsibilities and key achievements.</p>
+            </div>
+            
+            <div class="relative w-full overflow-x-auto pb-8">
+                <div id="timeline-container" class="flex justify-between items-center min-w-[2000px] relative px-4">
+                    <div class="timeline-line"></div>
+                </div>
+            </div>
+            
+            <div id="experience-details" class="mt-8 min-h-[300px]">
+                <!-- Job details will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Competencies Dashboard Section -->
+        <section id="competencies" class="my-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-800">Core Competencies</h2>
+                <p class="mt-2 text-lg text-gray-600">A dashboard of my leadership, strategic, and financial capabilities. Click a role on the timeline to see relevant skills highlighted.</p>
+            </div>
+            <div id="competency-filters" class="flex flex-wrap justify-center gap-2 mb-8">
+                <!-- Filter buttons will be dynamically inserted here -->
+            </div>
+            <div id="competency-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Competency cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Technical Proficiency Section -->
+        <section id="tech-proficiency" class="my-20">
+             <div class="text-center mb-12">
+                 <h2 class="text-3xl font-bold text-sky-800">Technical Proficiency</h2>
+                 <p class="mt-2 text-lg text-gray-600">A detailed matrix of my technical skills. Tools and platforms used in specific roles are highlighted when a timeline event is selected.</p>
+            </div>
+            <div id="tech-skills-grid" class="space-y-8">
+                 <!-- Technical skills will be dynamically inserted here -->
+            </div>
+        </section>
+        
+        <!-- Character Profile Radar -->
+        <section id="character-profile-radar" class="my-16">
+            <div class="max-w-5xl mx-auto bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-3xl font-bold text-sky-800 text-center mb-2">Executive Character Profile</h2>
+                <p class="text-center text-sm text-gray-500 mb-4">A gamified visualization of core executive attributes.</p>
+                <div class="chart-container h-[450px] max-w-2xl">
+                    <canvas id="characterRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Analytics Dashboard -->
+        <section id="career-analytics" class="my-20">
+            <div class="text-center mb-12">
+                 <h2 class="text-3xl font-bold text-sky-800">Career Analytics Dashboard</h2>
+                 <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Visual insights into my professional development, showcasing the depth and evolution of my expertise over time.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Competency Distribution -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Leadership Competency Profile</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">Qualitative assessment of key leadership domains.</p>
+                    <div class="chart-container h-[450px]">
+                        <canvas id="competencyRadarChart"></canvas>
+                    </div>
+                </div>
+                <!-- Tech Domain Distribution -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Functional Domain</h3>
+                     <p class="text-center text-sm text-gray-500 mb-4">Breakdown of work experience by primary job function. Note: Total duration from all related experiences.</p>
+                    <div class="chart-container h-[450px]">
+                        <canvas id="functionalDomainChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Experience Visualization -->
+        <section id="career-viz" class="my-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-800">Experience Across Industries</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">My professional journey has spanned various sectors, providing me with a broad perspective on technology's role in different business contexts. This chart visualizes the distribution of my experience.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <div class="chart-container">
+                    <canvas id="industryChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Education Section -->
+        <section id="credentials" class="my-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-800">Certifications & Education</h2>
+                <p class="mt-2 text-lg text-gray-600">My commitment to continuous learning and professional development.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Professional Certifications</h3>
+                    <ul id="certifications-list" class="space-y-3 text-gray-700 text-justify">
+                        <!-- Certs list -->
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Educational Background</h3>
+                    <div id="education-list" class="space-y-4 text-gray-700">
+                        <!-- Education list -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center py-8">
+        <div class="text-sm text-gray-500">
+            <p class="mb-2">Visitor Information</p>
+            <a href="https://www.flagcounter.com/details/b3pW" target="_blank">
+                <img src="https://s11.flagcounter.com/count2/b3pW/bg_FFFFFF/txt_5E6B78/border_F8F9FA/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const professionalExperience = [
+                {
+                    id: 0,
+                    company: "PT. Altha Dyanusa Consulting",
+                    industry: "Consulting",
+                    role: "Subject Matter Expert",
+                    period: "Nov 2024 - Feb 2025",
+                    details: ["<strong>Strategic Guidance:</strong> Advise executive leadership on DevOps and cloud adoption strategies to accelerate business agility and market entry.","<strong>Performance Optimization:</strong> Architected and implemented standardized training and documentation frameworks, boosting team productivity by 25%.","<strong>Talent Strategy:</strong> Developed and executed a successful mentorship program that cultivated top engineering talent, achieving a 95% employee retention rate."],
+                    keyCompetencies: ["Technology Roadmapping", "Talent Acquisition", "Stakeholder Management", "ROI Analysis"],
+                    techSkills: ["AWS", "GCP"]
+                },
+                {
+                    id: 1,
+                    company: "PT. Telkom Prima Cipta Certifia",
+                    industry: "Information Technology (EduTech)",
+                    role: "Industry Instructor & Consultant",
+                    period: "Oct 2024 - Oct 2024",
+                    details: [
+                        "<strong>Curriculum Leadership:</strong> Architected and delivered a comprehensive DevSecOps & Multi-Cloud curriculum for hundreds of professionals.", 
+                        "<strong>Hands-On Security Training:</strong> Led practical training on integrating automated security testing (SAST/DAST) into CI/CD pipelines, Kubernetes hardening, and secure IaC."
+                    ],
+                    keyCompetencies: ["Talent Acquisition", "Mentorship", "Stakeholder Management"],
+                    techSkills: ["AWS", "GCP", "Alibaba Cloud", "Kubernetes Security", "Secure SDLC"]
+                },
+                {
+                    id: 13,
+                    company: "Sekolah DevOps Cilsy",
+                    industry: "Information Technology (EduTech)",
+                    role: "Industry Instructor & Consultant",
+                    period: "Jul 2020 - Jun 2024",
+                    details: [
+                        "<strong>Expert Curriculum Development:</strong> Functioned as an industry expert, developing and delivering a specialized curriculum focused on AWS Cloud Security and DevOps best practices.",
+                        "<strong>Professional Mentorship:</strong> Mentored numerous engineers on secure infrastructure design, IAM policies, and VPC security hardening, fostering a more security-conscious generation of cloud professionals."
+                    ],
+                    keyCompetencies: ["Mentorship", "Talent Acquisition", "High-Performance Team Building"],
+                    techSkills: ["GCP", "AWS", "IAM", "VPC Security", "DevOps Methodologies"]
+                },
+                {
+                    id: 2,
+                    company: "PT. Meteor Inovasi Digital",
+                    industry: "Information Technology (Software)",
+                    role: "Head of IT DevOps",
+                    period: "Oct 2022 - Dec 2022",
+                    details: ["<strong>Digital Transformation:</strong> Spearheaded a multi-billion IDR initiative to migrate legacy infrastructure to a multi-cloud environment (AWS, GCP, Alibaba), enhancing scalability and operational resilience.","<strong>Technology Governance:</strong> Established the company's DevSecOps strategy, integrating security (SAST/DAST) into the SDLC to mitigate risk and ensure compliance."],
+                    keyCompetencies: ["Digital Transformation", "Technology Roadmapping", "Budget Management (CAPEX/OPEX)"],
+                    techSkills: ["AWS", "GCP", "Terraform", "GitLab-CI", "Kubernetes (GKE, EKS, ACK)", "SonarQube"]
+                },
+                {
+                    id: 3,
+                    company: "PT. Kredit Pintar Indonesia",
+                    industry: "Financial Services (FinTech)",
+                    role: "IT Development Operations",
+                    period: "Jul 2022 - Sep 2022",
+                    details: ["<strong>Strategic Automation:</strong> Governed the automation of cloud infrastructure as part of a multi-billion IDR CAPEX project, aligning technology with strategic business goals in the FinTech sector.","<strong>Global Team Leadership:</strong> Led collaborative initiatives within a global, medium-sized DevOps team, successfully achieving and maintaining 99.9% service uptime for mission-critical financial applications."],
+                    keyCompetencies: ["High-Performance Team Building", "Risk Management"],
+                    techSkills: ["GitOps (Flux CD)", "GitLab-CI", "Kubernetes (GKE, EKS, ACK)"]
+                },
+                {
+                    id: 4,
+                    company: "PT. Tri Adi Bersama (Anteraja)",
+                    industry: "Logistics & E-commerce",
+                    role: "DevOps Engineering",
+                    period: "Nov 2021 - Jul 2022",
+                    details: ["<strong>Scalability & Performance:</strong> Architected and scaled a containerized infrastructure on GKE and Amazon EKS to support over a hundred business-critical APIs with 99.9% uptime.","<strong>Process Innovation:</strong> Pioneered the development of a robust CI/CD pipeline that accelerated application deployment cycles and improved developer productivity."],
+                    keyCompetencies: [],
+                    techSkills: ["AWS", "GCP", "Azure DevOps", "Nexus Artifactory", "Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OWASP ZAP", "SonarQube", "Prometheus", "Grafana", "Dynatrace"]
+                },
+                {
+                    id: 6,
+                    company: "PT. Hashmicro Solusi Indonesia",
+                    industry: "Information Technology (ERP)",
+                    role: "DevOps Engineering",
+                    period: "May 2020 - Oct 2020",
+                    details: ["<strong>Business Process Modernization:</strong> Led a strategic migration of Odoo ERP systems to AWS EC2 as part of a multi-billion IDR CAPEX project, enhancing core business process efficiency.","<strong>Operational Excellence:</strong> Reduced infrastructure setup time by 50% through targeted automation initiatives using Bash scripts and AWS CLI."],
+                    keyCompetencies: ["Digital Transformation"],
+                    techSkills: ["AWS", "Bash", "Python", "PostgreSQL"]
+                },
+                {
+                    id: 7,
+                    company: "PT. Lentera Bangsa Benderang",
+                    industry: "Financial Services",
+                    role: "DevOps Engineering",
+                    period: "Jun 2019 - Sep 2019",
+                    details: ["<strong>Infrastructure Modernization:</strong> Re-architected on-premises cloud infrastructure for a leading multi-finance company, driving a 40% reduction in deployment times.","<strong>System Reliability:</strong> Enhanced application observability and accelerated issue resolution by implementing a containerized ELK Stack."],
+                    keyCompetencies: [],
+                    techSkills: ["ELK Stack", "Jenkins", "Docker"]
+                },
+                {
+                    id: 8,
+                    company: "Universitas Mercu Buana",
+                    industry: "Higher Education",
+                    role: "Bachelor of Economics (Operational Management)",
+                    period: "2015 - 2018",
+                    type: "education",
+                    details: ["<strong>Academic Focus:</strong> Majored in Operational Management, with extensive coursework in Project Management, Supply Chain Management (SCM), Financial Management, and Strategic Management to build a strong foundation in business process optimization and strategic resource planning.","<strong>Relevance:</strong> This academic period was a strategic investment to complement deep technical expertise with the business, financial, and operational acumen required for executive leadership roles like CTO."],
+                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "ROI Analysis", "Risk Management", "Stakeholder Management", "Project Management", "SCM (Supply Chain Management)", "Financial Management", "Strategic Management", "Total Quality Management (TQM)", "Managerial Decision Making"],
+                    techSkills: []
+                },
+                {
+                    id: 9,
+                    company: "PT. Dimension Data Indonesia",
+                    industry: "Consulting",
+                    role: "Freelance Network Consultant",
+                    period: "Feb 2015 - Jun 2015",
+                    details: ["<strong>Specialized Consultation:</strong> Provided expert network architecture consulting for a major financial institution, ensuring high availability and performance of critical MPLS networks using SolarWinds for monitoring."],
+                    keyCompetencies: ["Enterprise Architecture"],
+                    techSkills: ["MPLS"]
+                },
+                {
+                    id: 10,
+                    company: "PT. Telkom Akses",
+                    industry: "Telecommunications Infrastructure",
+                    role: "Principal Operations & Compliance Manager",
+                    period: "Apr 2013 - Oct 2014",
+                    details: ["<strong>Strategic Financial Command:</strong> Directly managed a ~IDR 1.5 trillion CAPEX budget, steering the deployment of critical national backbone infrastructure (FTTH, MSAN, ADSL) utilizing operational tools like I-Sisca and TenOSS.","<strong>Nationwide Operational Excellence:</strong> Architected and directed a new technical order framework, ensuring the on-time delivery of over 3.5 million infrastructure services across more than 8,300 telephone central units.","<strong>Executive Leadership & Governance:</strong> Led a 13-member team to a 15% increase in operational efficiency, while redesigning compliance policies to reduce regulatory violations by 20% and audit findings by 25%."],
+                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "Financial Management", "ROI Analysis", "High-Performance Team Building", "Stakeholder Management", "Project Management", "Risk Management", "Enterprise Architecture", "Technology Roadmapping", "Strategic Management"],
+                    techSkills: ["FTTH", "MPLS", "VPN"]
+                },
+                {
+                    id: 11,
+                    company: "Circus Waterpark Kuta Bali",
+                    industry: "Hospitality & Entertainment",
+                    role: "Electronic Data Processing Lead",
+                    period: "Jan 2013 - Mar 2013",
+                    details: ["<strong>Foundational Technology:</strong> Established the initial IT infrastructure and security protocols, including firewall implementation and server maintenance.","<strong>Business Automation:</strong> Automated key business processes for ticketing and point-of-sale systems, significantly improving operational efficiency."],
+                    keyCompetencies: ["Risk Management"],
+                    techSkills: ["Firewall"]
+                },
+                {
+                    id: 12,
+                    company: "Biznet",
+                    industry: "Telecommunications (ISP)",
+                    role: "Customer Care Specialist",
+                    period: "Oct 2011 - Oct 2012",
+                    details: ["<strong>Process Improvement:</strong> Optimized customer support workflows, resulting in a 20% reduction in ticket handling and response times, directly enhancing customer satisfaction."],
+                    keyCompetencies: ["Stakeholder Management"],
+                    techSkills: ["Network Security", "Load Balancing"]
+                }
+            ];
+
+            const allCompetencies = [
+                { name: "Digital Transformation", category: "Technology Strategy" },
+                { name: "Technology Roadmapping", category: "Technology Strategy" },
+                { name: "Enterprise Architecture", category: "Technology Strategy" },
+                { name: "Strategic Management", category: "Technology Strategy" },
+                { name: "Budget Management (CAPEX/OPEX)", category: "Financial Acumen" },
+                { name: "Financial Planning", category: "Financial Acumen" },
+                { name: "Financial Management", category: "Financial Acumen" },
+                { name: "ROI Analysis", category: "Financial Acumen" },
+                { name: "Talent Acquisition", category: "Team Leadership" },
+                { name: "High-Performance Team Building", category: "Team Leadership" },
+                { name: "Mentorship", category: "Team Leadership" },
+                { name: "Stakeholder Management", category: "Executive Functions" },
+                { name: "Risk Management", category: "Executive Functions" },
+                { name: "Project Management", category: "Executive Functions" },
+                { name: "SCM (Supply Chain Management)", category: "Executive Functions" },
+                { name: "Total Quality Management (TQM)", category: "Executive Functions" },
+                { name: "Managerial Decision Making", category: "Executive Functions" },
+            ];
+            
+            const competencies = {
+                "All": allCompetencies,
+                "Team Leadership": allCompetencies.filter(c => c.category === "Team Leadership"),
+                "Technology Strategy": allCompetencies.filter(c => c.category === "Technology Strategy"),
+                "Financial Acumen": allCompetencies.filter(c => c.category === "Financial Acumen"),
+                "Executive Functions": allCompetencies.filter(c => c.category === "Executive Functions")
+            };
+            
+            const technicalSkills = [
+                { category: "Cloud Platforms", skills: ["AWS", "GCP", "Alibaba Cloud"] },
+                { category: "IaC & Automation", skills: ["Terraform", "Ansible", "GitOps (Flux CD)", "Bash", "Python", "Go"] },
+                { category: "CI/CD & DevOps Tools", skills: ["Jenkins", "GitLab-CI", "Azure DevOps", "Nexus Artifactory", "Docker"] },
+                { category: "Container & Orchestration", skills: ["Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OpenShift (OKD)"] },
+                { category: "Security (DevSecOps)", skills: ["OWASP ZAP", "SonarQube", "IAM", "Network Security", "Container Security", "Secure SDLC", "Kubernetes Security", "VPC Security"] },
+                { category: "Monitoring & Observability", skills: ["ELK Stack", "Prometheus", "Grafana", "Dynatrace"] },
+                { category: "Network Infrastructure", skills: ["MPLS", "VPN", "Firewall", "Load Balancing", "FTTH"] },
+                { category: "Databases", skills: ["PostgreSQL", "MySQL", "BigQuery", "Cloud SQL"] },
+                { category: "Methodologies", skills: ["Agile", "SDLC", "Site Reliability Engineering (SRE)", "DevOps Methodologies"] }
+            ];
+
+            const credentials = {
+                certifications: [
+                    { name: "Google Associate Cloud Engineer Certification", id: "55864fb403294d648d9d2130326a0842" },
+                    { name: "AWS Certified Cloud Practitioner", id: "YT3X1MX1VFBE1K5V" },
+                    { name: "DevNet Associate (Cisco)", id: "1987298840-45/PROA/BLSDM.Kominfo/2024" },
+                    { name: "CyberOps Associate (Cisco)", id: "0447256131-103/OA.DTS/BLSDM.KOMINFO/2020" }
+                ],
+                education: [
+                    { degree: "Bachelor of Economics", school: "Mercu Buana University" },
+                    { degree: "Diploma in Human Resources Management", school: "Politeknik APP Jakarta" }
+                ]
+            };
+
+
+            const timelineContainer = document.getElementById('timeline-container');
+            const experienceDetailsContainer = document.getElementById('experience-details');
+            const competencyGridContainer = document.getElementById('competency-grid');
+            const competencyFiltersContainer = document.getElementById('competency-filters');
+            const techSkillsGrid = document.getElementById('tech-skills-grid');
+            let currentCompetencyFilter = 'All';
+            
+            function highlightAllSkills(keys = []) {
+                const competencyCards = document.querySelectorAll('.competency-card');
+                const techSkillCards = document.querySelectorAll('.tech-skill-card');
+                const allCards = [...competencyCards, ...techSkillCards];
+                
+                if (keys.length === 0) {
+                    allCards.forEach(card => card.classList.remove('highlight', 'fade'));
+                    return;
+                }
+
+                allCards.forEach(card => {
+                    const cardName = card.textContent;
+                    const match = keys.some(key => cardName.includes(key));
+                    if (match) {
+                        card.classList.add('highlight');
+                        card.classList.remove('fade');
+                    } else {
+                        card.classList.add('fade');
+                        card.classList.remove('highlight');
+                    }
+                });
+            }
+
+            function displayExperience(experienceId) {
+                const experience = professionalExperience.find(e => e.id === experienceId);
+                if (!experience) return;
+
+                const industryLine = experience.industry ? `<p class="text-md font-normal text-gray-500 mb-6">${experience.industry}</p>` : '';
+
+                const detailsHtml = `
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 max-w-4xl mx-auto fade-in">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+                            <h3 class="text-2xl font-bold ${experience.type === 'education' ? 'text-blue-800' : 'text-sky-700'}">${experience.role}</h3>
+                            <span class="text-sm text-gray-500 mt-2 sm:mt-0">${experience.period}</span>
+                        </div>
+                        <p class="text-lg font-medium text-gray-800">${experience.company}</p>
+                        ${industryLine}
+                        <ul class="space-y-4 list-disc list-inside text-gray-700">
+                            ${experience.details.map(detail => `<li>${detail}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                experienceDetailsContainer.innerHTML = detailsHtml;
+
+                document.querySelectorAll('.timeline-item').forEach(item => {
+                    item.classList.remove('active', 'text-sky-700', 'text-blue-800', 'font-semibold');
+                    if (parseInt(item.dataset.id) === experienceId) {
+                        item.classList.add('active', 'font-semibold');
+                        if (experience.type === 'education') {
+                            item.classList.add('text-blue-800');
+                        } else {
+                            item.classList.add('text-sky-700');
+                        }
+                    }
+                });
+
+                displayCompetencies(currentCompetencyFilter);
+                const competenciesToHighlight = [...(experience.keyCompetencies || []), ...(experience.techSkills || [])];
+                highlightAllSkills(competenciesToHighlight);
+            }
+            
+            function getYearRange(periodString) {
+                if (periodString.includes('Present')) {
+                    const startYearMatch = periodString.match(/\d{4}/);
+                    if (startYearMatch) {
+                        return `${startYearMatch[0]} - Present`;
+                    }
+                    return periodString;
+                }
+                
+                const years = periodString.match(/\d{4}/g);
+                if (!years || years.length === 0) return periodString;
+                
+                const startYear = years[0];
+                const endYear = years[years.length - 1];
+                
+                if (startYear === endYear) {
+                    return startYear;
+                } else {
+                    return `${startYear} - ${endYear}`;
+                }
+            }
+
+            professionalExperience.slice().reverse().forEach((exp) => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item flex-1 text-center px-2';
+                if(exp.type === 'education') {
+                    item.classList.add('education');
+                }
+                item.dataset.id = exp.id;
+                const periodText = getYearRange(exp.period);
+                item.innerHTML = `<div class="text-sm md:text-base font-medium">${exp.company}</div><div class="text-xs text-gray-500 mt-1">${periodText}</div>`;
+                item.addEventListener('click', () => displayExperience(exp.id));
+                timelineContainer.appendChild(item);
+            });
+
+            function displayCompetencies(filter = 'All') {
+                const skillsToShow = competencies[filter] || competencies['All'];
+                competencyGridContainer.innerHTML = '';
+                skillsToShow.forEach(skill => {
+                    const card = document.createElement('div');
+                    card.className = 'competency-card bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center fade-in';
+                    card.innerHTML = `<h4 class="font-semibold text-gray-800">${skill.name}</h4><p class="text-xs text-gray-500">${skill.category}</p>`;
+                    competencyGridContainer.appendChild(card);
+                });
+
+                 document.querySelectorAll('#competency-filters button').forEach(button => {
+                     button.classList.remove('bg-sky-700', 'text-white');
+                     button.classList.add('bg-gray-200', 'text-gray-700');
+                     if (button.dataset.filter === filter) {
+                         button.classList.add('bg-sky-700', 'text-white');
+                         button.classList.remove('bg-gray-200', 'text-gray-700');
+                     }
+                });
+            }
+            
+            const competencyFilterButtons = ['All', 'Team Leadership', 'Technology Strategy', 'Financial Acumen', 'Executive Functions'];
+            competencyFilterButtons.forEach(filter => {
+                const button = document.createElement('button');
+                button.className = 'px-4 py-2 text-sm font-medium rounded-full transition bg-gray-200 text-gray-700 hover:bg-sky-600 hover:text-white';
+                button.textContent = filter;
+                button.dataset.filter = filter;
+                button.addEventListener('click', () => {
+                    currentCompetencyFilter = filter;
+                    displayCompetencies(filter);
+                    highlightAllSkills([]);
+                });
+                competencyFiltersContainer.appendChild(button);
+            });
+
+            technicalSkills.forEach(category => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'bg-white p-6 rounded-xl shadow-sm border border-gray-200';
+                let skillsHtml = category.skills.map(skill => `<span class="tech-skill-card inline-block bg-sky-100 text-sky-800 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">${skill}</span>`).join('');
+                categoryDiv.innerHTML = `<h4 class="text-lg font-semibold text-gray-800 mb-4">${category.category}</h4><div>${skillsHtml}</div>`;
+                techSkillsGrid.appendChild(categoryDiv);
+            });
+            
+            displayExperience(0);
+
+            const certificationsList = document.getElementById('certifications-list');
+            credentials.certifications.forEach(cert => {
+                const li = document.createElement('li');
+                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5 text-justify">Credential ID: ${cert.id}</div>`;
+                certificationsList.appendChild(li);
+            });
+
+            const educationList = document.getElementById('education-list');
+            credentials.education.forEach(edu => {
+                const div = document.createElement('div');
+                div.innerHTML = `<p class="font-semibold">${edu.degree}</p><p class="text-sm text-gray-600">${edu.school}</p>`;
+                educationList.appendChild(div);
+            });
+
+            const industryCtx = document.getElementById('industryChart').getContext('2d');
+            const industryData = {
+                labels: ['Information Technology', 'Telecommunications', 'Consulting', 'Logistics & E-commerce', 'Financial Services', 'Hospitality & Entertainment'],
+                datasets: [{
+                    label: 'Years of Experience',
+                    data: [5.41, 2.67, 0.83, 0.75, 0.58, 0.25],
+                    backgroundColor: [
+                        'rgba(3, 105, 161, 0.6)',
+                        'rgba(14, 165, 233, 0.6)',
+                        'rgba(56, 189, 248, 0.6)',
+                        'rgba(125, 211, 252, 0.6)',
+                        'rgba(186, 230, 253, 0.6)',
+                        'rgba(224, 242, 254, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgb(3, 105, 161)',
+                        'rgb(14, 165, 233)',
+                        'rgb(56, 189, 248)',
+                        'rgb(125, 211, 252)',
+                        'rgb(186, 230, 253)',
+                        'rgb(224, 242, 254)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            new Chart(industryCtx, {
+                type: 'bar',
+                data: industryData,
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Distribution of Experience by Industry Sector' },
+                        tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.x.toFixed(2)} years` } }
+                    },
+                    scales: { x: { beginAtZero: true, title: { display: true, text: 'Years' } } }
+                }
+            });
+            
+            const characterRadarCtx = document.getElementById('characterRadarChart').getContext('2d');
+            new Chart(characterRadarCtx, {
+                 type: 'radar',
+                data: {
+                    labels: ['Execution (STR)', 'Agility (AGI)', 'Resilience (VIT)', 'Vision (INT)', 'Proficiency (DEX)', 'Risk Mgmt (LUK)'],
+                    datasets: [{
+                        label: 'Attribute Score',
+                        data: [95, 92, 90, 99, 88, 85],
+                        fill: true,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        pointBackgroundColor: 'rgb(54, 162, 235)',
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, pointLabels: { font: { size: 12 } } } }, plugins: { legend: { display: false } } }
+            });
+
+            const competencyRadarCtx = document.getElementById('competencyRadarChart');
+            if (competencyRadarCtx) {
+                 new Chart(competencyRadarCtx.getContext('2d'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Team Leadership', 'Technology Strategy', 'Financial Acumen', 'Executive Functions'],
+                        datasets: [{
+                            label: 'Years of Focused Experience',
+                            data: [1.92, 2.33, 1.92, 9.25],
+                            fill: true,
+                            backgroundColor: 'rgba(14, 165, 233, 0.2)',
+                            borderColor: 'rgb(14, 165, 233)',
+                            pointBackgroundColor: 'rgb(14, 165, 233)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgb(14, 165, 233)'
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 10, pointLabels: { font: { size: 14 } } } }, plugins: { legend: { position: 'top' } } }
+                });
+            }
+
+
+            const functionalDomainCtx = document.getElementById('functionalDomainChart').getContext('2d');
+            const functionalDomainData = {
+                labels: ['DevOps & Engineering', 'IT Leadership & Strategy', 'IT Consulting & Training', 'Foundation IT'],
+                 datasets: [{
+                    label: 'Years of Experience',
+                    data: [2.16, 1.91, 5.01, 1.25],
+                    backgroundColor: [
+                        'rgba(3, 105, 161, 0.7)',
+                        'rgba(14, 165, 233, 0.7)',
+                        'rgba(56, 189, 248, 0.7)',
+                        'rgba(125, 211, 252, 0.7)'
+                    ],
+                     borderColor: [
+                        'rgb(3, 105, 161)',
+                        'rgb(14, 165, 233)',
+                        'rgb(56, 189, 248)',
+                        'rgb(125, 211, 252)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+             new Chart(functionalDomainCtx, {
+                type: 'bar',
+                data: functionalDomainData,
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Experience by Functional Domain' },
+                        tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.x.toFixed(2)} years` } }
+                    },
+                    scales: { x: { beginAtZero: true, title: { display: true, text: 'Total Years' } } }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
+
