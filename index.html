@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive CV | Lukmanul Hakim - Subject Matter of DevSecOps Expert</title>
+    <title>Interactive CV | Lukmanul Hakim - DevSecOps & Cloud Infrastructure Leader</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Calm Harmony -->
-    <!-- Application Structure Plan: The application is designed as a single-page, vertically scrolling portfolio. The core is an interactive horizontal timeline of the professional experience. Clicking a role on the timeline dynamically updates a details section below it. This approach breaks down the dense 13+ year history into manageable, user-driven segments. Following the timeline, a filterable dashboard of competencies and a data visualization of industry experience provide quick, scannable insights. This structure was chosen to transform passive reading into an active, engaging exploration, which is more effective for busy executives and recruiters. -->
-    <!-- Visualization & Content Choices: 
-        - Professional Experience: Report Info -> Chronological job history. Goal -> Organize & show change over time. Viz/Method -> Interactive horizontal timeline controlling a dynamic content display. Interaction -> Click timeline element to show details. Justification -> Makes a long history digestible and engaging. Library -> Vanilla JS.
-        - Competencies: Report Info -> Categorized skills. Goal -> Organize & allow comparison. Viz/Method -> Filterable grid of competency cards. Interaction -> Click filter buttons to show/hide categories. Justification -> Allows users to quickly assess skills in specific areas (e.g., 'Financial Acumen'). Library -> Vanilla JS.
-        - Industry Experience: Report Info -> Implicit data from job history. Goal -> Inform & compare. Viz/Method -> Horizontal Bar Chart. Interaction -> Hover for tooltips. Justification -> Visually summarizes the breadth of experience across different sectors, a key strategic insight. Library -> Chart.js.
-        - All other text: Report Info -> Summaries, education. Goal -> Inform. Viz/Method -> Styled HTML text blocks. No SVG/Mermaid used. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -107,20 +99,20 @@
         <!-- Header Section -->
         <header class="text-center py-12">
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-800 tracking-tight">LUKMANUL HAKIM</h1>
-            <p class="mt-4 text-xl sm:text-2xl text-gray-600">Strategic Technology Leader | Subject Matter Expert of DevSecOps</p>
-            <div class="mt-6 flex justify-center items-center space-x-6 text-sm text-gray-500">
-                <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-700 transition">LinkedIn Profile</a>
-                <span>&bull;</span>
-                <span>Bogor, West Java, Indonesia</span>
+            <p class="mt-4 text-xl sm:text-2xl text-gray-600">DevSecOps & Cloud Infrastructure Leader</p>
+            <div class="mt-6 flex flex-wrap justify-center items-center gap-4 sm:space-x-6 text-sm text-gray-500">
+                <a href="https://linkedin.com/in/lukmanulhakimdevops" target="_blank" rel="noopener noreferrer" class="hover:text-sky-700 transition">LinkedIn</a>
+                <span class="hidden sm:inline">&bull;</span>
+                <span>Bogor Regency, West Java, Indonesia</span>
             </div>
         </header>
 
         <!-- Executive Summary Section -->
         <section id="summary" class="my-16">
-             <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+             <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-200">
                  <h2 class="text-2xl font-bold text-center text-sky-800 mb-6">Executive Summary</h2>
                  <p class="text-center text-gray-700 leading-relaxed text-justify">
-                     Visionary and results-driven technology executive with a career spanning over 13 years, featuring 9+ years of hands-on and leadership experience in directing IT infrastructure strategy, digital transformation, and high-performance engineering teams. Proven track record in architecting scalable, secure, and cost-efficient technology ecosystems that align with and drive business objectives. Expertise in technology roadmapping, budget management (CAPEX/OPEX), and fostering a culture of innovation and excellence.
+                     15 years of tech stack evolution: Progressing from hardware troubleshooting (Helpdesk/Network) and SysAdmin to IT Governance (Compliance), now architecting Multi-Cloud & Generative AI ecosystems. An early adopter accustomed to navigating bleeding-edge tech, transforming from manual Ops to Infrastructure as Code (IaC) and DevSecOps. My focus is practical: building secure, automated AI & CI/CD pipelines with strict FinOps discipline, applying operational logic to evolving cloud-native stacks.
                  </p>
             </div>
         </section>
@@ -129,7 +121,7 @@
         <section id="journey" class="my-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-sky-800">Career Journey</h2>
-                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Explore my 13+ year career evolution. Click on any role in the interactive timeline below to view the corresponding strategic responsibilities and key achievements.</p>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Explore my 15-year career evolution. Click on any role in the interactive timeline below to view the corresponding strategic responsibilities and key achievements.</p>
             </div>
             
             <div class="relative w-full overflow-x-auto pb-8">
@@ -147,7 +139,7 @@
         <section id="competencies" class="my-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-sky-800">Core Competencies</h2>
-                <p class="mt-2 text-lg text-gray-600">A dashboard of my leadership, strategic, and financial capabilities. Click a role on the timeline to see relevant skills highlighted.</p>
+                <p class="mt-2 text-lg text-gray-600">A dashboard of my leadership, strategic, and technical capabilities.</p>
             </div>
             <div id="competency-filters" class="flex flex-wrap justify-center gap-2 mb-8">
                 <!-- Filter buttons will be dynamically inserted here -->
@@ -161,7 +153,7 @@
         <section id="tech-proficiency" class="my-20">
              <div class="text-center mb-12">
                  <h2 class="text-3xl font-bold text-sky-800">Technical Proficiency</h2>
-                 <p class="mt-2 text-lg text-gray-600">A detailed matrix of my technical skills. Tools and platforms used in specific roles are highlighted when a timeline event is selected.</p>
+                 <p class="mt-2 text-lg text-gray-600">A detailed matrix of my technical skills, ranging from Cloud Architecture to Generative AI.</p>
             </div>
             <div id="tech-skills-grid" class="space-y-8">
                  <!-- Technical skills will be dynamically inserted here -->
@@ -183,38 +175,23 @@
         <section id="career-analytics" class="my-20">
             <div class="text-center mb-12">
                  <h2 class="text-3xl font-bold text-sky-800">Career Analytics Dashboard</h2>
-                 <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Visual insights into my professional development, showcasing the depth and evolution of my expertise over time.</p>
+                 <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Visual insights into my professional development.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Competency Distribution -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                     <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Leadership Competency Profile</h3>
-                    <p class="text-center text-sm text-gray-500 mb-4">Qualitative assessment of key leadership domains.</p>
                     <div class="chart-container h-[450px]">
                         <canvas id="competencyRadarChart"></canvas>
                     </div>
                 </div>
                 <!-- Tech Domain Distribution -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Functional Domain</h3>
-                     <p class="text-center text-sm text-gray-500 mb-4">Breakdown of work experience by primary job function. Note: Total duration from all related experiences.</p>
+                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Industry</h3>
                     <div class="chart-container h-[450px]">
-                        <canvas id="functionalDomainChart"></canvas>
+                        <canvas id="industryChart"></canvas>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Industry Experience Visualization -->
-        <section id="career-viz" class="my-20">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-sky-800">Experience Across Industries</h2>
-                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">My professional journey has spanned various sectors, providing me with a broad perspective on technology's role in different business contexts. This chart visualizes the distribution of my experience.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <div class="chart-container">
-                    <canvas id="industryChart"></canvas>
                 </div>
             </div>
         </section>
@@ -222,21 +199,26 @@
         <!-- Certifications & Education Section -->
         <section id="credentials" class="my-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-sky-800">Certifications & Education</h2>
+                <h2 class="text-3xl font-bold text-sky-800">Credentials & Continuous Learning</h2>
                 <p class="mt-2 text-lg text-gray-600">My commitment to continuous learning and professional development.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                     <h3 class="text-xl font-semibold text-sky-700 mb-4">Professional Certifications</h3>
-                    <ul id="certifications-list" class="space-y-3 text-gray-700 text-justify">
+                    <ul id="certifications-list" class="space-y-4 text-gray-700 text-justify">
                         <!-- Certs list -->
                     </ul>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Educational Background</h3>
+                    <h3 class="text-xl font-semibold text-sky-700 mt-8 mb-4">Education</h3>
                     <div id="education-list" class="space-y-4 text-gray-700">
                         <!-- Education list -->
                     </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Professional Development (2025)</h3>
+                     <p class="text-sm text-gray-500 mb-4">Comprehensive Coursework & Technical Bootcamps (Completed Jan-May 2025)</p>
+                    <ul id="training-list" class="space-y-4 text-gray-700">
+                        <!-- Training list -->
+                    </ul>
                 </div>
             </div>
         </section>
@@ -261,10 +243,14 @@
                     company: "PT. Altha Dyanusa Consulting",
                     industry: "Consulting",
                     role: "Subject Matter Expert",
-                    period: "Nov 2024 - Feb 2025",
-                    details: ["<strong>Strategic Guidance:</strong> Advise executive leadership on DevOps and cloud adoption strategies to accelerate business agility and market entry.","<strong>Performance Optimization:</strong> Architected and implemented standardized training and documentation frameworks, boosting team productivity by 25%.","<strong>Talent Strategy:</strong> Developed and executed a successful mentorship program that cultivated top engineering talent, achieving a 95% employee retention rate."],
-                    keyCompetencies: ["Technology Roadmapping", "Talent Acquisition", "Stakeholder Management", "ROI Analysis"],
-                    techSkills: ["AWS", "GCP"]
+                    period: "Oct 2024 - Feb 2025",
+                    details: [
+                        "<strong>Strategic Guidance:</strong> Advised executive leadership on advanced DevSecOps and secure cloud adoption strategies.",
+                        "<strong>Performance Optimization:</strong> Architected and implemented standardized training frameworks focused on secure SDLC practices, boosting team productivity by 25%.",
+                        "<strong>Talent Strategy:</strong> Achieved a 95% talent retention rate through successful mentorship programs."
+                    ],
+                    keyCompetencies: ["Technology Roadmapping", "Talent Acquisition", "Stakeholder Management", "ROI Analysis", "Secure SDLC"],
+                    techSkills: ["AWS", "GCP", "Secure SDLC", "Risk Management"]
                 },
                 {
                     id: 1,
@@ -273,7 +259,7 @@
                     role: "Industry Instructor & Consultant",
                     period: "Oct 2024 - Oct 2024",
                     details: [
-                        "<strong>Curriculum Leadership:</strong> Architected and delivered a comprehensive DevSecOps & Multi-Cloud curriculum for hundreds of professionals.", 
+                        "<strong>Curriculum Leadership:</strong> Architected and delivered a comprehensive DevSecOps & Multi-Cloud curriculum.", 
                         "<strong>Hands-On Security Training:</strong> Led practical training on integrating automated security testing (SAST/DAST) into CI/CD pipelines, Kubernetes hardening, and secure IaC."
                     ],
                     keyCompetencies: ["Talent Acquisition", "Mentorship", "Stakeholder Management"],
@@ -297,71 +283,89 @@
                     company: "PT. Meteor Inovasi Digital",
                     industry: "Information Technology (Software)",
                     role: "Head of IT DevOps",
-                    period: "Oct 2022 - Dec 2022",
-                    details: ["<strong>Digital Transformation:</strong> Spearheaded a multi-billion IDR initiative to migrate legacy infrastructure to a multi-cloud environment (AWS, GCP, Alibaba), enhancing scalability and operational resilience.","<strong>Technology Governance:</strong> Established the company's DevSecOps strategy, integrating security (SAST/DAST) into the SDLC to mitigate risk and ensure compliance."],
-                    keyCompetencies: ["Digital Transformation", "Technology Roadmapping", "Budget Management (CAPEX/OPEX)"],
-                    techSkills: ["AWS", "GCP", "Terraform", "GitLab-CI", "Kubernetes (GKE, EKS, ACK)", "SonarQube"]
+                    period: "Sep 2022 - Dec 2022",
+                    details: [
+                        "<strong>Digital Transformation:</strong> Led a multi-billion IDR digital transformation migrating legacy infrastructure to a secure multi-cloud (AWS/GCP/Alibaba).",
+                        "<strong>Security Enforcement:</strong> Enforced SAST/DAST with SonarQube & GitLab-CI, improving system reliability by 40% and ensuring regulatory compliance."
+                    ],
+                    keyCompetencies: ["Digital Transformation", "Technology Roadmapping", "Budget Management (CAPEX/OPEX)", "IT Risk Management"],
+                    techSkills: ["AWS", "GCP", "Alibaba Cloud", "Terraform", "GitLab-CI", "Kubernetes", "SonarQube"]
                 },
                 {
                     id: 3,
                     company: "PT. Kredit Pintar Indonesia",
                     industry: "Financial Services (FinTech)",
-                    role: "IT Development Operations",
+                    role: "DevOps Engineer",
                     period: "Jul 2022 - Sep 2022",
-                    details: ["<strong>Strategic Automation:</strong> Governed the automation of cloud infrastructure as part of a multi-billion IDR CAPEX project, aligning technology with strategic business goals in the FinTech sector.","<strong>Global Team Leadership:</strong> Led collaborative initiatives within a global, medium-sized DevOps team, successfully achieving and maintaining 99.9% service uptime for mission-critical financial applications."],
-                    keyCompetencies: ["High-Performance Team Building", "Risk Management"],
-                    techSkills: ["GitOps (Flux CD)", "GitLab-CI", "Kubernetes (GKE, EKS, ACK)"]
+                    details: [
+                        "<strong>Strategic Automation:</strong> Automated secure cloud infrastructure and GitOps workflows (Flux CD) to maintain 99.9% uptime for mission-critical financial applications.",
+                        "<strong>Compliance:</strong> Resolved critical OJK compliance issues through robust infrastructure governance."
+                    ],
+                    keyCompetencies: ["High-Performance Team Building", "Risk Management", "Compliance"],
+                    techSkills: ["Alibaba Cloud", "GitOps (Flux CD)", "GitLab-CI", "Kubernetes"]
                 },
                 {
                     id: 4,
                     company: "PT. Tri Adi Bersama (Anteraja)",
                     industry: "Logistics & E-commerce",
-                    role: "DevOps Engineering",
+                    role: "DevOps Engineer",
                     period: "Nov 2021 - Jul 2022",
-                    details: ["<strong>Scalability & Performance:</strong> Architected and scaled a containerized infrastructure on GKE and Amazon EKS to support over a hundred business-critical APIs with 99.9% uptime.","<strong>Process Innovation:</strong> Pioneered the development of a robust CI/CD pipeline that accelerated application deployment cycles and improved developer productivity."],
-                    keyCompetencies: [],
-                    techSkills: ["AWS", "GCP", "Azure DevOps", "Nexus Artifactory", "Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OWASP ZAP", "SonarQube", "Prometheus", "Grafana", "Dynatrace"]
+                    details: [
+                        "<strong>Scalability & Performance:</strong> Architected and scaled containerized infrastructure on GKE and Amazon EKS to support 120 APIs with 99.9% uptime.",
+                        "<strong>Security Integration:</strong> Integrated automated security scans with OWASP ZAP and SonarQube, reducing critical vulnerabilities by 60%."
+                    ],
+                    keyCompetencies: ["System Architecture"],
+                    techSkills: ["AWS", "GCP", "Azure DevOps", "Kubernetes (GKE, EKS)", "Docker", "Rancher", "SonarQube", "OWASP ZAP"]
                 },
                 {
                     id: 6,
                     company: "PT. Hashmicro Solusi Indonesia",
                     industry: "Information Technology (ERP)",
-                    role: "DevOps Engineering",
+                    role: "DevOps Engineer",
                     period: "May 2020 - Oct 2020",
-                    details: ["<strong>Business Process Modernization:</strong> Led a strategic migration of Odoo ERP systems to AWS EC2 as part of a multi-billion IDR CAPEX project, enhancing core business process efficiency.","<strong>Operational Excellence:</strong> Reduced infrastructure setup time by 50% through targeted automation initiatives using Bash scripts and AWS CLI."],
-                    keyCompetencies: ["Digital Transformation"],
+                    details: [
+                        "<strong>Cloud Migration:</strong> Led migration of business-critical Odoo ERP from on-prem to AWS EC2.",
+                        "<strong>Operational Excellence:</strong> Reduced infrastructure setup time by 50% with automation using Bash & AWS CLI and automated PostgreSQL backups to S3."
+                    ],
+                    keyCompetencies: ["Digital Transformation", "Cloud Cost Optimization"],
                     techSkills: ["AWS", "Bash", "Python", "PostgreSQL"]
                 },
                 {
                     id: 7,
                     company: "PT. Lentera Bangsa Benderang",
                     industry: "Financial Services",
-                    role: "DevOps Engineering",
+                    role: "DevOps Engineer",
                     period: "Jun 2019 - Sep 2019",
-                    details: ["<strong>Infrastructure Modernization:</strong> Re-architected on-premises cloud infrastructure for a leading multi-finance company, driving a 40% reduction in deployment times.","<strong>System Reliability:</strong> Enhanced application observability and accelerated issue resolution by implementing a containerized ELK Stack."],
+                    details: [
+                        "<strong>Infrastructure Modernization:</strong> Re-architected on-prem cloud infrastructure, achieving 40% faster deployments.",
+                        "<strong>Observability:</strong> Improved observability by implementing a containerized ELK Stack."
+                    ],
                     keyCompetencies: [],
-                    techSkills: ["ELK Stack", "Jenkins", "Docker"]
+                    techSkills: ["Jenkins", "Docker", "ELK Stack"]
                 },
                 {
                     id: 8,
                     company: "Universitas Mercu Buana",
                     industry: "Higher Education",
-                    role: "Bachelor of Economics (Operational Management)",
+                    role: "Bachelor of Economics",
                     period: "2015 - 2018",
                     type: "education",
-                    details: ["<strong>Academic Focus:</strong> Majored in Operational Management, with extensive coursework in Project Management, Supply Chain Management (SCM), Financial Management, and Strategic Management to build a strong foundation in business process optimization and strategic resource planning.","<strong>Relevance:</strong> This academic period was a strategic investment to complement deep technical expertise with the business, financial, and operational acumen required for executive leadership roles like CTO."],
-                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "ROI Analysis", "Risk Management", "Stakeholder Management", "Project Management", "SCM (Supply Chain Management)", "Financial Management", "Strategic Management", "Total Quality Management (TQM)", "Managerial Decision Making"],
+                    details: [
+                        "<strong>Academic Focus:</strong> Majored in Operational Management (GPA 3.17/4). Coursework in Project Management, Supply Chain Management (SCM), Financial Management, and Strategic Management.",
+                        "<strong>Relevance:</strong> Strategic investment to complement technical expertise with business, financial, and operational acumen."
+                    ],
+                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "ROI Analysis", "Risk Management", "Strategic Management", "Managerial Decision Making"],
                     techSkills: []
                 },
                 {
                     id: 9,
                     company: "PT. Dimension Data Indonesia",
                     industry: "Consulting",
-                    role: "Freelance Network Consultant",
+                    role: "Network Consultant",
                     period: "Feb 2015 - Jun 2015",
-                    details: ["<strong>Specialized Consultation:</strong> Provided expert network architecture consulting for a major financial institution, ensuring high availability and performance of critical MPLS networks using SolarWinds for monitoring."],
+                    details: ["<strong>Specialized Consultation:</strong> Provided network architecture consulting for a major financial institution, ensuring high availability and performance of critical MPLS networks using SolarWinds monitoring."],
                     keyCompetencies: ["Enterprise Architecture"],
-                    techSkills: ["MPLS"]
+                    techSkills: ["MPLS", "Network Architecture", "SolarWinds"]
                 },
                 {
                     id: 10,
@@ -369,9 +373,12 @@
                     industry: "Telecommunications Infrastructure",
                     role: "Principal Operations & Compliance Manager",
                     period: "Apr 2013 - Oct 2014",
-                    details: ["<strong>Strategic Financial Command:</strong> Directly managed a ~IDR 1.5 trillion CAPEX budget, steering the deployment of critical national backbone infrastructure (FTTH, MSAN, ADSL) utilizing operational tools like I-Sisca and TenOSS.","<strong>Nationwide Operational Excellence:</strong> Architected and directed a new technical order framework, ensuring the on-time delivery of over 3.5 million infrastructure services across more than 8,300 telephone central units.","<strong>Executive Leadership & Governance:</strong> Led a 13-member team to a 15% increase in operational efficiency, while redesigning compliance policies to reduce regulatory violations by 20% and audit findings by 25%."],
-                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "Financial Management", "ROI Analysis", "High-Performance Team Building", "Stakeholder Management", "Project Management", "Risk Management", "Enterprise Architecture", "Technology Roadmapping", "Strategic Management"],
-                    techSkills: ["FTTH", "MPLS", "VPN"]
+                    details: [
+                        "<strong>Strategic Financial Command:</strong> Directed a national infrastructure program managing IDR 1.5 trillion CAPEX.",
+                        "<strong>Operational Excellence:</strong> Increased operational efficiency by 15% and reduced regulatory violations by 20% through strategic policy redesign."
+                    ],
+                    keyCompetencies: ["Budget Management (CAPEX/OPEX)", "Financial Planning", "ROI Analysis", "High-Performance Team Building", "Risk Management", "Technology Roadmapping"],
+                    techSkills: ["FTTH", "MPLS", "VPN", "I-Sisca", "TenOSS"]
                 },
                 {
                     id: 11,
@@ -379,9 +386,12 @@
                     industry: "Hospitality & Entertainment",
                     role: "Electronic Data Processing Lead",
                     period: "Jan 2013 - Mar 2013",
-                    details: ["<strong>Foundational Technology:</strong> Established the initial IT infrastructure and security protocols, including firewall implementation and server maintenance.","<strong>Business Automation:</strong> Automated key business processes for ticketing and point-of-sale systems, significantly improving operational efficiency."],
+                    details: [
+                        "<strong>Foundational Technology:</strong> Established foundational IT infrastructure and security protocols.",
+                        "<strong>Business Automation:</strong> Automated ticketing and POS processes to improve efficiency and data integrity."
+                    ],
                     keyCompetencies: ["Risk Management"],
-                    techSkills: ["Firewall"]
+                    techSkills: ["Firewall", "Microsoft Server", "Bash", "PowerShell"]
                 },
                 {
                     id: 12,
@@ -389,9 +399,9 @@
                     industry: "Telecommunications (ISP)",
                     role: "Customer Care Specialist",
                     period: "Oct 2011 - Oct 2012",
-                    details: ["<strong>Process Improvement:</strong> Optimized customer support workflows, resulting in a 20% reduction in ticket handling and response times, directly enhancing customer satisfaction."],
+                    details: ["<strong>Process Improvement:</strong> Optimized customer support workflows, reducing ticket handling and response times by 20%."],
                     keyCompetencies: ["Stakeholder Management"],
-                    techSkills: ["Network Security", "Load Balancing"]
+                    techSkills: ["Network Troubleshooting", "CRM Systems"]
                 }
             ];
 
@@ -400,18 +410,18 @@
                 { name: "Technology Roadmapping", category: "Technology Strategy" },
                 { name: "Enterprise Architecture", category: "Technology Strategy" },
                 { name: "Strategic Management", category: "Technology Strategy" },
+                { name: "Cloud Cost Optimization", category: "Financial Acumen" },
                 { name: "Budget Management (CAPEX/OPEX)", category: "Financial Acumen" },
                 { name: "Financial Planning", category: "Financial Acumen" },
-                { name: "Financial Management", category: "Financial Acumen" },
                 { name: "ROI Analysis", category: "Financial Acumen" },
                 { name: "Talent Acquisition", category: "Team Leadership" },
                 { name: "High-Performance Team Building", category: "Team Leadership" },
                 { name: "Mentorship", category: "Team Leadership" },
                 { name: "Stakeholder Management", category: "Executive Functions" },
-                { name: "Risk Management", category: "Executive Functions" },
+                { name: "IT Risk Management", category: "Executive Functions" },
                 { name: "Project Management", category: "Executive Functions" },
                 { name: "SCM (Supply Chain Management)", category: "Executive Functions" },
-                { name: "Total Quality Management (TQM)", category: "Executive Functions" },
+                { name: "ISO 27001 Readiness", category: "Executive Functions" },
                 { name: "Managerial Decision Making", category: "Executive Functions" },
             ];
             
@@ -424,15 +434,12 @@
             };
             
             const technicalSkills = [
-                { category: "Cloud Platforms", skills: ["AWS", "GCP", "Alibaba Cloud"] },
-                { category: "IaC & Automation", skills: ["Terraform", "Ansible", "GitOps (Flux CD)", "Bash", "Python", "Go"] },
-                { category: "CI/CD & DevOps Tools", skills: ["Jenkins", "GitLab-CI", "Azure DevOps", "Nexus Artifactory", "Docker"] },
-                { category: "Container & Orchestration", skills: ["Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OpenShift (OKD)"] },
-                { category: "Security (DevSecOps)", skills: ["OWASP ZAP", "SonarQube", "IAM", "Network Security", "Container Security", "Secure SDLC", "Kubernetes Security", "VPC Security"] },
-                { category: "Monitoring & Observability", skills: ["ELK Stack", "Prometheus", "Grafana", "Dynatrace"] },
-                { category: "Network Infrastructure", skills: ["MPLS", "VPN", "Firewall", "Load Balancing", "FTTH"] },
-                { category: "Databases", skills: ["PostgreSQL", "MySQL", "BigQuery", "Cloud SQL"] },
-                { category: "Methodologies", skills: ["Agile", "SDLC", "Site Reliability Engineering (SRE)", "DevOps Methodologies"] }
+                { category: "Multi-Cloud & Ecosystems", skills: ["AWS", "GCP", "Microsoft Azure", "Alibaba Cloud", "OpenStack"] },
+                { category: "Generative AI & Data Ops", skills: ["Azure OpenAI Service", "Semantic Kernel SDK", "Azure Cognitive Search", "NLP", "Computer Vision", "RAG Architecture", "Document Intelligence"] },
+                { category: "DevSecOps & IaC", skills: ["Terraform", "Ansible", "CloudFormation", "Jenkins", "GitLab CI/CD", "Azure DevOps", "SonarQube", "OWASP ZAP", "Trivy", "Vault"] },
+                { category: "Containerization", skills: ["Kubernetes (GKE, EKS, AKS)", "Red Hat OpenShift", "Rancher", "Docker", "Helm", "Service Mesh (Istio)"] },
+                { category: "Strategic Governance & FinOps", skills: ["Cloud Cost Optimization", "Budgeting & Forecasting", "Resource Tagging", "ISO 27001 Readiness", "OJK/BI Compliance"] },
+                { category: "Observability & SRE", skills: ["ELK Stack", "Prometheus", "Grafana", "Dynatrace", "SLA/SLO Management", "Incident Response Automation"] }
             ];
 
             const credentials = {
@@ -443,8 +450,13 @@
                     { name: "CyberOps Associate (Cisco)", id: "0447256131-103/OA.DTS/BLSDM.KOMINFO/2020" }
                 ],
                 education: [
-                    { degree: "Bachelor of Economics", school: "Mercu Buana University" },
-                    { degree: "Diploma in Human Resources Management", school: "Politeknik APP Jakarta" }
+                    { degree: "Bachelor of Economics", school: "Mercu Buana University (2015-2018), GPA: 3.17" },
+                    { degree: "Diploma in Human Resources Management", school: "Politeknik APP Jakarta (2006-2010), GPA: 2.87" }
+                ],
+                training: [
+                    { title: "Advanced AI & Data Engineering (Microsoft Azure Track)", details: "Designing Azure AI Solutions (AI-102), Data Science Solutions (DP-100), AI Agents using Semantic Kernel." },
+                    { title: "Specialized Cognitive Services & NLP", details: "NLP with Azure AI Language (AI-3003), Computer Vision (AI-3004), Document Intelligence (AI-3002)." },
+                    { title: "Cloud-Native DevSecOps & Fundamentals", details: "Secure Pipelines in Azure DevOps, Azure Container Apps, GitHub Copilot Fundamentals." }
                 ]
             };
 
@@ -599,7 +611,7 @@
             const certificationsList = document.getElementById('certifications-list');
             credentials.certifications.forEach(cert => {
                 const li = document.createElement('li');
-                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5 text-justify">Credential ID: ${cert.id}</div>`;
+                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5">Credential ID: ${cert.id}</div>`;
                 certificationsList.appendChild(li);
             });
 
@@ -610,12 +622,19 @@
                 educationList.appendChild(div);
             });
 
+            const trainingList = document.getElementById('training-list');
+            credentials.training.forEach(train => {
+                const li = document.createElement('li');
+                li.innerHTML = `<div class="font-semibold text-gray-800">${train.title}</div><div class="text-sm text-gray-600 mt-1">${train.details}</div>`;
+                trainingList.appendChild(li);
+            });
+
             const industryCtx = document.getElementById('industryChart').getContext('2d');
             const industryData = {
-                labels: ['Information Technology', 'Telecommunications', 'Consulting', 'Logistics & E-commerce', 'Financial Services', 'Hospitality & Entertainment'],
+                labels: ['Information Technology (DevOps/SRE)', 'Telecommunications', 'Consulting', 'Logistics & E-commerce', 'Financial Services (FinTech)', 'Hospitality'],
                 datasets: [{
                     label: 'Years of Experience',
-                    data: [5.41, 2.67, 0.83, 0.75, 0.58, 0.25],
+                    data: [5.5, 2.7, 1.2, 0.75, 0.6, 0.25],
                     backgroundColor: [
                         'rgba(3, 105, 161, 0.6)',
                         'rgba(14, 165, 233, 0.6)',
@@ -657,7 +676,7 @@
                     labels: ['Execution (STR)', 'Agility (AGI)', 'Resilience (VIT)', 'Vision (INT)', 'Proficiency (DEX)', 'Risk Mgmt (LUK)'],
                     datasets: [{
                         label: 'Attribute Score',
-                        data: [95, 92, 90, 99, 88, 85],
+                        data: [95, 94, 90, 99, 92, 88],
                         fill: true,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgb(54, 162, 235)',
@@ -675,7 +694,7 @@
                         labels: ['Team Leadership', 'Technology Strategy', 'Financial Acumen', 'Executive Functions'],
                         datasets: [{
                             label: 'Years of Focused Experience',
-                            data: [1.92, 2.33, 1.92, 9.25],
+                            data: [3, 4, 3, 10],
                             fill: true,
                             backgroundColor: 'rgba(14, 165, 233, 0.2)',
                             borderColor: 'rgb(14, 165, 233)',
@@ -689,44 +708,7 @@
                 });
             }
 
-
-            const functionalDomainCtx = document.getElementById('functionalDomainChart').getContext('2d');
-            const functionalDomainData = {
-                labels: ['DevOps & Engineering', 'IT Leadership & Strategy', 'IT Consulting & Training', 'Foundation IT'],
-                 datasets: [{
-                    label: 'Years of Experience',
-                    data: [2.16, 1.91, 5.01, 1.25],
-                    backgroundColor: [
-                        'rgba(3, 105, 161, 0.7)',
-                        'rgba(14, 165, 233, 0.7)',
-                        'rgba(56, 189, 248, 0.7)',
-                        'rgba(125, 211, 252, 0.7)'
-                    ],
-                     borderColor: [
-                        'rgb(3, 105, 161)',
-                        'rgb(14, 165, 233)',
-                        'rgb(56, 189, 248)',
-                        'rgb(125, 211, 252)'
-                    ],
-                    borderWidth: 1
-                }]
-            };
-             new Chart(functionalDomainCtx, {
-                type: 'bar',
-                data: functionalDomainData,
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false }, title: { display: true, text: 'Experience by Functional Domain' },
-                        tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.x.toFixed(2)} years` } }
-                    },
-                    scales: { x: { beginAtZero: true, title: { display: true, text: 'Total Years' } } }
-                }
-            });
-
         });
     </script>
 </body>
 </html>
-
