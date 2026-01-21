@@ -30,7 +30,8 @@
                     },
                     animation: {
                         'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-                        'dash': 'dash 20s linear infinite', 
+                        'dash': 'dash 30s linear infinite', 
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         dash: {
@@ -88,58 +89,17 @@
             pointer-events: none;
         }
 
-        /* CYAN HOLOGRAPHIC MAP STYLE */
-        .wiki-map-layer {
-            /* Sepia+HueRotate(180) = Blue. Saturate boosts color. Brightness makes it "Muda" */
-            filter: sepia(100%) hue-rotate(180deg) saturate(400%) brightness(1.2) contrast(0.9);
-            opacity: 0.5;
-            mix-blend-mode: screen; 
-            transition: all 0.5s ease;
-        }
-        .wiki-map-layer:hover {
-            opacity: 0.8;
-            filter: sepia(100%) hue-rotate(180deg) saturate(500%) brightness(1.4) drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
-        }
-
-        .cable-line {
-            fill: none;
-            stroke: #0ea5e9; /* Sky Blue */
-            stroke-width: 1.5;
-            stroke-dasharray: 3 1;
-            opacity: 0.7;
-        }
-
-        .cable-line.backbone {
-            stroke: #3b82f6; /* Blue 500 */
-            stroke-width: 2.5;
-            stroke-dasharray: 6 2;
-            opacity: 0.9;
-            animation: dash 25s linear infinite;
-        }
-
-        .cable-line.international {
-            stroke: #f59e0b; /* Amber */
-            stroke-width: 2;
-            stroke-dasharray: 8 4;
-            opacity: 0.8;
-        }
-        
-        .city-dot {
-            fill: #22c55e;
-            stroke: #fff;
-            stroke-width: 1.5;
-        }
-        .city-dot.hub {
-            fill: #f59e0b; /* Amber for Hubs/Gateways */
-            stroke: #fff;
-            r: 4;
-        }
-        .city-dot.warning {
-            fill: #ef4444;
-        }
-        .city-pulse {
-            transform-box: fill-box;
-            transform-origin: center;
+        /* HOLOGRAPHIC MAP STYLE */
+        .hologram-map {
+            /* Invert: Membalik warna (Putih -> Hitam, Garis Gelap -> Neon).
+               Contrast: Mempertegas perbedaan garis dan background.
+               Saturate: Membuat warna garis lebih menyala.
+               Mix-Blend-Mode Screen: Membuat warna Hitam (hasil invert background putih) jadi transparan.
+            */
+            filter: invert(1) contrast(1.3) saturate(1.5) hue-rotate(180deg);
+            mix-blend-mode: screen;
+            transition: transform 0.3s ease-out;
+            transform-origin: center center;
         }
     </style>
 </head>
@@ -249,129 +209,40 @@
                         <!-- VIEW 1: NATIONAL NOC MAP (DEFAULT) -->
                         <div id="view-noc" class="flex flex-col gap-6 h-full transition-all duration-500">
                             
-                            <!-- THE MAP DISPLAY -->
+                            <!-- THE MAP DISPLAY CONTAINER -->
                             <div class="w-full aspect-[2.5/1] bg-slate-950 border border-slate-700 rounded relative overflow-hidden group">
-                                <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 z-30 text-right">
+                                
+                                <!-- OVERLAY: Active Status -->
+                                <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 z-30 text-right bg-slate-900/80 p-2 rounded backdrop-blur-sm border border-slate-700">
                                     LIVE TOPOLOGY<br>
-                                    <span class="text-green-400 animate-pulse">● PALAPA RING ACTIVE</span>
+                                    <span class="text-green-400 animate-pulse">● MANAGED BACKBONE ACTIVE</span>
+                                </div>
+
+                                <!-- ZOOM CONTROLS -->
+                                <div class="absolute bottom-4 right-4 flex flex-col gap-2 z-30">
+                                    <button onclick="adjustZoom(0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-600 hover:bg-slate-700 hover:text-green-400 font-bold shadow-lg transition-colors flex items-center justify-center" title="Zoom In">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                    <button onclick="adjustZoom(-0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-600 hover:bg-slate-700 hover:text-red-400 font-bold shadow-lg transition-colors flex items-center justify-center" title="Zoom Out">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
                                 </div>
                                 
                                 <!-- Background Grid -->
-                                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px;"></div>
+                                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px; z-index: 1;"></div>
 
-                                <!-- REAL MAP IMAGE FROM WIKIMEDIA (Styled as CYAN NEON) -->
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Indonesia_provinces_blank_map.svg" 
-                                     class="absolute inset-0 w-full h-full object-cover wiki-map-layer z-0" 
-                                     style="object-position: center bottom;"
-                                     alt="Indonesia Map Topology"
-                                     onerror="this.style.display='none'; document.getElementById('backup-text').style.display='block';">
+                                <!-- MAP WRAPPER (For Zooming) -->
+                                <div id="map-wrapper" class="w-full h-full transition-transform duration-300 ease-out origin-center">
+                                    <!-- REAL MAP IMAGE (HOLOGRAPHIC MODE) -->
+                                    <img src="https://www.indotelko.com/images/media/201601/ori/grafisFo-tlkm.jpg" 
+                                         class="w-full h-full object-contain md:object-cover hologram-map" 
+                                         alt="National Backbone Topology"
+                                         onerror="this.style.display='none'; document.getElementById('backup-text').style.display='block';">
+                                </div>
                                 
-                                <div id="backup-text" class="hidden absolute inset-0 flex items-center justify-center text-slate-600 font-mono text-xs">
+                                <div id="backup-text" class="hidden absolute inset-0 flex items-center justify-center text-slate-600 font-mono text-xs z-0">
                                     [MAP SIGNAL LOST - CHECK CONNECTION]
                                 </div>
-
-                                <!-- SVG OVERLAY FOR CABLES & DOTS (CALIBRATED COORDINATES) -->
-                                <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet" class="absolute inset-0 w-full h-full z-10">
-                                    
-                                    <!-- CABLES (COMPLEX TOPOLOGY) -->
-                                    <g id="cables">
-                                        <!-- INTERNATIONAL GATEWAYS (AMBER LINES) -->
-                                        <path class="cable-line international" d="M230,130 L230,20" /> <!-- Batam -> SG -->
-                                        <path class="cable-line international" d="M120,80 L80,60" /> <!-- Medan -> Global West -->
-                                        <path class="cable-line international" d="M660,330 L660,380" /> <!-- Kupang -> Darwin -->
-
-                                        <!-- RING BARAT -->
-                                        <path class="cable-line backbone" d="M120,80 L230,130" /> <!-- Medan -> Batam -->
-                                        <path class="cable-line backbone" d="M230,130 L280,270" /> <!-- Batam -> Jakarta -->
-                                        <path class="cable-line" d="M120,80 Q100,180 280,270" /> <!-- West Coast Sumatra -->
-
-                                        <!-- JAVA BACKBONE -->
-                                        <path class="cable-line backbone" d="M280,270 L420,290" stroke-width="4" /> <!-- JKT -> SBY -->
-                                        
-                                        <!-- RING TENGAH -->
-                                        <path class="cable-line backbone" d="M230,130 Q330,130 400,160" /> <!-- Batam -> Pontianak -->
-                                        <path class="cable-line backbone" d="M400,160 L460,180" /> <!-- Pontianak -> IKN -->
-                                        <path class="cable-line backbone" d="M460,180 L560,220" /> <!-- IKN -> Makassar -->
-                                        <path class="cable-line" d="M420,290 L460,180" /> <!-- SBY -> IKN -->
-                                        
-                                        <!-- BALI - NUSA (Re-Calibrated) -->
-                                        <path class="cable-line" d="M420,290 L465,300" /> <!-- SBY -> Bali (Closer) -->
-                                        <path class="cable-line" d="M465,300 L520,305" /> <!-- Bali -> Nusa -->
-                                        <path class="cable-line" d="M520,305 L560,220" /> <!-- Nusa -> Makassar -->
-
-                                        <!-- RING TIMUR -->
-                                        <!-- Jalur Utara -->
-                                        <path class="cable-line backbone" d="M560,220 L610,130" /> <!-- MKS -> Manado -->
-                                        <path class="cable-line backbone" d="M610,130 L700,160" /> <!-- Manado -> Ternate -->
-                                        <path class="cable-line backbone" d="M700,160 L850,180" /> <!-- Ternate -> Sorong -->
-                                        <path class="cable-line backbone" d="M850,180 L920,170" /> <!-- Sorong -> JYP -->
-
-                                        <!-- Jalur Selatan -->
-                                        <path class="cable-line" d="M560,220 L720,230" /> <!-- MKS -> Ambon -->
-                                        <path class="cable-line" d="M720,230 L880,240" /> <!-- Ambon -> Timika -->
-                                        <path class="cable-line" d="M880,240 L960,270" /> <!-- Timika -> Merauke -->
-                                        
-                                        <!-- Papua Loop -->
-                                        <path class="cable-line" d="M920,170 L960,270" /> <!-- JYP -> Merauke -->
-                                        
-                                        <!-- Australia Link -->
-                                        <path class="cable-line backbone" d="M560,220 L660,330" /> <!-- MKS -> Kupang -->
-                                    </g>
-
-                                    <!-- CITY NODES (Pinned to Wikimedia Map Coordinates) -->
-                                    <g id="nodes">
-                                        <!-- Jakarta (Java West) -->
-                                        <circle cx="280" cy="270" r="5" class="city-dot" />
-                                        <circle cx="280" cy="270" r="12" class="city-pulse fill-green-500 opacity-30 animate-ping-slow" />
-                                        <text x="280" y="300" fill="white" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">JKT</text>
-
-                                        <!-- Surabaya (Java East) -->
-                                        <circle cx="420" cy="290" r="4" class="city-dot" />
-                                        <text x="420" y="315" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">SBY</text>
-
-                                        <!-- Medan (Sumatra North) -->
-                                        <circle cx="120" cy="80" r="4" class="city-dot" />
-                                        <text x="120" y="70" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">MDN</text>
-                                        
-                                        <!-- Batam (Gateway) -->
-                                        <circle cx="230" cy="130" r="4" class="city-dot hub" />
-                                        <text x="245" y="130" fill="#f59e0b" font-size="9" font-weight="bold" font-family="monospace" text-anchor="start">BTH</text>
-
-                                        <!-- IKN (East Kalimantan) -->
-                                        <circle cx="460" cy="180" r="6" class="city-dot warning" />
-                                        <circle cx="460" cy="180" r="14" class="city-pulse fill-yellow-500 opacity-30 animate-ping-slow" />
-                                        <text x="490" y="185" fill="#eab308" font-size="10" font-weight="bold" font-family="monospace" text-anchor="start">IKN</text>
-
-                                        <!-- Pontianak -->
-                                        <circle cx="400" cy="160" r="3" class="city-dot" />
-
-                                        <!-- Makassar (South Sulawesi) -->
-                                        <circle cx="560" cy="220" r="5" class="city-dot hub" />
-                                        <text x="590" y="225" fill="#f59e0b" font-size="9" font-weight="bold" font-family="monospace" text-anchor="start">MKS</text>
-                                        
-                                        <!-- Manado (North Sulawesi) -->
-                                        <circle cx="610" cy="130" r="4" class="city-dot hub" />
-                                        <text x="630" y="135" fill="#f59e0b" font-size="8" font-family="monospace" text-anchor="start">MDC</text>
-
-                                        <!-- Ambon -->
-                                        <circle cx="720" cy="230" r="3" class="city-dot" />
-                                        
-                                        <!-- Kupang (Timor) -->
-                                        <circle cx="660" cy="330" r="4" class="city-dot hub" />
-                                        <text x="670" y="335" fill="#f59e0b" font-size="8" font-family="monospace" text-anchor="start">KOE</text>
-
-                                        <!-- Bali (DPS) - Correctly placed -->
-                                        <circle cx="465" cy="300" r="4" class="city-dot" />
-                                        <text x="465" y="320" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">DPS</text>
-
-                                        <!-- Jayapura -->
-                                        <circle cx="920" cy="170" r="4" class="city-dot" />
-                                        <text x="920" y="160" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">JYP</text>
-                                        
-                                        <!-- Merauke -->
-                                        <circle cx="960" cy="270" r="3" class="city-dot" />
-                                    </g>
-                                </svg>
                             </div>
 
                             <!-- BOTTOM STATS GRID -->
@@ -381,7 +252,7 @@
                                     <div class="flex items-center gap-3">
                                         <i class="fa-solid fa-server text-green-500"></i>
                                         <div>
-                                            <h4 class="text-white font-bold font-mono text-xs">PALAPA RING WEST</h4>
+                                            <h4 class="text-white font-bold font-mono text-xs">REGIONAL BACKBONE (WEST)</h4>
                                             <p class="text-[10px] text-gray-400">Gateway: <span class="text-amber-400">Batam (SG)</span></p>
                                         </div>
                                     </div>
@@ -393,8 +264,8 @@
                                     <div class="flex items-center gap-3">
                                         <i class="fa-solid fa-satellite-dish text-yellow-500"></i>
                                         <div>
-                                            <h4 class="text-white font-bold font-mono text-xs">PALAPA RING CENTRAL</h4>
-                                            <p class="text-[10px] text-gray-400">IKN Loop: <span class="text-yellow-400">Redundant</span></p>
+                                            <h4 class="text-white font-bold font-mono text-xs">MANAGED SEGMENT (CNTRL)</h4>
+                                            <p class="text-[10px] text-gray-400">Expansion: <span class="text-yellow-400">Future Ready</span></p>
                                         </div>
                                     </div>
                                     <span class="text-xs text-green-400 border border-green-800 px-1 rounded bg-green-900/20">ACTIVE</span>
@@ -405,7 +276,7 @@
                                     <div class="flex items-center gap-3">
                                         <i class="fa-solid fa-network-wired text-blue-500"></i>
                                         <div>
-                                            <h4 class="text-white font-bold font-mono text-xs">PALAPA RING EAST</h4>
+                                            <h4 class="text-white font-bold font-mono text-xs">HIGH-CAPACITY LOOP (EAST)</h4>
                                             <p class="text-[10px] text-gray-400">Route: <span class="text-blue-400">North & South</span></p>
                                         </div>
                                     </div>
@@ -976,6 +847,52 @@ def optimize_spend(resource_id):
     </div>
 
     <script>
+        // ZOOM LOGIC
+        let currentZoom = 1;
+        
+        function adjustZoom(delta) {
+            currentZoom += delta;
+            
+            // Limit zoom range
+            if (currentZoom < 1) currentZoom = 1;
+            if (currentZoom > 4) currentZoom = 4;
+            
+            // Apply scale transform
+            const wrapper = document.getElementById('map-wrapper');
+            wrapper.style.transform = `scale(${currentZoom})`;
+            
+            // Change cursor based on zoom level for panning indication (though panning logic is simple here)
+            wrapper.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+        }
+
+        // OPTIONAL: Basic Drag/Pan Logic (Mouse Only for simplicity)
+        const wrapper = document.getElementById('map-wrapper');
+        let isDragging = false;
+        let startX, startY, translateX = 0, translateY = 0;
+
+        wrapper.addEventListener('mousedown', (e) => {
+            if(currentZoom > 1) {
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                wrapper.style.cursor = 'grabbing';
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            if(currentZoom > 1) wrapper.style.cursor = 'grab';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            wrapper.style.transform = `scale(${currentZoom}) translate(${translateX / currentZoom}px, ${translateY / currentZoom}px)`;
+        });
+
+
         // TAB SWITCHING LOGIC (NATIONAL NOC)
         function switchMode(mode) {
             const nocView = document.getElementById('view-noc');
