@@ -41,6 +41,7 @@
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1), 0 4px 10px -5px rgba(0,0,0,0.05);
             border: 1px solid #cbd5e1;
         }
+        /* Small stamp styling */
         .stamp {
             border: 3px solid #ef4444;
             color: #ef4444;
@@ -54,6 +55,35 @@
             opacity: 0.9;
             mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxmaWx0ZXIgaWQ9Im4iPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjUiIG51bU9jdGF2ZXM9IjEiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjwvc3ZnPg==');
         }
+        
+        /* THE BIG RED STAMP - FIXED POSITIONING */
+        .watermark-overlay {
+            position: absolute;
+            /* Positioning relative to the HEADER container now */
+            top: 2rem; 
+            left: 1rem; 
+            transform: rotate(-12deg);
+            z-index: 50;
+            pointer-events: none;
+            opacity: 0.8; 
+            
+            /* Visual Style of a Rubber Stamp */
+            color: #b91c1c; /* Dark Red */
+            border: 0.5rem double #b91c1c; /* Double border for realistic stamp look */
+            font-size: clamp(3rem, 6vw, 5rem); /* Responsive size */
+            font-weight: 900;
+            padding: 0.5rem 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            line-height: 1;
+            white-space: nowrap;
+            
+            /* Blend Mode & Texture */
+            mix-blend-mode: multiply; 
+            mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxmaWx0ZXIgaWQ9Im4iPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjUiIG51bU9jdGF2ZXM9IjEiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjwvc3ZnPg==');
+        }
+
         .pdf-viewer {
             background: #525659;
             border-radius: 4px;
@@ -101,7 +131,7 @@
 </head>
 <body class="text-blueprint-text antialiased min-h-screen font-sans">
 
-    <div class="max-w-6xl mx-auto p-4 md:p-8">
+    <div class="max-w-6xl mx-auto p-4 md:p-8 relative z-10">
         
         <!-- Top Metadata Bar -->
         <div class="flex justify-between items-center text-xs font-mono text-gray-500 mb-2 uppercase tracking-widest">
@@ -110,16 +140,22 @@
         </div>
 
         <!-- Main Container (The "File") -->
-        <div class="bg-white paper-shadow min-h-screen relative">
+        <div class="bg-white paper-shadow min-h-screen relative overflow-hidden">
+            
             <!-- Top Stripe -->
             <div class="h-2 bg-slate-800 w-full"></div>
 
-            <!-- Header Section -->
-            <header class="p-8 md:p-12 border-b border-gray-200">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <!-- Header Section (Added 'relative' class here to lock the stamp) -->
+            <header class="p-8 md:p-12 border-b border-gray-200 relative group">
+                
+                <!-- Watermark Layer (Moved INSIDE Header for precise positioning) -->
+                <div class="watermark-overlay">CONFIDENTIAL</div>
+
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 relative z-10">
                     <div>
-                        <div class="stamp mb-4 border-red-600 text-red-600">CONFIDENTIAL</div>
-                        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 mb-2">
+                        <!-- Small label kept as part of the design -->
+                        <div class="inline-block px-2 py-1 bg-red-100 text-red-600 text-xs font-bold font-mono mb-4 border border-red-200 rounded">CLASSIFIED DOCUMENT</div>
+                        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 mb-2 relative z-10">
                             OPERATIONAL<br>RESILIENCE<br>BLUEPRINT
                         </h1>
                         <p class="text-xl font-mono text-slate-600 mt-4">v1.0 // Authored by Lukmanul Hakim</p>
@@ -139,7 +175,7 @@
                         <span class="text-4xl text-slate-400">❝</span>
                         <p class="text-lg md:text-xl font-medium italic text-gray-700 leading-relaxed">
                             Efficiency is Intelligent Laziness.
-                            <br><span class="text-sm not-italic font-bold text-gray-500 mt-2 block">— Operational Philosophy</span>
+                            <br><span class="text-sm not-italic font-bold text-gray-500 mt-2 block">— David Dunham</span>
                         </p>
                     </div>
                     
