@@ -181,6 +181,171 @@
                 </div>
             </section>
 
+            <!-- ============================================== -->
+            <!-- THE FRAMEWORK (IGP-v1) - NEW SECTION INSERTED -->
+            <!-- ============================================== -->
+            <section class="p-8 md:p-12 border-b border-gray-200 bg-white relative">
+                 <div class="absolute inset-0 blueprint-grid opacity-20 pointer-events-none"></div>
+                 
+                 <div class="relative z-10">
+                    <!-- Title Header -->
+                    <div class="mb-10 border-b-2 border-slate-900 pb-4">
+                        <h2 class="text-3xl font-black text-slate-900 tracking-tight flex flex-col md:flex-row md:items-center gap-2">
+                            <span>🏛️ THE INFRASTRUCTURE GOVERNANCE PROTOCOL</span>
+                            <span class="text-sm bg-slate-900 text-white px-2 py-1 rounded font-mono font-normal">IGP-v1</span>
+                        </h2>
+                        <p class="text-sm font-mono text-slate-600 mt-2 uppercase tracking-wider">Proprietary Framework by Lukmanul Hakim</p>
+                    </div>
+
+                    <div class="space-y-12">
+                        
+                        <!-- 1 & 2: ORIGIN & EVOLUTION (Grid) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            
+                            <!-- The Origin -->
+                            <div class="bg-slate-50 p-6 rounded border border-slate-200 relative group hover:border-slate-400 transition">
+                                <div class="absolute top-0 right-0 bg-slate-200 text-slate-600 px-3 py-1 text-xs font-bold font-mono rounded-bl">2018</div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="w-8 h-8 flex items-center justify-center bg-slate-200 rounded-full text-sm">1</span>
+                                    THE ORIGIN
+                                </h3>
+                                <div class="space-y-4 text-sm text-slate-700 font-mono leading-relaxed">
+                                    <div>
+                                        <strong class="block text-slate-900 text-xs uppercase mb-1">Context</strong>
+                                        Managing physical Outside Plant (OSP) assets worth ~1.5 Trillion IDR.
+                                    </div>
+                                    <div>
+                                        <strong class="block text-slate-900 text-xs uppercase mb-1">The Problem</strong>
+                                        High entropy. Manual tracking led to <span class="bg-red-100 px-1 font-bold text-red-700">"Ghost Assets"</span> (recorded but missing) and <span class="bg-red-100 px-1 font-bold text-red-700">"Zombie Assets"</span> (exists but unrecorded), causing massive CAPEX leakage.
+                                    </div>
+                                    <div class="border-t border-slate-200 pt-2 mt-2">
+                                        <strong class="block text-slate-900 text-xs uppercase mb-1">The Thesis</strong>
+                                        Algorithm for Automated Asset Indexing & Anomaly Detection.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- The Evolution -->
+                            <div class="bg-slate-900 p-6 rounded border border-slate-800 relative group shadow-lg text-slate-300">
+                                <div class="absolute top-0 right-0 bg-green-500 text-slate-900 px-3 py-1 text-xs font-bold font-mono rounded-bl">2026</div>
+                                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                    <span class="w-8 h-8 flex items-center justify-center bg-green-500 text-slate-900 rounded-full text-sm">2</span>
+                                    THE EVOLUTION
+                                </h3>
+                                <div class="space-y-4 text-sm font-mono leading-relaxed">
+                                    <div>
+                                        <strong class="block text-green-400 text-xs uppercase mb-1">Context</strong>
+                                        Multi-Cloud Environments (AWS/GCP/Alibaba) & Kubernetes Clusters.
+                                    </div>
+                                    <div>
+                                        <strong class="block text-green-400 text-xs uppercase mb-1">The Realization</strong>
+                                        Cloud resources are just "Virtual OSP." An un-tagged EC2 instance is the same as an un-mapped copper cable—a financial liability.
+                                    </div>
+                                    <div class="border-t border-slate-700 pt-2 mt-2">
+                                        <strong class="block text-green-400 text-xs uppercase mb-1">The Solution</strong>
+                                        Porting the Governance Logic from physical soil to digital code.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3: THE BLUEPRINT PILLARS (Table Matrix) -->
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <span class="w-8 h-8 flex items-center justify-center bg-slate-800 text-white rounded-full text-sm">3</span>
+                                THE BLUEPRINT TRANSLATION MATRIX
+                            </h3>
+                            
+                            <div class="overflow-x-auto border border-slate-300 rounded shadow-sm">
+                                <table class="w-full text-left border-collapse font-mono text-sm">
+                                    <thead>
+                                        <tr class="bg-slate-800 text-white uppercase text-xs tracking-wider">
+                                            <th class="p-4 border-b border-slate-700 w-1/6">Pillar</th>
+                                            <th class="p-4 border-b border-slate-700 w-5/12 bg-slate-700/50">Physical Logic (OSP)</th>
+                                            <th class="p-4 border-b border-slate-700 w-5/12 text-green-400">Cloud Native Translation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200 text-slate-700">
+                                        <!-- Row 1 -->
+                                        <tr class="bg-white hover:bg-slate-50">
+                                            <td class="p-4 font-bold border-r border-slate-200">I. IDENTIFICATION</td>
+                                            <td class="p-4 border-r border-slate-200">
+                                                <span class="font-bold text-slate-900">Asset Tagging:</span> Every cable must have a unique coordinate ID before burial.
+                                            </td>
+                                            <td class="p-4">
+                                                <span class="font-bold text-slate-900">Immutable Tagging:</span> Every Resource/Pod must have strict Labels (CostCenter, Owner, TTL) or the CI/CD pipeline rejects the deployment.
+                                            </td>
+                                        </tr>
+                                        <!-- Row 2 -->
+                                        <tr class="bg-slate-50 hover:bg-slate-100">
+                                            <td class="p-4 font-bold border-r border-slate-200">II. RESILIENCE</td>
+                                            <td class="p-4 border-r border-slate-200">
+                                                <span class="font-bold text-slate-900">Preventive Maintenance:</span> Detecting signal degradation before cable snap.
+                                            </td>
+                                            <td class="p-4">
+                                                <span class="font-bold text-slate-900">Self-Healing Systems:</span> Implementing Kubernetes Liveness/Readiness probes & Auto-Scaling groups that replace sick nodes before downtime occurs.
+                                            </td>
+                                        </tr>
+                                        <!-- Row 3 -->
+                                        <tr class="bg-white hover:bg-slate-50">
+                                            <td class="p-4 font-bold border-r border-slate-200">III. EFFICIENCY</td>
+                                            <td class="p-4 border-r border-slate-200">
+                                                <span class="font-bold text-slate-900">Route Optimization:</span> Finding the shortest cable path to save meters.
+                                            </td>
+                                            <td class="p-4">
+                                                <span class="font-bold text-slate-900">FinOps & Rightsizing:</span> Automated scripts that detect idle resources & over-provisioned VCPUs, shrinking the bill without shrinking performance.
+                                            </td>
+                                        </tr>
+                                        <!-- Row 4 -->
+                                        <tr class="bg-slate-50 hover:bg-slate-100">
+                                            <td class="p-4 font-bold border-r border-slate-200">IV. SECURITY</td>
+                                            <td class="p-4 border-r border-slate-200">
+                                                <span class="font-bold text-slate-900">Physical Access Control:</span> Locking manholes & distribution cabinets.
+                                            </td>
+                                            <td class="p-4">
+                                                <span class="font-bold text-slate-900">Zero Trust Architecture:</span> mTLS between services, IAM Roles with Least Privilege, and automated OWASP scanning in the pipeline.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- 4: THE OUTCOME -->
+                        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r shadow-sm">
+                            <h3 class="text-lg font-bold text-green-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle"></i>
+                                4. THE OUTCOME (PROOF OF WORK)
+                            </h3>
+                            <p class="text-sm text-green-800 mb-4 font-medium">This is not just theory. This framework has delivered:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-white p-3 rounded border border-green-200 text-center">
+                                    <div class="text-2xl font-black text-slate-900">99.9%</div>
+                                    <div class="text-xs font-mono text-gray-500 uppercase">Uptime (via Resilience)</div>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-green-200 text-center">
+                                    <div class="text-2xl font-black text-slate-900">IDR 1B+</div>
+                                    <div class="text-xs font-mono text-gray-500 uppercase">Savings (via Efficiency)</div>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-green-200 text-center">
+                                    <div class="text-2xl font-black text-slate-900">ZERO</div>
+                                    <div class="text-xs font-mono text-gray-500 uppercase">Human Latency (Automation)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Disclaimer Footer -->
+                        <div class="text-center mt-6">
+                            <p class="text-xs font-mono text-gray-400 italic">
+                                Disclaimer: "This framework is platform-agnostic (works on AWS, Azure, GCP, or On-Premise)."
+                            </p>
+                        </div>
+
+                    </div>
+                 </div>
+            </section>
+
+
             <!-- INFRASTRUCTURE WAR ROOM (NATIONAL NOC EDITION) -->
             <section class="p-8 md:p-12 bg-slate-100 border-t border-gray-300">
                 <div class="mb-8">
