@@ -275,10 +275,9 @@
                                             <th class="p-4 border-b border-slate-700 w-1/6">Pillar</th>
                                             <th class="p-4 border-b border-slate-700 w-5/12 bg-slate-700/50">Physical Logic (OSP)</th>
                                             <th class="p-4 border-b border-slate-700 w-5/12 text-green-400">Cloud Native Translation</th>
-                                        </tr>
+                                         </tr>
                                     </thead>
                                     <tbody class="divide-y divide-slate-200 text-slate-700">
-                                        <!-- Row 1 -->
                                         <tr class="bg-white hover:bg-slate-50">
                                             <td class="p-4 font-bold border-r border-slate-200">I. IDENTIFICATION</td>
                                             <td class="p-4 border-r border-slate-200">
@@ -288,7 +287,6 @@
                                                 <span class="font-bold text-slate-900">Immutable Tagging:</span> Every Resource/Pod must have strict Labels (CostCenter, Owner, TTL) or the CI/CD pipeline rejects the deployment.
                                             </td>
                                         </tr>
-                                        <!-- Row 2 -->
                                         <tr class="bg-slate-50 hover:bg-slate-100">
                                             <td class="p-4 font-bold border-r border-slate-200">II. RESILIENCE</td>
                                             <td class="p-4 border-r border-slate-200">
@@ -298,7 +296,6 @@
                                                 <span class="font-bold text-slate-900">Self-Healing Systems:</span> Implementing Kubernetes Liveness/Readiness probes & Auto-Scaling groups that replace sick nodes before downtime occurs.
                                             </td>
                                         </tr>
-                                        <!-- Row 3 -->
                                         <tr class="bg-white hover:bg-slate-50">
                                             <td class="p-4 font-bold border-r border-slate-200">III. EFFICIENCY</td>
                                             <td class="p-4 border-r border-slate-200">
@@ -308,7 +305,6 @@
                                                 <span class="font-bold text-slate-900">FinOps & Rightsizing:</span> Automated scripts that detect idle resources & over-provisioned VCPUs, shrinking the bill without shrinking performance.
                                             </td>
                                         </tr>
-                                        <!-- Row 4 -->
                                         <tr class="bg-slate-50 hover:bg-slate-100">
                                             <td class="p-4 font-bold border-r border-slate-200">IV. SECURITY</td>
                                             <td class="p-4 border-r border-slate-200">
@@ -318,8 +314,7 @@
                                                 <span class="font-bold text-slate-900">Zero Trust Architecture:</span> mTLS between services, IAM Roles with Least Privilege, and automated OWASP scanning in the pipeline.
                                             </td>
                                         </tr>
-                                        <!-- NEW ROW V: AIOps & Agentic AI -->
-                                        <tr class="bg-white hover:bg-slate-50 border-t border-slate-200">
+                                        <tr class="bg-white hover:bg-slate-50">
                                             <td class="p-4 font-bold border-r border-slate-200 text-purple-800">V. AIOps & AGENTIC AI</td>
                                             <td class="p-4 border-r border-slate-200">
                                                 <span class="font-bold text-slate-900">Predictive Analytics:</span> AI-driven analysis of OTDR traces, weather patterns, and historical outage data to predict fiber cuts before they happen.
@@ -356,7 +351,6 @@
                             </div>
                         </div>
                         
-                        <!-- Disclaimer Footer -->
                         <div class="text-center mt-6">
                             <p class="text-xs font-mono text-gray-400 italic">
                                 Disclaimer: "This framework is platform-agnostic (works on AWS, Azure, GCP, or On-Premise)."
@@ -367,7 +361,7 @@
                  </div>
             </section>
 
-            <!-- INFRASTRUCTURE WAR ROOM (NATIONAL NOC EDITION) - unchanged for brevity, but fully present in actual file -->
+            <!-- INFRASTRUCTURE WAR ROOM (NATIONAL NOC EDITION) -->
             <section class="p-8 md:p-12 bg-slate-100 border-t border-gray-300">
                 <div class="mb-8">
                     <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">National Command Center</h2>
@@ -375,10 +369,8 @@
                 </div>
 
                 <div class="bg-slate-900 rounded-lg shadow-2xl overflow-hidden border border-slate-700 relative">
-                    <!-- Scanline Overlay -->
                     <div class="absolute inset-0 scanline z-10 opacity-20 pointer-events-none"></div>
 
-                    <!-- Dashboard Header -->
                     <div class="bg-slate-800 px-6 py-3 border-b border-slate-700 flex flex-col md:flex-row justify-between items-center z-20 relative">
                         <div class="flex items-center gap-3 mb-2 md:mb-0">
                             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -395,19 +387,12 @@
 
                     <div class="p-6 md:p-8 min-h-[550px] relative z-20">
                         
-                        <!-- VIEW 1: NATIONAL NOC MAP (DEFAULT) -->
                         <div id="view-noc" class="flex flex-col gap-6 h-full transition-all duration-500">
-                            
-                            <!-- THE MAP DISPLAY CONTAINER -->
                             <div id="map-container" class="w-full aspect-[2.5/1] bg-slate-950 border border-slate-700 rounded relative overflow-hidden group">
-                                
-                                <!-- OVERLAY: Active Status -->
                                 <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 z-30 text-right bg-slate-900/80 p-2 rounded backdrop-blur-sm border border-slate-700 pointer-events-none">
                                     LIVE TOPOLOGY<br>
                                     <span class="text-green-400 animate-pulse">● MANAGED BACKBONE ACTIVE</span>
                                 </div>
-
-                                <!-- ZOOM CONTROLS -->
                                 <div class="absolute bottom-4 right-4 flex flex-col gap-2 z-30">
                                     <button onclick="zoomMap(0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-600 hover:bg-slate-700 hover:text-green-400 font-bold shadow-lg transition-colors flex items-center justify-center z-40" title="Zoom In">
                                         <i class="fa-solid fa-plus"></i>
@@ -416,11 +401,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                     </button>
                                 </div>
-                                
-                                <!-- Background Grid -->
                                 <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px; z-index: 1;"></div>
-
-                                <!-- MAP WRAPPER (For Zooming & Panning) -->
                                 <div id="map-wrapper" class="w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing">
                                     <img src="https://www.indotelko.com/images/media/201601/ori/grafisFo-tlkm.jpg" 
                                          class="w-full h-auto object-contain hologram-map pointer-events-none select-none" 
@@ -428,13 +409,10 @@
                                          draggable="false"
                                          onerror="this.style.display='none'; document.getElementById('backup-text').style.display='block';">
                                 </div>
-                                
                                 <div id="backup-text" class="hidden absolute inset-0 flex items-center justify-center text-slate-600 font-mono text-xs z-0 pointer-events-none">
                                     [MAP SIGNAL LOST - CHECK CONNECTION]
                                 </div>
                             </div>
-
-                            <!-- BOTTOM STATS GRID -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div class="bg-slate-800/50 border border-slate-600 p-3 rounded flex justify-between items-center">
                                     <div class="flex items-center gap-3">
@@ -469,7 +447,6 @@
                             </div>
                         </div>
 
-                        <!-- VIEW 2: RISK RADAR -->
                         <div id="view-risk" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full transition-all duration-500">
                             <div class="relative h-64 lg:h-80 w-full bg-slate-800/50 rounded border border-slate-700 p-4">
                                 <canvas id="resilienceChart"></canvas>
@@ -492,7 +469,6 @@
                             </div>
                         </div>
 
-                        <!-- VIEW 3: FINOPS -->
                         <div id="view-cost" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full transition-all duration-500">
                             <div class="bg-black rounded border border-gray-800 p-4 font-mono text-xs overflow-hidden h-64 lg:h-80 relative">
                                 <div class="absolute top-2 right-2 text-gray-600 text-[10px]">cloud_cost_optimizer.py</div>
@@ -521,10 +497,8 @@ def optimize_spend(resource_id):
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                     
-                    <!-- Bottom Ticker -->
                     <div class="bg-black border-t border-slate-700 p-2 overflow-hidden">
                         <div class="whitespace-nowrap animate-marquee text-[10px] font-mono text-gray-400">
                             <span class="mr-8"><span class="text-green-500">●</span> JAKARTA-POP1: ONLINE</span>
@@ -538,15 +512,19 @@ def optimize_spend(resource_id):
                 </div>
             </section>
 
-            <!-- Audit Log (Resume) - unchanged for brevity but fully present -->
+            <!-- ============================================== -->
+            <!-- EXECUTION HISTORY (System Evolution Log) - UPDATED -->
+            <!-- ============================================== -->
             <section class="p-8 md:p-12 border-t border-gray-200 bg-slate-50">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-wider flex items-center gap-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                     Execution History (System Evolution Log)
                 </h2>
+
                 <div class="space-y-6 font-mono text-sm border-l-2 border-slate-300 pl-4 md:pl-0 relative">
                     <div class="hidden md:block absolute left-[31px] top-4 bottom-4 w-px bg-slate-300 z-0"></div>
-                    <!-- Full resume content remains identical to previous version, omitted here for brevity -->
+
+                    <!-- Subject Matter Expert -->
                     <div class="relative md:pl-8 pb-4 group z-10">
                         <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
@@ -561,7 +539,197 @@ def optimize_spend(resource_id):
                             <li><strong>Bridging 14 years of L1 infrastructure grit to L7 cloud sophistication.</strong></li>
                         </ul>
                     </div>
-                    <!-- ... other job items unchanged ... -->
+
+                    <!-- Industry Instructor & Consultant -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">Industry Instructor & Consultant</h3>
+                            <span class="text-gray-500 font-bold text-emerald-600">Jul 2020 - Present</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-1 font-bold">Self Employee (EduTech)</div>
+                        <div class="text-xs text-gray-500 mb-2 italic">Partners: PT. Telkom Prima Cipta Certifia, Sekolah DevOps Cilsy</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Architected comprehensive DevSecOps & Multi-Cloud curriculum.</li>
+                            <li>Led hands-on training: Automated security testing (SAST/DAST), K8s hardening, secure IaC.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Head of IT DevOps -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">Head of IT DevOps</h3>
+                            <span class="text-gray-500">Oct 2022 - Dec 2022</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Meteor Inovasi Digital</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Spearheaded multi-cloud migration (AWS, GCP, Alibaba).</li>
+                            <li>Established DevSecOps governance for regulatory compliance.</li>
+                        </ul>
+                    </div>
+
+                    <!-- IT Development Operations -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">IT Development Operations</h3>
+                            <span class="text-gray-500">Jul 2022 - Sep 2022</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Kredit Pintar Indonesia (FinTech)</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Maintained 99.9% uptime for mission-critical financial apps.</li>
+                            <li>Implemented GitOps (Flux CD) strategies.</li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps Engineering (Anteraja) -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">DevOps Engineering</h3>
+                            <span class="text-gray-500">Nov 2021 - Jul 2022</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Tri Adi Bersama (Anteraja)</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Scaled GKE/EKS infrastructure for 100+ business APIs.</li>
+                            <li>Pioneered robust CI/CD pipelines accelerating deployment cycles.</li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps Engineering (Hashmicro) -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">DevOps Engineering</h3>
+                            <span class="text-gray-500">May 2020 - Oct 2020</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Hashmicro Solusi Indonesia</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Led Odoo ERP migration to AWS EC2 (CAPEX project).</li>
+                            <li>Automated infrastructure setup using Bash & AWS CLI.</li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps Engineering (Lentera Bangsa) -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">DevOps Engineering</h3>
+                            <span class="text-gray-500">Jun 2019 - Sep 2019</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Lentera Bangsa Benderang</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Re-architected cloud infrastructure reducing deployment time by 40%.</li>
+                            <li>Implemented containerized ELK Stack for observability.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bachelor of Economics -->
+                    <div class="relative md:pl-8 pb-4 group z-10 opacity-75">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-700">Bachelor of Economics</h3>
+                            <span class="text-gray-500">Sep 2015 - Oct 2018</span>
+                        </div>
+                        <div class="text-slate-500 font-sans mb-2 font-bold">Mercu Buana University</div>
+                        <ul class="list-disc list-inside text-gray-500 space-y-1 ml-2">
+                            <li>Focus: Operational Management & Strategic Resource Planning.</li>
+                            <li>Foundation for CAPEX/OPEX management capability.</li>
+                            <li><strong>Result:</strong> Graduated. GPA/Scale: 3.17/4.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Freelance Network Consultant -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">Freelance Network Consultant</h3>
+                            <span class="text-gray-500">Feb 2015 - Jun 2015</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Dimension Data Indonesia</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Network architecture consulting for financial institutions.</li>
+                            <li>Optimized MPLS networks using SolarWinds.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Principal Operational & Compliance Manager -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">Principal Operational & Compliance Manager</h3>
+                            <span class="text-gray-500">Apr 2013 - Oct 2014</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">PT. Telkom Akses</div>
+                        <div class="text-gray-600 text-xs md:text-sm space-y-4">
+                            <p class="italic text-slate-500">
+                                Served as the operational anchor for the National Copper-to-Fiber Migration Program, safeguarding a IDR 1.5 Trillion CAPEX allocation. 
+                                Performed dual-role responsibilities: Strategic Asset Control (Management) and Hands-on Systems Administration (Technical).
+                            </p>
+                            <div class="bg-slate-100 p-3 rounded-md border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-xs uppercase mb-2 border-b border-slate-300 pb-1">1. Asset Control & Compliance (The Guardian Role)</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">CAPEX Oversight:</span> Controlled deployment of assets (ODC, ODP, Fiber) valued at IDR 1.5 Trillion to prevent leakage.</li>
+                                    <li><span class="font-bold">Audit Readiness:</span> Enforced strict SOPs, reducing Audit Findings by 25% (Internal/External).</li>
+                                    <li><span class="font-bold">Migration Governance:</span> Managed administrative transition from Legacy Copper to Fiber Optic.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded-md border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-xs uppercase mb-2 border-b border-slate-300 pb-1">2. Database Administration (The Data Role)</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">ETL Execution:</span> Built manual ETL scripts to consolidate data from Oracle, MySQL, & PostgreSQL.</li>
+                                    <li><span class="font-bold">Query Optimization:</span> Wrote complex SQL Stored Procedures for daily operational reports (DOR).</li>
+                                    <li><span class="font-bold">Data Cleaning:</span> Sanitized mass data to align Legacy Systems (I-Sisca) with field conditions.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded-md border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-xs uppercase mb-2 border-b border-slate-300 pb-1">3. SysAdmin & B2B (The Tech Role)</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">Legacy Bridging:</span> Utilized SOAP/XML APIs to integrate TenOSS with web dashboards.</li>
+                                    <li><span class="font-bold">Linux SysAdmin:</span> Managed RedHat/CentOS servers; automated data fetching via Bash/Cron.</li>
+                                    <li><span class="font-bold">B2B Operations:</span> Managed end-to-end Service Delivery (OSM) for Corporate/Enterprise clients.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded-md border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-xs uppercase mb-2 border-b border-slate-300 pb-1">4. Key Milestones & Standardization (Timeline)</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><span class="font-bold">Legacy Standardization (TeNOSS):</span> Authored the national Work Instructions for Network Bearer creation, establishing the logic mapping between physical fiber assets and logical inventory systems.</li>
+                                    <li><span class="font-bold">GPON QA & Commissioning:</span> Executed technical validation (ATP) & Commissioning Tests to verify optical budgets & QoS, ensuring total network readiness (RFS).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EDP Lead -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">EDP Lead</h3>
+                            <span class="text-gray-500">Jan 2013 - Mar 2013</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">Circus Waterpark Kuta Bali</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Established initial IT infrastructure and security protocols.</li>
+                            <li>Automated ticketing and POS systems.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Care Specialist -->
+                    <div class="relative md:pl-8 pb-4 group z-10">
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-900">Customer Care Specialist</h3>
+                            <span class="text-gray-500">Oct 2011 - Oct 2012</span>
+                        </div>
+                        <div class="text-slate-600 font-sans mb-2 font-bold">Biznet</div>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Optimized support workflows reducing ticket response time by 20%.</li>
+                            <li><strong>Entry Point:</strong> Gained foundational insight into ISP operations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- System Init -->
                     <div class="relative md:pl-8 pt-4">
                          <div class="hidden md:block absolute -left-[9px] top-5 w-4 h-4 rounded-full bg-slate-900 border-2 border-white z-20"></div>
                          <div class="text-slate-400 font-bold uppercase tracking-widest text-xs border-t border-slate-300 pt-4 mt-2">
@@ -574,7 +742,7 @@ def optimize_spend(resource_id):
                 </div>
             </section>
 
-            <!-- Technical Proficiency, Professional Development, Certifications, Footer sections remain unchanged -->
+            <!-- Technical Proficiency (System Specs) -->
             <section class="p-8 md:p-12 border-t border-gray-200 bg-white relative overflow-hidden">
                 <div class="absolute inset-0 blueprint-grid opacity-30 pointer-events-none"></div>
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-wider flex items-center gap-2 relative z-10">
@@ -609,6 +777,7 @@ def optimize_spend(resource_id):
                 </div>
             </section>
 
+            <!-- Professional Development -->
             <section class="p-8 md:p-12 border-t border-gray-200 bg-slate-900 text-slate-300">
                 <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
                     <div>
@@ -661,13 +830,13 @@ def optimize_spend(resource_id):
                 </div>
             </section>
 
-             <section class="p-8 md:p-12 border-t border-gray-200 bg-white">
+            <!-- Certifications & Licenses -->
+            <section class="p-8 md:p-12 border-t border-gray-200 bg-white">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-wider flex items-center gap-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     Compliance & Authorization (Global Licenses)
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Google Associate Cloud Engineer -->
                     <a href="https://www.credly.com/badges/6a13ba2b-9a9f-458a-b1bb-060db0c53c1d" target="_blank" class="block border border-slate-300 p-4 rounded bg-slate-50 relative overflow-hidden group hover:border-slate-800 transition hover:shadow-md cursor-pointer">
                         <div class="absolute top-0 right-0 bg-slate-200 text-xs px-2 py-1 font-mono text-slate-600 group-hover:bg-slate-800 group-hover:text-white transition">VALID</div>
                         <h3 class="font-bold text-slate-900 mb-1">Google Associate Cloud Engineer</h3>
@@ -772,7 +941,6 @@ def optimize_spend(resource_id):
     </div>
 
     <script>
-        // === MAP INTERACTION LOGIC (ZOOM & PAN) ===
         const wrapper = document.getElementById('map-wrapper');
         const container = document.getElementById('map-container');
         
