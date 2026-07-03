@@ -1,5 +1,4 @@
-# ⚡ Lukmanul Hakim, PCA
-**Principal Cloud & DevSecOps Architect | Independent Advisor**
+# ⚡ Lukmanul Hakim, Solutions Architect & Global Council Member at VisasQ | DevSecOps&Cloud&Ai Infra. Optimization (GCP-ACE&PCA/AWS Prac./Azure) | Principal FTTH Auto-Prov. & FMEA Logic Expert | Ex-Principal Ops & Compliance Telco. Manager
 
 Operating with a pragmatic, Kaizen-driven approach to Enterprise IT Infrastructure. I specialize in architecting highly available, secure, and cost-optimized multi-cloud environments. With 15 years of rigorous engineering experience, my focus is strictly on system foundation, Zero-Trust Architecture, and Cloud FinOps.
 
