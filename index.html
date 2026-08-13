@@ -86,23 +86,23 @@
         
         .watermark-overlay {
             position: absolute;
-            top: 2rem; 
-            left: 1rem; 
-            transform: rotate(-12deg);
-            z-index: 50;
+            top: 1.5rem;
+            right: 3rem;
+            left: auto;
+            transform: rotate(-6deg);
+            z-index: 1;
             pointer-events: none;
-            opacity: 0.85; 
-            color: #1e3a8a; 
-            border: 0.5rem double #1e3a8a; 
-            font-size: clamp(2.5rem, 5vw, 4rem); 
+            opacity: 0.15;
+            color: #1e3a8a;
+            border: 0.3rem double #1e3a8a;
+            font-size: clamp(1.2rem, 2.5vw, 2.2rem);
             font-weight: 900;
-            padding: 0.5rem 2rem;
+            padding: 0.4rem 1.2rem;
             font-family: 'JetBrains Mono', monospace;
             text-transform: uppercase;
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.15rem;
             line-height: 1;
             white-space: nowrap;
-            mix-blend-mode: multiply; 
         }
 
         .blueprint-grid {
@@ -145,7 +145,7 @@
             <header class="p-8 md:p-12 border-b border-gray-200 relative group">
                 <div class="watermark-overlay">EXPERT NETWORK VERIFIED</div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 relative z-10">
-                    <div>
+                    <div class="z-10">
                         <div class="inline-block px-2 py-1 bg-blue-100 text-blue-900 text-xs font-bold font-mono mb-4 border border-blue-300 rounded">TECHNICAL DUE DILIGENCE & RISK GOVERNANCE</div>
                         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 mb-2 relative z-10">
                             SYSTEMIC RISK &<br>VALUATION<br>BLUEPRINT
@@ -153,7 +153,7 @@
                         <p class="text-xl font-mono text-slate-600 mt-4">v23.0 // Subject Matter Expert: Lukmanul Hakim (S.E., GCP PCA)</p>
                         <p class="text-sm font-mono text-slate-500 mt-2 border-l-2 border-blue-600 pl-3">Quantifying operational risk from physical Layer 1 backbones to cloud Layer 7 architectures.</p>
                     </div>
-                    <div class="text-right hidden md:block">
+                    <div class="text-right hidden md:block z-10">
                         <p class="font-bold text-slate-900">LUKMANUL HAKIM</p>
                         <p class="text-sm text-blue-900 font-bold">Empaneled Advisory Council Member</p>
                         <p class="text-sm text-gray-600">VisasQ Inc. & Coleman Research Group</p>
@@ -212,7 +212,7 @@
                                 <span class="text-blue-400 mt-1">▸</span>
                                 <span>
                                     <span class="text-white font-bold">Financial & Legal Compliance</span>
-                                    <span class="block text-sm text-slate-400 mt-1">Combining a <strong>Bachelor of Economics (S.E.)</strong> with technical architecture, operating under strict NDA/MNPI compliance (<5 hrs/year advisory).</span>
+                                    <span class="block text-sm text-slate-400 mt-1">Combining a <strong>Bachelor of Economics (S.E.)</strong> with technical architecture, operating under strict NDA/MNPI compliance (&lt;5 hrs/year advisory).</span>
                                 </span>
                             </div>
                         </div>
@@ -284,7 +284,7 @@
                             <i class="fa-solid fa-id-badge text-3xl text-gray-300 group-hover:text-blue-300 transition-colors"></i>
                             <div class="text-left">
                                 <span class="block text-[10px] text-gray-400 font-mono tracking-widest uppercase">Official Executive Resume</span>
-                                <span class="block text-sm md:text-base">CV_Lukmanul_Hakim_Executive.pdf</span>
+                                <span class="block text-sm md:text-base">CV_Lukmanul_Hakim.pdf</span>
                             </div>
                         </a>
                     </div>
@@ -475,7 +475,7 @@
                                     <h4 class="text-green-400 font-bold mb-1">AUDITED RISK-MITIGATED STATE</h4>
                                     <p class="text-gray-400 text-xs leading-relaxed">
                                         Decoupled microservices with IEC 60812 FMEA controls.<br>
-                                        <span class="text-green-400 font-bold">MTTR: < 300ms (Automated Failover & Zero SLA Penalty)</span>
+                                        <span class="text-green-400 font-bold">MTTR: &lt; 300ms (Automated Failover & Zero SLA Penalty)</span>
                                     </p>
                                 </div>
                             </div>
@@ -496,7 +496,7 @@
                                         </div>
                                         <div class="flex justify-between items-center border-b border-slate-700 pb-3">
                                             <span class="text-gray-300">O2C Fulfillment Acceleration</span>
-                                            <span class="text-blue-400 font-bold">Latency < 2 Mins</span>
+                                            <span class="text-blue-400 font-bold">Latency &lt; 2 Mins</span>
                                         </div>
                                         <div class="flex justify-between items-center">
                                             <span class="text-gray-300">Productivity Uplift Delivered</span>
@@ -532,7 +532,7 @@
                             <span class="mr-8"><span class="text-green-500">●</span> IEC 60812: FMEA RISK PRIORITY NUMBER (RPN) CALIBRATED</span>
                             <span class="mr-8"><span class="text-green-500">●</span> CAPEX: IDR 1.5T FIELD ASSET RECONCILED</span>
                             <span class="mr-8"><span class="text-blue-500">ℹ</span> COMPLIANCE: OJK / BANK INDONESIA STANDARDS MET</span>
-                            <span class="mr-8"><span class="text-green-500">●</span> NDA/MNPI: 100% COMPLIANT (<5 HRS/YR ADVISORY)</span>
+                            <span class="mr-8"><span class="text-green-500">●</span> NDA/MNPI: 100% COMPLIANT (&lt;5 HRS/YR ADVISORY)</span>
                         </div>
                     </div>
                 </div>
@@ -557,7 +557,7 @@
                         <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
                             <li>Provide technical due diligence evaluations and strategic risk assessments on cross-layer telecom infrastructure (subsea/optical physical assets to cloud-hosted BSS/OSS) for institutional investors and PE clients.</li>
                             <li>Advise executive clients on system fault isolation using <strong>IEC 60812 (FMEA)</strong> and <strong>IEC 61025 (FTA)</strong> to eliminate Single Points of Failure (SPOF) and protect EBITDA.</li>
-                            <li>Operating on an on-demand, non-operational basis (<strong><5 hours/year</strong>) with 100% adherence to strict NDA and MNPI compliance frameworks.</li>
+                            <li>Operating on an on-demand, non-operational basis (<strong>&lt;5 hours/year</strong>) with 100% adherence to strict NDA and MNPI compliance frameworks.</li>
                         </ul>
                     </div>
 
@@ -626,7 +626,7 @@
                     </div>
 
                     <div class="relative md:pl-8 pb-4 group z-10">
-                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 border-2 border-white group-hover:bg-slate-800 transition"></div>
+                        <div class="hidden md:block absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-900 border-2 border-white group-hover:bg-slate-800 transition"></div>
                         <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
                             <h3 class="text-lg font-bold text-slate-900">Principal Operations & Compliance Manager</h3>
                             <span class="text-gray-500 font-bold text-blue-900">Apr 2013 – Oct 2014</span>
@@ -734,7 +734,7 @@
                     <div class="text-center md:text-left">
                         <p class="font-bold text-white uppercase">Private Equity & M&A Technical Advisory</p>
                         <p>Empaneled Expert Advisor for institutional investors, PE due diligence, and enterprise risk governance.</p>
-                        <p class="text-slate-500 italic text-xs mt-1">Non-operational advisory (<5 hrs/year) operating under full NDA & MNPI compliance.</p>
+                        <p class="text-slate-500 italic text-xs mt-1">Non-operational advisory (&lt;5 hrs/year) operating under full NDA & MNPI compliance.</p>
                     </div>
                     <div class="text-center md:text-right">
                         <p class="mb-2">Engage for M&A Technical Due Diligence & Spot Advisory:</p>
