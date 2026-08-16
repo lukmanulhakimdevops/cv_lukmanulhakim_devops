@@ -50,6 +50,7 @@
     <!-- External Libraries & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +108,7 @@
       }
       #site-nav {
         position: fixed; top:0; left:0; right:0; z-index:100;
-        background: rgba(8,9,15,0.85);
+        background: rgba(8,9,15,0.88);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(29,111,164,0.2);
       }
@@ -203,10 +204,38 @@
         border:1px solid rgba(203,213,225,0.35); transition:border-color 0.2s, color 0.2s, transform 0.15s;
       }
       .btn-outline:hover { border-color:#CBD5E1; color:#fff; transform:translateY(-1px); }
-      .matrix-table thead tr th { background:#0F172A; color:#fff; padding:14px 16px; font-family:'JetBrains Mono',monospace; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
-      .matrix-table tbody tr td { padding:14px 16px; font-family:'JetBrains Mono',monospace; font-size:12px; border-bottom:1px solid #F1F5F9; vertical-align:top; }
-      .matrix-table tbody tr:nth-child(odd) { background:#FAFAFA; }
-      .matrix-table tbody tr:hover { background:#F1F5F9; }
+
+      /* ── Contrast-Optimized Translation Table ───────────────── */
+      .matrix-table thead tr th { 
+        background: #0F172A; 
+        color: #F8FAFC; 
+        padding: 14px 16px; 
+        font-family: 'JetBrains Mono', monospace; 
+        font-size: 10px; 
+        text-transform: uppercase; 
+        letter-spacing: .12em; 
+      }
+      .matrix-table tbody tr td { 
+        padding: 14px 16px; 
+        font-family: 'JetBrains Mono', monospace; 
+        font-size: 12px; 
+        color: #334155; 
+        border-bottom: 1px solid #E2E8F0; 
+        vertical-align: top; 
+        line-height: 1.6;
+      }
+      .matrix-table tbody tr td strong {
+        color: #0F172A;
+      }
+      .matrix-table tbody tr:nth-child(odd) { 
+        background: #FAFAFA; 
+      }
+      .matrix-table tbody tr:nth-child(even) { 
+        background: #FFFFFF; 
+      }
+      .matrix-table tbody tr:hover { 
+        background: #F1F5F9; 
+      }
     </style>
 </head>
 <body>
@@ -452,8 +481,8 @@
   </div>
 </section>
 
-<!-- TRANSLATION MATRIX -->
-<section class="bg-white py-20 px-6 border-t border-wire">
+<!-- TRANSLATION MATRIX (CONTRAST FIXED) -->
+<section class="bg-white py-20 px-6 border-t border-wire text-slate-800">
   <div class="max-w-6xl mx-auto">
     <div class="sec-label" style="color:#0F172A;">Systems Translation Layer</div>
     <h2 class="font-display text-3xl font-bold text-navy mb-3">Physical Logic &middot; Cloud-Native Translation</h2>
@@ -466,35 +495,35 @@
         <thead>
           <tr>
             <th class="w-1/6">Pillar</th>
-            <th class="w-5/12" style="background:#0F172A;">Physical Logic (Layer 1 OSP)</th>
-            <th class="w-5/12" style="color:#10B981;">Cloud-Native Translation (Layer 7)</th>
+            <th class="w-5/12" style="background:#0F172A; color:#F8FAFC;">Physical Logic (Layer 1 OSP)</th>
+            <th class="w-5/12" style="background:#0F172A; color:#10B981;">Cloud-Native Translation (Layer 7)</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="text-slate-700">
           <tr>
             <td class="font-bold text-slate-900">I. IDENTIFICATION</td>
-            <td><strong>Asset Tagging:</strong> Every cable must possess a unique coordinate ID before burial. An untagged cable represents unquantifiable capital loss.</td>
-            <td><strong>Immutable Tagging:</strong> Every cloud resource and Kubernetes pod carries mandatory metadata labels (CostCenter, Owner, TTL) or CI/CD pipelines reject deployment.</td>
+            <td><strong class="text-slate-900 font-bold">Asset Tagging:</strong> Every cable must possess a unique coordinate ID before burial. An untagged cable represents unquantifiable capital loss.</td>
+            <td><strong class="text-slate-900 font-bold">Immutable Tagging:</strong> Every cloud resource and Kubernetes pod carries mandatory metadata labels (CostCenter, Owner, TTL) or CI/CD pipelines reject deployment.</td>
           </tr>
           <tr>
             <td class="font-bold text-slate-900">II. RESILIENCE</td>
-            <td><strong>Preventive Maintenance:</strong> Detecting optical signal attenuation before fiber fracture. Legacy MTTR was 15 hours.</td>
-            <td><strong>Self-Healing Systems:</strong> Kubernetes Liveness/Readiness probes and Horizontal Pod Autoscalers isolate failure domains. MTTR &lt;300ms.</td>
+            <td><strong class="text-slate-900 font-bold">Preventive Maintenance:</strong> Detecting optical signal attenuation before fiber fracture. Legacy MTTR was 15 hours.</td>
+            <td><strong class="text-slate-900 font-bold">Self-Healing Systems:</strong> Kubernetes Liveness/Readiness probes and Horizontal Pod Autoscalers isolate failure domains. MTTR &lt;300ms.</td>
           </tr>
           <tr>
             <td class="font-bold text-slate-900">III. EFFICIENCY</td>
-            <td><strong>Route Optimization:</strong> Mapping shortest physical optical routes to conserve materials and protect CAPEX.</td>
-            <td><strong>FinOps &amp; Rightsizing:</strong> Automated workload scheduling and vCPU rightsizing that reduce cloud OPEX by up to 40% without compromising SLA throughput.</td>
+            <td><strong class="text-slate-900 font-bold">Route Optimization:</strong> Mapping shortest physical optical routes to conserve materials and protect CAPEX.</td>
+            <td><strong class="text-slate-900 font-bold">FinOps &amp; Rightsizing:</strong> Automated workload scheduling and vCPU rightsizing that reduce cloud OPEX by up to 40% without compromising SLA throughput.</td>
           </tr>
           <tr>
             <td class="font-bold text-slate-900">IV. SECURITY</td>
-            <td><strong>Physical Plant Hardening:</strong> Securing access to Optical Distribution Cabinets (ODC) and manholes to eliminate tampering vectors.</td>
-            <td><strong>Zero Trust Architecture:</strong> Strict mTLS service mesh, IAM Least Privilege, and automated CI/CD security scanning (OWASP ZAP, SonarQube) mitigating 60% of vulnerabilities.</td>
+            <td><strong class="text-slate-900 font-bold">Physical Plant Hardening:</strong> Securing access to Optical Distribution Cabinets (ODC) and manholes to eliminate tampering vectors.</td>
+            <td><strong class="text-slate-900 font-bold">Zero Trust Architecture:</strong> Strict mTLS service mesh, IAM Least Privilege, and automated CI/CD security scanning (OWASP ZAP, SonarQube) mitigating 60% of vulnerabilities.</td>
           </tr>
           <tr>
-            <td class="font-bold" style="color:#7C3AED;">V. AIOps &amp; AGENTIC AI</td>
-            <td><strong>Predictive Telemetry:</strong> OTDR trace analytics and historical outage correlation to predict fiber disruption before customer impact.</td>
-            <td><strong>Autonomous Infrastructure:</strong> Dynamic anomaly detection and Agentic AI workflows (Azure OpenAI, Semantic Kernel) for self-healing operational governance.</td>
+            <td class="font-bold text-purple-700">V. AIOps &amp; AGENTIC AI</td>
+            <td><strong class="text-slate-900 font-bold">Predictive Telemetry:</strong> OTDR trace analytics and historical outage correlation to predict fiber disruption before customer impact.</td>
+            <td><strong class="text-slate-900 font-bold">Autonomous Infrastructure:</strong> Dynamic anomaly detection and Agentic AI workflows (Azure OpenAI, Semantic Kernel) for self-healing operational governance.</td>
           </tr>
         </tbody>
       </table>
@@ -506,7 +535,7 @@
         <i class="fa-solid fa-diagram-project text-steel"></i>
         <span class="font-mono text-xs text-slate-600 uppercase tracking-wider">Evolution Roadmap</span>
       </div>
-      <img src="https://raw.githubusercontent.com/lukmanulhakimdevops/cv_lukmanulhakim_devops/refs/heads/main/modernisasi_cloud_branded.png"
+      <img src="https://raw.githubusercontent.com/lukmanulhakimdevops/cv_lukmanulhakimdevops/refs/heads/main/modernisasi_cloud_branded.png"
            alt="Cloud Modernization Architecture: Monolithic Legacy to GKE-HA with AIOps"
            class="w-full h-auto object-contain bg-white p-2" loading="lazy">
       <div class="bg-slate-50 px-5 py-3 border-t border-slate-200 text-center text-xs text-slate-500 font-mono">
@@ -933,25 +962,42 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER WITH EMBEDDED LINKEDIN BADGE -->
 <footer class="bg-obsidian border-t border-steel/20 py-16 px-6">
   <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
-      <div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-12">
+      
+      <!-- Contact and Advisory Column -->
+      <div class="lg:col-span-8">
         <h2 class="font-display text-2xl font-bold text-white mb-2">Strategic Advisory &amp; Architecture Mandates</h2>
-        <p class="text-slate-400 text-sm leading-relaxed mb-1">
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
           Available for institutional technical due diligence, cloud modernization strategy, and reliability risk assessments.
         </p>
-        <p class="text-sky-400 font-mono text-xs">Understand the failure modes first. Then architect the solution.</p>
+        <p class="text-sky-400 font-mono text-xs mb-6">Understand the failure modes first. Then architect the solution.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="btn-primary">
+            <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+          </a>
+          <a href="./CV_Lukmanul_Hakim_Microservices_A4.pdf" target="_blank" class="btn-outline">
+            <i class="fa-solid fa-id-badge"></i> View Verified CV
+          </a>
+        </div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 md:justify-end">
-        <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="btn-primary">
-          <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
-        </a>
-        <a href="./CV_Lukmanul_Hakim_Microservices_A4.pdf" target="_blank" class="btn-outline">
-          <i class="fa-solid fa-id-badge"></i> View Verified CV
-        </a>
+
+      <!-- Verified LinkedIn Profile Badge -->
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <div class="badge-base LI-profile-badge" 
+             data-locale="en_US" 
+             data-size="medium" 
+             data-theme="dark" 
+             data-type="VERTICAL" 
+             data-vanity="lukmanulhakimdevops" 
+             data-version="v1">
+          <a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/lukmanulhakimdevops?trk=profile-badge">Lukmanul Hakim</a>
+        </div>
       </div>
+
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 font-mono text-xs text-slate-500">
