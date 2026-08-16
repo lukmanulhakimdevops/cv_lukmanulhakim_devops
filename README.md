@@ -1,7 +1,7 @@
 # ⚡ Lukmanul Hakim
 
 **Principal Solutions Architect & Systems Modernization Strategist**  
-*Empaneled Subject Matter Expert at VisasQ & Coleman Research Group | GCP Professional Cloud Architect | Multi-Cloud & GitOps | IEC 60812 FMEA & Capital Risk Engineering*
+*Empaneled Subject Matter Expert at VisasQ & Coleman Research Group | GCP Professional Cloud Architect | Multi-Cloud & GitOps | IEC 61025 (FTA),IEC 60812 (FMEA),and ISO 31000 Risk Governance*
 
 ---
 
