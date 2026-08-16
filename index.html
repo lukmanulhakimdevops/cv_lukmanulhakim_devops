@@ -332,7 +332,7 @@
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <a href="./CV_Lukmanul_Hakim_Microservices_A4.pdf" target="_blank" class="btn-primary">
+          <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-primary">
             <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
           </a>
           <a href="#blueprint" class="btn-outline">
@@ -481,7 +481,7 @@
   </div>
 </section>
 
-<!-- TRANSLATION MATRIX (CONTRAST FIXED) -->
+<!-- TRANSLATION MATRIX (CONTRAST & IMAGE FIXED) -->
 <section class="bg-white py-20 px-6 border-t border-wire text-slate-800">
   <div class="max-w-6xl mx-auto">
     <div class="sec-label" style="color:#0F172A;">Systems Translation Layer</div>
@@ -529,15 +529,41 @@
       </table>
     </div>
 
-    <!-- Architecture Roadmap Visual -->
+    <!-- Architecture Roadmap Visual (with Dynamic Fallback) -->
     <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-      <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex items-center gap-2">
-        <i class="fa-solid fa-diagram-project text-steel"></i>
-        <span class="font-mono text-xs text-slate-600 uppercase tracking-wider">Evolution Roadmap</span>
+      <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-diagram-project text-steel"></i>
+          <span class="font-mono text-xs text-slate-600 uppercase tracking-wider">Evolution Roadmap</span>
+        </div>
+        <span class="font-mono text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded font-bold">L1 &rarr; L7 ARCHITECTURE</span>
       </div>
-      <img src="https://raw.githubusercontent.com/lukmanulhakimdevops/cv_lukmanulhakimdevops/refs/heads/main/modernisasi_cloud_branded.png"
+      
+      <!-- Primary Diagram -->
+      <img src="./modernisasi_cloud_branded.png"
            alt="Cloud Modernization Architecture: Monolithic Legacy to GKE-HA with AIOps"
-           class="w-full h-auto object-contain bg-white p-2" loading="lazy">
+           class="w-full h-auto object-contain bg-white p-4" 
+           loading="lazy"
+           onerror="this.style.display='none'; document.getElementById('diagram-fallback').classList.remove('hidden');">
+
+      <!-- Dynamic Fallback Box -->
+      <div id="diagram-fallback" class="hidden p-6 bg-slate-900 font-mono text-xs text-slate-300 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div class="p-4 bg-slate-800/80 border border-red-500/40 rounded">
+            <p class="text-red-400 font-bold mb-1">1. LEGACY STATE (2014)</p>
+            <p class="text-[11px] text-slate-400">Coupled Monolith &middot; Single Point of Failure (SPOF) &middot; MTTR 15h</p>
+          </div>
+          <div class="p-4 bg-slate-800/80 border border-sky-500/40 rounded">
+            <p class="text-sky-400 font-bold mb-1">2. MULTI-CLOUD STAGE</p>
+            <p class="text-[11px] text-slate-400">Terraform IaC &middot; Containerization &middot; GitOps Delivery</p>
+          </div>
+          <div class="p-4 bg-slate-800/80 border border-emerald-500/40 rounded">
+            <p class="text-emerald-400 font-bold mb-1">3. GKE-HA + AIOps (2026)</p>
+            <p class="text-[11px] text-slate-400">Stateless Microservices &middot; Zero Trust &middot; MTTR &lt;300ms</p>
+          </div>
+        </div>
+      </div>
+
       <div class="bg-slate-50 px-5 py-3 border-t border-slate-200 text-center text-xs text-slate-500 font-mono">
         Modernization Roadmap: Monolithic Legacy &rarr; Multi-Cloud Migration &rarr; GKE-HA with AIOps &amp; Agentic AI
       </div>
