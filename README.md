@@ -11,7 +11,7 @@
 ---
 
 ### 🎯 Core Architecture & Advisory Domains
-* **Legacy Modernization & Multi-Cloud Platforms:** Monolith-to-microservices decomposition, multi-cloud architecture (GCP, AWS, Azure, Alibaba Cloud), high-availability distributed systems (99.9%+ SLA), and FinOps workload rightsizing.
+* **Legacy Modernization & Multi-Cloud Platforms:** Monolith-to-microservices decomposition, multi-cloud architecture (GCP, AWS, Azure, Alibaba Cloud), high-availability distributed systems (99.9% SLA), and FinOps workload rightsizing.
 * **Platform Engineering & GitOps:** Immutable Infrastructure as Code (Terraform), declarative delivery (Flux CD), container orchestration (Kubernetes GKE/EKS/AKS), and Zero-Touch Provisioning (ZTP) pipelines.
 * **Standardized Reliability & Risk Modeling:** Mathematical failure mode analysis applying IEC 60812 (FMEA) and IEC 61025 (FTA) to eliminate single points of failure (SPOF) and enforce deterministic recovery windows.
 * **Enterprise DevSecOps & Governance:** Zero Trust security architectures (mTLS, IAM Least Privilege, automated SAST/DAST via OWASP ZAP and SonarQube) aligned with OJK, Bank Indonesia, ISO 27001, and ISO 31000 frameworks.
@@ -22,7 +22,7 @@
 ### 🚀 Key Technical Highlights & Milestones
 * **National FTTH Infrastructure Governance ($93M CAPEX):** Assigned within the Directorate of Operation at Telkom Akses to govern field quality compliance, service fulfillment testing, and BSS/OSS ETL data reconciliation (Oracle, PostgreSQL, SOAP) across millions of lines nationwide.
 * **Carrier-Grade ZTP Orchestration:** Engineered and validated a production DAG pipeline executing complete Zero-Touch Provisioning in **1 minute 54 seconds**, eliminating high-risk manual handoffs and decoupled BSS-OSS financial leakage.
-* **Zero-Downtime Multi-Cloud Migrations:** Executed legacy migrations for high-concurrency FinTech and national logistics platforms (120+ microservices), cutting deployment lead times by 70% while maintaining zero regulatory audit findings.
+* **Zero-Downtime Multi-Cloud Migrations:** Executed legacy migrations for high-concurrency FinTech and national logistics platforms (120 microservices), cutting deployment lead times by 70% while maintaining zero regulatory audit findings.
 * **Institutional Advisory Mandates:** Deliver NDA-governed technical assessments through global expert networks (VisasQ, Coleman Research Group) on telecom backbones and cloud infrastructure investments.
 
 ---
