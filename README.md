@@ -6,7 +6,7 @@
 ---
 
 ### Executive Profile
-15 years of ground-truth systems engineering practice spanning the full failure-mode stack, from Layer 1 physical infrastructure mechanics to Layer 7 cloud-native microservices and applied AI workflows. I specialize in legacy monolithic decomposition, declarative GitOps automation, and standardized reliability engineering (IEC 60812 FMEA / IEC 61025 FTA). Combining deep technical diagnostic capability with a Risk Governance, I translate distributed systems error budgets, failover domains, and security controls directly into financial balance-sheet language, CAPEX risk pricing, and EBITDA protection metrics.
+15 years of ground-truth systems engineering practice spanning the full failure-mode stack, from Layer 1 physical infrastructure mechanics to Layer 7 cloud-native microservices and applied AI workflows. I specialize in legacy monolithic decomposition, declarative GitOps automation, and standardized reliability engineering (IEC 61025 (FTA),IEC 60812 (FMEA),and ISO 31000 Risk Governance). Combining deep technical diagnostic capability with a Risk Governance, I translate distributed systems error budgets, failover domains, and security controls directly into financial balance-sheet language, CAPEX risk pricing, and EBITDA protection metrics.
 
 ---
 
