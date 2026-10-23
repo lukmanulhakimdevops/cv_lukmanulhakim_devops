@@ -226,7 +226,7 @@
         color: #334155; 
         border-bottom: 1px solid #E2E8F0; 
         vertical-align: top; 
-        line-height: 1.6;
+        line-height: 1.6; 
       }
       .matrix-table tbody tr td strong { 
         color: #0F172A; 
@@ -241,7 +241,7 @@
         background: #F1F5F9; 
       }
 
-      /* Specific Device Responsive Helpers */
+      /* Responsive Device Layout Specifics */
       html.layout-mobile .moat-card { padding: 20px; }
       html.layout-mobile .stat-num { font-size: 1.45rem; }
       html.layout-mobile .timeline-track { margin-left: 8px; padding-left: 20px; }
@@ -1092,6 +1092,25 @@
         </div>
       </div>
 
+      <!-- AWS Cloud Quest: Cloud Practitioner - Training Badge -->
+      <div class="cert-card">
+        <div class="cert-badge">VERIFIED</div>
+        <h3 class="font-bold text-slate-900 mb-1 pr-16 text-sm">AWS Cloud Quest: Cloud Practitioner</h3>
+        <p class="font-mono text-[11px] text-slate-500 mb-1">AWS Cloud Quest - Training Badge</p>
+        <p class="font-mono text-[11px] mb-3">
+          <a href="https://www.credly.com/badges/d32676f7-b90b-47b4-9b9e-9a9781293b38/public_url" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="text-steel hover:underline inline-flex items-center gap-1 font-semibold">
+            Verify on Credly <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="cert-dot" style="background:#FF9900;"></span>
+          <span class="text-xs font-bold font-mono text-slate-600 uppercase tracking-wider">Amazon Web Services</span>
+        </div>
+      </div>
+
       <!-- AWS Certified: Generative AI Practitioner -->
       <div class="cert-card">
         <div class="cert-badge">VERIFIED</div>
@@ -1116,15 +1135,7 @@
         <div class="cert-badge">VERIFIED</div>
         <h3 class="font-bold text-slate-900 mb-1 pr-16 text-sm">Cisco Certified: DevNet Associate</h3>
         <p class="font-mono text-[11px] text-slate-500 mb-1">Verification: 1987298840-45/PROA/BLSDM/2024</p>
-        <p class="font-mono text-[11px] mb-3">
-          <a href="https://www.credly.com/badges/d32676f7-b90b-47b4-9b9e-9a9781293b38/public_url" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="text-steel hover:underline inline-flex items-center gap-1 font-semibold">
-            Verify on Credly <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-          </a>
-        </p>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 mt-4">
           <span class="cert-dot" style="background:#1BA0D7;"></span>
           <span class="text-xs font-bold font-mono text-slate-600 uppercase tracking-wider">Cisco Systems</span>
         </div>
@@ -1307,7 +1318,6 @@
     menuBtn.addEventListener('click', function() {
       mobileDrawer.classList.toggle('hidden');
     });
-    // Auto-close drawer on link click
     var mobileLinks = document.querySelectorAll('.mobile-nav-link');
     mobileLinks.forEach(function(link) {
       link.addEventListener('click', function() {
