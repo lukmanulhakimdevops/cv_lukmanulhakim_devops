@@ -324,10 +324,11 @@
     </div>
 
     <!-- Desktop Navigation Links -->
-    <div class="hidden lg:flex items-center gap-7 text-xs font-mono text-slate-400 uppercase tracking-wider">
+    <div class="hidden lg:flex items-center gap-5 text-xs font-mono text-slate-400 uppercase tracking-wider">
       <a href="#blueprint"   class="hover:text-sky-400 transition">Modernization</a>
       <a href="#logistics-blueprint" class="hover:text-sky-400 transition">DevSecOps</a>
       <a href="#multifinance-blueprint" class="hover:text-sky-400 transition">Hybrid Ops</a>
+      <a href="#erp-iac-blueprint" class="hover:text-sky-400 transition">ERP IaC</a>
       <a href="#noc"          class="hover:text-sky-400 transition">Telemetry</a>
       <a href="#experience"  class="hover:text-sky-400 transition">Track Record</a>
       <a href="#credentials" class="hover:text-sky-400 transition">Credentials</a>
@@ -354,6 +355,7 @@
     <a href="#blueprint"   class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Modernization</a>
     <a href="#logistics-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">DevSecOps Blueprint</a>
     <a href="#multifinance-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Hybrid Ops Blueprint</a>
+    <a href="#erp-iac-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">ERP IaC Blueprint</a>
     <a href="#noc"          class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Telemetry</a>
     <a href="#experience"  class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Track Record</a>
     <a href="#credentials" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Credentials</a>
@@ -1560,6 +1562,506 @@
   </div>
 </section>
 
+
+<!-- CASE STUDY 04: MULTI-TENANT CLOUD ERP ZERO-TOUCH PROVISIONING & TERRAFORM IAC BLUEPRINT (MAY 2020 TO OCT 2020) -->
+<section id="erp-iac-blueprint" class="bg-navy border-t border-steel/25 py-20 px-6 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="sec-label">Case Study 04 &middot; Multi-Tenant Cloud ERP IaC &amp; ZTP Blueprint</div>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-uptime/10 border border-uptime/30 rounded px-3 py-1 font-mono text-[10px] text-uptime font-bold tracking-wider uppercase mb-4">
+          <i class="fa-solid fa-layer-group"></i>
+          NDA-Safe Architecture Spec &middot; May 2020 to Oct 2020 (6 Months)
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+          Multi-Tenant Cloud ERP: Declarative Terraform Zero-Touch Provisioning
+        </h2>
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+          Six-month cloud automation architecture built during the <strong class="text-white">HashiCorp Terraform 0.12 to 0.13</strong> transition (GA August 10, 2020) for 3-tier multi-tenant Cloud ERP SaaS deployments. Engineered modular <strong class="text-white">Zero-Touch Provisioning (ZTP)</strong> workflows that cut client environment provisioning lead time by <strong class="text-white">70%</strong> while enforcing per-tenant remote state isolation, Silo/Bridge/Pool tenancy boundaries, shift-left security gates, and ISO/IEC 27001 lifecycle governance.
+        </p>
+      </div>
+      <div class="font-mono text-[11px] text-slate-400 bg-obsidian/80 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
+        <div><span class="text-sky-400 font-bold">ROLE:</span> Cloud Automation &amp; Infrastructure Lead</div>
+        <div><span class="text-sky-400 font-bold">WINDOW:</span> May 2020 to October 2020</div>
+        <div><span class="text-sky-400 font-bold">DOMAIN:</span> Multi-Tenant Cloud ERP SaaS</div>
+      </div>
+    </div>
+
+    <!-- BLOK 1: VERIFIED KPI STRIP (STRICTLY CV-VERIFIED) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+      <div class="bg-obsidian/90 border border-uptime/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Onboarding Velocity</span>
+          <i class="fa-solid fa-bolt text-uptime"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">70% Faster</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Client environment provisioning lead time cut by 70% via modular Zero-Touch Provisioning, collapsing cross-team ticket queues and ClickOps rework.
+        </p>
+      </div>
+
+      <div class="bg-obsidian/90 border border-steel/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Blast-Radius Control</span>
+          <i class="fa-solid fa-diagram-project text-steel"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">Per-Tenant State</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Replaced shared Terraform CLI Workspaces with isolated per-tenant and per-volatility remote state, KMS encryption, versioning, and distributed locking.
+        </p>
+      </div>
+
+      <div class="bg-obsidian/90 border border-amber-gold/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-amber-gold uppercase tracking-widest font-bold">Tenancy Governance</span>
+          <i class="fa-solid fa-shield-halved text-amber-gold"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">Silo / Bridge / Pool</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Flat-composition SemVer Terraform modules enforcing tenant isolation, noisy-neighbor governance, and tag-audited anti-orphan offboarding.
+        </p>
+      </div>
+    </div>
+
+    <!-- BLOK 2: 5-STAGE ZTP & MULTI-TENANT ISOLATION SVG BLUEPRINT -->
+    <div class="bg-obsidian border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl mb-10">
+      <div class="bg-slate-900/90 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
+          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">5-Stage Declarative ZTP &amp; Multi-Tenant ERP Isolation Blueprint</span>
+        </div>
+        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">TERRAFORM 0.12 -> 0.13 &middot; ISO/IEC 27001 &middot; CLOUD-AGNOSTIC</span>
+      </div>
+
+      <div class="p-4 sm:p-6 overflow-x-auto blueprint-grid">
+        <svg viewBox="0 0 1080 515" class="w-full min-w-[780px] h-auto" role="img" aria-label="5-Stage Multi-Tenant Cloud ERP Zero-Touch Provisioning and Tenancy Isolation Blueprint">
+          <defs>
+            <marker id="erp-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+            </marker>
+            <marker id="erp-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+            </marker>
+            <marker id="erp-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+            </marker>
+            <marker id="erp-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#C4B5FD"/>
+            </marker>
+          </defs>
+
+          <!-- Top Governance Banner -->
+          <rect x="20" y="14" width="1040" height="36" rx="6" fill="#0F172A" stroke="#1D6FA4" stroke-width="1.2"/>
+          <text x="540" y="36" text-anchor="middle" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">
+            DECLARATIVE ZTP PIPELINE:  70% LEAD TIME REDUCTION  |  FLAT MODULE COMPOSITION  |  SEPARATE STATE PER TENANT  |  ISO 27001 ALIGNED
+          </text>
+
+          <!-- STAGE 1: ONBOARDING TRIGGER -->
+          <rect x="20" y="72" width="188" height="202" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
+          <text x="114" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. ONBOARDING TRIGGER</text>
+          <rect x="32" y="108" width="164" height="152" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.45"/>
+          <text x="114" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Tenant Git PR / API</text>
+          <text x="114" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">tenant_id &amp; region</text>
+          <text x="114" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Silo / Bridge / Pool tier</text>
+          <text x="114" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">TF 0.13 Custom Validation</text>
+          <text x="114" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Ownership &amp; Cost Tags</text>
+          <rect x="46" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.6"/>
+          <text x="114" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.32 / A.8.4</text>
+
+          <!-- STAGE 2: MODULAR TERRAFORM REGISTRY -->
+          <rect x="233" y="72" width="188" height="202" rx="8" fill="#0B1324" stroke="#38BDF8" stroke-width="1.5"/>
+          <text x="327" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. MODULAR TF REGISTRY</text>
+          <rect x="245" y="108" width="164" height="152" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.5"/>
+          <text x="327" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Flat Composition</text>
+          <text x="327" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">VPC, Compute, DB, IAM</text>
+          <text x="327" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SemVer Pinning (~&gt;)</text>
+          <text x="327" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">for_each on Modules</text>
+          <text x="327" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">tflint + Static IaC Scan</text>
+          <rect x="259" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.6"/>
+          <text x="327" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.9 / A.8.27</text>
+
+          <!-- STAGE 3: REMOTE STATE & LOCKING -->
+          <rect x="446" y="72" width="188" height="202" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
+          <text x="540" y="95" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. REMOTE STATE &amp; LOCK</text>
+          <rect x="458" y="108" width="164" height="152" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
+          <text x="540" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Isolated Per-Tenant</text>
+          <text x="540" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Directory / -backend-config</text>
+          <text x="540" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SSE-KMS CMK + TLS</text>
+          <text x="540" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Distributed Lock &amp; Timeout</text>
+          <text x="540" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Bucket Versioning Active</text>
+          <rect x="472" y="218" width="136" height="28" rx="4" fill="#18122B" stroke="#C4B5FD" stroke-opacity="0.6"/>
+          <text x="540" y="236" text-anchor="middle" fill="#DDD6FE" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.24 / A.8.31</text>
+
+          <!-- STAGE 4: TENANT PROVISIONING -->
+          <rect x="659" y="72" width="188" height="202" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
+          <text x="753" y="95" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">4. TENANT PROVISIONING</text>
+          <rect x="671" y="108" width="164" height="152" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
+          <text x="753" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Deterministic Apply</text>
+          <text x="753" y="148" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">Saved tfplan.binary</text>
+          <text x="753" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Parallel DAG Execution</text>
+          <text x="753" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Least-Privilege CI Role</text>
+          <text x="753" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">No TF Provisioners</text>
+          <rect x="685" y="218" width="136" height="28" rx="4" fill="#23190B" stroke="#F59E0B" stroke-opacity="0.6"/>
+          <text x="753" y="236" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.22 / A.8.2</text>
+
+          <!-- STAGE 5: READINESS CHECK -->
+          <rect x="872" y="72" width="188" height="202" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
+          <text x="966" y="95" text-anchor="middle" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">5. READINESS CHECK</text>
+          <rect x="884" y="108" width="164" height="152" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.55"/>
+          <text x="966" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Zero False-Green Gate</text>
+          <text x="966" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">DNS &amp; TLS Chain Valid</text>
+          <text x="966" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">ERP DB Handshake OK</text>
+          <text x="966" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">App /health Probe Green</text>
+          <text x="966" y="199" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Negative Isolation Test</text>
+          <rect x="898" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.7"/>
+          <text x="966" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.29 / A.8.15</text>
+
+          <!-- Forward Arrows 1 -> 2 -> 3 -> 4 -> 5 -->
+          <line x1="208" y1="172" x2="231" y2="172" stroke="#38BDF8" stroke-width="1.6" marker-end="url(#erp-arrow-sky)"/>
+          <line x1="421" y1="172" x2="444" y2="172" stroke="#C4B5FD" stroke-width="1.6" marker-end="url(#erp-arrow-purple)"/>
+          <line x1="634" y1="172" x2="657" y2="172" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#erp-arrow-amber)"/>
+          <line x1="847" y1="172" x2="870" y2="172" stroke="#10B981" stroke-width="1.6" marker-end="url(#erp-arrow-green)"/>
+
+          <!-- FOUNDATION PANEL LEFT: MULTI-TENANT ISOLATION SPECTRUM -->
+          <rect x="20" y="310" width="540" height="186" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.4"/>
+          <text x="38" y="332" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">MULTI-TENANT ERP ISOLATION SPECTRUM (SILO | BRIDGE | POOL)</text>
+
+          <rect x="36" y="346" width="160" height="100" rx="5" fill="#17233B" stroke="#1D6FA4" stroke-opacity="0.6"/>
+          <text x="116" y="366" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Silo Model</text>
+          <text x="116" y="385" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Dedicated VPC &amp; DB</text>
+          <text x="116" y="402" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Separate KMS CMK</text>
+          <text x="116" y="419" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Shared ZTP Control Plane</text>
+
+          <rect x="210" y="346" width="160" height="100" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
+          <text x="290" y="366" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Bridge Model</text>
+          <text x="290" y="385" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Stateless App Pool</text>
+          <text x="290" y="402" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Dedicated Batch/DB Tier</text>
+          <text x="290" y="419" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Pragmatic ERP Balance</text>
+
+          <rect x="384" y="346" width="160" height="100" rx="5" fill="#17233B" stroke="#F59E0B" stroke-opacity="0.55"/>
+          <text x="464" y="366" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Pool Model</text>
+          <text x="464" y="385" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Shared VPC &amp; Schema</text>
+          <text x="464" y="402" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">PostgreSQL RLS + Local</text>
+          <text x="464" y="419" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">set_config(..., true)</text>
+
+          <rect x="36" y="456" width="508" height="28" rx="4" fill="#131B2E" stroke="#38BDF8" stroke-opacity="0.35"/>
+          <text x="290" y="474" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">
+            NOISY NEIGHBOR DEFENSE: tenant_id Telemetry &middot; Edge 429 &middot; PgBouncer Quota &middot; statement_timeout &middot; Outlier Silo Promotion
+          </text>
+
+          <!-- FOUNDATION PANEL RIGHT: DAY-2 LIFECYCLE & CLEAN OFFBOARDING -->
+          <rect x="585" y="310" width="475" height="186" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.4"/>
+          <text x="603" y="332" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">DAY-2 LIFECYCLE, STATE PROTECTION &amp; CLEAN OFFBOARDING</text>
+
+          <rect x="601" y="346" width="214" height="138" rx="5" fill="#1C1A16" stroke="#F59E0B" stroke-opacity="0.45"/>
+          <text x="708" y="366" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Stateful Defense-in-Depth</text>
+          <text x="708" y="388" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Separate Stateful vs Stateless</text>
+          <text x="708" y="406" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Cloud API Deletion Protection</text>
+          <text x="708" y="424" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Revoked Delete on Routine CI</text>
+          <text x="708" y="442" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">External Vault / KMS Rotation</text>
+          <text x="708" y="460" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Immutable Image / CM Runtime</text>
+
+          <rect x="831" y="346" width="213" height="138" rx="5" fill="#1B1325" stroke="#8B5CF6" stroke-opacity="0.55"/>
+          <text x="937" y="366" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Anti-Orphan Offboarding</text>
+          <text x="937" y="388" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">1. Freeze Access &amp; Export</text>
+          <text x="937" y="406" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">2. Two-Stage Safe Destroy</text>
+          <text x="937" y="424" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">3. KMS Crypto-Shredding</text>
+          <text x="937" y="442" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">4. TenantID Tag Sweep</text>
+          <text x="937" y="460" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">ISO A.5.23 &amp; A.8.10 Ready</text>
+
+          <!-- Vertical Connectors from Provisioning/Readiness to Foundation -->
+          <line x1="327" y1="274" x2="327" y2="308" stroke="#38BDF8" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#erp-arrow-sky)"/>
+          <line x1="753" y1="274" x2="753" y2="308" stroke="#F59E0B" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#erp-arrow-amber)"/>
+        </svg>
+      </div>
+
+      <!-- 5 Compact Stage Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">STAGE 01</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Onboarding Trigger</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Declarative tenant manifest via Git PR or API with Terraform 0.13 custom variable validation before touching cloud APIs.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-sky-300 font-bold mb-1">STAGE 02</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Modular Registry</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Flat-composition SemVer modules for VPC, compute, ERP database, and IAM verified via tflint and static security scanning.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">STAGE 03</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Remote State &amp; Lock</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Isolated per-tenant state keys (Directory or -backend-config), KMS CMK encryption, bucket versioning, and distributed locking.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">STAGE 04</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Tenant Provisioning</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Deterministic apply of saved tfplan.binary using parallel DAG execution and least-privilege CI roles without Terraform provisioners.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-uptime font-bold mb-1">STAGE 05</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Readiness Check</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Automated DNS, TLS chain, ERP DB handshake, /health readiness, and negative cross-tenant isolation tests eliminating false greens.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOK 3: MULTI-TENANT ERP RISK & GOVERNANCE TRANSLATION MATRIX -->
+    <div class="mb-12">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-display text-xl font-bold text-white">Multi-Tenant ERP Risk &amp; Governance Translation Matrix</h3>
+        <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden sm:inline">IaC Controls -> ISO 27001 &amp; SaaS Resilience</span>
+      </div>
+      <div class="overflow-x-auto bg-obsidian border border-slate-700/80 rounded-xl shadow-lg">
+        <table class="w-full text-left border-collapse bp-table">
+          <thead>
+            <tr>
+              <th class="w-1/4">Operational / Security Risk</th>
+              <th class="w-5/12">Architectural Control Implemented (May to Oct 2020 Baseline)</th>
+              <th class="w-1/3">Resilience &amp; Compliance Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold text-white">Wrong-Workspace &amp; Monolithic State Blast Radius</td>
+              <td>Rejected shared CLI Workspaces; enforced separate state per tenant and volatility (Stateful VPC/DB vs. Stateless Compute) with KMS CMK, versioning, and distributed lock timeouts.</td>
+              <td class="text-emerald-300">Contained blast radius per tenant, enabled canary module upgrades, and eliminated concurrent-write state corruption.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Cross-Tenant Leakage on Transaction Poolers</td>
+              <td>Enforced Silo/Bridge/Pool isolation; banned <code class="font-mono text-sky-300">SET SESSION</code> on PostgreSQL RLS behind PgBouncer in favor of transaction-local <code class="font-mono text-sky-300">set_config(..., true)</code> plus automated negative CI tests.</td>
+              <td class="text-emerald-300">Default-to-deny tenant isolation verified on every release without session state leakage (ISO 27001 A.8.3 &amp; A.8.22).</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Noisy Neighbor During Month-End ERP Batches</td>
+              <td>Treated as resource governance: <code class="font-mono text-sky-300">tenant_id</code> telemetry, edge HTTP 429 rate limits, PgBouncer connection quotas + load shedding, tiered <code class="font-mono text-sky-300">statement_timeout</code>, async queues, and outlier Silo promotion.</td>
+              <td class="text-emerald-300">Protected shared ERP cluster latency during heavy accounting closes without inefficient vertical over-scaling.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Accidental DB Wipe &amp; 2020 Plaintext State Secrets</td>
+              <td>Paired HCL <code class="font-mono text-sky-300">prevent_destroy</code> with cloud API deletion protection and revoked delete IAM on routine CI; mitigated 2020 state plaintext via KMS CMK, runner-only ACLs, and Vault/Secrets Manager rotation.</td>
+              <td class="text-emerald-300">Prevented accidental stateful DB destruction during refactoring and contained bootstrap credential exposure (ISO A.5.17 &amp; A.8.24).</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Orphan Cloud Assets &amp; Incomplete Offboarding</td>
+              <td>Enforced mandatory <code class="font-mono text-sky-300">TenantID</code> / <code class="font-mono text-sky-300">ManagedBy=terraform</code> tags, Two-Stage Safe Destroy, KMS crypto-shredding, and automated AWS Config / Cloud Custodian anti-orphan sweeps.</td>
+              <td class="text-emerald-300">Eliminated ghost billing from unattached volumes/IPs/snapshots and delivered auditable exit compliance (ISO A.5.23 &amp; A.8.10).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BLOK 4: INTERACTIVE ENGINEERING DEEP-DIVE TABS -->
+    <div class="bg-obsidian border border-slate-700/80 rounded-xl overflow-hidden shadow-xl mb-10">
+      <div class="bg-slate-900/90 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
+          <h3 class="font-display text-lg font-bold text-white">Inspect 6-Gate Shift-Left CI, State Trade-Offs &amp; 2026 IaC Evolution</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" onclick="switchErpTab('gates')" id="erptab-gates" class="bp-tab bp-active">
+            <i class="fa-solid fa-list-check mr-1.5"></i>6-Gate CI &amp; 70% Math
+          </button>
+          <button type="button" onclick="switchErpTab('tradeoffs')" id="erptab-tradeoffs" class="bp-tab">
+            <i class="fa-solid fa-scale-balanced mr-1.5"></i>State &amp; Tenancy Trade-Offs
+          </button>
+          <button type="button" onclick="switchErpTab('evolution')" id="erptab-evolution" class="bp-tab">
+            <i class="fa-solid fa-code-branch mr-1.5"></i>Offboarding &amp; 2026 Bridge
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: 6-GATE SHIFT-LEFT CI & MECHANICS OF 70% REDUCTION -->
+      <div id="erppanel-gates" class="p-5 sm:p-6 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="bg-slate-900/90 border border-uptime/35 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-uptime font-bold mb-1">DRIVER 01: QUEUE COLLAPSE</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Replaced cross-team manual tickets (network, infra, DB, security) with one declarative ZTP pipeline.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-steel/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">DRIVER 02: PARALLEL DAG</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Terraform Dependency Graph provisions independent cloud resources concurrently rather than sequentially.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-amber-gold/35 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">DRIVER 03: ZERO REWORK</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Curated SemVer registry modules eliminate ClickOps typos, CIDR errors, and missing encryption rework.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-purple-500/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">DRIVER 04: SHIFT-LEFT</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Pre-apply CI gates catch syntax, provider, and security defects in seconds before calling cloud APIs.</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse bp-table">
+            <thead>
+              <tr>
+                <th class="w-1/6">CI Gate</th>
+                <th class="w-1/4">Command / Tooling</th>
+                <th class="w-1/3">Verification Scope</th>
+                <th class="w-1/4">Enforcement Policy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 01: Format</td>
+                <td><code class="font-mono text-sky-300">terraform fmt -check -recursive</code></td>
+                <td>Standard HCL formatting consistency for clean peer review diffs.</td>
+                <td>Auto-blocks PR on non-standard formatting.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 02: Validate</td>
+                <td><code class="font-mono text-sky-300">terraform validate</code></td>
+                <td>Internal syntax, variable types, and Terraform 0.13 custom validation rules offline.</td>
+                <td>Immediate PR block on invalid declarations.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 03: Lint</td>
+                <td><code class="font-mono text-sky-300">tflint</code> (provider plugins)</td>
+                <td>Catches provider-specific errors (invalid instance types, deprecated syntax) pre-plan.</td>
+                <td>Blocks PR before hitting cloud APIs.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 04: IaC Security</td>
+                <td>2020: <code class="font-mono text-sky-300">tfsec</code> / Checkov<br>2026: <code class="font-mono text-sky-300">Trivy</code> / Checkov</td>
+                <td>Detects public storage, <code class="font-mono text-sky-300">0.0.0.0/0</code> SGs, unencrypted DBs, and disabled logging.</td>
+                <td>Blocks PR on High/Critical findings; audited exceptions only.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 05: Binary Plan</td>
+                <td><code class="font-mono text-sky-300">terraform plan -out=tfplan.binary</code></td>
+                <td>Generates exact diff for peer review and JSON plan scan post-interpolation.</td>
+                <td>Apply strictly executes saved <code class="font-mono text-sky-300">tfplan.binary</code> only.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">Gate 06: Readiness</td>
+                <td>Automated Smoke &amp; Negative Probes</td>
+                <td>DNS resolution, TLS chain, ERP DB handshake, <code class="font-mono text-sky-300">/health</code>, and cross-tenant deny test.</td>
+                <td>Holds Onboarding Complete until all probes pass green.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: STATE ISOLATION & PARADIGM TRADE-OFFS -->
+      <div id="erppanel-tradeoffs" class="hidden p-5 sm:p-6 space-y-6">
+        <div>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">State Architecture Trade-Off (Why Separate Per-Tenant State Beats CLI Workspaces)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse bp-table">
+              <thead>
+                <tr>
+                  <th class="w-1/5">Isolation Dimension</th>
+                  <th class="w-4/12 text-uptime">Selected: Separate State per Tenant &amp; Volatility</th>
+                  <th class="w-1/4">Rejected: Terraform CLI Workspaces</th>
+                  <th class="w-1/4">Managed Option: HCP / TFE Workspaces</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold text-white">Backend &amp; IAM Boundary</td>
+                  <td>Dedicated state key, lock, cloud account, and least-privilege IAM per tenant and layer.</td>
+                  <td>Single shared backend bucket and coarse IAM role across all tenants.</td>
+                  <td>Native per-workspace RBAC, isolated credentials, and approval policies.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Blast-Radius Safety</td>
+                  <td>Structural filesystem or <code class="font-mono text-sky-300">-backend-config</code> boundary prevents cross-tenant apply errors.</td>
+                  <td>Relies on operator remembering <code class="font-mono text-sky-300">terraform workspace show</code> (wrong-workspace risk).</td>
+                  <td>Platform-enforced workspace boundaries and policy gates.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Canary Module Upgrades</td>
+                  <td>Each tenant pins its own SemVer module constraint (<code class="font-mono text-sky-300">~&gt; 1.4.0</code>) for staged rollout.</td>
+                  <td>All workspaces share one codebase, triggering conditional sprawl and simultaneous risk.</td>
+                  <td>Each workspace binds independently to branch, directory, or module version.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">Provisioning Paradigm Evaluation (Declarative IaC vs. Legacy Alternatives)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse bp-table">
+              <thead>
+                <tr>
+                  <th class="w-1/5">Dimension</th>
+                  <th class="w-4/12 text-uptime">HashiCorp Terraform (Declarative IaC)</th>
+                  <th class="w-1/4">Imperative Shell / Cloud CLI</th>
+                  <th class="w-1/4">Manual ClickOps Console</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold text-white">Idempotency &amp; Partial Recovery</td>
+                  <td>Native desired-state delta: partial quota failures recover cleanly on re-apply without duplicating VPC/DB.</td>
+                  <td>Requires manual existence checks and fragile rollback scripts on mid-run failure.</td>
+                  <td>Zero idempotency; manual cleanup of half-built assets slows recovery.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Drift &amp; Auditability</td>
+                  <td><code class="font-mono text-sky-300">terraform plan</code> surfaces out-of-band drift; full Git PR and binary diff audit trail (ISO A.8.32).</td>
+                  <td>No state inventory to detect drift or dry-run exact diffs before mutation.</td>
+                  <td>High snowflake server risk; weak click-log audit trail without peer review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: CLEAN OFFBOARDING & 2020-TO-2026 IAC EVOLUTION BRIDGE -->
+      <div id="erppanel-evolution" class="hidden p-5 sm:p-6 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-5">
+            <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">5-Step Clean Deprovisioning &amp; Separation of Concerns</div>
+            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">Strict Separation of Concerns:</strong> Terraform owns cloud infrastructure lifecycle only; ERP software runs via immutable images, containers, or dedicated CM (no <code class="font-mono text-sky-300">local-exec</code>/<code class="font-mono text-sky-300">remote-exec</code> provisioners).</li>
+              <li><strong class="text-white">1. Freeze &amp; Contractual Export:</strong> Revoke tenant access/API keys and deliver verified final ERP data export.</li>
+              <li><strong class="text-white">2. Two-Stage Safe Destroy:</strong> CR 1 lifts <code class="font-mono text-sky-300">prevent_destroy</code> and cloud deletion protection; CR 2 executes <code class="font-mono text-sky-300">terraform apply -destroy</code>.</li>
+              <li><strong class="text-white">3. Crypto-Shredding (ISO A.8.10):</strong> Purge post-retention snapshots and schedule tenant KMS CMK destruction with audit logs.</li>
+              <li><strong class="text-white">4. Anti-Orphan Tag Sweep &amp; Hygiene:</strong> Reconcile mandatory <code class="font-mono text-sky-300">TenantID</code> tags via AWS Config / Cloud Custodian to remove unattached volumes/IPs before archiving empty state.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900/80 border border-steel/40 rounded-lg p-5">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">2020 Baseline -> 2026 IaC Modernization Bridge</span>
+              <span class="font-mono text-[9px] text-amber-gold bg-amber-gold/10 border border-amber-gold/30 px-2 py-0.5 rounded">EVOLUTION PATH</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">Engine &amp; License Governance:</strong> 2020 Terraform 0.12/0.13 evolves to Terraform 1.17 (BSL 1.1, Stacks GA) or CNCF Sandbox OpenTofu 1.13 (MPL 2.0, CLI state encryption).</li>
+              <li><strong class="text-white">Zero-Secret State:</strong> Replaces 2020 plaintext state mitigations with Ephemeral Resources and Write-Only Arguments (<code class="font-mono text-sky-300">password_wo</code> + <code class="font-mono text-sky-300">password_wo_version</code>).</li>
+              <li><strong class="text-white">Native Locking &amp; Policy-as-Code:</strong> Migrates from DynamoDB LockID to S3 native locking (<code class="font-mono text-sky-300">use_lockfile = true</code>) and evaluates JSON plans via OPA/Rego (Conftest) or Sentinel.</li>
+              <li><strong class="text-white">Continuous Drift &amp; IDP Golden Paths:</strong> Advances from scheduled plan checks to Flux <code class="font-mono text-sky-300">tofu-controller</code> / Crossplane reconciliation exposed as self-service IDP Golden Paths.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOK 5: EXECUTIVE CTA STRIP -->
+    <div class="bg-obsidian/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Cloud Automation, IaC Governance &amp; SaaS Multi-Tenancy Advisory</p>
+        <p class="text-sm text-slate-300">Need a technical review of Terraform/OpenTofu state isolation, multi-tenant ERP security, or zero-touch onboarding?</p>
+      </div>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Multi-Tenant%20ERP%20IaC%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
+          <i class="fa-solid fa-lock"></i> Request Full Walkthrough (Under NDA)
+        </a>
+        <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-outline text-xs">
+          <i class="fa-solid fa-file-pdf"></i> Verified CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TRANSLATION MATRIX -->
 <section class="bg-white py-20 px-6 border-t border-wire text-slate-800">
   <div class="max-w-6xl mx-auto">
@@ -1989,6 +2491,11 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Zero-Touch Provisioning</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">ERP Architecture</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Multi-Tenant Cloud</span>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#erp-iac-blueprint" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+              <i class="fa-solid fa-diagram-project"></i> Inspect Multi-Tenant ERP IaC Blueprint (NDA-Safe) <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -2688,6 +3195,22 @@
     });
     var activePanel = document.getElementById('mfpanel-' + tabName);
     var activeTab   = document.getElementById('mftab-' + tabName);
+    if (activePanel) activePanel.classList.remove('hidden');
+    if (activeTab)   activeTab.classList.add('bp-active');
+  }
+
+
+  // 6D. MULTI-TENANT ERP IAC BLUEPRINT TAB CONTROLLER
+  function switchErpTab(tabName) {
+    var panels = ['gates', 'tradeoffs', 'evolution'];
+    panels.forEach(function(p) {
+      var panelEl = document.getElementById('erppanel-' + p);
+      var tabEl   = document.getElementById('erptab-' + p);
+      if (panelEl) panelEl.classList.add('hidden');
+      if (tabEl)   tabEl.classList.remove('bp-active');
+    });
+    var activePanel = document.getElementById('erppanel-' + tabName);
+    var activeTab   = document.getElementById('erptab-' + tabName);
     if (activePanel) activePanel.classList.remove('hidden');
     if (activeTab)   activeTab.classList.add('bp-active');
   }
