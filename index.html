@@ -594,7 +594,7 @@
           <i class="fa-solid fa-bolt text-xs text-amber-gold"></i>
         </div>
         <div class="font-display font-bold text-sm text-white leading-snug mb-1">Multi-Tenant ERP IaC</div>
-        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">GitHub Actions &middot; Terraform ZTP &middot; -70%</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Terraform + Ansible (Odoo) &middot; -70%</div>
       </button>
 
       <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('multifinance', false)" id="csbtn-multifinance" class="cs-selector-btn">
@@ -1798,7 +1798,7 @@
 
       <!-- PANEL 03: MULTI-TENANT ERP IAC -->
       <div id="cspanel-erp" class="hidden cs-panel-animate" role="tabpanel">
-<div class="sec-label">Case Study 03 &middot; May to Oct 2020 &middot; Multi-Tenant Cloud ERP GitHub &amp; Terraform ZTP</div>
+<div class="sec-label">Case Study 03 &middot; May to Oct 2020 &middot; Multi-Tenant Odoo ERP GitHub, Terraform &amp; Ansible ZTP</div>
 
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div class="max-w-3xl">
@@ -1807,10 +1807,10 @@
           NDA-Safe Architecture Spec &middot; May 2020 to Oct 2020 (6 Months)
         </div>
         <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-          Multi-Tenant Cloud ERP: GitHub Actions &amp; Declarative Terraform ZTP
+          Multi-Tenant Cloud ERP (Odoo): GitHub Actions, Terraform &amp; Ansible ZTP
         </h2>
         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Six-month cloud automation architecture built during the <strong class="text-white">HashiCorp Terraform 0.12 to 0.13</strong> transition (GA August 10, 2020) for 3-tier multi-tenant Cloud ERP SaaS deployments. Architected versioned <strong class="text-white">GitHub repositories</strong> (<code class="font-mono text-sky-300">erp-terraform-modules</code> &amp; <code class="font-mono text-sky-300">erp-tenants-live</code>) with <strong class="text-white">GitHub Actions Zero-Touch Provisioning (ZTP)</strong>, Branch Protection &amp; CODEOWNERS peer review, automated PR plan diffs, and nightly drift detection - cutting client environment provisioning lead time by <strong class="text-white">70%</strong> while enforcing per-tenant remote state isolation, Silo/Bridge/Pool tenancy boundaries, shift-left security gates, and ISO/IEC 27001 lifecycle governance.
+          Six-month cloud automation architecture built during the <strong class="text-white">HashiCorp Terraform 0.12 to 0.13</strong> transition (GA August 10, 2020) for 3-tier multi-tenant <strong class="text-white">Odoo Cloud ERP</strong> SaaS deployments. Enforced strict separation of concerns across versioned <strong class="text-white">GitHub repositories</strong> (<code class="font-mono text-sky-300">erp-terraform-modules</code>, <code class="font-mono text-sky-300">erp-tenants-live</code>, and Ansible playbooks) orchestrated by <strong class="text-white">GitHub Actions Zero-Touch Provisioning (ZTP)</strong>: <strong class="text-white">Terraform</strong> owned cloud infrastructure provisioning, while <strong class="text-white">Ansible</strong> automated idempotent <strong class="text-white">Odoo ERP code provisioning, custom addons deployment, and tenant configuration</strong> (<code class="font-mono text-sky-300">odoo.conf</code>, runtime dependencies, and service parameters) - cutting client environment provisioning lead time by <strong class="text-white">70%</strong> with per-tenant state isolation, Silo/Bridge/Pool tenancy boundaries, and ISO/IEC 27001 governance.
         </p>
       </div>
       <div class="font-mono text-[11px] text-slate-400 bg-obsidian/80 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
@@ -1830,7 +1830,7 @@
         </div>
         <div class="font-display text-3xl font-extrabold text-white">70% Faster</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Client environment provisioning lead time cut by 70% via GitHub Actions + modular Terraform ZTP, collapsing cross-team ticket queues and ClickOps rework.
+          Client environment provisioning lead time cut by 70% via GitHub Actions + modular Terraform (cloud infra) + Ansible (Odoo code provisioning &amp; config), collapsing ticket queues and ClickOps rework.
         </p>
       </div>
 
@@ -1862,9 +1862,9 @@
       <div class="bg-slate-900/90 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
-          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">5-Stage GitHub Actions &amp; Declarative Terraform ZTP ERP Blueprint (2020)</span>
+          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">5-Stage GitHub Actions, Terraform (Infra) &amp; Ansible (Odoo Config) ZTP Blueprint (2020)</span>
         </div>
-        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">GITHUB REPOS + ACTIONS &middot; TERRAFORM 0.12 -> 0.13 &middot; ISO/IEC 27001</span>
+        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">GITHUB ACTIONS &middot; TERRAFORM 0.12 -> 0.13 &middot; ANSIBLE (ODOO) &middot; ISO 27001</span>
       </div>
 
       <div class="p-4 sm:p-6 overflow-x-auto blueprint-grid">
@@ -1887,7 +1887,7 @@
           <!-- Top Governance Banner -->
           <rect x="20" y="14" width="1040" height="36" rx="6" fill="#0F172A" stroke="#1D6FA4" stroke-width="1.2"/>
           <text x="540" y="36" text-anchor="middle" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">
-            GITHUB + TERRAFORM ZTP:  70% LEAD TIME REDUCTION  |  PR PLAN DIFF &amp; CODEOWNERS  |  PER-TENANT STATE  |  NIGHTLY DRIFT CRON
+            GITHUB + TERRAFORM + ANSIBLE (ODOO):  70% LEAD TIME REDUCTION  |  INFRA VS APP CM SPLIT  |  PER-TENANT STATE  |  NIGHTLY DRIFT CRON
           </text>
 
           <!-- STAGE 1: ONBOARDING TRIGGER -->
@@ -1930,11 +1930,11 @@
           <rect x="659" y="72" width="188" height="202" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
           <text x="753" y="95" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">4. TENANT PROVISIONING</text>
           <rect x="671" y="108" width="164" height="152" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
-          <text x="753" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">VPC Runner Apply</text>
+          <text x="753" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">TF Apply + Ansible Odoo</text>
           <text x="753" y="148" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">Saved tfplan.binary</text>
           <text x="753" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Parallel DAG Execution</text>
           <text x="753" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Self-Hosted Runner IAM</text>
-          <text x="753" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Zero Local Provisioners</text>
+          <text x="753" y="199" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Ansible: Odoo Code/Conf</text>
           <rect x="685" y="218" width="136" height="28" rx="4" fill="#23190B" stroke="#F59E0B" stroke-opacity="0.6"/>
           <text x="753" y="236" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.22 / A.8.2</text>
 
@@ -1993,7 +1993,7 @@
           <text x="708" y="406" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Cloud API Deletion Protection</text>
           <text x="708" y="424" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Revoked Delete on Routine CI</text>
           <text x="708" y="442" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">External Vault / KMS Rotation</text>
-          <text x="708" y="460" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Immutable Image / CM Runtime</text>
+          <text x="708" y="460" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Ansible CM: Odoo Code/Config</text>
 
           <rect x="831" y="346" width="213" height="138" rx="5" fill="#1B1325" stroke="#8B5CF6" stroke-opacity="0.55"/>
           <text x="937" y="366" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Anti-Orphan Offboarding</text>
@@ -2028,8 +2028,8 @@
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">STAGE 04</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">VPC Runner Apply</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Self-hosted VPC GitHub Actions runner executes saved tfplan.binary via parallel DAG using least-privilege instance IAM (zero static cloud keys in Git).</p>
+          <h4 class="text-white font-bold text-xs mb-1.5">TF Apply &amp; Ansible (Odoo)</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Self-hosted VPC runner applies saved tfplan.binary via parallel DAG (cloud infra), then runs idempotent Ansible playbooks for Odoo code provisioning, addons, and odoo.conf setup.</p>
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-uptime font-bold mb-1">STAGE 05</div>
@@ -2273,7 +2273,7 @@
           <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-5">
             <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">5-Step Clean Deprovisioning &amp; Separation of Concerns</div>
             <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">Strict Separation of Concerns:</strong> Terraform owns cloud infrastructure lifecycle only; ERP software runs via immutable images, containers, or dedicated CM (no <code class="font-mono text-sky-300">local-exec</code>/<code class="font-mono text-sky-300">remote-exec</code> provisioners).</li>
+              <li><strong class="text-white">Strict Separation of Concerns (Terraform vs. Ansible):</strong> Terraform owns cloud infrastructure lifecycle only (zero <code class="font-mono text-sky-300">local-exec</code>/<code class="font-mono text-sky-300">remote-exec</code> provisioners); <strong class="text-white">Ansible</strong> handles idempotent <strong class="text-white">Odoo ERP code provisioning, custom addons deployment, and tenant configuration</strong> (<code class="font-mono text-sky-300">odoo.conf</code>, Python/OS dependencies, worker tuning, and service units).</li>
               <li><strong class="text-white">1. Freeze &amp; Contractual Export:</strong> Revoke tenant access/API keys and deliver verified final ERP data export.</li>
               <li><strong class="text-white">2. Two-Stage Safe Destroy (GitHub PRs):</strong> Approved PR #1 lifts <code class="font-mono text-sky-300">prevent_destroy</code> and cloud deletion protection; approved PR #2 executes <code class="font-mono text-sky-300">terraform apply -destroy</code> via protected workflow.</li>
               <li><strong class="text-white">3. Crypto-Shredding (ISO A.8.10):</strong> Purge post-retention snapshots and schedule tenant KMS CMK destruction with audit logs.</li>
@@ -2306,14 +2306,14 @@
         </span>
         <span class="font-mono text-[9px] text-slate-300 bg-slate-800/90 border border-slate-700 px-2 py-0.5 rounded">DELIVERY WINDOW: MAY–OCT 2020 · CLEAN HANDOVER</span>
       </div>
-      <p class="text-xs text-slate-300 leading-relaxed">Held <strong class="text-white">historical delivery ownership</strong> during the May–October 2020 mandate for GitHub Actions + modular HashiCorp Terraform Zero-Touch Provisioning, isolated per-tenant remote state, Silo/Bridge/Pool isolation patterns, and ISO 27001 lifecycle guardrails through handover. All proprietary ERP applications, client environments, repositories, and post-October 2020 operations belong exclusively to the company's internal team.</p>
+      <p class="text-xs text-slate-300 leading-relaxed">Held <strong class="text-white">historical delivery ownership</strong> during the May–October 2020 mandate for GitHub Actions + modular HashiCorp Terraform infrastructure ZTP, Ansible playbooks for Odoo ERP code provisioning and configuration, isolated per-tenant remote state, Silo/Bridge/Pool isolation patterns, and ISO 27001 lifecycle guardrails through handover. All proprietary ERP applications, client environments, repositories, and post-October 2020 operations belong exclusively to the company's internal team.</p>
     </div>
 
     <!-- BLOK 5: EXECUTIVE CTA STRIP -->
     <div class="bg-obsidian/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       <div>
         <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Cloud Automation, IaC Governance &amp; SaaS Multi-Tenancy Advisory</p>
-        <p class="text-sm text-slate-300">Need a technical review of GitHub Actions + Terraform/OpenTofu ZTP pipelines, state isolation, or multi-tenant ERP security?</p>
+        <p class="text-sm text-slate-300">Need a technical review of GitHub Actions + Terraform/OpenTofu + Ansible (Odoo) ZTP pipelines, state isolation, or multi-tenant ERP security?</p>
       </div>
       <div class="flex flex-wrap gap-3 shrink-0">
         <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Multi-Tenant%20ERP%20IaC%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
@@ -3006,7 +3006,7 @@
 <!-- TELKOM AKSES 2013-2014 FTTH FIELD AUDIT & SMALLWORLD PNI GIS ARCHIVE -->
 <section id="noc" class="bg-slate-900 py-20 px-6">
   <div class="max-w-6xl mx-auto">
-    <div class="sec-label">L1 Physical Plant Archive &middot; PT Telkom Akses (Apr 2013 &ndash; Oct 2014)</div>
+    <div class="sec-label">L1 Physical Plant Archive &middot; PT Telkom Akses &middot; Project Officer of Construction Management (POCM) under Directorate of Operation (Apr 2013 &ndash; Oct 2014)</div>
     <h2 class="font-display text-3xl font-bold text-white mb-1">FTTH Field Audit &amp; Smallworld PNI GIS Reconciliation</h2>
     <p class="text-slate-400 font-mono text-xs mb-8">
       Telkom Indonesia Group (2013&ndash;2014) &middot; GE Smallworld PNI (GIS) As-Built Inventory &middot; Field QA Audit &amp; Datek-to-Dalay Reconciliation
@@ -3372,19 +3372,21 @@
             May 2020 - October 2020 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Built declarative Terraform Infrastructure as Code provisioning workflows backed by GitHub repositories and GitHub Actions CI/CD pipelines (Branch Protection, CODEOWNERS PR plan diffs, shift-left validation, and automated drift checks) for multi-tenant enterprise resource planning cloud deployments. Cut client environment provisioning lead time by 70% through modular zero-touch provisioning automation.
+            Built declarative HashiCorp Terraform Infrastructure as Code workflows for cloud infrastructure provisioning paired with Ansible playbooks for idempotent Odoo ERP code provisioning, custom module deployment, and tenant configuration (odoo.conf, runtime dependencies, and service hardening), backed by GitHub repositories and GitHub Actions CI/CD pipelines (Branch Protection, CODEOWNERS PR plan diffs, shift-left validation, and automated drift checks) for multi-tenant ERP cloud deployments. Cut client environment provisioning lead time by 70% through modular zero-touch provisioning automation.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GitHub SCM &amp; Actions</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Infrastructure as Code (IaC)</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">HashiCorp Terraform</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Ansible (Odoo Provisioning &amp; Config)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Odoo ERP</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Cloud Automation</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Zero-Touch Provisioning</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">ERP Architecture</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Multi-Tenant Cloud</span>
           </div>
           <div class="mt-4 bg-slate-50 border-l-2 border-steel px-3.5 py-2.5 rounded-r text-[11px] font-mono text-slate-600 leading-relaxed">
-            <span class="text-slate-900 font-bold uppercase tracking-wider">Ownership Boundary (Historical Delivery):</span> Held delivery ownership for GitHub Actions + modular Terraform ZTP workflows and isolated multi-tenant state architecture during May–Oct 2020; all proprietary ERP environments, repositories, and post-October 2020 operations remain solely under internal company ownership.
+            <span class="text-slate-900 font-bold uppercase tracking-wider">Ownership Boundary (Historical Delivery):</span> Held delivery ownership for GitHub Actions + modular Terraform infrastructure ZTP, Ansible Odoo code provisioning and configuration playbooks, and isolated multi-tenant state architecture during May–Oct 2020; all proprietary ERP environments, repositories, and post-October 2020 operations remain solely under internal company ownership.
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
             <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('erp', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
@@ -3457,7 +3459,7 @@
         <div class="timeline-node-dot"></div>
         <div class="bg-white border border-slate-200 rounded-lg p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow">
           <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-            Principal Operational, Compliance &amp; Commissioning Lead, <span class="font-semibold text-slate-800">PT Telkom Akses (Telkom Indonesia Group)</span>
+            Project Officer of Construction Management for FTTH Commissioning &amp; OSS/BSS Operations under Directorate of Operation, <span class="font-semibold text-slate-800">PT Telkom Akses (Telkom Indonesia Group)</span>
           </h3>
           <div class="text-xs sm:text-sm text-slate-500 font-normal mt-1 mb-3.5">
             April 2013 - October 2014 &middot; Jakarta, Indonesia
@@ -3487,7 +3489,7 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Red Hat Enterprise Linux 6</span>
           </div>
           <div class="mt-4 bg-amber-50/70 border-l-2 border-amber-500 px-3.5 py-2.5 rounded-r text-[11px] font-mono text-slate-700 leading-relaxed">
-            <span class="text-slate-900 font-bold uppercase tracking-wider">Scope Boundary (Standalone L1/L2 Telecom - Non-DevOps / Non-Cloud):</span> Executed strictly within physical FTTH/GPON commissioning, ODN optical QA audits, VoBB SIP deep-packet inspection, GE Smallworld PNI (GIS) asset reconciliation, and RHEL 6 ETL scripting during Apr 2013&ndash;Oct 2014. No correlation with DevOps, DevSecOps, or cloud-native platforms; operational stewardship concluded upon October 2014 handover.
+            <span class="text-slate-900 font-bold uppercase tracking-wider">Scope Boundary (Standalone L1/L2 Telecom - Non-DevOps / Non-Cloud):</span> Official employment certificate (paklaring) code: POCM (Project Officer of Construction Management for FTTH Commissioning &amp; OSS/BSS Operations under Directorate of Operation). Executed strictly within physical FTTH/GPON commissioning, ODN optical QA audits, VoBB SIP deep-packet inspection, GE Smallworld PNI (GIS) asset reconciliation, and RHEL 6 ETL scripting during Apr 2013&ndash;Oct 2014. No correlation with DevOps, DevSecOps, or cloud-native platforms; operational stewardship concluded upon October 2014 handover.
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
             <a href="#noc" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
