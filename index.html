@@ -594,7 +594,7 @@
           <i class="fa-solid fa-bolt text-xs text-amber-gold"></i>
         </div>
         <div class="font-display font-bold text-sm text-white leading-snug mb-1">Multi-Tenant ERP IaC</div>
-        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Terraform ZTP &middot; -70% Lead Time</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">GitHub Actions &middot; Terraform ZTP &middot; -70%</div>
       </button>
 
       <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('multifinance', false)" id="csbtn-multifinance" class="cs-selector-btn">
@@ -1774,7 +1774,7 @@
 
       <!-- PANEL 03: MULTI-TENANT ERP IAC -->
       <div id="cspanel-erp" class="hidden cs-panel-animate" role="tabpanel">
-<div class="sec-label">Case Study 03 &middot; May to Oct 2020 &middot; Multi-Tenant Cloud ERP IaC &amp; ZTP</div>
+<div class="sec-label">Case Study 03 &middot; May to Oct 2020 &middot; Multi-Tenant Cloud ERP GitHub &amp; Terraform ZTP</div>
 
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div class="max-w-3xl">
@@ -1783,10 +1783,10 @@
           NDA-Safe Architecture Spec &middot; May 2020 to Oct 2020 (6 Months)
         </div>
         <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-          Multi-Tenant Cloud ERP: Declarative Terraform Zero-Touch Provisioning
+          Multi-Tenant Cloud ERP: GitHub Actions &amp; Declarative Terraform ZTP
         </h2>
         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Six-month cloud automation architecture built during the <strong class="text-white">HashiCorp Terraform 0.12 to 0.13</strong> transition (GA August 10, 2020) for 3-tier multi-tenant Cloud ERP SaaS deployments. Engineered modular <strong class="text-white">Zero-Touch Provisioning (ZTP)</strong> workflows that cut client environment provisioning lead time by <strong class="text-white">70%</strong> while enforcing per-tenant remote state isolation, Silo/Bridge/Pool tenancy boundaries, shift-left security gates, and ISO/IEC 27001 lifecycle governance.
+          Six-month cloud automation architecture built during the <strong class="text-white">HashiCorp Terraform 0.12 to 0.13</strong> transition (GA August 10, 2020) for 3-tier multi-tenant Cloud ERP SaaS deployments. Architected versioned <strong class="text-white">GitHub repositories</strong> (<code class="font-mono text-sky-300">erp-terraform-modules</code> &amp; <code class="font-mono text-sky-300">erp-tenants-live</code>) with <strong class="text-white">GitHub Actions Zero-Touch Provisioning (ZTP)</strong>, Branch Protection &amp; CODEOWNERS peer review, automated PR plan diffs, and nightly drift detection - cutting client environment provisioning lead time by <strong class="text-white">70%</strong> while enforcing per-tenant remote state isolation, Silo/Bridge/Pool tenancy boundaries, shift-left security gates, and ISO/IEC 27001 lifecycle governance.
         </p>
       </div>
       <div class="font-mono text-[11px] text-slate-400 bg-obsidian/80 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
@@ -1805,7 +1805,7 @@
         </div>
         <div class="font-display text-3xl font-extrabold text-white">70% Faster</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Client environment provisioning lead time cut by 70% via modular Zero-Touch Provisioning, collapsing cross-team ticket queues and ClickOps rework.
+          Client environment provisioning lead time cut by 70% via GitHub Actions + modular Terraform ZTP, collapsing cross-team ticket queues and ClickOps rework.
         </p>
       </div>
 
@@ -1827,7 +1827,7 @@
         </div>
         <div class="font-display text-3xl font-extrabold text-white">Silo / Bridge / Pool</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Flat-composition SemVer Terraform modules enforcing tenant isolation, noisy-neighbor governance, and tag-audited anti-orphan offboarding.
+          GitHub SemVer-tagged Terraform modules enforcing tenant isolation, PR plan approvals, noisy-neighbor governance, and tag-audited anti-orphan offboarding.
         </p>
       </div>
     </div>
@@ -1837,9 +1837,9 @@
       <div class="bg-slate-900/90 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
-          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">5-Stage Declarative ZTP &amp; Multi-Tenant ERP Isolation Blueprint</span>
+          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">5-Stage GitHub Actions &amp; Declarative Terraform ZTP ERP Blueprint (2020)</span>
         </div>
-        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">TERRAFORM 0.12 -> 0.13 &middot; ISO/IEC 27001 &middot; CLOUD-AGNOSTIC</span>
+        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">GITHUB REPOS + ACTIONS &middot; TERRAFORM 0.12 -> 0.13 &middot; ISO/IEC 27001</span>
       </div>
 
       <div class="p-4 sm:p-6 overflow-x-auto blueprint-grid">
@@ -1862,30 +1862,30 @@
           <!-- Top Governance Banner -->
           <rect x="20" y="14" width="1040" height="36" rx="6" fill="#0F172A" stroke="#1D6FA4" stroke-width="1.2"/>
           <text x="540" y="36" text-anchor="middle" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">
-            DECLARATIVE ZTP PIPELINE:  70% LEAD TIME REDUCTION  |  FLAT MODULE COMPOSITION  |  SEPARATE STATE PER TENANT  |  ISO 27001 ALIGNED
+            GITHUB + TERRAFORM ZTP:  70% LEAD TIME REDUCTION  |  PR PLAN DIFF &amp; CODEOWNERS  |  PER-TENANT STATE  |  NIGHTLY DRIFT CRON
           </text>
 
           <!-- STAGE 1: ONBOARDING TRIGGER -->
           <rect x="20" y="72" width="188" height="202" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
-          <text x="114" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. ONBOARDING TRIGGER</text>
+          <text x="114" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. GITHUB PR / DISPATCH</text>
           <rect x="32" y="108" width="164" height="152" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.45"/>
-          <text x="114" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Tenant Git PR / API</text>
-          <text x="114" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">tenant_id &amp; region</text>
-          <text x="114" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Silo / Bridge / Pool tier</text>
-          <text x="114" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">TF 0.13 Custom Validation</text>
-          <text x="114" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Ownership &amp; Cost Tags</text>
+          <text x="114" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">GitHub Repo &amp; Trigger</text>
+          <text x="114" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">erp-tenants-live PR</text>
+          <text x="114" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">workflow_dispatch / API</text>
+          <text x="114" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Branch Protect &amp; CODEOWNERS</text>
+          <text x="114" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">TF 0.13 Var Validation</text>
           <rect x="46" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.6"/>
           <text x="114" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.32 / A.8.4</text>
 
           <!-- STAGE 2: MODULAR TERRAFORM REGISTRY -->
           <rect x="233" y="72" width="188" height="202" rx="8" fill="#0B1324" stroke="#38BDF8" stroke-width="1.5"/>
-          <text x="327" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. MODULAR TF REGISTRY</text>
+          <text x="327" y="95" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. GITHUB MODULES &amp; CI</text>
           <rect x="245" y="108" width="164" height="152" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.5"/>
-          <text x="327" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Flat Composition</text>
-          <text x="327" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">VPC, Compute, DB, IAM</text>
-          <text x="327" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SemVer Pinning (~&gt;)</text>
-          <text x="327" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">for_each on Modules</text>
-          <text x="327" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">tflint + Static IaC Scan</text>
+          <text x="327" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">GitHub SemVer + Actions</text>
+          <text x="327" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">erp-terraform-modules</text>
+          <text x="327" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">GitHub Releases (v1.x.x)</text>
+          <text x="327" y="182" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">fmt · validate · tflint</text>
+          <text x="327" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">tfsec/Checkov · PR Diff</text>
           <rect x="259" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.6"/>
           <text x="327" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.9 / A.8.27</text>
 
@@ -1905,11 +1905,11 @@
           <rect x="659" y="72" width="188" height="202" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
           <text x="753" y="95" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">4. TENANT PROVISIONING</text>
           <rect x="671" y="108" width="164" height="152" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
-          <text x="753" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Deterministic Apply</text>
+          <text x="753" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">VPC Runner Apply</text>
           <text x="753" y="148" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">Saved tfplan.binary</text>
           <text x="753" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Parallel DAG Execution</text>
-          <text x="753" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Least-Privilege CI Role</text>
-          <text x="753" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">No TF Provisioners</text>
+          <text x="753" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Self-Hosted Runner IAM</text>
+          <text x="753" y="199" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Zero Local Provisioners</text>
           <rect x="685" y="218" width="136" height="28" rx="4" fill="#23190B" stroke="#F59E0B" stroke-opacity="0.6"/>
           <text x="753" y="236" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.22 / A.8.2</text>
 
@@ -1920,7 +1920,7 @@
           <text x="966" y="128" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Zero False-Green Gate</text>
           <text x="966" y="148" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">DNS &amp; TLS Chain Valid</text>
           <text x="966" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">ERP DB Handshake OK</text>
-          <text x="966" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">App /health Probe Green</text>
+          <text x="966" y="182" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">/health &amp; Nightly Drift</text>
           <text x="966" y="199" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Negative Isolation Test</text>
           <rect x="898" y="218" width="136" height="28" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-opacity="0.7"/>
           <text x="966" y="236" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">ISO A.8.29 / A.8.15</text>
@@ -1972,8 +1972,8 @@
 
           <rect x="831" y="346" width="213" height="138" rx="5" fill="#1B1325" stroke="#8B5CF6" stroke-opacity="0.55"/>
           <text x="937" y="366" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Anti-Orphan Offboarding</text>
-          <text x="937" y="388" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">1. Freeze Access &amp; Export</text>
-          <text x="937" y="406" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">2. Two-Stage Safe Destroy</text>
+          <text x="937" y="388" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">1. Freeze &amp; Export (PR #1)</text>
+          <text x="937" y="406" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">2. Destroy PR #2 (4-Eyes)</text>
           <text x="937" y="424" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">3. KMS Crypto-Shredding</text>
           <text x="937" y="442" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">4. TenantID Tag Sweep</text>
           <text x="937" y="460" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">ISO A.5.23 &amp; A.8.10 Ready</text>
@@ -1988,13 +1988,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">STAGE 01</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Onboarding Trigger</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Declarative tenant manifest via Git PR or API with Terraform 0.13 custom variable validation before touching cloud APIs.</p>
+          <h4 class="text-white font-bold text-xs mb-1.5">GitHub PR &amp; Dispatch</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Declarative tenant manifest in GitHub (erp-tenants-live) via protected PR, workflow_dispatch, or API webhook with CODEOWNERS &amp; TF 0.13 variable validation.</p>
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-sky-300 font-bold mb-1">STAGE 02</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Modular Registry</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Flat-composition SemVer modules for VPC, compute, ERP database, and IAM verified via tflint and static security scanning.</p>
+          <h4 class="text-white font-bold text-xs mb-1.5">GitHub Modules &amp; CI</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">SemVer-tagged GitHub module repo (erp-terraform-modules) validated in GitHub Actions via fmt, validate, tflint, tfsec/Checkov, Dependabot, and PR plan diff comments.</p>
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">STAGE 03</div>
@@ -2003,13 +2003,13 @@
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">STAGE 04</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Tenant Provisioning</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Deterministic apply of saved tfplan.binary using parallel DAG execution and least-privilege CI roles without Terraform provisioners.</p>
+          <h4 class="text-white font-bold text-xs mb-1.5">VPC Runner Apply</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Self-hosted VPC GitHub Actions runner executes saved tfplan.binary via parallel DAG using least-privilege instance IAM (zero static cloud keys in Git).</p>
         </div>
         <div class="bp-plane-card">
           <div class="font-mono text-[10px] text-uptime font-bold mb-1">STAGE 05</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Readiness Check</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Automated DNS, TLS chain, ERP DB handshake, /health readiness, and negative cross-tenant isolation tests eliminating false greens.</p>
+          <h4 class="text-white font-bold text-xs mb-1.5">Readiness &amp; Drift Cron</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Automated DNS, TLS, ERP DB handshake, /health, and negative isolation probes, backed by nightly GitHub Actions schedule drift detection.</p>
         </div>
       </div>
     </div>
@@ -2031,9 +2031,14 @@
           </thead>
           <tbody>
             <tr>
+              <td class="font-semibold text-white">Unreviewed ClickOps, Credential Leaks &amp; Drift</td>
+              <td>Enforced <code class="font-mono text-sky-300">GitHub</code> Branch Protection Rules, <code class="font-mono text-sky-300">CODEOWNERS</code> 4-eyes review on automated <code class="font-mono text-sky-300">terraform plan</code> PR comments, GitHub Secret Scanning/Dependabot, VPC self-hosted GitHub Actions runners (no static prod keys in Git), and nightly scheduled drift checks.</td>
+              <td class="text-emerald-300">Eliminated unauthorized console changes and delivered an immutable GitHub PR-to-apply audit trail (ISO/IEC 27001 A.8.32 &amp; A.8.4).</td>
+            </tr>
+            <tr>
               <td class="font-semibold text-white">Wrong-Workspace &amp; Monolithic State Blast Radius</td>
-              <td>Rejected shared CLI Workspaces; enforced separate state per tenant and volatility (Stateful VPC/DB vs. Stateless Compute) with KMS CMK, versioning, and distributed lock timeouts.</td>
-              <td class="text-emerald-300">Contained blast radius per tenant, enabled canary module upgrades, and eliminated concurrent-write state corruption.</td>
+              <td>Rejected shared CLI Workspaces; enforced separate state per tenant and volatility (Stateful VPC/DB vs. Stateless Compute) across split GitHub repos (<code class="font-mono text-sky-300">erp-terraform-modules</code> &amp; <code class="font-mono text-sky-300">erp-tenants-live</code>) with KMS CMK, versioning, and distributed lock timeouts.</td>
+              <td class="text-emerald-300">Contained blast radius per tenant, enabled canary SemVer module upgrades, and eliminated concurrent-write state corruption.</td>
             </tr>
             <tr>
               <td class="font-semibold text-white">Cross-Tenant Leakage on Transaction Poolers</td>
@@ -2065,11 +2070,11 @@
       <div class="bg-slate-900/90 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div>
           <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
-          <h3 class="font-display text-lg font-bold text-white">Inspect 6-Gate Shift-Left CI, State Trade-Offs &amp; 2026 IaC Evolution</h3>
+          <h3 class="font-display text-lg font-bold text-white">Inspect GitHub Actions 6-Gate CI, Repo/State Trade-Offs &amp; 2026 Bridge</h3>
         </div>
         <div class="flex flex-wrap gap-2">
           <button type="button" onclick="switchErpTab('gates')" id="erptab-gates" class="bp-tab bp-active">
-            <i class="fa-solid fa-list-check mr-1.5"></i>6-Gate CI &amp; 70% Math
+            <i class="fa-solid fa-list-check mr-1.5"></i>GitHub Actions 6-Gate CI
           </button>
           <button type="button" onclick="switchErpTab('tradeoffs')" id="erptab-tradeoffs" class="bp-tab">
             <i class="fa-solid fa-scale-balanced mr-1.5"></i>State &amp; Tenancy Trade-Offs
@@ -2085,7 +2090,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           <div class="bg-slate-900/90 border border-uptime/35 rounded-lg p-4">
             <div class="font-mono text-[10px] text-uptime font-bold mb-1">DRIVER 01: QUEUE COLLAPSE</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Replaced cross-team manual tickets (network, infra, DB, security) with one declarative ZTP pipeline.</p>
+            <p class="text-xs text-slate-300 leading-relaxed">Replaced cross-team manual tickets (network, infra, DB, security) with one GitHub PR / workflow_dispatch ZTP pipeline.</p>
           </div>
           <div class="bg-slate-900/90 border border-steel/40 rounded-lg p-4">
             <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">DRIVER 02: PARALLEL DAG</div>
@@ -2093,11 +2098,11 @@
           </div>
           <div class="bg-slate-900/90 border border-amber-gold/35 rounded-lg p-4">
             <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">DRIVER 03: ZERO REWORK</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Curated SemVer registry modules eliminate ClickOps typos, CIDR errors, and missing encryption rework.</p>
+            <p class="text-xs text-slate-300 leading-relaxed">Curated GitHub SemVer-tagged modules (erp-terraform-modules) eliminate ClickOps typos, CIDR errors, and encryption rework.</p>
           </div>
           <div class="bg-slate-900/90 border border-purple-500/40 rounded-lg p-4">
             <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">DRIVER 04: SHIFT-LEFT</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Pre-apply CI gates catch syntax, provider, and security defects in seconds before calling cloud APIs.</p>
+            <p class="text-xs text-slate-300 leading-relaxed">Required GitHub PR status checks catch syntax, provider, secret, and security defects in seconds before apply.</p>
           </div>
         </div>
 
@@ -2139,14 +2144,14 @@
               <tr>
                 <td class="font-mono font-bold text-white">Gate 05: Binary Plan</td>
                 <td><code class="font-mono text-sky-300">terraform plan -out=tfplan.binary</code></td>
-                <td>Generates exact diff for peer review and JSON plan scan post-interpolation.</td>
-                <td>Apply strictly executes saved <code class="font-mono text-sky-300">tfplan.binary</code> only.</td>
+                <td>Posts exact plan diff directly as a GitHub PR comment for CODEOWNERS review and JSON policy scan.</td>
+                <td>Merge to <code class="font-mono text-sky-300">main</code> applies strictly the saved <code class="font-mono text-sky-300">tfplan.binary</code> artifact.</td>
               </tr>
               <tr>
                 <td class="font-mono font-bold text-white">Gate 06: Readiness</td>
                 <td>Automated Smoke &amp; Negative Probes</td>
                 <td>DNS resolution, TLS chain, ERP DB handshake, <code class="font-mono text-sky-300">/health</code>, and cross-tenant deny test.</td>
-                <td>Holds Onboarding Complete until all probes pass green.</td>
+                <td>Holds Onboarding Complete until probes pass; nightly GitHub Actions <code class="font-mono text-sky-300">schedule</code> cron detects out-of-band drift.</td>
               </tr>
             </tbody>
           </table>
@@ -2220,6 +2225,21 @@
             </table>
           </div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-slate-900/90 border border-steel/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">SPLIT GITHUB REPO TOPOLOGY</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Separated <code class="font-mono text-sky-300">erp-terraform-modules</code> (SemVer GitHub Releases <code class="font-mono text-sky-300">v1.x.x</code>) from <code class="font-mono text-sky-300">erp-tenants-live</code> (per-tenant manifests &amp; isolated backend keys) so module updates never force global tenant churn.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-uptime/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-uptime font-bold mb-1">2020 VPC GITHUB RUNNERS</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Pre-OIDC (2020): deployed self-hosted <code class="font-mono text-sky-300">GitHub Actions</code> runners inside private VPC subnets using least-privilege cloud instance IAM roles and encrypted GitHub Secrets, avoiding static root keys and public DB exposure.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-amber-gold/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">NIGHTLY DRIFT &amp; DEPENDABOT</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Scheduled read-only <code class="font-mono text-sky-300">terraform plan -detailed-exitcode</code> workflows auto-open GitHub Issues on ClickOps drift, while GitHub Dependabot &amp; Secret Scanning guard Terraform providers and tokens.</p>
+          </div>
+        </div>
       </div>
 
       <!-- TAB 3: CLEAN OFFBOARDING & 2020-TO-2026 IAC EVOLUTION BRIDGE -->
@@ -2230,7 +2250,7 @@
             <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
               <li><strong class="text-white">Strict Separation of Concerns:</strong> Terraform owns cloud infrastructure lifecycle only; ERP software runs via immutable images, containers, or dedicated CM (no <code class="font-mono text-sky-300">local-exec</code>/<code class="font-mono text-sky-300">remote-exec</code> provisioners).</li>
               <li><strong class="text-white">1. Freeze &amp; Contractual Export:</strong> Revoke tenant access/API keys and deliver verified final ERP data export.</li>
-              <li><strong class="text-white">2. Two-Stage Safe Destroy:</strong> CR 1 lifts <code class="font-mono text-sky-300">prevent_destroy</code> and cloud deletion protection; CR 2 executes <code class="font-mono text-sky-300">terraform apply -destroy</code>.</li>
+              <li><strong class="text-white">2. Two-Stage Safe Destroy (GitHub PRs):</strong> Approved PR #1 lifts <code class="font-mono text-sky-300">prevent_destroy</code> and cloud deletion protection; approved PR #2 executes <code class="font-mono text-sky-300">terraform apply -destroy</code> via protected workflow.</li>
               <li><strong class="text-white">3. Crypto-Shredding (ISO A.8.10):</strong> Purge post-retention snapshots and schedule tenant KMS CMK destruction with audit logs.</li>
               <li><strong class="text-white">4. Anti-Orphan Tag Sweep &amp; Hygiene:</strong> Reconcile mandatory <code class="font-mono text-sky-300">TenantID</code> tags via AWS Config / Cloud Custodian to remove unattached volumes/IPs before archiving empty state.</li>
             </ul>
@@ -2245,7 +2265,8 @@
               <li><strong class="text-white">Engine &amp; License Governance:</strong> 2020 Terraform 0.12/0.13 evolves to Terraform 1.17 (BSL 1.1, Stacks GA) or CNCF Sandbox OpenTofu 1.13 (MPL 2.0, CLI state encryption).</li>
               <li><strong class="text-white">Zero-Secret State:</strong> Replaces 2020 plaintext state mitigations with Ephemeral Resources and Write-Only Arguments (<code class="font-mono text-sky-300">password_wo</code> + <code class="font-mono text-sky-300">password_wo_version</code>).</li>
               <li><strong class="text-white">Native Locking &amp; Policy-as-Code:</strong> Migrates from DynamoDB LockID to S3 native locking (<code class="font-mono text-sky-300">use_lockfile = true</code>) and evaluates JSON plans via OPA/Rego (Conftest) or Sentinel.</li>
-              <li><strong class="text-white">Continuous Drift &amp; IDP Golden Paths:</strong> Advances from scheduled plan checks to Flux <code class="font-mono text-sky-300">tofu-controller</code> / Crossplane reconciliation exposed as self-service IDP Golden Paths.</li>
+              <li><strong class="text-white">Keyless GitHub OIDC &amp; Environments:</strong> Upgrades 2020 VPC runner/secret patterns to keyless <code class="font-mono text-sky-300">GitHub Actions OIDC</code> (<code class="font-mono text-sky-300">id-token: write</code>) and GitHub Environments required reviewer gates.</li>
+              <li><strong class="text-white">Continuous Drift &amp; IDP Golden Paths:</strong> Advances from scheduled GitHub Actions drift crons to Flux <code class="font-mono text-sky-300">tofu-controller</code> / Crossplane reconciliation exposed as self-service IDP Golden Paths.</li>
             </ul>
           </div>
         </div>
@@ -2256,7 +2277,7 @@
     <div class="bg-obsidian/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       <div>
         <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Cloud Automation, IaC Governance &amp; SaaS Multi-Tenancy Advisory</p>
-        <p class="text-sm text-slate-300">Need a technical review of Terraform/OpenTofu state isolation, multi-tenant ERP security, or zero-touch onboarding?</p>
+        <p class="text-sm text-slate-300">Need a technical review of GitHub Actions + Terraform/OpenTofu ZTP pipelines, state isolation, or multi-tenant ERP security?</p>
       </div>
       <div class="flex flex-wrap gap-3 shrink-0">
         <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Multi-Tenant%20ERP%20IaC%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
@@ -3170,6 +3191,7 @@
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Kubernetes Orchestration</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">HashiCorp Terraform</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GitHub SCM &amp; Actions</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Infrastructure as Code (IaC)</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Multi-Cloud Migration</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Technical Documentation</span>
@@ -3263,7 +3285,7 @@
             May 2020 - October 2020 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Built declarative Terraform Infrastructure as Code provisioning workflows for multi-tenant enterprise resource planning cloud deployments. Cut client environment provisioning lead time by 70% through modular zero-touch provisioning automation.
+            Built declarative Terraform Infrastructure as Code provisioning workflows backed by GitHub repositories and GitHub Actions CI/CD pipelines (Branch Protection, CODEOWNERS PR plan diffs, shift-left validation, and automated drift checks) for multi-tenant enterprise resource planning cloud deployments. Cut client environment provisioning lead time by 70% through modular zero-touch provisioning automation.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Infrastructure as Code (IaC)</span>
@@ -3455,7 +3477,7 @@
       </div>
       <div class="skill-card">
         <div class="skill-title">2.0 IaC &amp; Platform Automation</div>
-        <div class="skill-content">HashiCorp Terraform (Advanced) &middot; Ansible &middot; Zero-Touch Provisioning (ZTP) &middot; Self-Service Infra</div>
+        <div class="skill-content">HashiCorp Terraform (Advanced) &middot; GitHub Actions &middot; Ansible &middot; Zero-Touch Provisioning (ZTP) &middot; Self-Service Infra</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">3.0 Containers &amp; GitOps</div>
