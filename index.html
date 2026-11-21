@@ -540,7 +540,7 @@
         </div>
         <h3 class="font-display font-bold text-navy text-lg mb-2">Layer 7 Platform &amp; Security</h3>
         <p class="text-muted text-sm leading-relaxed mb-4">
-          GCP Professional Cloud Architect &amp; Azure AI-103. Multi-Cloud (AWS, GCP, Azure, Alibaba), Kubernetes (GKE/EKS), Terraform IaC, GitOps (Flux CD), CI/CD security gating (OWASP ZAP, SonarQube), and zero-downtime monolithic decomposition for FinTech and Enterprise systems.
+          GCP Professional Cloud Architect &amp; Azure AI-103. Multi-Cloud (AWS, GCP, Azure, Alibaba), Kubernetes (GKE/EKS), Terraform IaC, GitOps (Flux CD), CI/CD security gating (OWASP ZAP, SonarQube), and controlled, low-downtime monolithic decomposition for FinTech and Enterprise systems.
         </p>
         <div class="font-mono text-xs text-amber-gold font-bold">GCP PCA &middot; Azure AI Certified</div>
       </div>
@@ -548,7 +548,7 @@
   </div>
 </section>
 
-<!-- UNIFIED ARCHITECTURE SHOWCASE HUB (5 VERIFIED CASE STUDIES IN REVERSE-CHRONOLOGICAL ORDER) -->
+<!-- UNIFIED ARCHITECTURE SHOWCASE HUB (5 VERIFIED BLUEPRINTS IN REVERSE-CHRONOLOGICAL ORDER) -->
 <section id="blueprint" class="bg-obsidian blueprint-grid border-t border-steel/25 py-20 px-6 relative overflow-hidden">
   <div class="max-w-6xl mx-auto relative z-10">
     <!-- Hub Header -->
@@ -576,7 +576,7 @@
           <i class="fa-solid fa-code-branch text-xs text-uptime"></i>
         </div>
         <div class="font-display font-bold text-sm text-white leading-snug mb-1">FinTech GitOps &amp; DR</div>
-        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Flux CD &middot; Harbor &middot; Snyk &middot; OpenSearch</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Flux CD &middot; Harbor &middot; Snyk &middot; OJK &middot; DR</div>
       </button>
 
       <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('logistics', false)" id="csbtn-logistics" class="cs-selector-btn">
@@ -837,6 +837,36 @@
       </div>
     </div>
 
+    <!-- BLOK 2B: CROSS-BORDER SOVEREIGN CONTROL & OJK REGULATORY MANDATE (JUL 2022) -->
+    <div class="bg-slate-900/95 border-l-4 border-amber-gold border-y border-r border-slate-700/80 rounded-r-xl p-5 sm:p-6 mb-10 shadow-xl">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2 font-mono text-[11px] text-amber-gold font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-landmark"></i>
+          Regulatory Governance Insight: Domestic Sovereign Control vs. Cross-Border HQ Restrictions
+        </div>
+        <span class="font-mono text-[9px] text-sky-300 bg-steel/20 border border-steel/40 px-2 py-0.5 rounded">POJK 10/POJK.05/2022 &middot; POJK 4/POJK.05/2021</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        <div class="lg:col-span-8 space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <p>
+            In multinational FinTech structures, extreme operational access restrictions imposed by overseas parent or headquarters engineering hubs over a domestic entity's core electronic systems <strong class="text-white">directly collide with Indonesian financial law enforced since July 2022</strong>. Under <strong class="text-white">POJK No. 10/POJK.05/2022</strong> (effective July 4, 2022), every OJK-licensed LPBBTI operator is explicitly mandated to <strong class="text-white">independently own, possess, and control its Electronic System</strong> using internal IT specialists and is strictly prohibited from outsourcing core IT functions.
+          </p>
+          <p>
+            This mandate is reinforced by <strong class="text-white">POJK No. 4/POJK.05/2021</strong> governing domestic data center and transaction processing placement within Indonesia (Art. 23 to 26) and internal authorization plus segregation-of-duties controls (Art. 29). Legally, the domestic Indonesian engineering organization must retain sovereign control over its systems, cryptographic boundaries, and release governance rather than operating as an access-restricted peripheral team.
+          </p>
+        </div>
+        <div class="lg:col-span-4 bg-obsidian/90 border border-slate-800 rounded-lg p-4 space-y-2.5">
+          <div class="font-mono text-[10px] text-uptime font-bold uppercase tracking-wider">Architectural Remediation</div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Establishing sovereign local GitOps delivery (<strong class="text-white">Flux CD</strong>), supply-chain gates (<strong class="text-white">Harbor + Snyk</strong>), zero-trust telemetry (<strong class="text-white">ELK + OpenSearch</strong>), and domestic <strong class="text-white">FinTech DR</strong> closes cross-border governance gaps.
+          </p>
+          <button type="button" onclick="jumpToFintechSovereignTab()" class="w-full inline-flex items-center justify-center gap-2 bg-steel/20 hover:bg-steel/35 border border-steel/50 text-sky-300 font-mono text-[10px] font-bold uppercase tracking-wider py-2 px-3 rounded transition">
+            <i class="fa-solid fa-sitemap"></i> Inspect Sovereign Core &amp; Mesh Blueprint
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- BLOK 3: FINTECH RISK, CONSISTENCY, DR & REGULATORY TRANSLATION MATRIX -->
     <div class="mb-12">
       <div class="flex items-center justify-between mb-4">
@@ -853,6 +883,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td class="font-semibold text-amber-300">Cross-Border HQ Access Restrictions vs. OJK Sovereignty</td>
+              <td>Enforced domestic operational authority aligned with <code class="font-mono text-sky-300">POJK 10/POJK.05/2022</code> (prohibiting core IT outsourcing and mandating internal IT control) and <code class="font-mono text-sky-300">POJK 4/POJK.05/2021</code> (NKRI processing Art. 23-26 &amp; authorization control Art. 29) via local GitOps, Harbor/Snyk gates, and domestic DR.</td>
+              <td class="text-emerald-300">Eliminates regulatory non-compliance exposure where foreign hubs restrict domestic licensed entities from controlling their own electronic systems.</td>
+            </tr>
             <tr>
               <td class="font-semibold text-white">Vulnerable Dependencies &amp; Untrusted Images</td>
               <td>Automated <code class="font-mono text-sky-300">Snyk</code> SCA, Dockerfile, and IaC scanning in CI paired with <code class="font-mono text-sky-300">Harbor</code> private registry (immutable tag rules, robot RBAC, vulnerability blocking, and signed digests).</td>
@@ -889,11 +924,11 @@
     </div>
 
     <!-- BLOK 4: INTERACTIVE ENGINEERING DEEP-DIVE TABS -->
-    <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl mb-10">
+    <div id="fintech-deep-dive" class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl mb-10">
       <div class="bg-slate-900/95 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div>
           <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
-          <h3 class="font-display text-lg font-bold text-white">Inspect Flux vs. Argo, Harbor/Snyk + FinTech DR &amp; ELK/OpenSearch Telemetry</h3>
+          <h3 class="font-display text-lg font-bold text-white">Inspect GitOps, State/DR, OJK Compliance &amp; Sovereign Core Topology</h3>
         </div>
         <div class="flex flex-wrap gap-2">
           <button type="button" onclick="switchFintechTab('gitops')" id="fttab-gitops" class="bp-tab bp-active">
@@ -904,6 +939,9 @@
           </button>
           <button type="button" onclick="switchFintechTab('compliance')" id="fttab-compliance" class="bp-tab">
             <i class="fa-solid fa-gavel mr-1.5"></i>ELK/OpenSearch &amp; OJK
+          </button>
+          <button type="button" onclick="switchFintechTab('sovereign')" id="fttab-sovereign" class="bp-tab">
+            <i class="fa-solid fa-sitemap mr-1.5"></i>Sovereign Core &amp; Mesh
           </button>
         </div>
       </div>
@@ -1026,6 +1064,183 @@
           <p class="text-xs text-slate-300 leading-relaxed">
             <strong class="text-white">Confirmed Core Stack:</strong> GitOps continuous delivery with <code class="font-mono text-sky-300">Flux CD</code> on Alibaba Cloud, <code class="font-mono text-sky-300">Snyk</code> vulnerability scanning, <code class="font-mono text-sky-300">Harbor</code> private container registry, stateful-to-stateless FinTech backend decomposition, <code class="font-mono text-sky-300">FinTech Disaster Recovery</code>, RBAC, container hardening, and zero-trust observability across <code class="font-mono text-sky-300">ELK Stack</code> and <code class="font-mono text-sky-300">OpenSearch</code> aligned with OJK and Bank Indonesia governance. Cloud-native controls (ACK, RRSA, Terway, ASM, KMS, DTS, ActionTrail, OSS WORM) reflect the 2022 Jakarta (<code class="font-mono text-sky-300">ap-southeast-5</code>) reference architecture without disclosing confidential loan volumes or internal TPS metrics.
           </p>
+        </div>
+      </div>
+
+      <!-- TAB 4: SOVEREIGN FINTECH CORE & MULTI-CLUSTER MESH TOPOLOGY -->
+      <div id="ftpanel-sovereign" class="hidden p-5 sm:p-6 space-y-6">
+        <div class="bg-obsidian/90 border border-steel/45 rounded-lg p-5">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Sovereign Domestic Control Blueprint (POJK 10/POJK.05/2022 &amp; POJK 4/POJK.05/2021)</span>
+            <span class="font-mono text-[9px] text-sky-300 bg-steel/20 border border-steel/40 px-2 py-0.5 rounded">ALIBABA CLOUD NKRI &middot; FULL-STACK TARGET MODEL</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            In multinational FinTech entities where overseas headquarters hubs restrict local engineering visibility to perimeter tooling, this target-state architecture closes the remaining core layers required for <strong class="text-white">full domestic electronic system sovereignty</strong>. It integrates unified fail-fast operations automation (<code class="font-mono text-sky-300">set -euo pipefail</code>), <strong class="text-white">Strangler Fig legacy ledger decomposition</strong> behind dynamic Pod-CIDR firewall boundaries, <strong class="text-white">isolated Accounts and Ledger databases</strong> accessed via keyless pod Workload Identity (ACK RRSA), automated <strong class="text-white">code-style/unit/E2E release promotion</strong> into GitOps branches, and <strong class="text-white">active multi-cluster Service Mesh failover</strong> strictly inside Indonesia (NKRI).
+          </p>
+        </div>
+
+        <!-- Sovereign FinTech Core & Multi-Cluster Mesh SVG Blueprint -->
+        <div class="bg-obsidian border border-slate-700/80 rounded-xl overflow-hidden">
+          <div class="bg-slate-900/95 px-4 py-2.5 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
+            <span class="font-mono text-[11px] text-slate-200 font-bold uppercase tracking-wider">Sovereign FinTech Core Decomposition, GitOps Automation &amp; 2-Cluster Mesh (NKRI)</span>
+            <span class="font-mono text-[9px] text-sky-400">STRANGLER FIG &middot; MULTI-CLUSTER MESH &middot; SPLIT LEDGER DB &middot; RRSA OIDC</span>
+          </div>
+          <div class="p-4 overflow-x-auto blueprint-grid">
+            <svg viewBox="0 0 1080 545" class="w-full min-w-[780px] h-auto" role="img" aria-label="Sovereign FinTech Core Decomposition, Multi-Cluster Service Mesh, Split Accounts and Ledger Databases, and Keyless Identity Blueprint">
+              <defs>
+                <marker id="sov-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+                </marker>
+                <marker id="sov-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+                </marker>
+                <marker id="sov-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+                </marker>
+                <marker id="sov-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#C4B5FD"/>
+                </marker>
+              </defs>
+
+              <!-- LAYER 1: DOMESTIC UNIFIED OPS, QA GATES & DETERMINISTIC GITOPS RELEASE -->
+              <rect x="20" y="16" width="1040" height="112" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
+              <text x="38" y="38" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">LAYER 1: DOMESTIC SOVEREIGN OPS DISPATCHER &amp; DETERMINISTIC RELEASE GATES (POJK 10/2022 INTERNAL IT)</text>
+
+              <rect x="38" y="50" width="290" height="64" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.55"/>
+              <text x="183" y="70" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Automated QA &amp; Security Gates</text>
+              <text x="183" y="88" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Lint / Checkstyle &middot; Unit &amp; Snyk SCA</text>
+              <text x="183" y="103" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Staging/Prod E2E + Failure Evidence Archival</text>
+
+              <rect x="374" y="50" width="320" height="64" rx="5" fill="#13223A" stroke="#10B981" stroke-opacity="0.55"/>
+              <text x="534" y="70" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Deterministic GitOps Release Engine</text>
+              <text x="534" y="88" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SemVer &amp; Clean-Git Guard -> Manifest Render</text>
+              <text x="534" y="103" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Pins Terraform/Flux Sync Branch -> Signed Tag</text>
+
+              <rect x="740" y="50" width="302" height="64" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.55"/>
+              <text x="891" y="70" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Harbor Registry &amp; Domestic Vault</text>
+              <text x="891" y="88" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Immutable @sha256 Per Financial Service</text>
+              <text x="891" y="103" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Domestic OSS Archive: Artifacts &amp; Audit Proof</text>
+
+              <line x1="328" y1="82" x2="372" y2="82" stroke="#38BDF8" stroke-width="1.4" marker-end="url(#sov-arrow-sky)"/>
+              <line x1="694" y1="82" x2="738" y2="82" stroke="#10B981" stroke-width="1.4" marker-end="url(#sov-arrow-green)"/>
+
+              <!-- LAYER 2: STRANGLER FIG MONOLITH COEXISTENCE & 2-CLUSTER SERVICE MESH -->
+              <rect x="20" y="156" width="320" height="236" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
+              <text x="38" y="178" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">STRANGLER FIG LEGACY PATH</text>
+
+              <rect x="38" y="194" width="284" height="82" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
+              <text x="180" y="216" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Legacy Core Ledger (VM Tier)</text>
+              <text x="180" y="235" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">Artifact Build -> Controlled VM Cutover</text>
+              <text x="180" y="254" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Isolated Internal Service Port (TCP:8080)</text>
+
+              <rect x="38" y="294" width="284" height="80" rx="5" fill="#23190B" stroke="#F59E0B" stroke-width="1.1"/>
+              <text x="180" y="316" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Dynamic Pod-CIDR Firewall</text>
+              <text x="180" y="335" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Restricts Legacy Ledger Access Strictly</text>
+              <text x="180" y="352" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">to Verified Cluster Pod CIDR (Zero Public)</text>
+
+              <line x1="180" y1="276" x2="180" y2="292" stroke="#F59E0B" stroke-width="1.4" marker-end="url(#sov-arrow-amber)"/>
+
+              <!-- RIGHT BLOCK: MULTI-CLUSTER KUBERNETES + SERVICE MESH (PRIMARY & STANDBY DR) -->
+              <rect x="366" y="156" width="694" height="236" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
+              <text x="384" y="178" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">MULTI-CLUSTER FINTECH MESH &amp; DOMESTIC DR TOPOLOGY (PRIMARY DC + STANDBY DRC | NKRI)</text>
+
+              <rect x="384" y="194" width="318" height="122" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.55"/>
+              <text x="543" y="214" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Cluster-1 (Primary Jakarta DC)</text>
+              <text x="543" y="233" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Private Nodes &middot; Flux CD &middot; Fleet Config</text>
+              <text x="543" y="250" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SHA-256 Verified Mesh + Ingress Gateway</text>
+              <text x="543" y="268" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Frontend &middot; User/eKYC &middot; Contacts &middot; Auth</text>
+              <text x="543" y="286" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Strict mTLS Sidecar Injection Enforced</text>
+
+              <rect x="726" y="194" width="316" height="122" rx="5" fill="#112A2E" stroke="#38BDF8" stroke-opacity="0.55"/>
+              <text x="884" y="214" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Cluster-2 (Domestic DRC Peer)</text>
+              <text x="884" y="233" text-anchor="middle" fill="#7DD3FC" font-family="JetBrains Mono, monospace" font-size="8.5">Private Nodes &middot; Harbor Sync &middot; Flux DR</text>
+              <text x="884" y="250" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Cross-Cluster Endpoint Discovery Active</text>
+              <text x="884" y="268" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Balance Reader &middot; Ledger Writer &middot; History</text>
+              <text x="884" y="286" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Explicit mTLS Port NetworkPolicy Only</text>
+
+              <line x1="702" y1="254" x2="724" y2="254" stroke="#38BDF8" stroke-width="1.5" marker-start="url(#sov-arrow-sky)" marker-end="url(#sov-arrow-sky)"/>
+
+              <rect x="384" y="330" width="658" height="44" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.45"/>
+              <text x="713" y="349" text-anchor="middle" fill="#F8FAFC" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">MULTI-CLUSTER INGRESS + CENTRAL FLEET GOVERNANCE + ASYMMETRIC JWT AUTHENTICATION</text>
+              <text x="713" y="365" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Staging &amp; Production Namespace Isolation with Domestic Traffic Failover (POJK 4/2021 Art. 16 &amp; 23)</text>
+
+              <!-- Connector from Strangler Fig to Cluster -->
+              <line x1="340" y1="334" x2="364" y2="334" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#sov-arrow-amber)"/>
+
+              <!-- Connectors from Layer 1 to Layer 2 -->
+              <line x1="534" y1="128" x2="534" y2="154" stroke="#10B981" stroke-width="1.5" marker-end="url(#sov-arrow-green)"/>
+              <line x1="180" y1="128" x2="180" y2="154" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#sov-arrow-amber)"/>
+
+              <!-- LAYER 3: KEYLESS POD IDENTITY, SPLIT ACCOUNTS/LEDGER DB & ZERO-TRUST TELEMETRY -->
+              <rect x="20" y="420" width="1040" height="108" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
+              <text x="38" y="442" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">LAYER 3: KEYLESS POD IDENTITY (OIDC / RRSA), SPLIT FINANCIAL DATABASES &amp; ZERO-TRUST TELEMETRY</text>
+
+              <rect x="38" y="454" width="320" height="58" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.6"/>
+              <text x="198" y="474" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="11" font-weight="700">Keyless Workload Identity</text>
+              <text x="198" y="492" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">K8s ServiceAccount &lt;-&gt; Cloud IAM Role</text>
+              <text x="198" y="506" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.3">Short-Lived OIDC STS Tokens (Zero Static Keys)</text>
+
+              <rect x="384" y="454" width="330" height="58" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
+              <text x="549" y="474" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Split PostgreSQL Financial State</text>
+              <text x="549" y="492" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Dedicated Databases: accounts-db &amp; ledger-db</text>
+              <text x="549" y="506" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.3">KMS TDE + Secret Manager Rotation + NKRI DRC</text>
+
+              <rect x="740" y="454" width="302" height="58" rx="5" fill="#211A38" stroke="#38BDF8" stroke-opacity="0.55"/>
+              <text x="891" y="474" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Zero-Trust Observability</text>
+              <text x="891" y="492" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">ELK Stack &middot; OpenSearch &middot; Mesh Tracing</text>
+              <text x="891" y="506" text-anchor="middle" fill="#7DD3FC" font-family="JetBrains Mono, monospace" font-size="8.3">Upfront PII Masking + WORM Audit Lock</text>
+
+              <line x1="358" y1="483" x2="382" y2="483" stroke="#10B981" stroke-width="1.4" marker-end="url(#sov-arrow-green)"/>
+              <line x1="714" y1="483" x2="738" y2="483" stroke="#38BDF8" stroke-width="1.4" marker-end="url(#sov-arrow-sky)"/>
+
+              <!-- Vertical Connectors Layer 2 -> Layer 3 -->
+              <line x1="543" y1="392" x2="543" y2="418" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#sov-arrow-purple)"/>
+              <line x1="884" y1="392" x2="884" y2="418" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#sov-arrow-sky)"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Sovereign Core Operational Control Matrix -->
+        <div>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">Sovereign Core Control Planes (Closing Cross-Border Visibility Gaps)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse bp-table">
+              <thead>
+                <tr>
+                  <th class="w-1/4">Core Architecture Layer</th>
+                  <th class="w-5/12">Sovereign Engineering Pattern</th>
+                  <th class="w-1/3">Regulatory &amp; Operational Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold text-white">Strangler Fig Ledger Decomposition</td>
+                  <td>Coexists legacy VM ledger behind a dynamically queried Pod-CIDR firewall (strictly internal TCP:8080, zero public ingress) while extracting stateless account, balance, and transaction microservices into Kubernetes.</td>
+                  <td class="text-emerald-300">De-risks core banking modernization with incremental traffic cutover and isolated failure domains.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Split Financial Data Boundaries</td>
+                  <td>Separates <code class="font-mono text-sky-300">accounts-db</code> (identity/eKYC) and <code class="font-mono text-sky-300">ledger-db</code> (double-entry balances) on managed PostgreSQL with KMS TDE, Secret Manager rotation, and domestic NKRI replication.</td>
+                  <td class="text-emerald-300">Prevents cross-domain schema coupling and enforces POJK 4/2021 domestic data residency.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Keyless Pod-to-DB Identity</td>
+                  <td>Maps namespace-scoped Kubernetes ServiceAccounts to least-privilege cloud IAM roles via OIDC Workload Identity / ACK RRSA (<code class="font-mono text-sky-300">db-client</code>, <code class="font-mono text-sky-300">trace</code>, <code class="font-mono text-sky-300">metrics</code> only).</td>
+                  <td class="text-emerald-300">Eliminates static database passwords and long-lived JSON/AKSK keys inside financial pods.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Deterministic QA &amp; GitOps Release</td>
+                  <td>Fail-fast unified pipeline (<code class="font-mono text-sky-300">set -euo pipefail</code>) enforcing lint/checkstyle, unit tests, Snyk scans, E2E browser verification with screenshot archival, SemVer validation, clean-Git checks, and automated GitOps sync branch updates.</td>
+                  <td class="text-emerald-300">Gives domestic Indonesian engineers complete, auditable release autonomy under POJK 10/POJK.05/2022.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">2-Cluster Mesh &amp; Domestic DR</td>
+                  <td>Federates Primary Jakarta DC and Domestic DRC clusters under Multi-Cluster Ingress, SHA-256 verified managed Istio/ASM mTLS, cross-cluster endpoint discovery, and strict port-scoped NetworkPolicies.</td>
+                  <td class="text-emerald-300">Enables deterministic multi-cluster failover and verifiable FinTech DR drills inside Indonesia.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -2582,7 +2797,8 @@
     </div>
       </div>
 
-      <!-- Bottom Quick Switcher Bar -->
+
+            <!-- Bottom Quick Switcher Bar -->
       <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
         <button type="button" onclick="stepCaseStudy(-1)" class="btn-outline text-xs py-2.5 px-4">
           <i class="fa-solid fa-arrow-left"></i> Previous Blueprint
@@ -2691,7 +2907,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="sec-label">Telemetry Center</div>
     <h2 class="font-display text-3xl font-bold text-white mb-1">Operational Telemetry</h2>
-    <p class="text-slate-400 font-mono text-xs mb-8">Consolidated view of 34 provinces &middot; High Availability Active</p>
+    <p class="text-slate-400 font-mono text-xs mb-8">Reference Architecture Simulation &middot; 34 Provinces Concept View &middot; High Availability Modeling</p>
     
     <div class="bg-obsidian border border-slate-700 rounded-xl overflow-hidden shadow-2xl relative">
       <div class="absolute inset-0 scanline z-10 opacity-10 pointer-events-none"></div>
@@ -2725,7 +2941,7 @@
         <div id="view-noc" class="flex flex-col gap-6">
           <div id="map-container" class="w-full aspect-[2.5/1] bg-slate-950 border border-slate-800 rounded-lg relative overflow-hidden group">
             <div class="absolute top-4 right-4 text-xs font-mono text-slate-400 z-30 text-right bg-obsidian/90 p-2 rounded backdrop-blur border border-slate-800 pointer-events-none">
-              LIVE TOPOLOGY<br>
+              REFERENCE TOPOLOGY SIM<br>
               <span class="text-uptime animate-pulse">● BACKBONE ACTIVE</span>
             </div>
             <div class="absolute bottom-4 right-4 flex flex-col gap-2 z-30">
@@ -2959,7 +3175,7 @@
             July 2022 - September 2022 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Architected continuous delivery using GitOps with Flux CD on Alibaba Cloud, decoupling stateful legacy financial technology backend services into scalable stateless microservices. Enforced automated audit verification pipelines and container hardening aligned with Indonesia Financial Services Authority (OJK) and Bank Indonesia data governance standards. Implemented role-based access control and zero-trust telemetry across financial transaction pathways.
+            Architected continuous delivery using GitOps with Flux CD on Alibaba Cloud, decoupling stateful legacy financial technology backend services into scalable stateless microservices. Enforced automated audit verification pipelines, container hardening, Harbor private registry controls, and Snyk security gating aligned with Indonesia Financial Services Authority (OJK POJK 10/POJK.05/2022 domestic electronic system sovereignty and POJK 4/POJK.05/2021) and Bank Indonesia data governance standards. Implemented role-based access control, FinTech Disaster Recovery readiness, and zero-trust telemetry across ELK Stack and OpenSearch.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GitOps Delivery</span>
@@ -3214,7 +3430,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <div class="skill-card">
         <div class="skill-title">1.0 Multi-Cloud &amp; Migration</div>
-        <div class="skill-content">Monolith Decomposition &middot; GCP &middot; AWS &middot; Azure &middot; Alibaba Cloud &middot; Zero Cutover Downtime</div>
+        <div class="skill-content">Monolith Decomposition &middot; GCP &middot; AWS &middot; Azure &middot; Alibaba Cloud &middot; Controlled Low-Downtime Cutover</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">2.0 IaC &amp; Platform Automation</div>
@@ -3222,11 +3438,11 @@
       </div>
       <div class="skill-card">
         <div class="skill-title">3.0 Containers &amp; GitOps</div>
-        <div class="skill-content">Kubernetes (GKE/EKS) &middot; Docker &middot; Flux CD &middot; Helm &middot; Service Mesh &middot; Pod Autoscaling</div>
+        <div class="skill-content">Kubernetes (GKE/EKS/ACK) &middot; Docker &middot; Flux CD &middot; Harbor &middot; Service Mesh (Istio/ASM) &middot; Helm &middot; Pod Autoscaling</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">4.0 Platform Security &amp; IAM</div>
-        <div class="skill-content">Zero Trust &middot; OAuth2 / OIDC / JWT &middot; HashiCorp Vault &middot; RBAC &middot; OWASP Top 10 &middot; SonarQube</div>
+        <div class="skill-content">Zero Trust &middot; Workload Identity / RRSA &middot; RBAC &middot; Snyk &middot; OWASP ZAP &middot; SonarQube &middot; ELK / OpenSearch</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">5.0 Reliability Engineering &amp; Risk</div>
@@ -3831,9 +4047,9 @@
   }
 
 
-  // 6E. FINTECH GITOPS BLUEPRINT TAB CONTROLLER
+  // 6E. FINTECH GITOPS BLUEPRINT TAB CONTROLLER (4 TABS INCL. SOVEREIGN PUZZLE)
   function switchFintechTab(tabName) {
-    var panels = ['gitops', 'state', 'compliance'];
+    var panels = ['gitops', 'state', 'compliance', 'sovereign'];
     panels.forEach(function(p) {
       var panelEl = document.getElementById('ftpanel-' + p);
       var tabEl   = document.getElementById('fttab-' + p);
@@ -3844,6 +4060,15 @@
     var activeTab   = document.getElementById('fttab-' + tabName);
     if (activePanel) activePanel.classList.remove('hidden');
     if (activeTab)   activeTab.classList.add('bp-active');
+  }
+
+  function jumpToFintechSovereignTab() {
+    switchFintechTab('sovereign');
+    var dd = document.getElementById('fintech-deep-dive');
+    if (dd) {
+      var y = dd.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 
   // 7. TYPEBOT INTEGRATION
