@@ -364,7 +364,7 @@
     <!-- Desktop Navigation Links -->
     <div class="hidden lg:flex items-center gap-7 text-xs font-mono text-slate-400 uppercase tracking-wider">
       <a href="#blueprint"   class="hover:text-sky-400 transition">Blueprints</a>
-      <a href="#noc"         class="hover:text-sky-400 transition">Telemetry</a>
+      <a href="#noc"         class="hover:text-sky-400 transition">2014 GIS Audit</a>
       <a href="#experience"  class="hover:text-sky-400 transition">Track Record</a>
       <a href="#credentials" class="hover:text-sky-400 transition">Credentials</a>
     </div>
@@ -388,7 +388,7 @@
       <span>LAYOUT: MOBILE</span>
     </div>
     <a href="#blueprint"   class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Architecture Blueprints (5)</a>
-    <a href="#noc"         class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Telemetry</a>
+    <a href="#noc"         class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">2014 FTTH &amp; SW PNI GIS Audit</a>
     <a href="#experience"  class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Track Record</a>
     <a href="#credentials" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Credentials</a>
     <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="block text-sky-400 font-bold py-1">
@@ -2902,53 +2902,55 @@
   </div>
 </section>
 
-<!-- NATIONAL COMMAND CENTER / NOC -->
+<!-- TELKOM AKSES 2013-2014 FTTH FIELD AUDIT & SMALLWORLD PNI GIS ARCHIVE -->
 <section id="noc" class="bg-slate-900 py-20 px-6">
   <div class="max-w-6xl mx-auto">
-    <div class="sec-label">Telemetry Center</div>
-    <h2 class="font-display text-3xl font-bold text-white mb-1">Operational Telemetry</h2>
-    <p class="text-slate-400 font-mono text-xs mb-8">Reference Architecture Simulation &middot; 34 Provinces Concept View &middot; High Availability Modeling</p>
+    <div class="sec-label">L1 Physical Plant Archive &middot; PT Telkom Akses (Apr 2013 &ndash; Oct 2014)</div>
+    <h2 class="font-display text-3xl font-bold text-white mb-1">FTTH Field Audit &amp; Smallworld PNI GIS Reconciliation</h2>
+    <p class="text-slate-400 font-mono text-xs mb-8">
+      Telkom Indonesia Group (2013&ndash;2014) &middot; GE Smallworld PNI (GIS) As-Built Inventory &middot; Field QA Audit &amp; Datek-to-Dalay Reconciliation
+    </p>
     
     <div class="bg-obsidian border border-slate-700 rounded-xl overflow-hidden shadow-2xl relative">
       <div class="absolute inset-0 scanline z-10 opacity-10 pointer-events-none"></div>
       
       <div class="bg-slate-800/80 px-6 py-3 border-b border-slate-700 flex flex-col md:flex-row justify-between items-center gap-3 relative z-20">
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-4">
           <span class="flex items-center gap-2 font-mono text-xs text-slate-400">
-            <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
-            SYSTEM: <span class="text-uptime font-bold ml-1">ONLINE (100%)</span>
+            <span class="w-2 h-2 rounded-full bg-uptime"></span>
+            TIMELINE: <span class="text-uptime font-bold ml-1">TELKOM AKSES (2013&ndash;2014)</span>
           </span>
           <span class="hidden md:inline text-slate-700">|</span>
           <span class="hidden md:inline font-mono text-xs text-slate-400">
-            REGIONS: <span class="text-sky-400 font-bold">34/34 UP</span>
+            GIS SYSTEM: <span class="text-sky-400 font-bold">SW PNI SMALLWORLD</span>
           </span>
         </div>
-        <div class="flex gap-6">
+        <div class="flex flex-wrap gap-5">
           <button onclick="switchMode('noc')" id="tab-noc" class="noc-tab active-green">
-            <i class="fa-solid fa-map-location-dot mr-1"></i> Topology View
+            <i class="fa-solid fa-map-location-dot mr-1"></i> SW PNI GIS Footprint
           </button>
           <button onclick="switchMode('risk')" id="tab-risk" class="noc-tab">
-            <i class="fa-solid fa-shield-halved mr-1"></i> Risk Radar
+            <i class="fa-solid fa-shield-halved mr-1"></i> FTA / FMEA Audit
           </button>
           <button onclick="switchMode('cost')" id="tab-cost" class="noc-tab">
-            <i class="fa-solid fa-coins mr-1"></i> FinOps Ledger
+            <i class="fa-solid fa-file-contract mr-1"></i> BAST &amp; CAPEX Ledger
           </button>
         </div>
       </div>
 
       <div class="p-6 md:p-8 min-h-[520px] relative z-20">
-        <!-- Topology View -->
+        <!-- Tab 1: 2014 Telkom National Fiber Footprint & SW PNI GIS Context -->
         <div id="view-noc" class="flex flex-col gap-6">
           <div id="map-container" class="w-full aspect-[2.5/1] bg-slate-950 border border-slate-800 rounded-lg relative overflow-hidden group">
-            <div class="absolute top-4 right-4 text-xs font-mono text-slate-400 z-30 text-right bg-obsidian/90 p-2 rounded backdrop-blur border border-slate-800 pointer-events-none">
-              REFERENCE TOPOLOGY SIM<br>
-              <span class="text-uptime animate-pulse">● BACKBONE ACTIVE</span>
+            <div class="absolute top-4 right-4 text-xs font-mono text-slate-400 z-30 text-right bg-obsidian/90 p-2.5 rounded backdrop-blur border border-slate-800 pointer-events-none">
+              2014 NATIONAL FIBER FOOTPRINT<br>
+              <span class="text-sky-400">SW PNI GIS &amp; OSP AUDIT ARCHIVE</span>
             </div>
             <div class="absolute bottom-4 right-4 flex flex-col gap-2 z-30">
-              <button onclick="zoomMap(0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-700 hover:bg-slate-700 hover:text-uptime font-bold shadow-lg transition flex items-center justify-center">
+              <button onclick="zoomMap(0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-700 hover:bg-slate-700 hover:text-uptime font-bold shadow-lg transition flex items-center justify-center" aria-label="Zoom In Map">
                 <i class="fa-solid fa-plus text-xs"></i>
               </button>
-              <button onclick="zoomMap(-0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-700 hover:bg-slate-700 hover:text-alert font-bold shadow-lg transition flex items-center justify-center">
+              <button onclick="zoomMap(-0.2)" class="bg-slate-800 text-white w-8 h-8 rounded border border-slate-700 hover:bg-slate-700 hover:text-alert font-bold shadow-lg transition flex items-center justify-center" aria-label="Zoom Out Map">
                 <i class="fa-solid fa-minus text-xs"></i>
               </button>
             </div>
@@ -2957,110 +2959,121 @@
             <div id="map-wrapper" class="w-full h-full flex items-center justify-center cursor-grab">
               <img src="https://www.indotelko.com/images/media/201601/ori/grafisFo-tlkm.jpg"
                    class="w-full h-auto object-contain hologram-map"
-                   alt="National Backbone Topology" draggable="false"
+                   alt="Telkom Indonesia 2014 National Optical Fiber Backbone Footprint and Smallworld PNI GIS Context" draggable="false"
                    onerror="this.style.display='none'; document.getElementById('backup-text').style.display='flex';">
             </div>
             <div id="backup-text" class="hidden absolute inset-0 items-center justify-center text-slate-600 font-mono text-xs z-0 pointer-events-none">
-              [TOPOLOGY TELEMETRY ACTIVE]
+              [2014 NATIONAL FIBER &amp; SW PNI GIS ARCHIVE]
             </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-lg px-4 py-3 text-xs font-mono text-slate-400 leading-relaxed">
+            <span class="text-sky-400 font-bold">L1 TELECOM AUDIT ARCHIVE (2013&ndash;2014):</span> Dedicated strictly to the <strong class="text-slate-200">PT Telkom Akses copper-to-FTTH rollout</strong> under the Directorate of Operation &middot; capturing field quality audits, <strong class="text-slate-200">GE Smallworld PNI (GIS)</strong> physical outside-plant mapping (Datek), and BSS/OSS reconciliation (Dalay) for valid BAST handovers.
           </div>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center">
+            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center gap-3">
               <div class="flex items-center gap-3">
-                <i class="fa-solid fa-server text-uptime"></i>
+                <i class="fa-solid fa-earth-asia text-sky-400"></i>
                 <div>
-                  <h4 class="text-white font-bold font-mono text-xs">BACKBONE WEST</h4>
-                  <p class="text-xs text-slate-400">Gateway: <span class="text-amber-400">Batam (SG)</span></p>
+                  <h4 class="text-white font-bold font-mono text-xs">SW PNI GIS (SMALLWORLD)</h4>
+                  <p class="text-xs text-slate-400">As-Built ODC/ODP &amp; Feeder Datek</p>
                 </div>
               </div>
-              <span class="text-xs text-uptime border border-uptime/30 px-2 py-0.5 rounded bg-uptime/10 font-mono">OPTIMAL</span>
+              <span class="text-[10px] text-uptime border border-uptime/30 px-2 py-0.5 rounded bg-uptime/10 font-mono shrink-0">VERIFIED</span>
             </div>
-            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center">
+            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center gap-3">
               <div class="flex items-center gap-3">
-                <i class="fa-solid fa-satellite-dish text-yellow-500"></i>
+                <i class="fa-solid fa-wave-square text-yellow-500"></i>
                 <div>
-                  <h4 class="text-white font-bold font-mono text-xs">SEGMENT CENTRAL</h4>
-                  <p class="text-xs text-slate-400">Expansion: <span class="text-yellow-400">HA Ready</span></p>
+                  <h4 class="text-white font-bold font-mono text-xs">ODN &amp; GPON FIELD AUDIT</h4>
+                  <p class="text-xs text-slate-400">Attenuation &le; -24 dBm &middot; VoBB SIP</p>
                 </div>
               </div>
-              <span class="text-xs text-uptime border border-uptime/30 px-2 py-0.5 rounded bg-uptime/10 font-mono">ACTIVE</span>
+              <span class="text-[10px] text-uptime border border-uptime/30 px-2 py-0.5 rounded bg-uptime/10 font-mono shrink-0">QA PASSED</span>
             </div>
-            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center">
+            <div class="bg-slate-800/40 border border-slate-700 p-4 rounded-lg flex justify-between items-center gap-3">
               <div class="flex items-center gap-3">
-                <i class="fa-solid fa-network-wired text-sky-400"></i>
+                <i class="fa-solid fa-database text-uptime"></i>
                 <div>
-                  <h4 class="text-white font-bold font-mono text-xs">LOOP EAST</h4>
-                  <p class="text-xs text-slate-400">Route: <span class="text-sky-400">North &amp; South</span></p>
+                  <h4 class="text-white font-bold font-mono text-xs">DATEK &harr; DALAY ETL</h4>
+                  <p class="text-xs text-slate-400">SW PNI &rarr; I-Sisca / TenOSS (RHEL 6)</p>
                 </div>
               </div>
-              <span class="text-xs text-sky-400 border border-steel/30 px-2 py-0.5 rounded bg-steel/10 font-mono">STABLE</span>
+              <span class="text-[10px] text-sky-400 border border-steel/30 px-2 py-0.5 rounded bg-steel/10 font-mono shrink-0">BAST VALID</span>
             </div>
           </div>
         </div>
 
-        <!-- Risk Radar View -->
+        <!-- Tab 2: 2013-2014 FTA / FMEA Trial Audit Comparison -->
         <div id="view-risk" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div class="relative h-64 lg:h-80 w-full bg-slate-800/30 rounded-lg border border-slate-700 p-4">
             <canvas id="resilienceChart"></canvas>
           </div>
           <div class="font-mono text-sm space-y-6">
             <div class="border-l-4 border-alert pl-5">
-              <h4 class="text-alert font-bold mb-2">LEGACY COUPLED MONOLITH</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Tight dependencies, unhardened perimeter, and shared state databases. A single service failure triggers cascading cluster degradation across regional nodes.</p>
-              <p class="text-alert font-bold text-xs mt-1">Recovery Window: 8–15 Hours</p>
+              <h4 class="text-alert font-bold mb-2">PRE-AUDIT TRIAL BASELINE (2013)</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Unreconciled physical-to-logical gaps between field builds, GE Smallworld PNI GIS records (Datek), and BSS/OSS databases (Dalay); optical attenuation drops (&gt;-24 dBm), VoBB SIP registration anomalies, and SOAP XML API timeouts during trial integration testing.
+              </p>
+              <p class="text-alert font-bold text-xs mt-1">Exposure: Trial Fallout &amp; BAST Capital Discrepancy</p>
             </div>
             <div class="border-l-4 border-uptime pl-5">
-              <h4 class="text-uptime font-bold mb-2">DECOUPLED CLOUD-NATIVE STATE</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Stateless microservices on Kubernetes. Zero Trust mTLS, HashiCorp Vault secrets, automated failover, and GitOps self-healing workflows.</p>
-              <p class="text-uptime font-bold text-xs mt-1">Recovery Window: &lt;300ms (Automated)</p>
+              <h4 class="text-uptime font-bold mb-2">POST-AUDIT &amp; SW PNI RECONCILED STATE (2014)</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Standardized field compliance audits, GE Smallworld PNI as-built inventory lock, OMCI/TR-069 provisioning SOPs, Wireshark RFC 3261 SIP verification, and automated RHEL 6 ETL reconciliation guided by IEC 60812 (FMEA) and IEC 61025 (FTA).
+              </p>
+              <p class="text-uptime font-bold text-xs mt-1">Verified Outcome: -20% Trial Defects &middot; Zero Asset Discrepancy</p>
             </div>
           </div>
         </div>
 
-        <!-- FinOps Ledger View -->
+        <!-- Tab 3: 2013-2014 BAST & CAPEX Audit Ledger -->
         <div id="view-cost" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div class="bg-slate-800/30 border border-slate-700 rounded-lg p-6 font-mono text-sm">
-            <p class="text-xs text-slate-400 uppercase tracking-widest mb-5">// Capital Efficiency Ledger</p>
+            <p class="text-xs text-slate-400 uppercase tracking-widest mb-5">// 2013&ndash;2014 Telkom Akses Field Audit &amp; SW PNI Ledger</p>
             <div class="space-y-4">
               <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-slate-300">Ghost Asset Elimination</span>
-                <span class="text-uptime font-bold">OPEX -40%</span>
+                <span class="text-slate-300">FTTH Program CAPEX Audited</span>
+                <span class="text-sky-400 font-bold">IDR 1.5T ($93M)</span>
               </div>
               <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-slate-300">Automated Cluster Rightsizing</span>
-                <span class="text-emerald-400 font-bold">Scope 2 Reduced</span>
+                <span class="text-slate-300">Trial Integration Defect Rate</span>
+                <span class="text-uptime font-bold">-20% (FTA / FMEA)</span>
               </div>
               <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <span class="text-slate-300">Zero Regulatory Findings</span>
-                <span class="text-sky-400 font-bold">OJK / BI Compliant</span>
+                <span class="text-slate-300">SW PNI GIS vs. BSS/OSS Parity</span>
+                <span class="text-emerald-400 font-bold">Zero Discrepancy</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-slate-300">Deployment Lead Time</span>
-                <span class="text-yellow-400 font-bold">-70% via IaC</span>
+                <span class="text-slate-300">Handover &amp; Billing Governance</span>
+                <span class="text-yellow-400 font-bold">Valid BAST &middot; 0 Leakage</span>
               </div>
             </div>
           </div>
           <div class="font-mono text-sm space-y-5">
-            <h3 class="text-white text-lg font-display font-bold">Architecting for Capital Integrity</h3>
+            <h3 class="text-white text-lg font-display font-bold">Physical Plant Capital Integrity (2013&ndash;2014)</h3>
             <p class="text-slate-300 text-xs leading-relaxed">
-              Downtime is not merely a technical glitch; it is an unbudgeted operational risk that impairs EBITDA. Applying standardized reliability modeling (IEC 60812 FMEA, ISO 31000) ensures enterprise software migrations maintain audit compliance and financial resilience.
+              In nationwide FTTH deployment, an unrecorded Optical Distribution Point (ODP) or mismatched fiber port between <strong class="text-white">GE Smallworld PNI GIS (Datek)</strong> and <strong class="text-white">I-Sisca / TenOSS (Dalay)</strong> directly causes failed service activation, invalid BAST handovers, and permanent CAPEX leakage.
+            </p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Combining physical field quality audits, RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML), and formal IEC 60812 FMEA / IEC 61025 FTA modeling protected capital asset accuracy across the IDR 1.5T copper-to-FTTH program.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Ticker -->
+      <!-- Ticker (Strictly 2013-2014 Telkom Akses & SW PNI GIS Scope) -->
       <div class="bg-black/60 border-t border-slate-800 py-2 overflow-hidden">
         <div class="ticker-wrap">
           <div class="ticker-inner font-mono text-xs text-slate-500 px-4">
-            <span class="mr-10"><span class="text-uptime">●</span> KUBERNETES: GKE MULTI-CLUSTER HEALTHY</span>
-            <span class="mr-10"><span class="text-uptime">●</span> GITOPS: FLUX CD SYNCHRONIZED (ZERO-TOUCH)</span>
-            <span class="mr-10"><span class="text-sky-400">ℹ</span> AZURE AI: AGENTIC WORKFLOWS &amp; SEMANTIC KERNEL ACTIVE</span>
-            <span class="mr-10"><span class="text-sky-400">ℹ</span> TERRAFORM: IMMUTABLE INFRASTRUCTURE APPLIED</span>
-            <span class="mr-10"><span class="text-alert">✖</span> SECURITY: UNAPPROVED IAM ROLE BLOCKED</span>
-            <span class="mr-10"><span class="text-uptime">●</span> FMEA RISK AUDIT: RPN WITHIN ACCEPTABLE LIMITS</span>
-            <span class="mr-10"><span class="text-sky-400">ℹ</span> IEC 60812 / IEC 61025 / ISO 31000 / ISO/IEC 20000 COMPLIANT</span>
+            <span class="mr-10"><span class="text-uptime">●</span> SW PNI GIS (SMALLWORLD): AS-BUILT ODC/ODP SPATIAL INVENTORY AUDITED</span>
+            <span class="mr-10"><span class="text-uptime">●</span> DATEK &harr; DALAY ETL: ORACLE / POSTGRESQL / SOAP XML ON RHEL 6</span>
+            <span class="mr-10"><span class="text-sky-400">ℹ</span> ODN OPTICAL BUDGET: REDAMAN &le; -24 dBm VERIFIED</span>
+            <span class="mr-10"><span class="text-sky-400">ℹ</span> VOBB SIP DPI: WIRESHARK RFC 3261 / RTP / G.711 AUDITED</span>
+            <span class="mr-10"><span class="text-uptime">●</span> GPON PROVISIONING SOP: OMCI (ITU-T G.984) + TR-069 CWMP</span>
+            <span class="mr-10"><span class="text-uptime">●</span> IEC 60812 FMEA &amp; IEC 61025 FTA: -20% TRIAL INTEGRATION DEFECTS</span>
+            <span class="mr-10"><span class="text-sky-400">ℹ</span> CAPEX AUDIT: IDR 1.5T ($93M) SCOPE &middot; ZERO ASSET DISCREPANCY &middot; BAST VALID</span>
           </div>
         </div>
       </div>
@@ -3327,9 +3340,10 @@
             April 2013 - October 2014 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Governed field quality compliance audits, optical distribution network (ODN) budget verification, and service fulfillment testing for the nationwide copper-to-FTTH rollout ($93M / IDR 1.5T CAPEX program scope). Led joint GPON commissioning and Triple-Play (High-Speed Internet, VoBB/VoIP, IPTV) acceptance testing alongside OEM telecom vendors; engineered OLT-to-ONT link parameters, dynamic bandwidth allocation (DBA T-CONT Types 1–4), GEM ports, 802.1Q/Q-in-Q VLAN segregation, and IGMP snooping/multicast routing to prevent stream freezing and eliminate packet drop. Conducted deep-packet protocol inspection using Wireshark for Voice-over-Broadband (VoBB); analyzed SIP signaling handshakes (RFC 3261 REGISTER/INVITE/200 OK), NAT traversal, RTP stream jitter, and G.711a/u codec negotiation against Telkom IMS/Softswitch infrastructure to resolve registration drops, one-way audio, and call anomalies. Standardized standard operating procedures (SOP) for Network &amp; Access Bearer creation and auto-provisioning workflows (OMCI Layer 2 transport provisioning combined with TR-069 CWMP/ACS parameter configuration), reconciling physical plant records (Datek) with logical service instances (Dalay) to ensure zero billing revenue leakage. Applied Fault Tree Analysis (IEC 61025), Failure Mode and Effects Analysis (IEC 60812), and ISO 31000 risk management to quantify and remediate fulfillment failure modes (optical attenuation drops &gt;-24 dBm, BSS/OSS API timeouts, and inventory mismatches), achieving a 20% defect reduction during trial integration testing with zero capital asset discrepancy. Developed automated extract, transform, load (ETL) reconciliation scripts (Oracle, PostgreSQL, SOAP XML APIs) hosted on Red Hat Enterprise Linux (RHEL 6) linking physical field inventory with BSS/OSS platforms (I-Sisca, TenOSS) to maintain audit-compliant asset registers and valid BAST sign-offs.
+            Governed field quality compliance audits, optical distribution network (ODN) budget verification, and service fulfillment testing for the nationwide copper-to-FTTH rollout ($93M / IDR 1.5T CAPEX program scope). Led joint GPON commissioning and Triple-Play (High-Speed Internet, VoBB/VoIP, IPTV) acceptance testing alongside OEM telecom vendors; engineered OLT-to-ONT link parameters, dynamic bandwidth allocation (DBA T-CONT Types 1–4), GEM ports, 802.1Q/Q-in-Q VLAN segregation, and IGMP snooping/multicast routing to prevent stream freezing and eliminate packet drop. Conducted deep-packet protocol inspection using Wireshark for Voice-over-Broadband (VoBB); analyzed SIP signaling handshakes (RFC 3261 REGISTER/INVITE/200 OK), NAT traversal, RTP stream jitter, and G.711a/u codec negotiation against Telkom IMS/Softswitch infrastructure to resolve registration drops, one-way audio, and call anomalies. Standardized standard operating procedures (SOP) for Network &amp; Access Bearer creation and auto-provisioning workflows (OMCI Layer 2 transport provisioning combined with TR-069 CWMP/ACS parameter configuration), reconciling GE Smallworld PNI GIS physical plant records (Datek) with logical service instances (Dalay) to ensure zero billing revenue leakage. Applied Fault Tree Analysis (IEC 61025), Failure Mode and Effects Analysis (IEC 60812), and ISO 31000 risk management to quantify and remediate fulfillment failure modes (optical attenuation drops &gt;-24 dBm, BSS/OSS API timeouts, and inventory mismatches), achieving a 20% defect reduction during trial integration testing with zero capital asset discrepancy. Developed automated extract, transform, load (ETL) reconciliation scripts (Oracle, PostgreSQL, SOAP XML APIs) hosted on Red Hat Enterprise Linux (RHEL 6) linking physical field inventory with BSS/OSS platforms (I-Sisca, TenOSS) to maintain audit-compliant asset registers and valid BAST sign-offs.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GE Smallworld PNI (GIS)</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GPON Commissioning</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Triple-Play Fulfillment</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Wireshark Deep Packet Inspection</span>
@@ -3462,7 +3476,7 @@
       </div>
       <div class="skill-card">
         <div class="skill-title">9.0 Telecommunication &amp; Network</div>
-        <div class="skill-content">GPON Commissioning &middot; Triple-Play Fulfillment &middot; Wireshark DPI &middot; VoBB SIP (RFC 3261) &middot; IGMP Multicast &middot; MPLS</div>
+        <div class="skill-content">GE Smallworld PNI (GIS) &middot; GPON Commissioning &middot; Triple-Play Fulfillment &middot; Wireshark DPI &middot; VoBB SIP (RFC 3261) &middot; IGMP Multicast &middot; MPLS</div>
       </div>
     </div>
   </div>
@@ -3887,26 +3901,26 @@
     }
   }
 
-  // 6. RADAR CHART CONTROLLER
+  // 6. RADAR CHART CONTROLLER (2013-2014 TELKOM AKSES FTA/FMEA & SW PNI GIS AUDIT)
   document.addEventListener('DOMContentLoaded', function() {
     var canvas = document.getElementById('resilienceChart');
     if (canvas) {
       new Chart(canvas.getContext('2d'), {
         type: 'radar',
         data: {
-          labels: ['Scalability', 'Security', 'Cost Efficiency', 'Reliability', 'Automation'],
+          labels: ['SW PNI GIS Accuracy', 'ODN Optical Spec', 'VoBB SIP / QoS', 'Datek-Dalay Sync', 'BAST CAPEX Integrity'],
           datasets: [
             {
-              label: 'Legacy Monolith (Coupled)',
-              data: [35, 30, 25, 55, 15],
+              label: 'Pre-Audit Trial Baseline (2013)',
+              data: [55, 62, 58, 50, 60],
               backgroundColor: 'rgba(239,68,68,0.15)',
               borderColor: 'rgba(239,68,68,0.8)',
               borderWidth: 2,
               pointBackgroundColor: 'rgba(239,68,68,0.8)',
             },
             {
-              label: 'Modernized Microservices (Decoupled)',
-              data: [95, 98, 90, 99, 100],
+              label: 'Post-Audit & SW PNI Reconciled (2014)',
+              data: [96, 94, 92, 98, 100],
               backgroundColor: 'rgba(16,185,129,0.15)',
               borderColor: '#10B981',
               borderWidth: 2,
