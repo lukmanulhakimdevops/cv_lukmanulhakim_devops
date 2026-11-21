@@ -303,6 +303,44 @@
       }
       .bp-table tbody tr:hover { background:rgba(29,111,164,0.08); }
 
+
+      /* Unified Architecture Showcase Hub Selector Cards */
+      .cs-selector-btn {
+        text-align: left;
+        background: rgba(15, 23, 42, 0.78);
+        border: 1px solid rgba(51, 65, 85, 0.85);
+        border-radius: 10px;
+        padding: 14px 15px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .cs-selector-btn:hover {
+        border-color: rgba(56, 189, 248, 0.65);
+        background: rgba(15, 23, 42, 0.96);
+        transform: translateY(-2px);
+      }
+      .cs-selector-btn.cs-active {
+        background: linear-gradient(145deg, rgba(29, 111, 164, 0.24), rgba(15, 23, 42, 0.98));
+        border-color: #38BDF8;
+        box-shadow: 0 0 22px rgba(29, 111, 164, 0.28);
+      }
+      .cs-selector-btn.cs-active::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #10B981, #38BDF8);
+      }
+      .cs-panel-animate {
+        animation: csFadeIn 0.28s ease-out;
+      }
+      @keyframes csFadeIn {
+        from { opacity: 0; transform: translateY(6px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
     </style>
 </head>
 <body class="transition-colors duration-300">
@@ -324,13 +362,9 @@
     </div>
 
     <!-- Desktop Navigation Links -->
-    <div class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs font-mono text-slate-400 uppercase tracking-wider">
-      <a href="#blueprint"   class="hover:text-sky-400 transition">Modernization</a>
-      <a href="#logistics-blueprint" class="hover:text-sky-400 transition">DevSecOps</a>
-      <a href="#multifinance-blueprint" class="hover:text-sky-400 transition">Hybrid Ops</a>
-      <a href="#erp-iac-blueprint" class="hover:text-sky-400 transition">ERP IaC</a>
-      <a href="#fintech-gitops-blueprint" class="hover:text-sky-400 transition">GitOps</a>
-      <a href="#noc"          class="hover:text-sky-400 transition">Telemetry</a>
+    <div class="hidden lg:flex items-center gap-7 text-xs font-mono text-slate-400 uppercase tracking-wider">
+      <a href="#blueprint"   class="hover:text-sky-400 transition">Blueprints</a>
+      <a href="#noc"         class="hover:text-sky-400 transition">Telemetry</a>
       <a href="#experience"  class="hover:text-sky-400 transition">Track Record</a>
       <a href="#credentials" class="hover:text-sky-400 transition">Credentials</a>
     </div>
@@ -353,12 +387,8 @@
       <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
       <span>LAYOUT: MOBILE</span>
     </div>
-    <a href="#blueprint"   class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Modernization</a>
-    <a href="#logistics-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">DevSecOps Blueprint</a>
-    <a href="#multifinance-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Hybrid Ops Blueprint</a>
-    <a href="#erp-iac-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">ERP IaC Blueprint</a>
-    <a href="#fintech-gitops-blueprint" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">FinTech GitOps Blueprint</a>
-    <a href="#noc"          class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Telemetry</a>
+    <a href="#blueprint"   class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Architecture Blueprints (5)</a>
+    <a href="#noc"         class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Telemetry</a>
     <a href="#experience"  class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Track Record</a>
     <a href="#credentials" class="mobile-nav-link block text-slate-300 hover:text-sky-400 py-1 border-b border-slate-800/60">Credentials</a>
     <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="block text-sky-400 font-bold py-1">
@@ -421,7 +451,7 @@
         
         <div class="space-y-1 mb-8">
           <p class="text-slate-200 text-lg md:text-xl font-semibold">Principal Solutions Architect &amp; Cloud Modernization Strategist</p>
-          <p class="text-slate-400 text-sm md:text-base font-mono">Multi-Cloud Migration &middot; DevSecOps &middot; Multi-Environment Systems Reliability (ISO 31000 / ISO/IEC 20000 / IEC 60812 FMEA / IEC 61025 FTA) </p>
+          <p class="text-slate-400 text-sm md:text-base font-mono">Multi-Cloud Migration &middot; DevSecOps &middot; Multi-Environment Systems Reliability (ISO 31000 / ISO/IEC 20000 / IEC 60812 FMEA / IEC 61025 FTA)</p>
         </div>
 
         <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-10 max-w-lg">
@@ -434,8 +464,8 @@
             <div class="stat-desc">CAPEX Governed</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">99.9%</div>
-            <div class="stat-desc">Availability SLA</div>
+            <div class="stat-num">120</div>
+            <div class="stat-desc">K8s Microservices</div>
           </div>
         </div>
 
@@ -444,7 +474,7 @@
             <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
           </a>
           <a href="#blueprint" class="btn-outline">
-            <i class="fa-solid fa-diagram-project"></i> Modernization Blueprint
+            <i class="fa-solid fa-diagram-project"></i> Architecture Blueprints (5)
           </a>
           <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="btn-outline">
             <i class="fa-brands fa-linkedin"></i> LinkedIn
@@ -461,7 +491,7 @@
   <div class="max-w-4xl mx-auto">
     <div class="sec-label">Executive Summary</div>
     <blockquote class="text-slate-200 text-base md:text-xl leading-relaxed font-light">
-      Solutions Architect Consultant with <strong class="text-white font-bold">15 years of progressive systems and infrastructure engineering experience</strong>, specializing in enterprise legacy modernization, multi-cloud transitions, and carrier-grade automated service fulfillment. Proven track record of migrating mission-critical workloads into Cloud Platform &amp; Kubernetes environments with zero cutover downtime. Empaneled Advisor for Tokyo-based <strong class="text-white font-bold">VisasQ Inc. &amp; Coleman Research Group</strong>, delivering retained technical due diligence, multi-environment service assurance, and cloud architecture feasibility assessments for institutional investments. Bridges physical infrastructure failure modes (<strong class="text-white font-bold">L1 optical fiber/GPON ODN, $93M CAPEX scope</strong>) to distributed multi-cloud platforms (<strong class="text-white font-bold">L7 K8s, Terraform IaC, GitOps</strong>), applying unified <strong class="text-white font-bold">ISO 31000 Risk Governance</strong>, <strong class="text-white font-bold">ISO/IEC 20000 Service Assurance</strong>, and quantitative reliability modeling (<strong class="text-white font-bold">IEC 60812 FMEA, IEC 61025 FTA</strong>) across multi-environment architectures (FTTH access to enterprise multi-cloud) to eliminate single points of failure (SPOF) and protect enterprise EBITDA integrity.
+      Solutions Architect Consultant with <strong class="text-white font-bold">15 years of progressive systems and infrastructure engineering experience</strong>, specializing in enterprise legacy modernization, multi-cloud transitions, and carrier-grade automated service fulfillment. Proven track record of modernizing legacy enterprise workloads into Cloud Platform, Kubernetes, and GitOps environments with controlled, low-downtime cutovers. Empaneled Advisor for Tokyo-based <strong class="text-white font-bold">VisasQ Inc. &amp; Coleman Research Group</strong>, delivering retained technical due diligence, multi-environment service assurance, and cloud architecture feasibility assessments for institutional investments. Bridges physical infrastructure failure modes (<strong class="text-white font-bold">L1 optical fiber/GPON ODN, $93M CAPEX scope</strong>) to distributed multi-cloud platforms (<strong class="text-white font-bold">L7 K8s, Terraform IaC, GitOps</strong>), applying unified <strong class="text-white font-bold">ISO 31000 Risk Governance</strong>, <strong class="text-white font-bold">ISO/IEC 20000 Service Assurance</strong>, and quantitative reliability modeling (<strong class="text-white font-bold">IEC 60812 FMEA, IEC 61025 FTA</strong>) across multi-environment architectures (FTTH access to enterprise multi-cloud) to eliminate single points of failure (SPOF) and protect enterprise EBITDA integrity.
     </blockquote>
     <p class="font-mono text-xs text-sky-400 mt-6 border-l-2 border-steel pl-4 leading-relaxed">
       Assigned under the Directorate of Operation in 2013 &middot; Principal Solutions Architect today.<br>
@@ -518,82 +548,508 @@
   </div>
 </section>
 
-<!-- MODERNIZATION & ZTP BLUEPRINT -->
-<section id="blueprint" class="bg-obsidian blueprint-grid py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="sec-label">Execution Blueprint</div>
-    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-      Legacy Decomposition &amp; Zero-Touch Provisioning (ZTP)
-    </h2>
-    <p class="text-slate-400 text-sm font-mono mb-12 max-w-2xl leading-relaxed">
-      Deconstructing legacy monolithic bottlenecks into autonomous DAG orchestration pipelines. Decoupled BSS-OSS architecture eliminates financial revenue leakage and establishes automated compliance verification.
-    </p>
-
-    <div class="inline-flex items-center gap-3 bg-uptime/10 border border-uptime/30 rounded px-4 py-2 font-mono text-xs text-uptime font-bold mb-8">
-      <i class="fa-solid fa-circle-check"></i>
-      STATUS: PRODUCTION GRADE &middot; 1 MINUTE 54 SECONDS SLA
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-      <div class="bg-black border border-slate-800 rounded-lg overflow-hidden relative group">
-        <div class="absolute top-3 left-3 bg-obsidian/90 text-xs px-2 py-1 font-mono text-uptime rounded z-10 backdrop-blur border border-uptime/30">
-          PARALLEL DAG ORCHESTRATION
-        </div>
-        <img src="./Untitled2.jpg" alt="ZTP DAG Pipeline execution showing 1m 54s" class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity">
-      </div>
-      <div class="bg-black border border-slate-800 rounded-lg overflow-hidden relative group">
-        <div class="absolute top-3 left-3 bg-obsidian/90 text-xs px-2 py-1 font-mono text-sky-400 rounded z-10 backdrop-blur border border-steel/30">
-          IMMUTABLE BAST AUDIT ARTIFACT
-        </div>
-        <img src="./Untitled3.jpg" alt="GitHub Artifacts showing BAST-WorkOrder JSON" class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity">
-      </div>
-    </div>
-
-    <!-- YouTube Deep Dive -->
-    <div class="bg-slate-900 border border-slate-700 rounded-lg overflow-hidden mb-8">
-      <div class="px-6 py-4 border-b border-slate-700 flex items-center gap-3">
-        <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
-        <div>
-          <p class="text-xs font-mono text-slate-400 uppercase tracking-widest">Architectural Deep Dive &middot; 17 Min</p>
-          <p class="text-white font-bold text-sm">The Blueprint, Explained: When Perfect Code Collides with the Physics of the Streets</p>
-        </div>
-      </div>
-      <div class="relative w-full" style="padding-top:56.25%;">
-        <iframe class="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/Z0vUZEZItro"
-                title="Carrier-Grade ZTP Blueprint"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row gap-4">
-      <a href="./Carrier-Grade_ZTP_Blueprint.pdf" target="_blank"
-         class="flex-1 flex items-center gap-4 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-600 text-white px-6 py-4 rounded-lg font-bold transition group">
-        <i class="fa-solid fa-file-pdf text-3xl text-slate-400 group-hover:text-yellow-400 transition"></i>
-        <div>
-          <span class="block text-xs font-mono text-slate-500 uppercase tracking-widest">Sanitized Technical Spec</span>
-          <span class="block text-sm">Carrier-Grade_ZTP_Blueprint.pdf</span>
-        </div>
-      </a>
-      <a href="./CV_Lukmanul_Hakim.pdf" target="_blank"
-         class="flex-1 flex items-center gap-4 bg-steel/10 hover:bg-steel/20 border border-steel/30 hover:border-steel/50 text-white px-6 py-4 rounded-lg font-bold transition group">
-        <i class="fa-solid fa-id-badge text-3xl text-sky-400 group-hover:text-white transition"></i>
-        <div>
-          <span class="block text-xs font-mono text-sky-400/70 uppercase tracking-widest">Verified Resume</span>
-          <span class="block text-sm">CV_Lukmanul_Hakim.pdf</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- CASE STUDY 02: MULTI-CLOUD DEVSECOPS ARCHITECTURE BLUEPRINT (NOV 2021 TO JUL 2022) -->
-<section id="logistics-blueprint" class="bg-navy border-t border-steel/25 py-20 px-6 relative overflow-hidden">
+<!-- UNIFIED ARCHITECTURE SHOWCASE HUB (5 VERIFIED CASE STUDIES IN REVERSE-CHRONOLOGICAL ORDER) -->
+<section id="blueprint" class="bg-obsidian blueprint-grid border-t border-steel/25 py-20 px-6 relative overflow-hidden">
   <div class="max-w-6xl mx-auto relative z-10">
-    <div class="sec-label">Case Study 02 &middot; Multi-Cloud DevSecOps Blueprint</div>
+    <!-- Hub Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <div class="sec-label">Architecture Showcase Hub &middot; 5 Verified Blueprints</div>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-2">
+          Production Blueprints Across the Full Stack (L1 to L7)
+        </h2>
+        <p class="text-slate-400 text-sm max-w-2xl leading-relaxed">
+          Select any NDA-safe architecture case study below (ordered reverse-chronologically from 2022 FinTech GitOps to Carrier-Grade Telecom ZTP) to inspect system topology diagrams, risk translation matrices, and engineering trade-offs.
+        </p>
+      </div>
+      <div class="inline-flex items-center gap-2 bg-navy/90 border border-steel/35 rounded-lg px-3.5 py-2 font-mono text-[11px] text-sky-300 shrink-0">
+        <i class="fa-solid fa-layer-group text-uptime"></i>
+        <span id="cs-counter-label">BLUEPRINT 01 OF 05</span>
+      </div>
+    </div>
+
+    <!-- 5-Card Chronological Blueprint Selector -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-10" role="tablist" aria-label="Architecture Case Studies">
+      <button type="button" role="tab" aria-selected="true" onclick="openCaseStudy('fintech', false)" id="csbtn-fintech" class="cs-selector-btn cs-active">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <span class="font-mono text-[10px] font-bold text-sky-400 uppercase tracking-wider">01 &middot; Jul-Sep 2022</span>
+          <i class="fa-solid fa-code-branch text-xs text-uptime"></i>
+        </div>
+        <div class="font-display font-bold text-sm text-white leading-snug mb-1">FinTech GitOps &amp; DR</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Flux CD &middot; Harbor &middot; Snyk &middot; OpenSearch</div>
+      </button>
+
+      <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('logistics', false)" id="csbtn-logistics" class="cs-selector-btn">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <span class="font-mono text-[10px] font-bold text-sky-400 uppercase tracking-wider">02 &middot; Nov 21-Jul 22</span>
+          <i class="fa-solid fa-cubes text-xs text-steel"></i>
+        </div>
+        <div class="font-display font-bold text-sm text-white leading-snug mb-1">Logistics DevSecOps</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">120 Microservices &middot; GKE/EKS &middot; -60% CVE</div>
+      </button>
+
+      <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('erp', false)" id="csbtn-erp" class="cs-selector-btn">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <span class="font-mono text-[10px] font-bold text-sky-400 uppercase tracking-wider">03 &middot; May-Oct 2020</span>
+          <i class="fa-solid fa-bolt text-xs text-amber-gold"></i>
+        </div>
+        <div class="font-display font-bold text-sm text-white leading-snug mb-1">Multi-Tenant ERP IaC</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Terraform ZTP &middot; -70% Lead Time</div>
+      </button>
+
+      <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('multifinance', false)" id="csbtn-multifinance" class="cs-selector-btn">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <span class="font-mono text-[10px] font-bold text-sky-400 uppercase tracking-wider">04 &middot; Jun-Sep 2019</span>
+          <i class="fa-solid fa-server text-xs text-purple-400"></i>
+        </div>
+        <div class="font-display font-bold text-sm text-white leading-snug mb-1">Multifinance Hybrid HA</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">Jenkins/ELK/GCS &middot; 40% Faster</div>
+      </button>
+
+      <button type="button" role="tab" aria-selected="false" onclick="openCaseStudy('ztp', false)" id="csbtn-ztp" class="cs-selector-btn">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <span class="font-mono text-[10px] font-bold text-sky-400 uppercase tracking-wider">05 &middot; L1->L7 Core</span>
+          <i class="fa-solid fa-tower-cell text-xs text-uptime"></i>
+        </div>
+        <div class="font-display font-bold text-sm text-white leading-snug mb-1">Telecom FTTH ZTP</div>
+        <div class="font-mono text-[10px] text-slate-400 leading-relaxed">DAG Pipeline &middot; 1m 54s SLA &middot; Video</div>
+      </button>
+    </div>
+
+    <!-- Active Blueprint Stage Frame -->
+    <div class="bg-navy/55 border border-steel/30 rounded-2xl p-5 sm:p-8 shadow-2xl">
+      <!-- PANEL 01: FINTECH GITOPS (DEFAULT ACTIVE) -->
+      <div id="cspanel-fintech" class="cs-panel-animate" role="tabpanel">
+<div class="sec-label">Case Study 01 &middot; Jul to Sep 2022 &middot; Regulated FinTech GitOps, Observability &amp; DR</div>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-steel/15 border border-steel/40 rounded px-3 py-1 font-mono text-[10px] text-sky-300 font-bold tracking-wider uppercase mb-4">
+          <i class="fa-solid fa-shield-halved"></i>
+          NDA-Safe Architecture Spec &middot; Jul 2022 to Sep 2022 (3 Months)
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+          Regulated FinTech Lending: GitOps (Flux CD), Harbor/Snyk, ELK/OpenSearch &amp; FinTech DR
+        </h2>
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+          Focused three-month FinTech architecture and DevSecOps leadership engagement executed at Indonesia's mid-2022 regulatory inflection point (<strong class="text-white">POJK No. 10/POJK.05/2022</strong> effective July 4, 2022, <strong class="text-white">POJK 4/2021</strong>, <strong class="text-white">Bank Indonesia SNAP</strong>, and the September 2022 parliamentary passage of the <strong class="text-white">Personal Data Protection Law</strong>). Architected pull-based <strong class="text-white">GitOps continuous delivery with Flux CD on Alibaba Cloud</strong>, hardened the container supply chain with <strong class="text-white">Snyk</strong> and <strong class="text-white">Harbor</strong>, decoupled stateful legacy backends into stateless microservices with <strong class="text-white">FinTech Disaster Recovery</strong> readiness, and enforced RBAC plus zero-trust telemetry across <strong class="text-white">ELK Stack</strong> and <strong class="text-white">OpenSearch</strong>.
+        </p>
+      </div>
+      <div class="font-mono text-[11px] text-slate-400 bg-navy/90 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
+        <div><span class="text-sky-400 font-bold">ROLE:</span> FinTech Solutions &amp; DevSecOps Lead</div>
+        <div><span class="text-sky-400 font-bold">WINDOW:</span> July 2022 to September 2022</div>
+        <div><span class="text-sky-400 font-bold">DOMAIN:</span> OJK-Licensed FinTech (LPBBTI)</div>
+      </div>
+    </div>
+
+    <!-- BLOK 1: VERIFIED PILLARS STRIP (STRICTLY CV + CONFIRMED STACK, ZERO FABRICATED TPS/LOAN METRICS) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+      <div class="bg-navy/90 border border-steel/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">GitOps &amp; Supply Chain</span>
+          <i class="fa-solid fa-code-branch text-steel"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">Flux + Harbor</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Headless pull-based Flux CD on Alibaba Cloud paired with Snyk vulnerability gating, Harbor private registry immutability, GPG verification, and drift healing.
+        </p>
+      </div>
+
+      <div class="bg-navy/90 border border-uptime/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Stateless &amp; FinTech DR</span>
+          <i class="fa-solid fa-cubes-stacked text-uptime"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">ACID + DRP</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Stateless FinTech microservices backed by double-entry ledgers, idempotency keys, Transactional Outbox CDC, and domestic NKRI FinTech Disaster Recovery.
+        </p>
+      </div>
+
+      <div class="bg-navy/90 border border-amber-gold/35 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-[10px] text-amber-gold uppercase tracking-widest font-bold">Zero-Trust &amp; Compliance</span>
+          <i class="fa-solid fa-scale-balanced text-amber-gold"></i>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-white">OJK &amp; BI</div>
+        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+          Least-privilege RBAC, container hardening, and encrypted zero-trust telemetry across ELK Stack, OpenSearch, and tamper-evident WORM audit archives.
+        </p>
+      </div>
+    </div>
+
+    <!-- BLOK 2: 4-PLANE PULL-BASED GITOPS, HARBOR/SNYK, ELK/OPENSEARCH & FINTECH DR SVG BLUEPRINT -->
+    <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl mb-10">
+      <div class="bg-slate-900/95 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
+          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">4-Plane FinTech GitOps (Flux CD), Harbor/Snyk, ELK/OpenSearch &amp; DR Blueprint (2022)</span>
+        </div>
+        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">ALIBABA CLOUD NKRI &middot; HARBOR &middot; SNYK &middot; OPENSEARCH + ELK</span>
+      </div>
+
+      <div class="p-4 sm:p-6 overflow-x-auto bg-obsidian/90 blueprint-grid">
+        <svg viewBox="0 0 1080 560" class="w-full min-w-[780px] h-auto" role="img" aria-label="4-Plane FinTech GitOps Flux CD, Snyk, Harbor, ELK, OpenSearch, and FinTech Disaster Recovery Architecture on Alibaba Cloud">
+          <defs>
+            <marker id="ft-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+            </marker>
+            <marker id="ft-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+            </marker>
+            <marker id="ft-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+            </marker>
+            <marker id="ft-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#C4B5FD"/>
+            </marker>
+          </defs>
+
+          <!-- PLANE 1: SOURCE & SUPPLY CHAIN PLANE -->
+          <rect x="20" y="16" width="1040" height="104" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
+          <text x="38" y="38" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 1: SOURCE &amp; SUPPLY CHAIN PLANE (SOD + SNYK SECURITY GATING + HARBOR REGISTRY)</text>
+
+          <rect x="38" y="50" width="290" height="56" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.5"/>
+          <text x="183" y="71" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">GitOps Config Repo (Protected Main)</text>
+          <text x="183" y="90" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">CODEOWNERS SoD &middot; Mandatory GPG Commits &middot; @sha256</text>
+
+          <rect x="372" y="50" width="316" height="56" rx="5" fill="#13223A" stroke="#10B981" stroke-opacity="0.55"/>
+          <text x="530" y="71" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Snyk + CI Audit &amp; Policy Gate</text>
+          <text x="530" y="90" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Snyk SCA/Container/IaC &middot; Conftest &middot; Anti Path-Traversal</text>
+
+          <rect x="732" y="50" width="310" height="56" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.55"/>
+          <text x="887" y="71" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Harbor Private Registry (Signed)</text>
+          <text x="887" y="90" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Distroless UID 65532 &middot; Immutable Tags &middot; Robot RBAC</text>
+
+          <line x1="328" y1="78" x2="370" y2="78" stroke="#38BDF8" stroke-width="1.4" marker-end="url(#ft-arrow-sky)"/>
+          <line x1="688" y1="78" x2="730" y2="78" stroke="#10B981" stroke-width="1.4" marker-end="url(#ft-arrow-green)"/>
+
+          <!-- Outbound Pull Arrow from Plane 2 to Plane 1 -->
+          <line x1="183" y1="154" x2="183" y2="108" stroke="#38BDF8" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ft-arrow-sky)"/>
+          <rect x="200" y="124" width="256" height="20" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="0.9"/>
+          <text x="328" y="137" text-anchor="middle" fill="#7DD3FC" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">OUTBOUND PULL ONLY (TLS + GPG VERIFY)</text>
+
+          <!-- PLANE 2: FLUX CD GITOPS TOOLKIT & ADMISSION GATE (IN-CLUSTER ACK) -->
+          <rect x="20" y="154" width="1040" height="110" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
+          <text x="38" y="176" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 2: FLUX CD GITOPS TOOLKIT &amp; ADMISSION GATE (ACK FLUX-SYSTEM | MULTI-TENANCY LOCKDOWN)</text>
+
+          <rect x="38" y="188" width="218" height="62" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
+          <text x="147" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">source-controller</text>
+          <text x="147" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">GitRepository &middot; HelmRepo</text>
+          <text x="147" y="241" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">spec.verify.mode: head</text>
+
+          <rect x="284" y="188" width="242" height="62" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
+          <text x="405" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">kustomize &amp; helm-controller</text>
+          <text x="405" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SSA Drift Heal &middot; SA Impersonation</text>
+          <text x="405" y="241" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">DR Cluster Declarative Rebuild</text>
+
+          <rect x="554" y="188" width="216" height="62" rx="5" fill="#112A2E" stroke="#38BDF8" stroke-opacity="0.5"/>
+          <text x="662" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">notification-controller</text>
+          <text x="662" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Git Webhook Receiver</text>
+          <text x="662" y="241" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Drift &amp; Failure Alerts</text>
+
+          <rect x="798" y="188" width="244" height="62" rx="5" fill="#1A2622" stroke="#F59E0B" stroke-width="1.2"/>
+          <text x="920" y="209" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="11" font-weight="700">ACK Admission Gate</text>
+          <text x="920" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Harbor Signed Digest &amp; Snyk Policy</text>
+          <text x="920" y="241" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">PSA Restricted + OPA Gatekeeper</text>
+
+          <line x1="256" y1="219" x2="282" y2="219" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
+          <line x1="526" y1="219" x2="552" y2="219" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
+          <line x1="770" y1="219" x2="796" y2="219" stroke="#F59E0B" stroke-width="1.3" marker-end="url(#ft-arrow-amber)"/>
+
+          <!-- PLANE 3: ALIBABA CLOUD RUNTIME & FINTECH DISASTER RECOVERY PLANE -->
+          <rect x="20" y="294" width="1040" height="122" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
+          <text x="38" y="316" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 3: ALIBABA CLOUD RUNTIME &amp; FINTECH DISASTER RECOVERY (JAKARTA 3-AZ + DOMESTIC DRC | NKRI)</text>
+
+          <rect x="38" y="328" width="242" height="74" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
+          <text x="159" y="348" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Stateless FinTech Services</text>
+          <text x="159" y="366" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.3">Terway Default-Deny &middot; ASM mTLS</text>
+          <text x="159" y="382" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">HPA Drain &middot; SNAP BI Egress</text>
+
+          <rect x="298" y="328" width="234" height="74" rx="5" fill="#2A2010" stroke="#8B5CF6" stroke-opacity="0.65"/>
+          <text x="415" y="348" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Pod Identity &amp; Secrets</text>
+          <text x="415" y="366" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">ACK RRSA OIDC (&lt;=12h STS)</text>
+          <text x="415" y="382" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.3">KMS + ack-secret-manager + etcd</text>
+
+          <rect x="550" y="328" width="242" height="74" rx="5" fill="#2A2010" stroke="#10B981" stroke-opacity="0.55"/>
+          <text x="671" y="348" text-anchor="middle" fill="#6EE7B7" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Stateful Data &amp; CDC</text>
+          <text x="671" y="366" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">RDS Multi-AZ TDE + Outbox</text>
+          <text x="671" y="382" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.3">Redis/Tair &middot; OSS &middot; DTS CDC</text>
+
+          <rect x="810" y="328" width="232" height="74" rx="5" fill="#2B1A16" stroke="#EF4444" stroke-width="1.2"/>
+          <text x="926" y="348" text-anchor="middle" fill="#FCA5A5" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">FinTech Disaster Recovery</text>
+          <text x="926" y="366" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.3">3-AZ Failover + Domestic DRC</text>
+          <text x="926" y="382" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">Harbor Sync + Flux DR Drill</text>
+
+          <line x1="920" y1="264" x2="920" y2="292" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#ft-arrow-amber)"/>
+          <line x1="280" y1="365" x2="296" y2="365" stroke="#C4B5FD" stroke-width="1.3" marker-end="url(#ft-arrow-purple)"/>
+          <line x1="532" y1="365" x2="548" y2="365" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
+          <line x1="792" y1="365" x2="808" y2="365" stroke="#F59E0B" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#ft-arrow-amber)"/>
+
+          <!-- PLANE 4: AUDIT & ZERO-TRUST TELEMETRY PLANE (ELK + OPENSEARCH + WORM) -->
+          <rect x="20" y="444" width="1040" height="100" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
+          <text x="38" y="466" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 4: ZERO-TRUST TELEMETRY &amp; ANTI-TAMPERING AUDIT PLANE (ELK STACK + OPENSEARCH + WORM)</text>
+
+          <rect x="38" y="478" width="318" height="52" rx="5" fill="#211A38" stroke="#38BDF8" stroke-opacity="0.55"/>
+          <text x="197" y="498" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">ELK Stack &amp; OpenSearch</text>
+          <text x="197" y="516" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Centralized Log Analytics &middot; Upfront PII Masking &middot; TLS/RBAC</text>
+
+          <rect x="384" y="478" width="314" height="52" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
+          <text x="541" y="498" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">ActionTrail + ACK Audit (advaudit)</text>
+          <text x="541" y="516" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">Cloud API Events &middot; kube-apiserver &middot; Container Exec Audit</text>
+
+          <rect x="726" y="478" width="316" height="52" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
+          <text x="884" y="498" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">OSS BucketWorm Vault (Locked)</text>
+          <text x="884" y="516" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Compliance WORM &middot; Anti-Tampering (409 FileImmutable)</text>
+
+          <line x1="356" y1="504" x2="382" y2="504" stroke="#C4B5FD" stroke-width="1.3" marker-end="url(#ft-arrow-purple)"/>
+          <line x1="698" y1="504" x2="724" y2="504" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
+
+          <!-- Telemetry Dashed Connectors Plane 3 -> Plane 4 -->
+          <line x1="159" y1="416" x2="159" y2="442" stroke="#38BDF8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-sky)"/>
+          <line x1="541" y1="416" x2="541" y2="442" stroke="#C4B5FD" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-purple)"/>
+          <line x1="926" y1="416" x2="926" y2="442" stroke="#10B981" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-green)"/>
+        </svg>
+      </div>
+
+      <!-- 4 Compact Plane Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">PLANE 01</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Supply Chain (Snyk + Harbor)</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Protected GitOps repo with CODEOWNERS SoD, GPG commits, Snyk SCA/container/IaC scanning, and Harbor private registry with immutable tags and robot RBAC.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-uptime font-bold mb-1">PLANE 02</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Flux CD &amp; Admission</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">In-cluster Flux CD v2 lockdown (no cross-namespace refs), SA impersonation, Harbor signed digest checks, PSA restricted, and OPA Gatekeeper.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">PLANE 03</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">ACK Runtime &amp; FinTech DR</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">3-AZ Jakarta stateless microservices, RRSA OIDC, ASM Strict mTLS, double-entry ledger + DTS CDC, and FinTech Disaster Recovery (Harbor replication + Flux DR).</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">PLANE 04</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">ELK, OpenSearch &amp; WORM</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Centralized ELK Stack and OpenSearch zero-trust telemetry with upfront PII masking, ActionTrail + ACK advaudit exec logs, and OSS BucketWorm Compliance Lock.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOK 3: FINTECH RISK, CONSISTENCY, DR & REGULATORY TRANSLATION MATRIX -->
+    <div class="mb-12">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-display text-xl font-bold text-white">FinTech Risk, Transaction Integrity, DR &amp; Regulatory Control Matrix</h3>
+        <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden sm:inline">Control-Once, Comply-Many (OJK / BI / PDP)</span>
+      </div>
+      <div class="overflow-x-auto bg-navy/85 border border-slate-700/80 rounded-xl shadow-lg">
+        <table class="w-full text-left border-collapse bp-table">
+          <thead>
+            <tr>
+              <th class="w-1/4">Financial / Regulatory Risk</th>
+              <th class="w-5/12">Architectural Control Implemented (2022 Production + Reference)</th>
+              <th class="w-1/3">Verified Resilience &amp; Audit Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold text-white">Vulnerable Dependencies &amp; Untrusted Images</td>
+              <td>Automated <code class="font-mono text-sky-300">Snyk</code> SCA, Dockerfile, and IaC scanning in CI paired with <code class="font-mono text-sky-300">Harbor</code> private registry (immutable tag rules, robot RBAC, vulnerability blocking, and signed digests).</td>
+              <td class="text-emerald-300">Blocked critical CVEs before registry promotion and guaranteed staging-to-production image integrity.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Push-CI Credential Exposure &amp; Out-of-Band Drift</td>
+              <td>Headless pull-based Flux CD v2 with GPG <code class="font-mono text-sky-300">spec.verify</code>, CODEOWNERS SoD, multi-tenancy lockdown flags (post-May 2022 CVEs), and Server-Side Apply continuous drift healing.</td>
+              <td class="text-emerald-300">Zero production cluster credentials outside ACK and immutable Git-to-cluster SoD audit trail (POJK 4/2021 Art. 12 &amp; 29).</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Double Disbursement &amp; Dual-Write Ledger Splits</td>
+              <td>Append-only double-entry ledger, DB-enforced <code class="font-mono text-sky-300">Idempotency-Key</code> + optimistic/fencing locks, SNAP BI 1:1 <code class="font-mono text-sky-300">X-EXTERNAL-ID</code> inquiry-before-retry, and Transactional Outbox via DTS CDC.</td>
+              <td class="text-emerald-300">Eliminated dual-write anomalies and prevented duplicate escrow payouts during network timeouts or autoscaling.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Regional Outage &amp; FinTech Disaster Recovery (POJK 4/2021 Art. 16 &amp; 23)</td>
+              <td>FinTech Disaster Recovery architecture combining 3-AZ Jakarta HA, declarative Flux CD cluster rebuild from Git, <code class="font-mono text-sky-300">Harbor</code> image replication, domestic cross-site DB backup/DRC inside NKRI, and periodic DRP drills.</td>
+              <td class="text-emerald-300">Repeatable failover and deterministic DR recovery without violating Indonesian financial data residency mandates.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">Container Escape &amp; Lateral Movement on Payment Paths</td>
+              <td>Multi-stage distroless non-root (<code class="font-mono text-sky-300">USER 65532:65532</code>), PSA <code class="font-mono text-sky-300">restricted</code> (Aug 2022 PSP removal), ACK RRSA OIDC pod identity, Terway default-deny, ASM Strict mTLS, and <code class="font-mono text-sky-300">httpGet preStop</code> draining.</td>
+              <td class="text-emerald-300">Isolated blast radius per microservice with zero aborted in-flight financial transactions during rolling upgrades.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-white">PII Leakage in Logs &amp; Audit Tampering</td>
+              <td>Zero-trust telemetry across <code class="font-mono text-sky-300">ELK Stack</code> and <code class="font-mono text-sky-300">OpenSearch</code> with upfront PII masking, ACK <code class="font-mono text-sky-300">advaudit</code> exec logs, ActionTrail, and Jakarta OSS <code class="font-mono text-sky-300">BucketWorm</code> Locked compliance archive.</td>
+              <td class="text-emerald-300">Tamper-evident forensics (<code class="font-mono text-sky-300">409 FileImmutable</code>) supporting OJK 5-working-day and UU PDP 72-hour breach reporting.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BLOK 4: INTERACTIVE ENGINEERING DEEP-DIVE TABS -->
+    <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl mb-10">
+      <div class="bg-slate-900/95 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
+          <h3 class="font-display text-lg font-bold text-white">Inspect Flux vs. Argo, Harbor/Snyk + FinTech DR &amp; ELK/OpenSearch Telemetry</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" onclick="switchFintechTab('gitops')" id="fttab-gitops" class="bp-tab bp-active">
+            <i class="fa-solid fa-code-compare mr-1.5"></i>Flux, Harbor &amp; Snyk
+          </button>
+          <button type="button" onclick="switchFintechTab('state')" id="fttab-state" class="bp-tab">
+            <i class="fa-solid fa-database mr-1.5"></i>State, Hardening &amp; DR
+          </button>
+          <button type="button" onclick="switchFintechTab('compliance')" id="fttab-compliance" class="bp-tab">
+            <i class="fa-solid fa-gavel mr-1.5"></i>ELK/OpenSearch &amp; OJK
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: FLUX CD, HARBOR & SNYK TRADE-OFFS (2022 CONTEXT) -->
+      <div id="ftpanel-gitops" class="p-5 sm:p-6 space-y-6">
+        <div>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">GitOps Engine Decision Trade-Off (July to September 2022 Context)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse bp-table">
+              <thead>
+                <tr>
+                  <th class="w-1/5">Evaluation Dimension</th>
+                  <th class="w-4/12 text-uptime">Selected: Flux CD v2 + Harbor + Snyk</th>
+                  <th class="w-1/4">Alternative 1: Argo CD (2022)</th>
+                  <th class="w-1/4">Rejected: Push-Based CI/CD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold text-white">Attack Surface &amp; UI Discipline</td>
+                  <td>Headless Kubernetes controllers with no exposed Web UI; prevents manual "click-to-sync" bypasses of Git SoD.</td>
+                  <td>Centralized Web UI, API server, and Dex/OIDC add perimeter surface; managed ACK One GitOps only emerged near Sep 2022.</td>
+                  <td>Requires opening inbound API server access or bastion pathways to external CI runners.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">Supply-Chain Security &amp; Registry</td>
+                  <td><code class="font-mono text-sky-300">Snyk</code> enforces dependency, container, and IaC checks in CI while <code class="font-mono text-sky-300">Harbor</code> enforces tag immutability, project RBAC, robot accounts, and DR image replication.</td>
+                  <td>Renders Helm via <code class="font-mono text-sky-300">helm template</code> rather than native Helm SDK lifecycle tracking; dual RBAC layers increase OJK audit effort.</td>
+                  <td>Fire-and-forget scripts lack continuous drift detection and rely on fragile imperative rollbacks.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-white">RBAC &amp; Secret Strategy (ACK 2022)</td>
+                  <td>Single native Kubernetes RBAC via SA impersonation (<code class="font-mono text-sky-300">--no-cross-namespace-refs</code>) paired with KMS + <code class="font-mono text-sky-300">ack-secret-manager</code> (RRSA).</td>
+                  <td>Requires reconciling Argo AppProject/CSV RBAC with target cluster Kubernetes RBAC during audits.</td>
+                  <td>External CI runner typically holds overly broad cluster-admin kubeconfig tokens.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">MAY 2022 CVE HARDENING</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Pinned <code class="font-mono text-sky-300">flux2 &gt;= v0.29.0</code> (patching CVE-2022-24817/24877/24878), enforced <code class="font-mono text-sky-300">--no-remote-bases</code>, and blocked <code class="font-mono text-sky-300">spec.kubeConfig</code> via Gatekeeper.</p>
+          </div>
+          <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-uptime font-bold mb-1">SNYK + HARBOR GATE</div>
+            <p class="text-xs text-slate-300 leading-relaxed"><code class="font-mono text-sky-300">Snyk</code> blocks high/critical CVEs at PR and image build time; <code class="font-mono text-sky-300">Harbor</code> enforces immutable <code class="font-mono text-sky-300">@sha256</code> artifacts and scoped pull-only robot accounts.</p>
+          </div>
+          <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">FAST-TRACK P0 &amp; API LOAD</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Staggered Flux intervals + webhook Receivers protect <code class="font-mono text-sky-300">kube-apiserver</code>; P0 fixes use fast-track PRs or <code class="font-mono text-sky-300">git revert</code> with audited break-glass backport.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: STATE EXTERNALIZATION, CONTAINER HARDENING & FINTECH DISASTER RECOVERY -->
+      <div id="ftpanel-state" class="hidden p-5 sm:p-6 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div class="bg-obsidian/85 border border-slate-800 rounded-lg p-5">
+            <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">Stateful -> Stateless Map</div>
+            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">Sessions &amp; Limits:</strong> Multi-AZ Redis/Tair with short-lived JWTs and distributed denylists.</li>
+              <li><strong class="text-white">eKYC &amp; Contracts:</strong> Jakarta OSS (KMS SSE + pre-signed URLs) enabling <code class="font-mono text-sky-300">readOnlyRootFilesystem: true</code>.</li>
+              <li><strong class="text-white">Ledger Integrity:</strong> Append-only double-entry ledger on RDS Multi-AZ TDE with Fencing Tokens and DTS CDC Outbox.</li>
+              <li><strong class="text-white">SNAP BI Egress:</strong> OAuth2 + RSA-2048 KMS + HMAC-SHA512 + 1:1 <code class="font-mono text-sky-300">X-EXTERNAL-ID</code> inquiry-before-retry.</li>
+            </ul>
+          </div>
+
+          <div class="bg-obsidian/85 border border-steel/40 rounded-lg p-5">
+            <div class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-3">Container Hardening (Aug 2022)</div>
+            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">Distroless &amp; Numeric UID:</strong> Explicit <code class="font-mono text-sky-300">USER 65532:65532</code> passing <code class="font-mono text-sky-300">runAsNonRoot: true</code> cleanly.</li>
+              <li><strong class="text-white">PSA Restricted:</strong> Migrated off deprecated PSP (removed K8s 1.25 Aug 25, 2022) with explicit <code class="font-mono text-sky-300">seccompProfile: RuntimeDefault</code>.</li>
+              <li><strong class="text-white">Admission &amp; Snyk:</strong> Harbor verified digests, Snyk CVE thresholds, OPA Gatekeeper, and <code class="font-mono text-sky-300">drop ALL</code> capabilities.</li>
+              <li><strong class="text-white">Pod Zero Trust:</strong> ACK RRSA OIDC (&le;12h STS), Terway default-deny, and ASM Strict mTLS.</li>
+            </ul>
+          </div>
+
+          <div class="bg-obsidian/85 border border-alert/40 rounded-lg p-5">
+            <div class="font-mono text-[10px] text-red-300 uppercase tracking-widest font-bold mb-3">FinTech Disaster Recovery (DRP)</div>
+            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">GitOps Cluster Rebuild:</strong> Flux CD declaratively bootstraps namespaces, RBAC, NetworkPolicies, and stateless FinTech workloads into standby DR clusters from Git.</li>
+              <li><strong class="text-white">Artifact Continuity:</strong> <code class="font-mono text-sky-300">Harbor</code> replication policies synchronize verified immutable images so DR failover never stalls on external CI rebuilds.</li>
+              <li><strong class="text-white">Domestic NKRI Data DR:</strong> Multi-AZ database failover paired with geographically separated domestic backup/DRC strategy aligned with POJK 4/2021 Art. 16 &amp; 23 (never failing over outside NKRI).</li>
+              <li><strong class="text-white">DR Drills &amp; Reconciliation:</strong> Periodic failover testing verifying ledger parity, SNAP callback continuity, and zero dual-write split-brain.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: ELK / OPENSEARCH TELEMETRY, 2022 OJK/BI COMPLIANCE & SCOPE TRANSPARENCY -->
+      <div id="ftpanel-compliance" class="hidden p-5 sm:p-6 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">POJK 10/POJK.05/2022</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Effective Jul 4, 2022: mandated in-house IT control (no IT outsourcing), Pusdafil integration, audit trails (Art. 45), security (Art. 46), and device-access limits (Art. 47).</p>
+          </div>
+          <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-uptime font-bold mb-1">POJK 4/2021 &amp; PP 71/2019</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Mandated domestic NKRI Data Center &amp; geographically separated DRC drills (Art. 16, 23-26), SoD controls (Art. 29), and 5-working-day incident reporting (Art. 31).</p>
+          </div>
+          <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">BI PBI 22/23 &amp; SNAP</div>
+            <p class="text-xs text-slate-300 leading-relaxed">PADG 23/15/PADG/2021 SNAP initial deadline passed Jun 30, 2022: enforced domestic payment processing, RSA/HMAC signatures, and documented change controls.</p>
+          </div>
+          <div class="bg-obsidian/90 border border-purple-500/40 rounded-lg p-4">
+            <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">ELK + OPENSEARCH + PDP</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Centralized <code class="font-mono text-sky-300">ELK Stack</code> &amp; <code class="font-mono text-sky-300">OpenSearch</code> with upfront PII masking, ActionTrail/ACK audit logs, and OSS WORM Vault supporting UU PDP (passed Sep 20, 2022) 72-hour breach notice.</p>
+          </div>
+        </div>
+
+        <div class="bg-obsidian/85 border border-slate-800 rounded-lg p-5">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Forensic Transparency: Verified Stack vs. Alibaba Cloud 2022 Reference</span>
+            <span class="font-mono text-[9px] text-uptime bg-uptime/10 border border-uptime/30 px-2 py-0.5 rounded">ZERO OVERCLAIM</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Confirmed Core Stack:</strong> GitOps continuous delivery with <code class="font-mono text-sky-300">Flux CD</code> on Alibaba Cloud, <code class="font-mono text-sky-300">Snyk</code> vulnerability scanning, <code class="font-mono text-sky-300">Harbor</code> private container registry, stateful-to-stateless FinTech backend decomposition, <code class="font-mono text-sky-300">FinTech Disaster Recovery</code>, RBAC, container hardening, and zero-trust observability across <code class="font-mono text-sky-300">ELK Stack</code> and <code class="font-mono text-sky-300">OpenSearch</code> aligned with OJK and Bank Indonesia governance. Cloud-native controls (ACK, RRSA, Terway, ASM, KMS, DTS, ActionTrail, OSS WORM) reflect the 2022 Jakarta (<code class="font-mono text-sky-300">ap-southeast-5</code>) reference architecture without disclosing confidential loan volumes or internal TPS metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOK 5: EXECUTIVE CTA STRIP -->
+    <div class="bg-navy/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Regulated FinTech GitOps, Observability &amp; Disaster Recovery Review</p>
+        <p class="text-sm text-slate-300">Need a technical walkthrough of Flux CD + Harbor/Snyk supply-chain controls, ELK/OpenSearch zero-trust telemetry, or FinTech DRP architecture?</p>
+      </div>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="mailto:lukmanulhakim@devstackops.my.id?subject=FinTech%20GitOps%20%26%20DR%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
+          <i class="fa-solid fa-lock"></i> Request Full Walkthrough (Under NDA)
+        </a>
+        <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-outline text-xs">
+          <i class="fa-solid fa-file-pdf"></i> Verified CV
+        </a>
+      </div>
+    </div>
+      </div>
+
+      <!-- PANEL 02: LOGISTICS DEVSECOPS -->
+      <div id="cspanel-logistics" class="hidden cs-panel-animate" role="tabpanel">
+<div class="sec-label">Case Study 02 &middot; Nov 2021 to Jul 2022 &middot; Multi-Cloud DevSecOps Fabric</div>
 
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div class="max-w-3xl">
@@ -1095,480 +1551,11 @@
         </a>
       </div>
     </div>
-  </div>
-</section>
-
-
-<!-- CASE STUDY 03: HYBRID CLOUD DEVOPS & MULTIFINANCE OBSERVABILITY BLUEPRINT (JUN 2019 TO SEP 2019) -->
-<section id="multifinance-blueprint" class="bg-obsidian blueprint-grid border-t border-steel/25 py-20 px-6 relative overflow-hidden">
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="sec-label">Case Study 03 &middot; Hybrid Cloud DevOps &amp; Observability Blueprint</div>
-
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 bg-steel/15 border border-steel/40 rounded px-3 py-1 font-mono text-[10px] text-sky-300 font-bold tracking-wider uppercase mb-4">
-          <i class="fa-solid fa-building-shield"></i>
-          NDA-Safe Architecture Spec &middot; Jun 2019 to Sep 2019 (4 Months)
-        </div>
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-          Regulated Multifinance Platform: Hybrid HA, Bitbucket CI, ELK &amp; GCS Offload
-        </h2>
-        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Four-month DevOps infrastructure transformation for a regulated Indonesian multifinance platform operating under <strong class="text-white">POJK No. 35/POJK.05/2018</strong> and <strong class="text-white">PP No. 82/2012</strong>. Optimized <strong class="text-white">hybrid cloud and on-premise VPS</strong> high availability, accelerated release cycles by <strong class="text-white">40%</strong> via containerized Jenkins CI integrated with <strong class="text-white">Jira</strong>, <strong class="text-white">Docker</strong>, and <strong class="text-white">Bitbucket</strong> (Android CI/CD), deployed a containerized <strong class="text-white">ELK Stack</strong> to lower MTTR, and offloaded build artifacts plus sanitized log debris via <strong class="text-white">gsutil rsync to Google Cloud Storage</strong>.
-        </p>
-      </div>
-      <div class="font-mono text-[11px] text-slate-400 bg-navy/90 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
-        <div><span class="text-sky-400 font-bold">ROLE:</span> DevOps Infrastructure Consultant</div>
-        <div><span class="text-sky-400 font-bold">WINDOW:</span> June 2019 to September 2019</div>
-        <div><span class="text-sky-400 font-bold">DOMAIN:</span> Regulated Multifinance (OJK)</div>
-      </div>
-    </div>
-
-    <!-- BLOK 1: VERIFIED KPI STRIP (STRICTLY CV-VERIFIED) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-      <div class="bg-navy/90 border border-uptime/35 rounded-lg p-5">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Release Velocity</span>
-          <i class="fa-solid fa-rocket text-uptime"></i>
-        </div>
-        <div class="font-display text-3xl font-extrabold text-white">40% Faster</div>
-        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Release cycles accelerated through containerized Jenkins CI integrated with Jira, Docker layer caching, Bitbucket Android CI/CD, and GCS artifact offload.
-        </p>
       </div>
 
-      <div class="bg-navy/90 border border-steel/35 rounded-lg p-5">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">High-Availability Estate</span>
-          <i class="fa-solid fa-server text-steel"></i>
-        </div>
-        <div class="font-display text-3xl font-extrabold text-white">Hybrid HA</div>
-        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Optimized hybrid cloud and on-premise VPS topology supporting domestic DC/DRC readiness, SPOF elimination, and low-downtime releases.
-        </p>
-      </div>
-
-      <div class="bg-navy/90 border border-amber-gold/35 rounded-lg p-5">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-amber-gold uppercase tracking-widest font-bold">Incident Observability</span>
-          <i class="fa-solid fa-magnifying-glass-chart text-amber-gold"></i>
-        </div>
-        <div class="font-display text-3xl font-extrabold text-white">Lower MTTR</div>
-        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Containerized ELK Stack unifying hybrid logs with automated GCS log debris offloading to protect VPS disks and accelerate incident resolution.
-        </p>
-      </div>
-    </div>
-
-    <!-- BLOK 2: END-TO-END HYBRID DEVOPS, BITBUCKET ANDROID CI & GCS OFFLOAD SVG BLUEPRINT -->
-    <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl mb-10">
-      <div class="bg-slate-900/95 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
-          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">Closed-Loop Hybrid DevOps, Bitbucket Android CI &amp; GCS Offload Fabric (2019)</span>
-        </div>
-        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">POJK 35/2018 &middot; BITBUCKET + JIRA &middot; GSUTIL RSYNC</span>
-      </div>
-
-      <div class="p-4 sm:p-6 overflow-x-auto bg-obsidian/90 blueprint-grid">
-        <svg viewBox="0 0 1080 545" class="w-full min-w-[780px] h-auto" role="img" aria-label="Hybrid Cloud DevOps, Bitbucket Android CI/CD, Containerized Jenkins, ELK Stack, and GCS Offload Architecture Blueprint">
-          <defs>
-            <marker id="mf-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
-            </marker>
-            <marker id="mf-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
-            </marker>
-            <marker id="mf-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
-            </marker>
-            <marker id="mf-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#C4B5FD"/>
-            </marker>
-          </defs>
-
-          <!-- Reverse Audit Writeback Arc (Jenkins -> Jira) -->
-          <path d="M 599 82 C 599 22, 118 22, 118 82" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-green)"/>
-          <rect x="206" y="14" width="306" height="22" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-width="1"/>
-          <text x="359" y="29" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">REVERSE AUDIT WRITEBACK: SHA, DIGEST, GCS LINK, APPROVER</text>
-
-          <!-- STAGE 1: JIRA -->
-          <rect x="20" y="84" width="196" height="176" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
-          <text x="118" y="108" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">1. JIRA GOVERNANCE</text>
-          <rect x="34" y="122" width="168" height="122" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.45"/>
-          <text x="118" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Change Request Gate</text>
-          <text x="118" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Authorized Ticket ID</text>
-          <text x="118" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Atlassian Native Link</text>
-          <text x="118" y="203" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Audit Trail Anchor</text>
-          <text x="118" y="224" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9">PP 82/2012 Traceability</text>
-
-          <!-- STAGE 2: BITBUCKET SCM & ANDROID CI/CD -->
-          <rect x="242" y="84" width="196" height="176" rx="8" fill="#0B1324" stroke="#38BDF8" stroke-width="1.5"/>
-          <text x="340" y="108" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">2. BITBUCKET SCM</text>
-          <rect x="256" y="122" width="168" height="122" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.5"/>
-          <text x="340" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Android &amp; Service Repos</text>
-          <text x="340" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Android Repo + Gradle</text>
-          <text x="340" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Dockerfile + Jenkinsfile</text>
-          <text x="340" y="203" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Jira Smart Commits</text>
-          <text x="340" y="224" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="9">Branch Perms -> Webhook</text>
-
-          <!-- STAGE 3: CONTAINERIZED JENKINS + DOCKER -->
-          <rect x="464" y="84" width="270" height="176" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
-          <text x="599" y="108" text-anchor="middle" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">3. CONTAINERIZED JENKINS + DOCKER</text>
-          <rect x="478" y="122" width="242" height="122" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
-          <text x="599" y="143" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Isolated Backend &amp; Android CI</text>
-          <text x="599" y="163" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Jira Gate + 0 Controller Executors</text>
-          <text x="599" y="181" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Multi-Stage Cache + Android SDK (.apk/.aab)</text>
-          <text x="599" y="199" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9">Folder RBAC .jks Signing + cleanWs()</text>
-          <text x="599" y="218" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="9">SHA256 Digest -> Registry &amp; GCS Sync</text>
-          <text x="599" y="235" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">SoD Prod Approval Gate</text>
-
-          <!-- STAGE 4: HYBRID CLOUD & ON-PREMISE VPS HA -->
-          <rect x="760" y="84" width="300" height="176" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
-          <text x="910" y="108" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">4. HYBRID CLOUD &amp; ON-PREM VPS (HA)</text>
-          <rect x="774" y="122" width="272" height="122" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
-          <text x="910" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">High-Availability Financial Runtime</text>
-          <text x="910" y="165" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="9">IPsec VPN (VTI / DPD / TCP MSS Clamping)</text>
-          <text x="910" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">HAProxy/NGINX + Unicast VRRP Keepalived</text>
-          <text x="910" y="203" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Graceful Drain + Tini PID 1 + Parallel Schema</text>
-          <text x="910" y="224" text-anchor="middle" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="9">Domestic DC/DRC Alignment (POJK 35/2018)</text>
-
-          <!-- Forward Arrows Stages 1 -> 2 -> 3 -> 4 -->
-          <line x1="216" y1="172" x2="240" y2="172" stroke="#38BDF8" stroke-width="1.6" marker-end="url(#mf-arrow-sky)"/>
-          <line x1="438" y1="172" x2="462" y2="172" stroke="#38BDF8" stroke-width="1.6" marker-end="url(#mf-arrow-sky)"/>
-          <line x1="734" y1="172" x2="758" y2="172" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#mf-arrow-amber)"/>
-
-          <!-- STAGE 5: CONTAINERIZED ELK OBSERVABILITY STACK -->
-          <rect x="242" y="300" width="818" height="118" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
-          <text x="260" y="321" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">5. CONTAINERIZED ELK OBSERVABILITY STACK (ELASTIC 6.8 / 7.1 TLS + RBAC)</text>
-
-          <rect x="260" y="334" width="182" height="72" rx="5" fill="#17233B" stroke="#38BDF8" stroke-opacity="0.45"/>
-          <text x="351" y="354" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Host Log Shippers</text>
-          <text x="351" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Docker JSON Rotation (.gz)</text>
-          <text x="351" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Filebeat TLS + Backpressure</text>
-
-          <rect x="462" y="334" width="194" height="72" rx="5" fill="#17233B" stroke="#38BDF8" stroke-opacity="0.45"/>
-          <text x="559" y="354" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Logstash Container</text>
-          <text x="559" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Dissect + PII Mask / HMAC</text>
-          <text x="559" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Persistent Queues + DLQ</text>
-
-          <rect x="676" y="334" width="192" height="72" rx="5" fill="#17233B" stroke="#F59E0B" stroke-opacity="0.55"/>
-          <text x="772" y="354" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="11" font-weight="700">Elasticsearch Container</text>
-          <text x="772" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">4-Phase ILM + Snapshots</text>
-          <text x="772" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">JVM &lt;32GB + Watermark 95%</text>
-
-          <rect x="888" y="334" width="154" height="72" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
-          <text x="965" y="354" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Kibana &amp; Triage</text>
-          <text x="965" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">RBAC Dashboards</text>
-          <text x="965" y="388" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Faster MTTR Triage</text>
-
-          <!-- Internal ELK Arrows -->
-          <line x1="442" y1="370" x2="460" y2="370" stroke="#38BDF8" stroke-width="1.3" marker-end="url(#mf-arrow-sky)"/>
-          <line x1="656" y1="370" x2="674" y2="370" stroke="#38BDF8" stroke-width="1.3" marker-end="url(#mf-arrow-sky)"/>
-          <line x1="868" y1="370" x2="886" y2="370" stroke="#10B981" stroke-width="1.3" marker-end="url(#mf-arrow-green)"/>
-
-          <!-- STAGE 6: GOOGLE CLOUD STORAGE OFFLOAD (ARTIFACTS & SANITIZED LOG DEBRIS) -->
-          <rect x="242" y="442" width="818" height="86" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
-          <text x="260" y="463" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">6. GOOGLE CLOUD STORAGE OFFLOAD (GSUTIL -M RSYNC -R WITHOUT -D FLAG | NEARLINE / COLDLINE)</text>
-
-          <rect x="260" y="473" width="380" height="44" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
-          <text x="450" y="491" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Build Artifact Bucket (Non-PII)</text>
-          <text x="450" y="507" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">.apk / .aab &middot; mapping.txt &middot; Jenkins Build Logs (MD5/CRC32C)</text>
-
-          <rect x="660" y="473" width="382" height="44" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
-          <text x="851" y="491" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Sanitized Log Debris Archive Bucket</text>
-          <text x="851" y="507" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">PII-Scrubbed .gz Debris &amp; DLQ Offload (Raw PII Kept Domestic)</text>
-
-          <!-- Telemetry Flow from Stage 4 to Stage 5 -->
-          <line x1="910" y1="260" x2="910" y2="298" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-amber)"/>
-
-          <!-- Offload Flow from Stage 3 (Jenkins) -> Stage 6 (Artifact Bucket) -->
-          <path d="M 480 260 L 480 282 L 228 282 L 228 495 L 258 495" fill="none" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-purple)"/>
-          <rect x="24" y="454" width="192" height="44" rx="5" fill="#1D1633" stroke="#8B5CF6" stroke-opacity="0.7"/>
-          <text x="120" y="472" text-anchor="middle" fill="#DDD6FE" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">ARTIFACT &amp; DEBRIS OFFLOAD</text>
-          <text x="120" y="488" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">gsutil -m rsync (No -d) + Local Prune</text>
-
-          <!-- Offload Flow from Stage 5 (ELK/VPS) -> Stage 6 (Sanitized Log Debris Bucket) -->
-          <line x1="772" y1="418" x2="772" y2="440" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-purple)"/>
-
-          <!-- Closed-Loop Incident Tracking from ELK back to Jira -->
-          <path d="M 242 370 L 118 370 L 118 262" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-sky)"/>
-          <rect x="26" y="308" width="184" height="44" rx="5" fill="#1F1215" stroke="#EF4444" stroke-opacity="0.65"/>
-          <text x="118" y="327" text-anchor="middle" fill="#FCA5A5" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">CLOSED-LOOP INCIDENT</text>
-          <text x="118" y="342" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Alert &amp; Triage -> Jira Ticket</text>
-        </svg>
-      </div>
-
-      <!-- 6 Compact Stage Cards (2x3 Grid) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">STAGE 01</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Jira Governance</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Authorized change requests with unique ticket IDs anchor audit compliance under PP 82/2012 before code enters release branches.</p>
-        </div>
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-sky-300 font-bold mb-1">STAGE 02</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Bitbucket SCM &amp; Android CI/CD</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Android mobile and service repositories hosted on Bitbucket with first-party Jira Smart Commits, branch permissions, and automated Jenkins webhooks.</p>
-        </div>
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-uptime font-bold mb-1">STAGE 03</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Jenkins + Docker CI</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Multi-stage Docker builds, ephemeral Android SDK/Gradle containers, Folder-scoped RBAC .jks signing, SoD approval gates, cleanWs(), and Jira writeback.</p>
-        </div>
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">STAGE 04</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Hybrid &amp; VPS HA</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Route-based IPsec VPN (VTI/DPD/MSS), HAProxy/NGINX + Unicast Keepalived, graceful draining, Tini PID 1, and Expand-Migrate-Contract schemas.</p>
-        </div>
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-sky-200 font-bold mb-1">STAGE 05</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Containerized ELK</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">TLS-encrypted log shipping, Logstash dissect + PII masking/HMAC + PQ/DLQ, Elasticsearch 4-phase ILM + Snapshots, and Kibana MTTR triage.</p>
-        </div>
-        <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">STAGE 06</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">GCS Artifact &amp; Log Debris Offload</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">gsutil -m rsync -r (without -d) offloading non-PII .apk/.aab artifacts, mapping.txt, and PII-scrubbed .gz log debris to GCS Nearline/Coldline buckets.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- BLOK 3: MULTIFINANCE RISK, GOVERNANCE & CONTROL MATRIX -->
-    <div class="mb-12">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="font-display text-xl font-bold text-white">Multifinance Risk, Governance &amp; Control Matrix</h3>
-        <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden sm:inline">2019 Regulatory Controls -> Operational Resilience</span>
-      </div>
-      <div class="overflow-x-auto bg-navy/85 border border-slate-700/80 rounded-xl shadow-lg">
-        <table class="w-full text-left border-collapse bp-table">
-          <thead>
-            <tr>
-              <th class="w-1/4">Operational / Regulatory Risk</th>
-              <th class="w-5/12">Architectural Control (2019 Vintage Pattern)</th>
-              <th class="w-1/3">Verified Resilience &amp; Audit Outcome</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="font-semibold text-white">Unauthorized Changes &amp; Audit Gaps (PP 82/2012)</td>
-              <td>Bitbucket Smart Commits + branch permissions, declarative <code class="font-mono text-sky-300">Jenkinsfile</code>, Jira-ID commit gate, Folder RBAC, SoD <code class="font-mono text-sky-300">input</code> approval, and automated reverse audit writeback to Jira.</td>
-              <td class="text-emerald-300">End-to-end immutable audit chain from Jira ticket to production while accelerating release cycles by 40%.</td>
-            </tr>
-            <tr>
-              <td class="font-semibold text-white">Android CI/CD Bloat &amp; Signing Key Exposure</td>
-              <td>Bitbucket Android repo triggers isolated Docker Android SDK/Gradle builders; <code class="font-mono text-sky-300">.jks</code> keystore scoped in Jenkins Credentials Store; <code class="font-mono text-sky-300">gsutil -m rsync</code> offloads <code class="font-mono text-sky-300">.apk/.aab</code> and <code class="font-mono text-sky-300">mapping.txt</code> before <code class="font-mono text-sky-300">cleanWs()</code>.</td>
-              <td class="text-emerald-300">Zero signing keys in Git, zero workspace debris left on Jenkins hosts, and reproducible checksum-verified release artifacts.</td>
-            </tr>
-            <tr>
-              <td class="font-semibold text-white">Container Escape &amp; Secret Exposure (CIS 5.4 &amp; 5.31)</td>
-              <td>Zero executors on Jenkins controller, isolated build agents, no direct <code class="font-mono text-sky-300">/var/run/docker.sock</code> on controller, single-quoted <code class="font-mono text-sky-300">withCredentials</code> (<code class="font-mono text-sky-300">--password-stdin</code>), non-root &amp; <code class="font-mono text-sky-300">--cap-drop=ALL</code>.</td>
-              <td class="text-emerald-300">Eliminated Groovy interpolation credential leaks and isolated build blast radius away from production VPS hosts.</td>
-            </tr>
-            <tr>
-              <td class="font-semibold text-white">Hybrid Link Blackholes, LB SPOF &amp; VPS Drift (POJK 35/2018)</td>
-              <td>Route-based IPsec VPN (VTI, DPD, TCP MSS clamping), Unicast VRRP Keepalived (<code class="font-mono text-sky-300">nopreempt</code>) + HAProxy/NGINX, immutable Docker runtimes, and Git-versioned configs.</td>
-              <td class="text-emerald-300">Removed reverse proxy SPOF, prevented virtualized VRRP split-brain, and eliminated snowflake VPS drift.</td>
-            </tr>
-            <tr>
-              <td class="font-semibold text-white">Mid-Flight Financial Transaction Drops</td>
-              <td>Backend graceful connection draining, <code class="font-mono text-sky-300">nginx -t</code> + <code class="font-mono text-sky-300">systemctl reload</code>, PID 1 <code class="font-mono text-sky-300">tini</code> (<code class="font-mono text-sky-300">SIGTERM</code> forwarding), and Expand-Migrate-Contract DB changes.</td>
-              <td class="text-emerald-300">Low-downtime releases with deterministic digest rollback safe for financing approvals and payment APIs.</td>
-            </tr>
-            <tr>
-              <td class="font-semibold text-white">VPS Disk Exhaustion &amp; Log Debris (POJK 35/2018 &amp; Kominfo 20/2016)</td>
-              <td>Docker JSON log rotation, Logstash <code class="font-mono text-sky-300">dissect</code> + PII masking/HMAC + PQ/DLQ, 4-phase ILM, and <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (no <code class="font-mono text-sky-300">-d</code>) offloading PII-scrubbed <code class="font-mono text-sky-300">.gz</code> debris to GCS Nearline/Coldline while keeping raw PII domestic.</td>
-              <td class="text-emerald-300">Prevented 95% flood-stage read-only lockouts, safeguarded customer PII residency, and enabled faster incident resolution (lower MTTR).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- BLOK 4: INTERACTIVE ENGINEERING DEEP-DIVE TABS -->
-    <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl mb-10">
-      <div class="bg-slate-900/95 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
-          <h3 class="font-display text-lg font-bold text-white">Inspect 6-Stage Controls, Trade-Offs &amp; GCS/ELK Guardrails</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <button type="button" onclick="switchMultifinanceTab('stages')" id="mftab-stages" class="bp-tab bp-active">
-            <i class="fa-solid fa-diagram-next mr-1.5"></i>6-Stage Controls
-          </button>
-          <button type="button" onclick="switchMultifinanceTab('tradeoffs')" id="mftab-tradeoffs" class="bp-tab">
-            <i class="fa-solid fa-scale-balanced mr-1.5"></i>Trade-Offs &amp; OJK 2019
-          </button>
-          <button type="button" onclick="switchMultifinanceTab('guardrails')" id="mftab-guardrails" class="bp-tab">
-            <i class="fa-solid fa-lock mr-1.5"></i>CIS Docker, GCS &amp; ELK
-          </button>
-        </div>
-      </div>
-
-      <!-- TAB 1: 6-STAGE CONTROLS -->
-      <div id="mfpanel-stages" class="p-5 sm:p-6">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse bp-table">
-            <thead>
-              <tr>
-                <th class="w-1/6">Stage</th>
-                <th class="w-1/4">Stack &amp; Scope</th>
-                <th class="w-1/3">Technical &amp; Governance Mechanics</th>
-                <th class="w-1/4">Contribution to Outcome</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="font-mono font-bold text-white">01. Change Auth</td>
-                <td><strong class="text-uptime">Jira</strong> (Change Governance)</td>
-                <td>Authorized change tickets with scope, test plan, and sign-off anchoring PP 82/2012 audit trails.</td>
-                <td>Eliminates unauthorized changes and manual cross-team release handoffs.</td>
-              </tr>
-              <tr>
-                <td class="font-mono font-bold text-white">02. Version Control</td>
-                <td><strong class="text-sky-300">Bitbucket</strong> (Android CI/CD &amp; Services)</td>
-                <td>First-party Atlassian Jira Smart Commits, branch-to-issue linking, branch permissions, and Bitbucket webhook triggers to Jenkins.</td>
-                <td>Enforces four-eyes PR review and native Jira traceability for Android and backend repos.</td>
-              </tr>
-              <tr>
-                <td class="font-mono font-bold text-white">03. Container CI</td>
-                <td><strong class="text-uptime">Containerized Jenkins + Docker</strong></td>
-                <td>Isolated declarative builds, multi-stage Docker caching, ephemeral Android SDK/Gradle signing (<code class="font-mono text-sky-300">.jks</code> in Folder RBAC), SoD approval, and <code class="font-mono text-sky-300">cleanWs()</code>.</td>
-                <td>Primary driver of 40% faster release cycles with audit-ready release evidence.</td>
-              </tr>
-              <tr>
-                <td class="font-mono font-bold text-white">04. Artifact &amp; Debris Offload</td>
-                <td><strong class="text-purple-300">Private Registry + Google Cloud Storage</strong></td>
-                <td>Immutable SHA256 container images in Private Registry; <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (no <code class="font-mono text-sky-300">-d</code>) offloads <code class="font-mono text-sky-300">.apk/.aab</code>, <code class="font-mono text-sky-300">mapping.txt</code>, and sanitized <code class="font-mono text-sky-300">.gz</code> log debris to GCS.</td>
-                <td>Keeps <code class="font-mono text-sky-300">JENKINS_HOME</code> and VPS SSD disks clean while preserving checksum-verified audit archives.</td>
-              </tr>
-              <tr>
-                <td class="font-mono font-bold text-white">05. Hybrid HA Runtime</td>
-                <td><strong class="text-uptime">Hybrid Cloud &amp; On-Premise VPS HA</strong></td>
-                <td>Route-based IPsec VPN (VTI/DPD/MSS), HAProxy/NGINX + Unicast VRRP Keepalived, immutable container runtimes, and graceful draining.</td>
-                <td>Strengthens financial platform availability and domestic DC/DRC posture.</td>
-              </tr>
-              <tr>
-                <td class="font-mono font-bold text-white">06. ELK Telemetry</td>
-                <td><strong class="text-uptime">Containerized ELK Stack</strong></td>
-                <td>Encrypted Filebeat shipping, Logstash dissect + PII masking/HMAC + PQ/DLQ, 4-phase ILM, and Kibana correlation dashboards.</td>
-                <td>Enables faster incident resolution and lower MTTR across hybrid nodes.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- TAB 2: CI/CD TRADE-OFFS & 2019 REGULATORY VINTAGE -->
-      <div id="mfpanel-tradeoffs" class="hidden p-5 sm:p-6 space-y-6">
-        <div>
-          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">Delivery Architecture Trade-Off (4-Month Consulting Window)</h4>
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse bp-table">
-              <thead>
-                <tr>
-                  <th class="w-1/5">Dimension</th>
-                  <th class="w-4/12 text-uptime">Selected: Bitbucket + Containerized Jenkins + GCS</th>
-                  <th class="w-1/4">Alternative 1: Bare-Metal Jenkins</th>
-                  <th class="w-1/4">Alternative 2: Manual SSH / SCP</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="font-semibold text-white">Release Velocity</td>
-                  <td>Declarative pipelines, Docker layer caching, and native Bitbucket-Jira hooks drove 40% faster release cycles.</td>
-                  <td>Automated, but frequent Android SDK and OS dependency conflicts across shared host projects.</td>
-                  <td>Slow, operator-dependent, repetitive manual steps with long maintenance windows.</td>
-                </tr>
-                <tr>
-                  <td class="font-semibold text-white">Artifact &amp; Debris Hygiene</td>
-                  <td><code class="font-mono text-sky-300">gsutil -m rsync</code> offloads build binaries and sanitized log debris to GCS Nearline/Coldline, paired with <code class="font-mono text-sky-300">cleanWs()</code>.</td>
-                  <td>Build artifacts and rotated logs accumulate locally on VPS disks, triggering disk-full build outages.</td>
-                  <td>Ad-hoc file copies scattered across operator laptops and local servers with no checksum verification.</td>
-                </tr>
-                <tr>
-                  <td class="font-semibold text-white">Multifinance Audit</td>
-                  <td>First-party Atlassian Jira-Bitbucket-Jenkins chain with SHA256 digests, Folder RBAC, and SoD approval gates.</td>
-                  <td>Freestyle UI jobs easily modified outside version control without audit trail.</td>
-                  <td>Relies on manual spreadsheets and screenshots prone to audit findings.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">2019 Indonesian Regulatory &amp; Cloud Residency Context (Jun to Sep 2019)</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
-              <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">POJK 35/POJK.05/2018</div>
-              <p class="text-xs text-slate-300 leading-relaxed">Effective Dec 27, 2018: mandated integrated IT systems (&gt;5 branches), IT SOPs, and domestic Data Center &amp; DRC in Indonesia (Art. 18 &amp; 19).</p>
-            </div>
-            <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
-              <div class="font-mono text-[10px] text-uptime font-bold mb-1">PP NO. 82 TAHUN 2012</div>
-              <p class="text-xs text-slate-300 leading-relaxed">Active during Jun to Sep 2019 (replaced Oct 2019 by PP 71/2019): mandated end-to-end electronic system audit trails, risk control, and security.</p>
-            </div>
-            <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
-              <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">POJK 1/2015 &amp; KOMINFO 20/2016</div>
-              <p class="text-xs text-slate-300 leading-relaxed">Mandated LJKNB risk management internal controls plus personal data protection and 5-year electronic retention readiness.</p>
-            </div>
-            <div class="bg-obsidian/90 border border-purple-500/40 rounded-lg p-4">
-              <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">2019 GCS RESIDENCY GUARDRAIL</div>
-              <p class="text-xs text-slate-300 leading-relaxed">Since GCP Jakarta opened in Jun 2020, GCS offload was strictly limited to non-PII build artifacts and PII-scrubbed debris; raw PII stayed in domestic DC/DRC.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 3: CIS DOCKER, GCS RSYNC & ELK STORAGE GUARDRAILS -->
-      <div id="mfpanel-guardrails" class="hidden p-5 sm:p-6 space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div class="bg-obsidian/85 border border-slate-800 rounded-lg p-5">
-            <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">CIS Docker Hardening &amp; Bitbucket Android CI Security</div>
-            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">No Direct Host Socket on Controller:</strong> Rejected bind-mounting <code class="font-mono text-sky-300">/var/run/docker.sock</code> onto the Jenkins controller (violates CIS 5.31 and enables root container escape).</li>
-              <li><strong class="text-white">Isolated Build Agents:</strong> Set <code class="font-mono text-sky-300">numExecutors = 0</code> on controller; delegated backend and Android SDK/Gradle builds to isolated builder hosts outside production subnets.</li>
-              <li><strong class="text-white">Safe Secret &amp; Keystore Binding:</strong> Stored Android <code class="font-mono text-sky-300">.jks</code> keystores and registry credentials in Folder-scoped Jenkins Credentials Store with single-quoted shell blocks (<code class="font-mono text-sky-300">sh '...'</code>) to prevent Groovy interpolation leaks.</li>
-              <li><strong class="text-white">Runtime Container Posture:</strong> Non-root <code class="font-mono text-sky-300">USER</code>, <code class="font-mono text-sky-300">--cap-drop=ALL</code>, <code class="font-mono text-sky-300">no-new-privileges=true</code>, AppArmor/SELinux enabled, and <code class="font-mono text-sky-300">tini</code> PID 1 signal forwarding.</li>
-            </ul>
-          </div>
-
-          <div class="bg-obsidian/85 border border-purple-500/40 rounded-lg p-5">
-            <div class="font-mono text-[10px] text-purple-300 uppercase tracking-widest font-bold mb-3">GCS gsutil rsync Offload &amp; Elasticsearch VPS Guardrails</div>
-            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">Bucket Separation &amp; No <code class="font-mono text-sky-300">-d</code> Flag:</strong> Executed <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (strictly omitting <code class="font-mono text-sky-300">-d</code> delete) into separate Artifact (<code class="font-mono text-sky-300">.apk/.aab</code>, <code class="font-mono text-sky-300">mapping.txt</code>, build logs) and Sanitized Log Debris (<code class="font-mono text-sky-300">.gz</code>, DLQ) buckets with MD5/CRC32C verification.</li>
-              <li><strong class="text-white">GCS Lifecycle &amp; PII Gate:</strong> Automated GCS Object Lifecycle transitions to Nearline/Coldline while scrubbing customer PII via Logstash before offload so raw PII remains strictly in domestic DC/DRC.</li>
-              <li><strong class="text-white">Flood-Stage Lockout Prevention:</strong> Separated <code class="font-mono text-sky-300">path.data</code> from OS root partition, enforced Docker <code class="font-mono text-sky-300">max-size: 10m</code> rotation, 4-phase ILM rollover, <code class="font-mono text-sky-300">vm.max_map_count=262144</code>, and alerts ahead of 85%/90%/95% watermarks.</li>
-              <li><strong class="text-white">JVM, Parsing &amp; Zero-Downtime DB:</strong> Pinned <code class="font-mono text-sky-300">-Xms = -Xmx</code> under Compressed OOPs (~26 to 32 GB), replaced heavy Grok with <code class="font-mono text-sky-300">dissect</code> + PQ/DLQ, and enforced Expand-Migrate-Contract schema changes.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BLOK 5: EXECUTIVE CTA STRIP -->
-    <div class="bg-navy/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      <div>
-        <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Regulated Financial Infrastructure &amp; DevOps Advisory</p>
-        <p class="text-sm text-slate-300">Interested in hybrid cloud HA engineering, audit-ready Bitbucket/Jenkins CI governance, or GCS/ELK observability offload?</p>
-      </div>
-      <div class="flex flex-wrap gap-3 shrink-0">
-        <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Multifinance%20Hybrid%20DevOps%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
-          <i class="fa-solid fa-lock"></i> Request Full Walkthrough (Under NDA)
-        </a>
-        <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-outline text-xs">
-          <i class="fa-solid fa-file-pdf"></i> Verified CV
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CASE STUDY 04: MULTI-TENANT CLOUD ERP ZERO-TOUCH PROVISIONING & TERRAFORM IAC BLUEPRINT (MAY 2020 TO OCT 2020) -->
-<section id="erp-iac-blueprint" class="bg-navy border-t border-steel/25 py-20 px-6 relative overflow-hidden">
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="sec-label">Case Study 04 &middot; Multi-Tenant Cloud ERP IaC &amp; ZTP Blueprint</div>
+      <!-- PANEL 03: MULTI-TENANT ERP IAC -->
+      <div id="cspanel-erp" class="hidden cs-panel-animate" role="tabpanel">
+<div class="sec-label">Case Study 03 &middot; May to Oct 2020 &middot; Multi-Tenant Cloud ERP IaC &amp; ZTP</div>
 
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div class="max-w-3xl">
@@ -2061,275 +2048,287 @@
         </a>
       </div>
     </div>
-  </div>
-</section>
+      </div>
 
-
-<!-- CASE STUDY 05: REGULATED FINTECH GITOPS (FLUX CD) & ZERO-TRUST BLUEPRINT (JUL 2022 TO SEP 2022) -->
-<section id="fintech-gitops-blueprint" class="bg-obsidian blueprint-grid border-t border-steel/25 py-20 px-6 relative overflow-hidden">
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="sec-label">Case Study 05 &middot; Regulated FinTech GitOps, Observability &amp; DR Blueprint</div>
+      <!-- PANEL 04: MULTIFINANCE HYBRID HA -->
+      <div id="cspanel-multifinance" class="hidden cs-panel-animate" role="tabpanel">
+<div class="sec-label">Case Study 04 &middot; Jun to Sep 2019 &middot; Regulated Multifinance Hybrid HA &amp; ELK</div>
 
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-steel/15 border border-steel/40 rounded px-3 py-1 font-mono text-[10px] text-sky-300 font-bold tracking-wider uppercase mb-4">
-          <i class="fa-solid fa-shield-halved"></i>
-          NDA-Safe Architecture Spec &middot; Jul 2022 to Sep 2022 (3 Months)
+          <i class="fa-solid fa-building-shield"></i>
+          NDA-Safe Architecture Spec &middot; Jun 2019 to Sep 2019 (4 Months)
         </div>
         <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-          Regulated FinTech Lending: GitOps (Flux CD), Harbor/Snyk, ELK/OpenSearch &amp; FinTech DR
+          Regulated Multifinance Platform: Hybrid HA, Bitbucket CI, ELK &amp; GCS Offload
         </h2>
         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Focused three-month FinTech architecture and DevSecOps leadership engagement executed at Indonesia's mid-2022 regulatory inflection point (<strong class="text-white">POJK No. 10/POJK.05/2022</strong> effective July 4, 2022, <strong class="text-white">POJK 4/2021</strong>, <strong class="text-white">Bank Indonesia SNAP</strong>, and the September 2022 parliamentary passage of the <strong class="text-white">Personal Data Protection Law</strong>). Architected pull-based <strong class="text-white">GitOps continuous delivery with Flux CD on Alibaba Cloud</strong>, hardened the container supply chain with <strong class="text-white">Snyk</strong> and <strong class="text-white">Harbor</strong>, decoupled stateful legacy backends into stateless microservices with <strong class="text-white">FinTech Disaster Recovery</strong> readiness, and enforced RBAC plus zero-trust telemetry across <strong class="text-white">ELK Stack</strong> and <strong class="text-white">OpenSearch</strong>.
+          Four-month DevOps infrastructure transformation for a regulated Indonesian multifinance platform operating under <strong class="text-white">POJK No. 35/POJK.05/2018</strong> and <strong class="text-white">PP No. 82/2012</strong>. Optimized <strong class="text-white">hybrid cloud and on-premise VPS</strong> high availability, accelerated release cycles by <strong class="text-white">40%</strong> via containerized Jenkins CI integrated with <strong class="text-white">Jira</strong>, <strong class="text-white">Docker</strong>, and <strong class="text-white">Bitbucket</strong> (Android CI/CD), deployed a containerized <strong class="text-white">ELK Stack</strong> to lower MTTR, and offloaded build artifacts plus sanitized log debris via <strong class="text-white">gsutil rsync to Google Cloud Storage</strong>.
         </p>
       </div>
       <div class="font-mono text-[11px] text-slate-400 bg-navy/90 border border-slate-700/80 rounded-lg px-4 py-3 space-y-1 shrink-0">
-        <div><span class="text-sky-400 font-bold">ROLE:</span> FinTech Solutions &amp; DevSecOps Lead</div>
-        <div><span class="text-sky-400 font-bold">WINDOW:</span> July 2022 to September 2022</div>
-        <div><span class="text-sky-400 font-bold">DOMAIN:</span> OJK-Licensed FinTech (LPBBTI)</div>
+        <div><span class="text-sky-400 font-bold">ROLE:</span> DevOps Infrastructure Consultant</div>
+        <div><span class="text-sky-400 font-bold">WINDOW:</span> June 2019 to September 2019</div>
+        <div><span class="text-sky-400 font-bold">DOMAIN:</span> Regulated Multifinance (OJK)</div>
       </div>
     </div>
 
-    <!-- BLOK 1: VERIFIED PILLARS STRIP (STRICTLY CV + CONFIRMED STACK, ZERO FABRICATED TPS/LOAN METRICS) -->
+    <!-- BLOK 1: VERIFIED KPI STRIP (STRICTLY CV-VERIFIED) -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-      <div class="bg-navy/90 border border-steel/35 rounded-lg p-5">
+      <div class="bg-navy/90 border border-uptime/35 rounded-lg p-5">
         <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">GitOps &amp; Supply Chain</span>
-          <i class="fa-solid fa-code-branch text-steel"></i>
+          <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Release Velocity</span>
+          <i class="fa-solid fa-rocket text-uptime"></i>
         </div>
-        <div class="font-display text-3xl font-extrabold text-white">Flux + Harbor</div>
+        <div class="font-display text-3xl font-extrabold text-white">40% Faster</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Headless pull-based Flux CD on Alibaba Cloud paired with Snyk vulnerability gating, Harbor private registry immutability, GPG verification, and drift healing.
+          Release cycles accelerated through containerized Jenkins CI integrated with Jira, Docker layer caching, Bitbucket Android CI/CD, and GCS artifact offload.
         </p>
       </div>
 
-      <div class="bg-navy/90 border border-uptime/35 rounded-lg p-5">
+      <div class="bg-navy/90 border border-steel/35 rounded-lg p-5">
         <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold">Stateless &amp; FinTech DR</span>
-          <i class="fa-solid fa-cubes-stacked text-uptime"></i>
+          <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">High-Availability Estate</span>
+          <i class="fa-solid fa-server text-steel"></i>
         </div>
-        <div class="font-display text-3xl font-extrabold text-white">ACID + DRP</div>
+        <div class="font-display text-3xl font-extrabold text-white">Hybrid HA</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Stateless FinTech microservices backed by double-entry ledgers, idempotency keys, Transactional Outbox CDC, and domestic NKRI FinTech Disaster Recovery.
+          Optimized hybrid cloud and on-premise VPS topology supporting domestic DC/DRC readiness, SPOF elimination, and low-downtime releases.
         </p>
       </div>
 
       <div class="bg-navy/90 border border-amber-gold/35 rounded-lg p-5">
         <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-[10px] text-amber-gold uppercase tracking-widest font-bold">Zero-Trust &amp; Compliance</span>
-          <i class="fa-solid fa-scale-balanced text-amber-gold"></i>
+          <span class="font-mono text-[10px] text-amber-gold uppercase tracking-widest font-bold">Incident Observability</span>
+          <i class="fa-solid fa-magnifying-glass-chart text-amber-gold"></i>
         </div>
-        <div class="font-display text-3xl font-extrabold text-white">OJK &amp; BI</div>
+        <div class="font-display text-3xl font-extrabold text-white">Lower MTTR</div>
         <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-          Least-privilege RBAC, container hardening, and encrypted zero-trust telemetry across ELK Stack, OpenSearch, and tamper-evident WORM audit archives.
+          Containerized ELK Stack unifying hybrid logs with automated GCS log debris offloading to protect VPS disks and accelerate incident resolution.
         </p>
       </div>
     </div>
 
-    <!-- BLOK 2: 4-PLANE PULL-BASED GITOPS, HARBOR/SNYK, ELK/OPENSEARCH & FINTECH DR SVG BLUEPRINT -->
+    <!-- BLOK 2: END-TO-END HYBRID DEVOPS, BITBUCKET ANDROID CI & GCS OFFLOAD SVG BLUEPRINT -->
     <div class="bg-navy/85 border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl mb-10">
       <div class="bg-slate-900/95 px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-uptime animate-pulse"></span>
-          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">4-Plane FinTech GitOps (Flux CD), Harbor/Snyk, ELK/OpenSearch &amp; DR Blueprint (2022)</span>
+          <span class="font-mono text-xs text-slate-200 font-bold uppercase tracking-wider">Closed-Loop Hybrid DevOps, Bitbucket Android CI &amp; GCS Offload Fabric (2019)</span>
         </div>
-        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">ALIBABA CLOUD NKRI &middot; HARBOR &middot; SNYK &middot; OPENSEARCH + ELK</span>
+        <span class="font-mono text-[10px] text-sky-400 bg-steel/15 border border-steel/35 px-2.5 py-0.5 rounded">POJK 35/2018 &middot; BITBUCKET + JIRA &middot; GSUTIL RSYNC</span>
       </div>
 
       <div class="p-4 sm:p-6 overflow-x-auto bg-obsidian/90 blueprint-grid">
-        <svg viewBox="0 0 1080 560" class="w-full min-w-[780px] h-auto" role="img" aria-label="4-Plane FinTech GitOps Flux CD, Snyk, Harbor, ELK, OpenSearch, and FinTech Disaster Recovery Architecture on Alibaba Cloud">
+        <svg viewBox="0 0 1080 545" class="w-full min-w-[780px] h-auto" role="img" aria-label="Hybrid Cloud DevOps, Bitbucket Android CI/CD, Containerized Jenkins, ELK Stack, and GCS Offload Architecture Blueprint">
           <defs>
-            <marker id="ft-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <marker id="mf-arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
             </marker>
-            <marker id="ft-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <marker id="mf-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
             </marker>
-            <marker id="ft-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <marker id="mf-arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
             </marker>
-            <marker id="ft-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <marker id="mf-arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#C4B5FD"/>
             </marker>
           </defs>
 
-          <!-- PLANE 1: SOURCE & SUPPLY CHAIN PLANE -->
-          <rect x="20" y="16" width="1040" height="104" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
-          <text x="38" y="38" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 1: SOURCE &amp; SUPPLY CHAIN PLANE (SOD + SNYK SECURITY GATING + HARBOR REGISTRY)</text>
+          <!-- Reverse Audit Writeback Arc (Jenkins -> Jira) -->
+          <path d="M 599 82 C 599 22, 118 22, 118 82" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-green)"/>
+          <rect x="206" y="14" width="306" height="22" rx="4" fill="#0B1F1B" stroke="#10B981" stroke-width="1"/>
+          <text x="359" y="29" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">REVERSE AUDIT WRITEBACK: SHA, DIGEST, GCS LINK, APPROVER</text>
 
-          <rect x="38" y="50" width="290" height="56" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.5"/>
-          <text x="183" y="71" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">GitOps Config Repo (Protected Main)</text>
-          <text x="183" y="90" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">CODEOWNERS SoD &middot; Mandatory GPG Commits &middot; @sha256</text>
+          <!-- STAGE 1: JIRA -->
+          <rect x="20" y="84" width="196" height="176" rx="8" fill="#0B1324" stroke="#1D6FA4" stroke-width="1.5"/>
+          <text x="118" y="108" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">1. JIRA GOVERNANCE</text>
+          <rect x="34" y="122" width="168" height="122" rx="5" fill="#13223A" stroke="#2563EB" stroke-opacity="0.45"/>
+          <text x="118" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Change Request Gate</text>
+          <text x="118" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Authorized Ticket ID</text>
+          <text x="118" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Atlassian Native Link</text>
+          <text x="118" y="203" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Audit Trail Anchor</text>
+          <text x="118" y="224" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9">PP 82/2012 Traceability</text>
 
-          <rect x="372" y="50" width="316" height="56" rx="5" fill="#13223A" stroke="#10B981" stroke-opacity="0.55"/>
-          <text x="530" y="71" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Snyk + CI Audit &amp; Policy Gate</text>
-          <text x="530" y="90" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Snyk SCA/Container/IaC &middot; Conftest &middot; Anti Path-Traversal</text>
+          <!-- STAGE 2: BITBUCKET SCM & ANDROID CI/CD -->
+          <rect x="242" y="84" width="196" height="176" rx="8" fill="#0B1324" stroke="#38BDF8" stroke-width="1.5"/>
+          <text x="340" y="108" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">2. BITBUCKET SCM</text>
+          <rect x="256" y="122" width="168" height="122" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.5"/>
+          <text x="340" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Android &amp; Service Repos</text>
+          <text x="340" y="165" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Android Repo + Gradle</text>
+          <text x="340" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Dockerfile + Jenkinsfile</text>
+          <text x="340" y="203" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Jira Smart Commits</text>
+          <text x="340" y="224" text-anchor="middle" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="9">Branch Perms -> Webhook</text>
 
-          <rect x="732" y="50" width="310" height="56" rx="5" fill="#13223A" stroke="#38BDF8" stroke-opacity="0.55"/>
-          <text x="887" y="71" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Harbor Private Registry (Signed)</text>
-          <text x="887" y="90" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Distroless UID 65532 &middot; Immutable Tags &middot; Robot RBAC</text>
+          <!-- STAGE 3: CONTAINERIZED JENKINS + DOCKER -->
+          <rect x="464" y="84" width="270" height="176" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
+          <text x="599" y="108" text-anchor="middle" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">3. CONTAINERIZED JENKINS + DOCKER</text>
+          <rect x="478" y="122" width="242" height="122" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
+          <text x="599" y="143" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Isolated Backend &amp; Android CI</text>
+          <text x="599" y="163" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Jira Gate + 0 Controller Executors</text>
+          <text x="599" y="181" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Multi-Stage Cache + Android SDK (.apk/.aab)</text>
+          <text x="599" y="199" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="9">Folder RBAC .jks Signing + cleanWs()</text>
+          <text x="599" y="218" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="9">SHA256 Digest -> Registry &amp; GCS Sync</text>
+          <text x="599" y="235" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">SoD Prod Approval Gate</text>
 
-          <line x1="328" y1="78" x2="370" y2="78" stroke="#38BDF8" stroke-width="1.4" marker-end="url(#ft-arrow-sky)"/>
-          <line x1="688" y1="78" x2="730" y2="78" stroke="#10B981" stroke-width="1.4" marker-end="url(#ft-arrow-green)"/>
+          <!-- STAGE 4: HYBRID CLOUD & ON-PREMISE VPS HA -->
+          <rect x="760" y="84" width="300" height="176" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
+          <text x="910" y="108" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">4. HYBRID CLOUD &amp; ON-PREM VPS (HA)</text>
+          <rect x="774" y="122" width="272" height="122" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
+          <text x="910" y="144" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">High-Availability Financial Runtime</text>
+          <text x="910" y="165" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="9">IPsec VPN (VTI / DPD / TCP MSS Clamping)</text>
+          <text x="910" y="184" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">HAProxy/NGINX + Unicast VRRP Keepalived</text>
+          <text x="910" y="203" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Graceful Drain + Tini PID 1 + Parallel Schema</text>
+          <text x="910" y="224" text-anchor="middle" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="9">Domestic DC/DRC Alignment (POJK 35/2018)</text>
 
-          <!-- Outbound Pull Arrow from Plane 2 to Plane 1 -->
-          <line x1="183" y1="154" x2="183" y2="108" stroke="#38BDF8" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ft-arrow-sky)"/>
-          <rect x="200" y="124" width="256" height="20" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="0.9"/>
-          <text x="328" y="137" text-anchor="middle" fill="#7DD3FC" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">OUTBOUND PULL ONLY (TLS + GPG VERIFY)</text>
+          <!-- Forward Arrows Stages 1 -> 2 -> 3 -> 4 -->
+          <line x1="216" y1="172" x2="240" y2="172" stroke="#38BDF8" stroke-width="1.6" marker-end="url(#mf-arrow-sky)"/>
+          <line x1="438" y1="172" x2="462" y2="172" stroke="#38BDF8" stroke-width="1.6" marker-end="url(#mf-arrow-sky)"/>
+          <line x1="734" y1="172" x2="758" y2="172" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#mf-arrow-amber)"/>
 
-          <!-- PLANE 2: FLUX CD GITOPS TOOLKIT & ADMISSION GATE (IN-CLUSTER ACK) -->
-          <rect x="20" y="154" width="1040" height="110" rx="8" fill="#0A1B1E" stroke="#10B981" stroke-width="1.5"/>
-          <text x="38" y="176" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 2: FLUX CD GITOPS TOOLKIT &amp; ADMISSION GATE (ACK FLUX-SYSTEM | MULTI-TENANCY LOCKDOWN)</text>
+          <!-- STAGE 5: CONTAINERIZED ELK OBSERVABILITY STACK -->
+          <rect x="242" y="300" width="818" height="118" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+          <text x="260" y="321" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">5. CONTAINERIZED ELK OBSERVABILITY STACK (ELASTIC 6.8 / 7.1 TLS + RBAC)</text>
 
-          <rect x="38" y="188" width="218" height="62" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
-          <text x="147" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">source-controller</text>
-          <text x="147" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">GitRepository &middot; HelmRepo</text>
-          <text x="147" y="241" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">spec.verify.mode: head</text>
+          <rect x="260" y="334" width="182" height="72" rx="5" fill="#17233B" stroke="#38BDF8" stroke-opacity="0.45"/>
+          <text x="351" y="354" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Host Log Shippers</text>
+          <text x="351" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Docker JSON Rotation (.gz)</text>
+          <text x="351" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Filebeat TLS + Backpressure</text>
 
-          <rect x="284" y="188" width="242" height="62" rx="5" fill="#112A2E" stroke="#10B981" stroke-opacity="0.5"/>
-          <text x="405" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">kustomize &amp; helm-controller</text>
-          <text x="405" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">SSA Drift Heal &middot; SA Impersonation</text>
-          <text x="405" y="241" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">DR Cluster Declarative Rebuild</text>
+          <rect x="462" y="334" width="194" height="72" rx="5" fill="#17233B" stroke="#38BDF8" stroke-opacity="0.45"/>
+          <text x="559" y="354" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Logstash Container</text>
+          <text x="559" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Dissect + PII Mask / HMAC</text>
+          <text x="559" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Persistent Queues + DLQ</text>
 
-          <rect x="554" y="188" width="216" height="62" rx="5" fill="#112A2E" stroke="#38BDF8" stroke-opacity="0.5"/>
-          <text x="662" y="209" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="11" font-weight="700">notification-controller</text>
-          <text x="662" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Git Webhook Receiver</text>
-          <text x="662" y="241" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Drift &amp; Failure Alerts</text>
+          <rect x="676" y="334" width="192" height="72" rx="5" fill="#17233B" stroke="#F59E0B" stroke-opacity="0.55"/>
+          <text x="772" y="354" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="11" font-weight="700">Elasticsearch Container</text>
+          <text x="772" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">4-Phase ILM + Snapshots</text>
+          <text x="772" y="388" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">JVM &lt;32GB + Watermark 95%</text>
 
-          <rect x="798" y="188" width="244" height="62" rx="5" fill="#1A2622" stroke="#F59E0B" stroke-width="1.2"/>
-          <text x="920" y="209" text-anchor="middle" fill="#FDE68A" font-family="Inter, sans-serif" font-size="11" font-weight="700">ACK Admission Gate</text>
-          <text x="920" y="227" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Harbor Signed Digest &amp; Snyk Policy</text>
-          <text x="920" y="241" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.5">PSA Restricted + OPA Gatekeeper</text>
+          <rect x="888" y="334" width="154" height="72" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
+          <text x="965" y="354" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700">Kibana &amp; Triage</text>
+          <text x="965" y="372" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">RBAC Dashboards</text>
+          <text x="965" y="388" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Faster MTTR Triage</text>
 
-          <line x1="256" y1="219" x2="282" y2="219" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
-          <line x1="526" y1="219" x2="552" y2="219" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
-          <line x1="770" y1="219" x2="796" y2="219" stroke="#F59E0B" stroke-width="1.3" marker-end="url(#ft-arrow-amber)"/>
+          <!-- Internal ELK Arrows -->
+          <line x1="442" y1="370" x2="460" y2="370" stroke="#38BDF8" stroke-width="1.3" marker-end="url(#mf-arrow-sky)"/>
+          <line x1="656" y1="370" x2="674" y2="370" stroke="#38BDF8" stroke-width="1.3" marker-end="url(#mf-arrow-sky)"/>
+          <line x1="868" y1="370" x2="886" y2="370" stroke="#10B981" stroke-width="1.3" marker-end="url(#mf-arrow-green)"/>
 
-          <!-- PLANE 3: ALIBABA CLOUD RUNTIME & FINTECH DISASTER RECOVERY PLANE -->
-          <rect x="20" y="294" width="1040" height="122" rx="8" fill="#1B160C" stroke="#F59E0B" stroke-width="1.5"/>
-          <text x="38" y="316" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 3: ALIBABA CLOUD RUNTIME &amp; FINTECH DISASTER RECOVERY (JAKARTA 3-AZ + DOMESTIC DRC | NKRI)</text>
+          <!-- STAGE 6: GOOGLE CLOUD STORAGE OFFLOAD (ARTIFACTS & SANITIZED LOG DEBRIS) -->
+          <rect x="242" y="442" width="818" height="86" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
+          <text x="260" y="463" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">6. GOOGLE CLOUD STORAGE OFFLOAD (GSUTIL -M RSYNC -R WITHOUT -D FLAG | NEARLINE / COLDLINE)</text>
 
-          <rect x="38" y="328" width="242" height="74" rx="5" fill="#2A2010" stroke="#F59E0B" stroke-opacity="0.55"/>
-          <text x="159" y="348" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Stateless FinTech Services</text>
-          <text x="159" y="366" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.3">Terway Default-Deny &middot; ASM mTLS</text>
-          <text x="159" y="382" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">HPA Drain &middot; SNAP BI Egress</text>
+          <rect x="260" y="473" width="380" height="44" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
+          <text x="450" y="491" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Build Artifact Bucket (Non-PII)</text>
+          <text x="450" y="507" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">.apk / .aab &middot; mapping.txt &middot; Jenkins Build Logs (MD5/CRC32C)</text>
 
-          <rect x="298" y="328" width="234" height="74" rx="5" fill="#2A2010" stroke="#8B5CF6" stroke-opacity="0.65"/>
-          <text x="415" y="348" text-anchor="middle" fill="#DDD6FE" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Pod Identity &amp; Secrets</text>
-          <text x="415" y="366" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">ACK RRSA OIDC (&lt;=12h STS)</text>
-          <text x="415" y="382" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.3">KMS + ack-secret-manager + etcd</text>
+          <rect x="660" y="473" width="382" height="44" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
+          <text x="851" y="491" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Sanitized Log Debris Archive Bucket</text>
+          <text x="851" y="507" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">PII-Scrubbed .gz Debris &amp; DLQ Offload (Raw PII Kept Domestic)</text>
 
-          <rect x="550" y="328" width="242" height="74" rx="5" fill="#2A2010" stroke="#10B981" stroke-opacity="0.55"/>
-          <text x="671" y="348" text-anchor="middle" fill="#6EE7B7" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">Stateful Data &amp; CDC</text>
-          <text x="671" y="366" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">RDS Multi-AZ TDE + Outbox</text>
-          <text x="671" y="382" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.3">Redis/Tair &middot; OSS &middot; DTS CDC</text>
+          <!-- Telemetry Flow from Stage 4 to Stage 5 -->
+          <line x1="910" y1="260" x2="910" y2="298" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-amber)"/>
 
-          <rect x="810" y="328" width="232" height="74" rx="5" fill="#2B1A16" stroke="#EF4444" stroke-width="1.2"/>
-          <text x="926" y="348" text-anchor="middle" fill="#FCA5A5" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">FinTech Disaster Recovery</text>
-          <text x="926" y="366" text-anchor="middle" fill="#FDE68A" font-family="JetBrains Mono, monospace" font-size="8.3">3-AZ Failover + Domestic DRC</text>
-          <text x="926" y="382" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.3">Harbor Sync + Flux DR Drill</text>
+          <!-- Offload Flow from Stage 3 (Jenkins) -> Stage 6 (Artifact Bucket) -->
+          <path d="M 480 260 L 480 282 L 228 282 L 228 495 L 258 495" fill="none" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-purple)"/>
+          <rect x="24" y="454" width="192" height="44" rx="5" fill="#1D1633" stroke="#8B5CF6" stroke-opacity="0.7"/>
+          <text x="120" y="472" text-anchor="middle" fill="#DDD6FE" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">ARTIFACT &amp; DEBRIS OFFLOAD</text>
+          <text x="120" y="488" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">gsutil -m rsync (No -d) + Local Prune</text>
 
-          <line x1="920" y1="264" x2="920" y2="292" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#ft-arrow-amber)"/>
-          <line x1="280" y1="365" x2="296" y2="365" stroke="#C4B5FD" stroke-width="1.3" marker-end="url(#ft-arrow-purple)"/>
-          <line x1="532" y1="365" x2="548" y2="365" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
-          <line x1="792" y1="365" x2="808" y2="365" stroke="#F59E0B" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#ft-arrow-amber)"/>
+          <!-- Offload Flow from Stage 5 (ELK/VPS) -> Stage 6 (Sanitized Log Debris Bucket) -->
+          <line x1="772" y1="418" x2="772" y2="440" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-purple)"/>
 
-          <!-- PLANE 4: AUDIT & ZERO-TRUST TELEMETRY PLANE (ELK + OPENSEARCH + WORM) -->
-          <rect x="20" y="444" width="1040" height="100" rx="8" fill="#161126" stroke="#8B5CF6" stroke-width="1.5"/>
-          <text x="38" y="466" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700">PLANE 4: ZERO-TRUST TELEMETRY &amp; ANTI-TAMPERING AUDIT PLANE (ELK STACK + OPENSEARCH + WORM)</text>
-
-          <rect x="38" y="478" width="318" height="52" rx="5" fill="#211A38" stroke="#38BDF8" stroke-opacity="0.55"/>
-          <text x="197" y="498" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">ELK Stack &amp; OpenSearch</text>
-          <text x="197" y="516" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Centralized Log Analytics &middot; Upfront PII Masking &middot; TLS/RBAC</text>
-
-          <rect x="384" y="478" width="314" height="52" rx="5" fill="#211A38" stroke="#8B5CF6" stroke-opacity="0.55"/>
-          <text x="541" y="498" text-anchor="middle" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">ActionTrail + ACK Audit (advaudit)</text>
-          <text x="541" y="516" text-anchor="middle" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="8.5">Cloud API Events &middot; kube-apiserver &middot; Container Exec Audit</text>
-
-          <rect x="726" y="478" width="316" height="52" rx="5" fill="#112A2E" stroke="#10B981" stroke-width="1.2"/>
-          <text x="884" y="498" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="10.5" font-weight="700">OSS BucketWorm Vault (Locked)</text>
-          <text x="884" y="516" text-anchor="middle" fill="#6EE7B7" font-family="JetBrains Mono, monospace" font-size="8.5">Compliance WORM &middot; Anti-Tampering (409 FileImmutable)</text>
-
-          <line x1="356" y1="504" x2="382" y2="504" stroke="#C4B5FD" stroke-width="1.3" marker-end="url(#ft-arrow-purple)"/>
-          <line x1="698" y1="504" x2="724" y2="504" stroke="#10B981" stroke-width="1.3" marker-end="url(#ft-arrow-green)"/>
-
-          <!-- Telemetry Dashed Connectors Plane 3 -> Plane 4 -->
-          <line x1="159" y1="416" x2="159" y2="442" stroke="#38BDF8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-sky)"/>
-          <line x1="541" y1="416" x2="541" y2="442" stroke="#C4B5FD" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-purple)"/>
-          <line x1="926" y1="416" x2="926" y2="442" stroke="#10B981" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ft-arrow-green)"/>
+          <!-- Closed-Loop Incident Tracking from ELK back to Jira -->
+          <path d="M 242 370 L 118 370 L 118 262" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#mf-arrow-sky)"/>
+          <rect x="26" y="308" width="184" height="44" rx="5" fill="#1F1215" stroke="#EF4444" stroke-opacity="0.65"/>
+          <text x="118" y="327" text-anchor="middle" fill="#FCA5A5" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">CLOSED-LOOP INCIDENT</text>
+          <text x="118" y="342" text-anchor="middle" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="8.5">Alert &amp; Triage -> Jira Ticket</text>
         </svg>
       </div>
 
-      <!-- 4 Compact Plane Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
+      <!-- 6 Compact Stage Cards (2x3 Grid) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-5 border-t border-slate-800 bg-obsidian/95">
         <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">PLANE 01</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Supply Chain (Snyk + Harbor)</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Protected GitOps repo with CODEOWNERS SoD, GPG commits, Snyk SCA/container/IaC scanning, and Harbor private registry with immutable tags and robot RBAC.</p>
+          <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">STAGE 01</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Jira Governance</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Authorized change requests with unique ticket IDs anchor audit compliance under PP 82/2012 before code enters release branches.</p>
         </div>
         <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-uptime font-bold mb-1">PLANE 02</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">Flux CD &amp; Admission</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">In-cluster Flux CD v2 lockdown (no cross-namespace refs), SA impersonation, Harbor signed digest checks, PSA restricted, and OPA Gatekeeper.</p>
+          <div class="font-mono text-[10px] text-sky-300 font-bold mb-1">STAGE 02</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Bitbucket SCM &amp; Android CI/CD</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Android mobile and service repositories hosted on Bitbucket with first-party Jira Smart Commits, branch permissions, and automated Jenkins webhooks.</p>
         </div>
         <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">PLANE 03</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">ACK Runtime &amp; FinTech DR</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">3-AZ Jakarta stateless microservices, RRSA OIDC, ASM Strict mTLS, double-entry ledger + DTS CDC, and FinTech Disaster Recovery (Harbor replication + Flux DR).</p>
+          <div class="font-mono text-[10px] text-uptime font-bold mb-1">STAGE 03</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Jenkins + Docker CI</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Multi-stage Docker builds, ephemeral Android SDK/Gradle containers, Folder-scoped RBAC .jks signing, SoD approval gates, cleanWs(), and Jira writeback.</p>
         </div>
         <div class="bp-plane-card">
-          <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">PLANE 04</div>
-          <h4 class="text-white font-bold text-xs mb-1.5">ELK, OpenSearch &amp; WORM</h4>
-          <p class="text-[11px] text-slate-400 leading-relaxed">Centralized ELK Stack and OpenSearch zero-trust telemetry with upfront PII masking, ActionTrail + ACK advaudit exec logs, and OSS BucketWorm Compliance Lock.</p>
+          <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">STAGE 04</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Hybrid &amp; VPS HA</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Route-based IPsec VPN (VTI/DPD/MSS), HAProxy/NGINX + Unicast Keepalived, graceful draining, Tini PID 1, and Expand-Migrate-Contract schemas.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-sky-200 font-bold mb-1">STAGE 05</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">Containerized ELK</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">TLS-encrypted log shipping, Logstash dissect + PII masking/HMAC + PQ/DLQ, Elasticsearch 4-phase ILM + Snapshots, and Kibana MTTR triage.</p>
+        </div>
+        <div class="bp-plane-card">
+          <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">STAGE 06</div>
+          <h4 class="text-white font-bold text-xs mb-1.5">GCS Artifact &amp; Log Debris Offload</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">gsutil -m rsync -r (without -d) offloading non-PII .apk/.aab artifacts, mapping.txt, and PII-scrubbed .gz log debris to GCS Nearline/Coldline buckets.</p>
         </div>
       </div>
     </div>
 
-    <!-- BLOK 3: FINTECH RISK, CONSISTENCY, DR & REGULATORY TRANSLATION MATRIX -->
+    <!-- BLOK 3: MULTIFINANCE RISK, GOVERNANCE & CONTROL MATRIX -->
     <div class="mb-12">
       <div class="flex items-center justify-between mb-4">
-        <h3 class="font-display text-xl font-bold text-white">FinTech Risk, Transaction Integrity, DR &amp; Regulatory Control Matrix</h3>
-        <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden sm:inline">Control-Once, Comply-Many (OJK / BI / PDP)</span>
+        <h3 class="font-display text-xl font-bold text-white">Multifinance Risk, Governance &amp; Control Matrix</h3>
+        <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden sm:inline">2019 Regulatory Controls -> Operational Resilience</span>
       </div>
       <div class="overflow-x-auto bg-navy/85 border border-slate-700/80 rounded-xl shadow-lg">
         <table class="w-full text-left border-collapse bp-table">
           <thead>
             <tr>
-              <th class="w-1/4">Financial / Regulatory Risk</th>
-              <th class="w-5/12">Architectural Control Implemented (2022 Production + Reference)</th>
+              <th class="w-1/4">Operational / Regulatory Risk</th>
+              <th class="w-5/12">Architectural Control (2019 Vintage Pattern)</th>
               <th class="w-1/3">Verified Resilience &amp; Audit Outcome</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="font-semibold text-white">Vulnerable Dependencies &amp; Untrusted Images</td>
-              <td>Automated <code class="font-mono text-sky-300">Snyk</code> SCA, Dockerfile, and IaC scanning in CI paired with <code class="font-mono text-sky-300">Harbor</code> private registry (immutable tag rules, robot RBAC, vulnerability blocking, and signed digests).</td>
-              <td class="text-emerald-300">Blocked critical CVEs before registry promotion and guaranteed staging-to-production image integrity.</td>
+              <td class="font-semibold text-white">Unauthorized Changes &amp; Audit Gaps (PP 82/2012)</td>
+              <td>Bitbucket Smart Commits + branch permissions, declarative <code class="font-mono text-sky-300">Jenkinsfile</code>, Jira-ID commit gate, Folder RBAC, SoD <code class="font-mono text-sky-300">input</code> approval, and automated reverse audit writeback to Jira.</td>
+              <td class="text-emerald-300">End-to-end immutable audit chain from Jira ticket to production while accelerating release cycles by 40%.</td>
             </tr>
             <tr>
-              <td class="font-semibold text-white">Push-CI Credential Exposure &amp; Out-of-Band Drift</td>
-              <td>Headless pull-based Flux CD v2 with GPG <code class="font-mono text-sky-300">spec.verify</code>, CODEOWNERS SoD, multi-tenancy lockdown flags (post-May 2022 CVEs), and Server-Side Apply continuous drift healing.</td>
-              <td class="text-emerald-300">Zero production cluster credentials outside ACK and immutable Git-to-cluster SoD audit trail (POJK 4/2021 Art. 12 &amp; 29).</td>
+              <td class="font-semibold text-white">Android CI/CD Bloat &amp; Signing Key Exposure</td>
+              <td>Bitbucket Android repo triggers isolated Docker Android SDK/Gradle builders; <code class="font-mono text-sky-300">.jks</code> keystore scoped in Jenkins Credentials Store; <code class="font-mono text-sky-300">gsutil -m rsync</code> offloads <code class="font-mono text-sky-300">.apk/.aab</code> and <code class="font-mono text-sky-300">mapping.txt</code> before <code class="font-mono text-sky-300">cleanWs()</code>.</td>
+              <td class="text-emerald-300">Zero signing keys in Git, zero workspace debris left on Jenkins hosts, and reproducible checksum-verified release artifacts.</td>
             </tr>
             <tr>
-              <td class="font-semibold text-white">Double Disbursement &amp; Dual-Write Ledger Splits</td>
-              <td>Append-only double-entry ledger, DB-enforced <code class="font-mono text-sky-300">Idempotency-Key</code> + optimistic/fencing locks, SNAP BI 1:1 <code class="font-mono text-sky-300">X-EXTERNAL-ID</code> inquiry-before-retry, and Transactional Outbox via DTS CDC.</td>
-              <td class="text-emerald-300">Eliminated dual-write anomalies and prevented duplicate escrow payouts during network timeouts or autoscaling.</td>
+              <td class="font-semibold text-white">Container Escape &amp; Secret Exposure (CIS 5.4 &amp; 5.31)</td>
+              <td>Zero executors on Jenkins controller, isolated build agents, no direct <code class="font-mono text-sky-300">/var/run/docker.sock</code> on controller, single-quoted <code class="font-mono text-sky-300">withCredentials</code> (<code class="font-mono text-sky-300">--password-stdin</code>), non-root &amp; <code class="font-mono text-sky-300">--cap-drop=ALL</code>.</td>
+              <td class="text-emerald-300">Eliminated Groovy interpolation credential leaks and isolated build blast radius away from production VPS hosts.</td>
             </tr>
             <tr>
-              <td class="font-semibold text-white">Regional Outage &amp; FinTech Disaster Recovery (POJK 4/2021 Art. 16 &amp; 23)</td>
-              <td>FinTech Disaster Recovery architecture combining 3-AZ Jakarta HA, declarative Flux CD cluster rebuild from Git, <code class="font-mono text-sky-300">Harbor</code> image replication, domestic cross-site DB backup/DRC inside NKRI, and periodic DRP drills.</td>
-              <td class="text-emerald-300">Repeatable failover and deterministic DR recovery without violating Indonesian financial data residency mandates.</td>
+              <td class="font-semibold text-white">Hybrid Link Blackholes, LB SPOF &amp; VPS Drift (POJK 35/2018)</td>
+              <td>Route-based IPsec VPN (VTI, DPD, TCP MSS clamping), Unicast VRRP Keepalived (<code class="font-mono text-sky-300">nopreempt</code>) + HAProxy/NGINX, immutable Docker runtimes, and Git-versioned configs.</td>
+              <td class="text-emerald-300">Removed reverse proxy SPOF, prevented virtualized VRRP split-brain, and eliminated snowflake VPS drift.</td>
             </tr>
             <tr>
-              <td class="font-semibold text-white">Container Escape &amp; Lateral Movement on Payment Paths</td>
-              <td>Multi-stage distroless non-root (<code class="font-mono text-sky-300">USER 65532:65532</code>), PSA <code class="font-mono text-sky-300">restricted</code> (Aug 2022 PSP removal), ACK RRSA OIDC pod identity, Terway default-deny, ASM Strict mTLS, and <code class="font-mono text-sky-300">httpGet preStop</code> draining.</td>
-              <td class="text-emerald-300">Isolated blast radius per microservice with zero aborted in-flight financial transactions during rolling upgrades.</td>
+              <td class="font-semibold text-white">Mid-Flight Financial Transaction Drops</td>
+              <td>Backend graceful connection draining, <code class="font-mono text-sky-300">nginx -t</code> + <code class="font-mono text-sky-300">systemctl reload</code>, PID 1 <code class="font-mono text-sky-300">tini</code> (<code class="font-mono text-sky-300">SIGTERM</code> forwarding), and Expand-Migrate-Contract DB changes.</td>
+              <td class="text-emerald-300">Low-downtime releases with deterministic digest rollback safe for financing approvals and payment APIs.</td>
             </tr>
             <tr>
-              <td class="font-semibold text-white">PII Leakage in Logs &amp; Audit Tampering</td>
-              <td>Zero-trust telemetry across <code class="font-mono text-sky-300">ELK Stack</code> and <code class="font-mono text-sky-300">OpenSearch</code> with upfront PII masking, ACK <code class="font-mono text-sky-300">advaudit</code> exec logs, ActionTrail, and Jakarta OSS <code class="font-mono text-sky-300">BucketWorm</code> Locked compliance archive.</td>
-              <td class="text-emerald-300">Tamper-evident forensics (<code class="font-mono text-sky-300">409 FileImmutable</code>) supporting OJK 5-working-day and UU PDP 72-hour breach reporting.</td>
+              <td class="font-semibold text-white">VPS Disk Exhaustion &amp; Log Debris (POJK 35/2018 &amp; Kominfo 20/2016)</td>
+              <td>Docker JSON log rotation, Logstash <code class="font-mono text-sky-300">dissect</code> + PII masking/HMAC + PQ/DLQ, 4-phase ILM, and <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (no <code class="font-mono text-sky-300">-d</code>) offloading PII-scrubbed <code class="font-mono text-sky-300">.gz</code> debris to GCS Nearline/Coldline while keeping raw PII domestic.</td>
+              <td class="text-emerald-300">Prevented 95% flood-stage read-only lockouts, safeguarded customer PII residency, and enabled faster incident resolution (lower MTTR).</td>
             </tr>
           </tbody>
         </table>
@@ -2341,139 +2340,158 @@
       <div class="bg-slate-900/95 px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div>
           <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Engineering Deep-Dive</p>
-          <h3 class="font-display text-lg font-bold text-white">Inspect Flux vs. Argo, Harbor/Snyk + FinTech DR &amp; ELK/OpenSearch Telemetry</h3>
+          <h3 class="font-display text-lg font-bold text-white">Inspect 6-Stage Controls, Trade-Offs &amp; GCS/ELK Guardrails</h3>
         </div>
         <div class="flex flex-wrap gap-2">
-          <button type="button" onclick="switchFintechTab('gitops')" id="fttab-gitops" class="bp-tab bp-active">
-            <i class="fa-solid fa-code-compare mr-1.5"></i>Flux, Harbor &amp; Snyk
+          <button type="button" onclick="switchMultifinanceTab('stages')" id="mftab-stages" class="bp-tab bp-active">
+            <i class="fa-solid fa-diagram-next mr-1.5"></i>6-Stage Controls
           </button>
-          <button type="button" onclick="switchFintechTab('state')" id="fttab-state" class="bp-tab">
-            <i class="fa-solid fa-database mr-1.5"></i>State, Hardening &amp; DR
+          <button type="button" onclick="switchMultifinanceTab('tradeoffs')" id="mftab-tradeoffs" class="bp-tab">
+            <i class="fa-solid fa-scale-balanced mr-1.5"></i>Trade-Offs &amp; OJK 2019
           </button>
-          <button type="button" onclick="switchFintechTab('compliance')" id="fttab-compliance" class="bp-tab">
-            <i class="fa-solid fa-gavel mr-1.5"></i>ELK/OpenSearch &amp; OJK
+          <button type="button" onclick="switchMultifinanceTab('guardrails')" id="mftab-guardrails" class="bp-tab">
+            <i class="fa-solid fa-lock mr-1.5"></i>CIS Docker, GCS &amp; ELK
           </button>
         </div>
       </div>
 
-      <!-- TAB 1: FLUX CD, HARBOR & SNYK TRADE-OFFS (2022 CONTEXT) -->
-      <div id="ftpanel-gitops" class="p-5 sm:p-6 space-y-6">
+      <!-- TAB 1: 6-STAGE CONTROLS -->
+      <div id="mfpanel-stages" class="p-5 sm:p-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse bp-table">
+            <thead>
+              <tr>
+                <th class="w-1/6">Stage</th>
+                <th class="w-1/4">Stack &amp; Scope</th>
+                <th class="w-1/3">Technical &amp; Governance Mechanics</th>
+                <th class="w-1/4">Contribution to Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-mono font-bold text-white">01. Change Auth</td>
+                <td><strong class="text-uptime">Jira</strong> (Change Governance)</td>
+                <td>Authorized change tickets with scope, test plan, and sign-off anchoring PP 82/2012 audit trails.</td>
+                <td>Eliminates unauthorized changes and manual cross-team release handoffs.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">02. Version Control</td>
+                <td><strong class="text-sky-300">Bitbucket</strong> (Android CI/CD &amp; Services)</td>
+                <td>First-party Atlassian Jira Smart Commits, branch-to-issue linking, branch permissions, and Bitbucket webhook triggers to Jenkins.</td>
+                <td>Enforces four-eyes PR review and native Jira traceability for Android and backend repos.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">03. Container CI</td>
+                <td><strong class="text-uptime">Containerized Jenkins + Docker</strong></td>
+                <td>Isolated declarative builds, multi-stage Docker caching, ephemeral Android SDK/Gradle signing (<code class="font-mono text-sky-300">.jks</code> in Folder RBAC), SoD approval, and <code class="font-mono text-sky-300">cleanWs()</code>.</td>
+                <td>Primary driver of 40% faster release cycles with audit-ready release evidence.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">04. Artifact &amp; Debris Offload</td>
+                <td><strong class="text-purple-300">Private Registry + Google Cloud Storage</strong></td>
+                <td>Immutable SHA256 container images in Private Registry; <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (no <code class="font-mono text-sky-300">-d</code>) offloads <code class="font-mono text-sky-300">.apk/.aab</code>, <code class="font-mono text-sky-300">mapping.txt</code>, and sanitized <code class="font-mono text-sky-300">.gz</code> log debris to GCS.</td>
+                <td>Keeps <code class="font-mono text-sky-300">JENKINS_HOME</code> and VPS SSD disks clean while preserving checksum-verified audit archives.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">05. Hybrid HA Runtime</td>
+                <td><strong class="text-uptime">Hybrid Cloud &amp; On-Premise VPS HA</strong></td>
+                <td>Route-based IPsec VPN (VTI/DPD/MSS), HAProxy/NGINX + Unicast VRRP Keepalived, immutable container runtimes, and graceful draining.</td>
+                <td>Strengthens financial platform availability and domestic DC/DRC posture.</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-bold text-white">06. ELK Telemetry</td>
+                <td><strong class="text-uptime">Containerized ELK Stack</strong></td>
+                <td>Encrypted Filebeat shipping, Logstash dissect + PII masking/HMAC + PQ/DLQ, 4-phase ILM, and Kibana correlation dashboards.</td>
+                <td>Enables faster incident resolution and lower MTTR across hybrid nodes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: CI/CD TRADE-OFFS & 2019 REGULATORY VINTAGE -->
+      <div id="mfpanel-tradeoffs" class="hidden p-5 sm:p-6 space-y-6">
         <div>
-          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">GitOps Engine Decision Trade-Off (July to September 2022 Context)</h4>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">Delivery Architecture Trade-Off (4-Month Consulting Window)</h4>
           <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse bp-table">
               <thead>
                 <tr>
-                  <th class="w-1/5">Evaluation Dimension</th>
-                  <th class="w-4/12 text-uptime">Selected: Flux CD v2 + Harbor + Snyk</th>
-                  <th class="w-1/4">Alternative 1: Argo CD (2022)</th>
-                  <th class="w-1/4">Rejected: Push-Based CI/CD</th>
+                  <th class="w-1/5">Dimension</th>
+                  <th class="w-4/12 text-uptime">Selected: Bitbucket + Containerized Jenkins + GCS</th>
+                  <th class="w-1/4">Alternative 1: Bare-Metal Jenkins</th>
+                  <th class="w-1/4">Alternative 2: Manual SSH / SCP</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="font-semibold text-white">Attack Surface &amp; UI Discipline</td>
-                  <td>Headless Kubernetes controllers with no exposed Web UI; prevents manual "click-to-sync" bypasses of Git SoD.</td>
-                  <td>Centralized Web UI, API server, and Dex/OIDC add perimeter surface; managed ACK One GitOps only emerged near Sep 2022.</td>
-                  <td>Requires opening inbound API server access or bastion pathways to external CI runners.</td>
+                  <td class="font-semibold text-white">Release Velocity</td>
+                  <td>Declarative pipelines, Docker layer caching, and native Bitbucket-Jira hooks drove 40% faster release cycles.</td>
+                  <td>Automated, but frequent Android SDK and OS dependency conflicts across shared host projects.</td>
+                  <td>Slow, operator-dependent, repetitive manual steps with long maintenance windows.</td>
                 </tr>
                 <tr>
-                  <td class="font-semibold text-white">Supply-Chain Security &amp; Registry</td>
-                  <td><code class="font-mono text-sky-300">Snyk</code> enforces dependency, container, and IaC checks in CI while <code class="font-mono text-sky-300">Harbor</code> enforces tag immutability, project RBAC, robot accounts, and DR image replication.</td>
-                  <td>Renders Helm via <code class="font-mono text-sky-300">helm template</code> rather than native Helm SDK lifecycle tracking; dual RBAC layers increase OJK audit effort.</td>
-                  <td>Fire-and-forget scripts lack continuous drift detection and rely on fragile imperative rollbacks.</td>
+                  <td class="font-semibold text-white">Artifact &amp; Debris Hygiene</td>
+                  <td><code class="font-mono text-sky-300">gsutil -m rsync</code> offloads build binaries and sanitized log debris to GCS Nearline/Coldline, paired with <code class="font-mono text-sky-300">cleanWs()</code>.</td>
+                  <td>Build artifacts and rotated logs accumulate locally on VPS disks, triggering disk-full build outages.</td>
+                  <td>Ad-hoc file copies scattered across operator laptops and local servers with no checksum verification.</td>
                 </tr>
                 <tr>
-                  <td class="font-semibold text-white">RBAC &amp; Secret Strategy (ACK 2022)</td>
-                  <td>Single native Kubernetes RBAC via SA impersonation (<code class="font-mono text-sky-300">--no-cross-namespace-refs</code>) paired with KMS + <code class="font-mono text-sky-300">ack-secret-manager</code> (RRSA).</td>
-                  <td>Requires reconciling Argo AppProject/CSV RBAC with target cluster Kubernetes RBAC during audits.</td>
-                  <td>External CI runner typically holds overly broad cluster-admin kubeconfig tokens.</td>
+                  <td class="font-semibold text-white">Multifinance Audit</td>
+                  <td>First-party Atlassian Jira-Bitbucket-Jenkins chain with SHA256 digests, Folder RBAC, and SoD approval gates.</td>
+                  <td>Freestyle UI jobs easily modified outside version control without audit trail.</td>
+                  <td>Relies on manual spreadsheets and screenshots prone to audit findings.</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">MAY 2022 CVE HARDENING</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Pinned <code class="font-mono text-sky-300">flux2 &gt;= v0.29.0</code> (patching CVE-2022-24817/24877/24878), enforced <code class="font-mono text-sky-300">--no-remote-bases</code>, and blocked <code class="font-mono text-sky-300">spec.kubeConfig</code> via Gatekeeper.</p>
-          </div>
-          <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-uptime font-bold mb-1">SNYK + HARBOR GATE</div>
-            <p class="text-xs text-slate-300 leading-relaxed"><code class="font-mono text-sky-300">Snyk</code> blocks high/critical CVEs at PR and image build time; <code class="font-mono text-sky-300">Harbor</code> enforces immutable <code class="font-mono text-sky-300">@sha256</code> artifacts and scoped pull-only robot accounts.</p>
-          </div>
-          <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">FAST-TRACK P0 &amp; API LOAD</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Staggered Flux intervals + webhook Receivers protect <code class="font-mono text-sky-300">kube-apiserver</code>; P0 fixes use fast-track PRs or <code class="font-mono text-sky-300">git revert</code> with audited break-glass backport.</p>
+        <div>
+          <h4 class="font-mono text-xs text-sky-400 uppercase tracking-widest font-bold mb-3">2019 Indonesian Regulatory &amp; Cloud Residency Context (Jun to Sep 2019)</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
+              <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">POJK 35/POJK.05/2018</div>
+              <p class="text-xs text-slate-300 leading-relaxed">Effective Dec 27, 2018: mandated integrated IT systems (&gt;5 branches), IT SOPs, and domestic Data Center &amp; DRC in Indonesia (Art. 18 &amp; 19).</p>
+            </div>
+            <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
+              <div class="font-mono text-[10px] text-uptime font-bold mb-1">PP NO. 82 TAHUN 2012</div>
+              <p class="text-xs text-slate-300 leading-relaxed">Active during Jun to Sep 2019 (replaced Oct 2019 by PP 71/2019): mandated end-to-end electronic system audit trails, risk control, and security.</p>
+            </div>
+            <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
+              <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">POJK 1/2015 &amp; KOMINFO 20/2016</div>
+              <p class="text-xs text-slate-300 leading-relaxed">Mandated LJKNB risk management internal controls plus personal data protection and 5-year electronic retention readiness.</p>
+            </div>
+            <div class="bg-obsidian/90 border border-purple-500/40 rounded-lg p-4">
+              <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">2019 GCS RESIDENCY GUARDRAIL</div>
+              <p class="text-xs text-slate-300 leading-relaxed">Since GCP Jakarta opened in Jun 2020, GCS offload was strictly limited to non-PII build artifacts and PII-scrubbed debris; raw PII stayed in domestic DC/DRC.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- TAB 2: STATE EXTERNALIZATION, CONTAINER HARDENING & FINTECH DISASTER RECOVERY -->
-      <div id="ftpanel-state" class="hidden p-5 sm:p-6 space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!-- TAB 3: CIS DOCKER, GCS RSYNC & ELK STORAGE GUARDRAILS -->
+      <div id="mfpanel-guardrails" class="hidden p-5 sm:p-6 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="bg-obsidian/85 border border-slate-800 rounded-lg p-5">
-            <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">Stateful -> Stateless Map</div>
-            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">Sessions &amp; Limits:</strong> Multi-AZ Redis/Tair with short-lived JWTs and distributed denylists.</li>
-              <li><strong class="text-white">eKYC &amp; Contracts:</strong> Jakarta OSS (KMS SSE + pre-signed URLs) enabling <code class="font-mono text-sky-300">readOnlyRootFilesystem: true</code>.</li>
-              <li><strong class="text-white">Ledger Integrity:</strong> Append-only double-entry ledger on RDS Multi-AZ TDE with Fencing Tokens and DTS CDC Outbox.</li>
-              <li><strong class="text-white">SNAP BI Egress:</strong> OAuth2 + RSA-2048 KMS + HMAC-SHA512 + 1:1 <code class="font-mono text-sky-300">X-EXTERNAL-ID</code> inquiry-before-retry.</li>
+            <div class="font-mono text-[10px] text-uptime uppercase tracking-widest font-bold mb-3">CIS Docker Hardening &amp; Bitbucket Android CI Security</div>
+            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">No Direct Host Socket on Controller:</strong> Rejected bind-mounting <code class="font-mono text-sky-300">/var/run/docker.sock</code> onto the Jenkins controller (violates CIS 5.31 and enables root container escape).</li>
+              <li><strong class="text-white">Isolated Build Agents:</strong> Set <code class="font-mono text-sky-300">numExecutors = 0</code> on controller; delegated backend and Android SDK/Gradle builds to isolated builder hosts outside production subnets.</li>
+              <li><strong class="text-white">Safe Secret &amp; Keystore Binding:</strong> Stored Android <code class="font-mono text-sky-300">.jks</code> keystores and registry credentials in Folder-scoped Jenkins Credentials Store with single-quoted shell blocks (<code class="font-mono text-sky-300">sh '...'</code>) to prevent Groovy interpolation leaks.</li>
+              <li><strong class="text-white">Runtime Container Posture:</strong> Non-root <code class="font-mono text-sky-300">USER</code>, <code class="font-mono text-sky-300">--cap-drop=ALL</code>, <code class="font-mono text-sky-300">no-new-privileges=true</code>, AppArmor/SELinux enabled, and <code class="font-mono text-sky-300">tini</code> PID 1 signal forwarding.</li>
             </ul>
           </div>
 
-          <div class="bg-obsidian/85 border border-steel/40 rounded-lg p-5">
-            <div class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-3">Container Hardening (Aug 2022)</div>
-            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">Distroless &amp; Numeric UID:</strong> Explicit <code class="font-mono text-sky-300">USER 65532:65532</code> passing <code class="font-mono text-sky-300">runAsNonRoot: true</code> cleanly.</li>
-              <li><strong class="text-white">PSA Restricted:</strong> Migrated off deprecated PSP (removed K8s 1.25 Aug 25, 2022) with explicit <code class="font-mono text-sky-300">seccompProfile: RuntimeDefault</code>.</li>
-              <li><strong class="text-white">Admission &amp; Snyk:</strong> Harbor verified digests, Snyk CVE thresholds, OPA Gatekeeper, and <code class="font-mono text-sky-300">drop ALL</code> capabilities.</li>
-              <li><strong class="text-white">Pod Zero Trust:</strong> ACK RRSA OIDC (&le;12h STS), Terway default-deny, and ASM Strict mTLS.</li>
+          <div class="bg-obsidian/85 border border-purple-500/40 rounded-lg p-5">
+            <div class="font-mono text-[10px] text-purple-300 uppercase tracking-widest font-bold mb-3">GCS gsutil rsync Offload &amp; Elasticsearch VPS Guardrails</div>
+            <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+              <li><strong class="text-white">Bucket Separation &amp; No <code class="font-mono text-sky-300">-d</code> Flag:</strong> Executed <code class="font-mono text-sky-300">gsutil -m rsync -r</code> (strictly omitting <code class="font-mono text-sky-300">-d</code> delete) into separate Artifact (<code class="font-mono text-sky-300">.apk/.aab</code>, <code class="font-mono text-sky-300">mapping.txt</code>, build logs) and Sanitized Log Debris (<code class="font-mono text-sky-300">.gz</code>, DLQ) buckets with MD5/CRC32C verification.</li>
+              <li><strong class="text-white">GCS Lifecycle &amp; PII Gate:</strong> Automated GCS Object Lifecycle transitions to Nearline/Coldline while scrubbing customer PII via Logstash before offload so raw PII remains strictly in domestic DC/DRC.</li>
+              <li><strong class="text-white">Flood-Stage Lockout Prevention:</strong> Separated <code class="font-mono text-sky-300">path.data</code> from OS root partition, enforced Docker <code class="font-mono text-sky-300">max-size: 10m</code> rotation, 4-phase ILM rollover, <code class="font-mono text-sky-300">vm.max_map_count=262144</code>, and alerts ahead of 85%/90%/95% watermarks.</li>
+              <li><strong class="text-white">JVM, Parsing &amp; Zero-Downtime DB:</strong> Pinned <code class="font-mono text-sky-300">-Xms = -Xmx</code> under Compressed OOPs (~26 to 32 GB), replaced heavy Grok with <code class="font-mono text-sky-300">dissect</code> + PQ/DLQ, and enforced Expand-Migrate-Contract schema changes.</li>
             </ul>
           </div>
-
-          <div class="bg-obsidian/85 border border-alert/40 rounded-lg p-5">
-            <div class="font-mono text-[10px] text-red-300 uppercase tracking-widest font-bold mb-3">FinTech Disaster Recovery (DRP)</div>
-            <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
-              <li><strong class="text-white">GitOps Cluster Rebuild:</strong> Flux CD declaratively bootstraps namespaces, RBAC, NetworkPolicies, and stateless FinTech workloads into standby DR clusters from Git.</li>
-              <li><strong class="text-white">Artifact Continuity:</strong> <code class="font-mono text-sky-300">Harbor</code> replication policies synchronize verified immutable images so DR failover never stalls on external CI rebuilds.</li>
-              <li><strong class="text-white">Domestic NKRI Data DR:</strong> Multi-AZ database failover paired with geographically separated domestic backup/DRC strategy aligned with POJK 4/2021 Art. 16 &amp; 23 (never failing over outside NKRI).</li>
-              <li><strong class="text-white">DR Drills &amp; Reconciliation:</strong> Periodic failover testing verifying ledger parity, SNAP callback continuity, and zero dual-write split-brain.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 3: ELK / OPENSEARCH TELEMETRY, 2022 OJK/BI COMPLIANCE & SCOPE TRANSPARENCY -->
-      <div id="ftpanel-compliance" class="hidden p-5 sm:p-6 space-y-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-          <div class="bg-obsidian/90 border border-steel/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-sky-400 font-bold mb-1">POJK 10/POJK.05/2022</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Effective Jul 4, 2022: mandated in-house IT control (no IT outsourcing), Pusdafil integration, audit trails (Art. 45), security (Art. 46), and device-access limits (Art. 47).</p>
-          </div>
-          <div class="bg-obsidian/90 border border-uptime/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-uptime font-bold mb-1">POJK 4/2021 &amp; PP 71/2019</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Mandated domestic NKRI Data Center &amp; geographically separated DRC drills (Art. 16, 23-26), SoD controls (Art. 29), and 5-working-day incident reporting (Art. 31).</p>
-          </div>
-          <div class="bg-obsidian/90 border border-amber-gold/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-amber-gold font-bold mb-1">BI PBI 22/23 &amp; SNAP</div>
-            <p class="text-xs text-slate-300 leading-relaxed">PADG 23/15/PADG/2021 SNAP initial deadline passed Jun 30, 2022: enforced domestic payment processing, RSA/HMAC signatures, and documented change controls.</p>
-          </div>
-          <div class="bg-obsidian/90 border border-purple-500/40 rounded-lg p-4">
-            <div class="font-mono text-[10px] text-purple-300 font-bold mb-1">ELK + OPENSEARCH + PDP</div>
-            <p class="text-xs text-slate-300 leading-relaxed">Centralized <code class="font-mono text-sky-300">ELK Stack</code> &amp; <code class="font-mono text-sky-300">OpenSearch</code> with upfront PII masking, ActionTrail/ACK audit logs, and OSS WORM Vault supporting UU PDP (passed Sep 20, 2022) 72-hour breach notice.</p>
-          </div>
-        </div>
-
-        <div class="bg-obsidian/85 border border-slate-800 rounded-lg p-5">
-          <div class="flex items-center justify-between mb-2">
-            <span class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold">Forensic Transparency: Verified Stack vs. Alibaba Cloud 2022 Reference</span>
-            <span class="font-mono text-[9px] text-uptime bg-uptime/10 border border-uptime/30 px-2 py-0.5 rounded">ZERO OVERCLAIM</span>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            <strong class="text-white">Confirmed Core Stack:</strong> GitOps continuous delivery with <code class="font-mono text-sky-300">Flux CD</code> on Alibaba Cloud, <code class="font-mono text-sky-300">Snyk</code> vulnerability scanning, <code class="font-mono text-sky-300">Harbor</code> private container registry, stateful-to-stateless FinTech backend decomposition, <code class="font-mono text-sky-300">FinTech Disaster Recovery</code>, RBAC, container hardening, and zero-trust observability across <code class="font-mono text-sky-300">ELK Stack</code> and <code class="font-mono text-sky-300">OpenSearch</code> aligned with OJK and Bank Indonesia governance. Cloud-native controls (ACK, RRSA, Terway, ASM, KMS, DTS, ActionTrail, OSS WORM) reflect the 2022 Jakarta (<code class="font-mono text-sky-300">ap-southeast-5</code>) reference architecture without disclosing confidential loan volumes or internal TPS metrics.
-          </p>
         </div>
       </div>
     </div>
@@ -2481,16 +2499,100 @@
     <!-- BLOK 5: EXECUTIVE CTA STRIP -->
     <div class="bg-navy/90 border border-steel/30 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       <div>
-        <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Regulated FinTech GitOps, Observability &amp; Disaster Recovery Review</p>
-        <p class="text-sm text-slate-300">Need a technical walkthrough of Flux CD + Harbor/Snyk supply-chain controls, ELK/OpenSearch zero-trust telemetry, or FinTech DRP architecture?</p>
+        <p class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-bold mb-1">Regulated Financial Infrastructure &amp; DevOps Advisory</p>
+        <p class="text-sm text-slate-300">Interested in hybrid cloud HA engineering, audit-ready Bitbucket/Jenkins CI governance, or GCS/ELK observability offload?</p>
       </div>
       <div class="flex flex-wrap gap-3 shrink-0">
-        <a href="mailto:lukmanulhakim@devstackops.my.id?subject=FinTech%20GitOps%20%26%20DR%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
+        <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Multifinance%20Hybrid%20DevOps%20Walkthrough%20Request%20(Under%20NDA)" class="btn-primary text-xs">
           <i class="fa-solid fa-lock"></i> Request Full Walkthrough (Under NDA)
         </a>
         <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-outline text-xs">
           <i class="fa-solid fa-file-pdf"></i> Verified CV
         </a>
+      </div>
+    </div>
+      </div>
+
+      <!-- PANEL 05: TELECOM ZTP FOUNDATION -->
+      <div id="cspanel-ztp" class="hidden cs-panel-animate" role="tabpanel">
+<div class="sec-label">Case Study 05 &middot; L1 to L7 Foundation &middot; Carrier-Grade Telecom ZTP</div>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+      Legacy Decomposition &amp; Zero-Touch Provisioning (ZTP)
+    </h2>
+    <p class="text-slate-400 text-sm font-mono mb-12 max-w-2xl leading-relaxed">
+      Deconstructing legacy monolithic bottlenecks into autonomous DAG orchestration pipelines. Decoupled BSS-OSS architecture eliminates financial revenue leakage and establishes automated compliance verification.
+    </p>
+
+    <div class="inline-flex items-center gap-3 bg-uptime/10 border border-uptime/30 rounded px-4 py-2 font-mono text-xs text-uptime font-bold mb-8">
+      <i class="fa-solid fa-circle-check"></i>
+      STATUS: PRODUCTION GRADE &middot; 1 MINUTE 54 SECONDS SLA
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <div class="bg-black border border-slate-800 rounded-lg overflow-hidden relative group">
+        <div class="absolute top-3 left-3 bg-obsidian/90 text-xs px-2 py-1 font-mono text-uptime rounded z-10 backdrop-blur border border-uptime/30">
+          PARALLEL DAG ORCHESTRATION
+        </div>
+        <img src="./Untitled2.jpg" alt="ZTP DAG Pipeline execution showing 1m 54s" class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="bg-black border border-slate-800 rounded-lg overflow-hidden relative group">
+        <div class="absolute top-3 left-3 bg-obsidian/90 text-xs px-2 py-1 font-mono text-sky-400 rounded z-10 backdrop-blur border border-steel/30">
+          IMMUTABLE BAST AUDIT ARTIFACT
+        </div>
+        <img src="./Untitled3.jpg" alt="GitHub Artifacts showing BAST-WorkOrder JSON" class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+      </div>
+    </div>
+
+    <!-- YouTube Deep Dive -->
+    <div class="bg-slate-900 border border-slate-700 rounded-lg overflow-hidden mb-8">
+      <div class="px-6 py-4 border-b border-slate-700 flex items-center gap-3">
+        <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+        <div>
+          <p class="text-xs font-mono text-slate-400 uppercase tracking-widest">Architectural Deep Dive &middot; 17 Min</p>
+          <p class="text-white font-bold text-sm">The Blueprint, Explained: When Perfect Code Collides with the Physics of the Streets</p>
+        </div>
+      </div>
+      <div class="relative w-full" style="padding-top:56.25%;">
+        <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Z0vUZEZItro"
+                title="Carrier-Grade ZTP Blueprint"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <a href="./Carrier-Grade_ZTP_Blueprint.pdf" target="_blank"
+         class="flex-1 flex items-center gap-4 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-600 text-white px-6 py-4 rounded-lg font-bold transition group">
+        <i class="fa-solid fa-file-pdf text-3xl text-slate-400 group-hover:text-yellow-400 transition"></i>
+        <div>
+          <span class="block text-xs font-mono text-slate-500 uppercase tracking-widest">Sanitized Technical Spec</span>
+          <span class="block text-sm">Carrier-Grade_ZTP_Blueprint.pdf</span>
+        </div>
+      </a>
+      <a href="./CV_Lukmanul_Hakim.pdf" target="_blank"
+         class="flex-1 flex items-center gap-4 bg-steel/10 hover:bg-steel/20 border border-steel/30 hover:border-steel/50 text-white px-6 py-4 rounded-lg font-bold transition group">
+        <i class="fa-solid fa-id-badge text-3xl text-sky-400 group-hover:text-white transition"></i>
+        <div>
+          <span class="block text-xs font-mono text-sky-400/70 uppercase tracking-widest">Verified Resume</span>
+          <span class="block text-sm">CV_Lukmanul_Hakim.pdf</span>
+        </div>
+      </a>
+    </div>
+      </div>
+
+      <!-- Bottom Quick Switcher Bar -->
+      <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
+        <button type="button" onclick="stepCaseStudy(-1)" class="btn-outline text-xs py-2.5 px-4">
+          <i class="fa-solid fa-arrow-left"></i> Previous Blueprint
+        </button>
+        <div class="font-mono text-[11px] text-slate-400 text-center">
+          Switch case studies above or use deep links from <a href="#experience" class="text-sky-400 hover:underline">Track Record</a>
+        </div>
+        <button type="button" onclick="stepCaseStudy(1)" class="btn-primary text-xs py-2.5 px-4">
+          Next Blueprint <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -2830,14 +2932,14 @@
             September 2022 - December 2022 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Led a 4-month multi-cloud legacy modernization across Amazon Web Services, Google Cloud Platform, and Alibaba Cloud for high-traffic enterprise applications. Decomposed virtual machine based monolithic workloads into containerized Kubernetes microservices with Terraform Infrastructure as Code, achieving 99.9%+ availability and a zero-downtime cutover. Built automated deployment pipelines and multi-region failover, reducing single-cloud dependency risk.
+            Delivered hands-on cloud containerization, multi-cloud infrastructure engineering, and structured technical project documentation across Amazon Web Services, Google Cloud Platform, and Alibaba Cloud. Containerized legacy virtual machine workloads for Kubernetes orchestration using HashiCorp Terraform Infrastructure as Code and CI/CD pipeline templates to establish portable multi-cloud engineering baselines.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Kubernetes Orchestration</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">HashiCorp Terraform</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Infrastructure as Code (IaC)</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Multi-Cloud Migration</span>
-            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Disaster Recovery</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Technical Documentation</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Microservices Architecture</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Alibaba Cloud</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Google Cloud Platform (GCP)</span>
@@ -2875,7 +2977,7 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">FinTech Disaster Recovery</span>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
-            <a href="#fintech-gitops-blueprint" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+            <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('fintech', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
               <i class="fa-solid fa-diagram-project"></i> Inspect FinTech GitOps &amp; Zero-Trust Blueprint (NDA-Safe) <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -2907,7 +3009,7 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Logistics Microservices</span>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
-            <a href="#logistics-blueprint" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+            <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('logistics', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
               <i class="fa-solid fa-diagram-project"></i> Inspect 5-Plane Architecture Blueprint (NDA-Safe) <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -2936,7 +3038,7 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Multi-Tenant Cloud</span>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
-            <a href="#erp-iac-blueprint" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+            <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('erp', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
               <i class="fa-solid fa-diagram-project"></i> Inspect Multi-Tenant ERP IaC Blueprint (NDA-Safe) <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -2967,7 +3069,7 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">MTTR Optimization</span>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100">
-            <a href="#multifinance-blueprint" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+            <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('multifinance', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
               <i class="fa-solid fa-diagram-project"></i> Inspect Hybrid Cloud &amp; ELK Architecture Blueprint (NDA-Safe) <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -3030,6 +3132,11 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">PostgreSQL</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">SOAP APIs</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Red Hat Enterprise Linux 6</span>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#blueprint" onclick="event.preventDefault(); openCaseStudy('ztp', true);" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-steel hover:text-steel-dim transition">
+              <i class="fa-solid fa-diagram-project"></i> Inspect Carrier-Grade ZTP Execution Blueprint &amp; Video <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -3609,6 +3716,71 @@
       });
     }
   });
+
+
+
+  // 6A. UNIFIED ARCHITECTURE SHOWCASE HUB CONTROLLER
+  var caseStudyOrder = ['fintech', 'logistics', 'erp', 'multifinance', 'ztp'];
+  var currentCaseStudy = 'fintech';
+
+  function openCaseStudy(key, shouldScroll) {
+    if (caseStudyOrder.indexOf(key) === -1) return;
+    currentCaseStudy = key;
+
+    caseStudyOrder.forEach(function(item) {
+      var panel = document.getElementById('cspanel-' + item);
+      var btn   = document.getElementById('csbtn-' + item);
+      if (panel) panel.classList.add('hidden');
+      if (btn) {
+        btn.classList.remove('cs-active');
+        btn.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    var activePanel = document.getElementById('cspanel-' + key);
+    var activeBtn   = document.getElementById('csbtn-' + key);
+    if (activePanel) activePanel.classList.remove('hidden');
+    if (activeBtn) {
+      activeBtn.classList.add('cs-active');
+      activeBtn.setAttribute('aria-selected', 'true');
+    }
+
+    var idx = caseStudyOrder.indexOf(key) + 1;
+    var counterEl = document.getElementById('cs-counter-label');
+    if (counterEl) {
+      counterEl.textContent = 'BLUEPRINT 0' + idx + ' OF 0' + caseStudyOrder.length;
+    }
+
+    if (shouldScroll) {
+      var hub = document.getElementById('blueprint');
+      if (hub) {
+        var y = hub.getBoundingClientRect().top + window.pageYOffset - 72;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  }
+
+  function stepCaseStudy(delta) {
+    var curIdx = caseStudyOrder.indexOf(currentCaseStudy);
+    var nextIdx = (curIdx + delta + caseStudyOrder.length) % caseStudyOrder.length;
+    openCaseStudy(caseStudyOrder[nextIdx], true);
+  }
+
+  function handleBlueprintHash() {
+    var hashMap = {
+      '#fintech-gitops-blueprint': 'fintech',
+      '#logistics-blueprint': 'logistics',
+      '#erp-iac-blueprint': 'erp',
+      '#multifinance-blueprint': 'multifinance',
+      '#ztp-blueprint': 'ztp'
+    };
+    var target = hashMap[window.location.hash];
+    if (target) {
+      openCaseStudy(target, true);
+    }
+  }
+  window.addEventListener('hashchange', handleBlueprintHash);
+  document.addEventListener('DOMContentLoaded', handleBlueprintHash);
 
 
   // 6B. LOGISTICS DEVSECOPS BLUEPRINT TAB CONTROLLER
