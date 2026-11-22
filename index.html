@@ -7,7 +7,7 @@
     
     <!-- SEO & Metadata -->
     <meta name="description" content="Lukmanul Hakim: Cross-layer Solutions Architect with 9+ years of hands-on telecom, DevOps, and multi-cloud delivery across a 15-year technology trajectory (since 2011), bridging L1 FTTH infrastructure ($93M program scope) to L7 Kubernetes, GitOps, certified Azure AI (AI-103), and standardized risk engineering (IEC 60812 FMEA, ISO 31000).">
-    <meta name="keywords" content="Lukmanul Hakim, Principal Solutions Architect, Interim Head of DevOps, Enterprise IT Advisory Consultant, Cloud Modernization, Monolith to Microservices, DevSecOps, GCP Professional Cloud Architect, Azure AI-103, AWS, Kubernetes, GitOps, Flux CD, IEC 60812 FMEA, IEC 61025 FTA, ISO 31000, ISO/IEC 20000, OJK Compliance, Telkom Akses, FTTH, Zero-Touch Provisioning">
+    <meta name="keywords" content="Lukmanul Hakim, Principal Solutions Architect, Interim Head of DevOps, Enterprise IT Advisory Consultant, Cloud Modernization, Monolith to Microservices, DevSecOps, GCP Professional Cloud Architect, Cloud Run, BigQuery, Pub/Sub, Event-Driven Architecture, Azure AI-103, Azure AI Studio, Azure OpenAI, Semantic Kernel, Document Intelligence, AWS, Kubernetes, GKE, EKS, GitOps, Flux CD, HashiCorp Terraform, Ansible, PostgreSQL HA, repmgr, Barman, Proxmox Enterprise, BGP AS Failover, IEC 60812 FMEA, IEC 61025 FTA, ISO 31000, ISO/IEC 20000, FinOps, OJK Compliance, Telkom Akses, FTTH, Zero-Touch Provisioning">
     <meta name="author" content="Lukmanul Hakim">
     <meta name="robots" content="index, follow">
     
@@ -35,19 +35,25 @@
         "name": "Universitas Mercu Buana Jakarta"
       },
       "knowsAbout": [
-        "Autonomous Agent Systems & LLMOps",
-        "Azure AI Apps and Agents Architecture",
+        "Autonomous Agent Systems & LLM Orchestration",
+        "Azure AI Apps and Agents Architecture (AI-103)",
+        "Azure AI Studio, Azure OpenAI, Semantic Kernel & Document Intelligence",
+        "Prompt Defense, AI Safety & AI Ethics",
+        "Google Cloud Platform (PCA & ACE: GKE, Cloud Run, Compute Engine, Cloud Storage, Pub/Sub, BigQuery)",
+        "Event-Driven & Serverless Container Architecture",
         "Monolith-to-Microservices Decomposition",
-        "Multi-Cloud Architecture",
-        "Kubernetes & GitOps",
-        "Platform & Application Security (OWASP Top 10)",
-        "Identity & Access Management (IAM / RBAC / SSO)",
-        "IEC 60812 FMEA",
-        "IEC 61025 FTA",
-        "ISO 31000 Risk Governance",
-        "ISO/IEC 20000 Service Management",
-        "DevSecOps & Platform Engineering",
-        "Carrier-Grade FTTH & GPON Infrastructure",
+        "Multi-Cloud Architecture & Workload Migration (GCP, AWS, Azure, Alibaba Cloud)",
+        "Kubernetes, Helm & Pull-Based GitOps (Flux CD)",
+        "Infrastructure as Code (HashiCorp Terraform) & Ansible Automation",
+        "PostgreSQL High Availability (repmgr, repmgrd, Barman PITR) & Bare-Metal Proxmox Enterprise",
+        "Multi-ISP BGP AS Failover, HAProxy & Keepalived",
+        "Platform & Application Security (OWASP ZAP, SonarQube, Snyk, GitLab SAST/DAST)",
+        "Identity & Access Management (IAM, RBAC, Workload Identity)",
+        "Site Reliability Engineering (SRE), High Availability & Disaster Recovery",
+        "IEC 60812 FMEA & IEC 61025 FTA",
+        "ISO 31000 Risk Governance & ISO/IEC 20000 Service Management",
+        "FinOps & Cloud Cost Governance",
+        "Carrier-Grade FTTH & GPON Infrastructure (GE Smallworld PNI GIS)",
         "Zero-Touch Provisioning (ZTP)",
         "VoIP & VoBB SIP Signaling (RFC 3261)",
         "OJK & Bank Indonesia Compliance",
@@ -469,7 +475,7 @@
           </div>
         </div>
         <p class="font-mono text-[10px] text-slate-400 mb-8 max-w-lg leading-relaxed">
-          * 2011-2026 career span (9+ yrs hands-on; B.Economic. study Mar 2016-Oct 2018) &middot; Nationwide FTTH program QA/audit scope (POCM) &middot; GKE/EKS logistics production.
+          * 2011-2026 career span (9+ yrs hands-on; B.Sc. study Mar 2016-Oct 2018) &middot; Nationwide FTTH program QA/audit scope (POCM) &middot; GKE/EKS logistics production.
         </p>
 
         <div class="flex flex-wrap gap-4">
@@ -3106,7 +3112,7 @@
             <i class="fa-solid fa-map-location-dot mr-1"></i> SW PNI GIS Footprint
           </button>
           <button onclick="switchMode('risk')" id="tab-risk" class="noc-tab">
-            <i class="fa-solid fa-shield-halved mr-1"></i> FTA / FMEA Audit
+            <i class="fa-solid fa-shield-halved mr-1"></i> Field RCA Audit
           </button>
           <button onclick="switchMode('cost')" id="tab-cost" class="noc-tab">
             <i class="fa-solid fa-file-contract mr-1"></i> BAST &amp; CAPEX Ledger
@@ -3187,7 +3193,7 @@
             <div class="relative h-64 lg:h-80 w-full bg-slate-800/30 rounded-lg border border-slate-700 p-4">
               <canvas id="resilienceChart"></canvas>
             </div>
-            <p class="text-[10px] font-mono text-slate-500 text-center">Illustrative Risk-Reduction Index (Qualitative Pre-Audit vs. Post-FTA/FMEA Comparison)</p>
+            <p class="text-[10px] font-mono text-slate-500 text-center">Illustrative Risk-Reduction Index (Qualitative Pre-Audit vs. Post-RCA Comparison; Formalized via FTA/FMEA in 2018 Thesis)</p>
           </div>
           <div class="font-mono text-sm space-y-6">
             <div class="border-l-4 border-alert pl-5">
@@ -3200,7 +3206,7 @@
             <div class="border-l-4 border-uptime pl-5">
               <h4 class="text-uptime font-bold mb-2">POST-AUDIT &amp; SW PNI RECONCILED STATE (2014)</h4>
               <p class="text-slate-400 text-xs leading-relaxed">
-                Standardized field compliance audits, GE Smallworld PNI as-built inventory lock, OMCI/TR-069 provisioning SOPs, Wireshark RFC 3261 SIP verification, and automated RHEL 6 ETL reconciliation guided by IEC 60812 (FMEA) and IEC 61025 (FTA).
+                Standardized field compliance audits, GE Smallworld PNI as-built inventory lock, OMCI/TR-069 provisioning SOPs, Wireshark RFC 3261 SIP verification, structured field Root Cause Analysis (RCA, later formalized via IEC 60812 FMEA &amp; IEC 61025 FTA in 2018 B.Sc. thesis), and automated RHEL 6 ETL reconciliation.
               </p>
               <p class="text-uptime font-bold text-xs mt-1">Verified Outcome: -20% Trial Defects &middot; Zero Asset Discrepancy</p>
             </div>
@@ -3218,7 +3224,7 @@
               </div>
               <div class="flex justify-between items-center border-b border-slate-800 pb-4">
                 <span class="text-slate-300">Trial Integration Defect Rate</span>
-                <span class="text-uptime font-bold">-20% (FTA / FMEA)</span>
+                <span class="text-uptime font-bold">-20% (Field RCA Audit)</span>
               </div>
               <div class="flex justify-between items-center border-b border-slate-800 pb-4">
                 <span class="text-slate-300">SW PNI GIS vs. BSS/OSS Parity</span>
@@ -3236,7 +3242,7 @@
               In nationwide FTTH deployment, an unrecorded Optical Distribution Point (ODP) or mismatched fiber port between <strong class="text-white">GE Smallworld PNI GIS (Datek)</strong> and <strong class="text-white">I-Sisca / TenOSS (Dalay)</strong> directly causes failed service activation, invalid BAST handovers, and permanent CAPEX leakage.
             </p>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Combining physical field quality audits, RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML), and formal IEC 60812 FMEA / IEC 61025 FTA modeling protected capital asset accuracy across the IDR 1.5T copper-to-FTTH program.
+              Combining physical field quality audits, structured Root Cause Analysis (later formalized into IEC 60812 FMEA &amp; IEC 61025 FTA models in the 2018 B.Sc. thesis), and RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML) protected capital asset accuracy across the IDR 1.5T copper-to-FTTH program.
             </p>
           </div>
         </div>
@@ -3251,7 +3257,7 @@
             <span class="mr-10"><span class="text-sky-400">ℹ</span> ODN OPTICAL BUDGET: REDAMAN &le; -24 dBm VERIFIED</span>
             <span class="mr-10"><span class="text-sky-400">ℹ</span> VOBB SIP DPI: WIRESHARK RFC 3261 / RTP / G.711 AUDITED</span>
             <span class="mr-10"><span class="text-uptime">●</span> GPON PROVISIONING SOP: OMCI (ITU-T G.984) + TR-069 CWMP</span>
-            <span class="mr-10"><span class="text-uptime">●</span> IEC 60812 FMEA &amp; IEC 61025 FTA: -20% TRIAL INTEGRATION DEFECTS</span>
+            <span class="mr-10"><span class="text-uptime">●</span> STRUCTURED FIELD RCA (FORMALIZED IN 2018 FTA/FMEA THESIS): -20% TRIAL DEFECTS</span>
             <span class="mr-10"><span class="text-sky-400">ℹ</span> CAPEX AUDIT: IDR 1.5T ($93M) SCOPE &middot; ZERO ASSET DISCREPANCY &middot; BAST VALID</span>
           </div>
         </div>
@@ -3573,7 +3579,7 @@
             April 2013 - October 2014 &middot; Jakarta, Indonesia
           </div>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
-            Governed field quality compliance audits, optical distribution network (ODN) budget verification, and service fulfillment testing for the nationwide copper-to-FTTH rollout ($93M / IDR 1.5T CAPEX program scope). Led joint GPON commissioning and Triple-Play (High-Speed Internet, VoBB/VoIP, IPTV) acceptance testing alongside OEM telecom vendors; engineered OLT-to-ONT link parameters, dynamic bandwidth allocation (DBA T-CONT Types 1–4), GEM ports, 802.1Q/Q-in-Q VLAN segregation, and IGMP snooping/multicast routing to prevent stream freezing and eliminate packet drop. Conducted deep-packet protocol inspection using Wireshark for Voice-over-Broadband (VoBB); analyzed SIP signaling handshakes (RFC 3261 REGISTER/INVITE/200 OK), NAT traversal, RTP stream jitter, and G.711a/u codec negotiation against Telkom IMS/Softswitch infrastructure to resolve registration drops, one-way audio, and call anomalies. Contributed to IndiHome FTTH Pilot Project standard operating procedures (SOP) for Network &amp; Access Bearer creation and auto-provisioning workflows (OMCI Layer 2 transport provisioning combined with TR-069 CWMP/ACS parameter configuration), reconciling GE Smallworld PNI GIS physical plant records (Datek) with logical service instances (Dalay) to mitigate billing revenue leakage. Applied Fault Tree Analysis (IEC 61025), Failure Mode and Effects Analysis (IEC 60812), and ISO 31000 risk management to quantify and remediate fulfillment failure modes (optical attenuation drops &gt;-24 dBm, BSS/OSS API timeouts, and inventory mismatches), achieving a 20% defect reduction during trial integration testing with zero capital asset discrepancy. Developed automated extract, transform, load (ETL) reconciliation scripts (Oracle, PostgreSQL, SOAP XML APIs) hosted on Red Hat Enterprise Linux (RHEL 6) linking physical field inventory with BSS/OSS platforms (I-Sisca, TenOSS) to maintain audit-compliant asset registers and valid BAST sign-offs.
+            Governed field quality compliance audits, optical distribution network (ODN) budget verification, and service fulfillment testing for the nationwide copper-to-FTTH rollout ($93M / IDR 1.5T CAPEX program scope). Led joint GPON commissioning and Triple-Play (High-Speed Internet, VoBB/VoIP, IPTV) acceptance testing alongside OEM telecom vendors; engineered OLT-to-ONT link parameters, dynamic bandwidth allocation (DBA T-CONT Types 1–4), GEM ports, 802.1Q/Q-in-Q VLAN segregation, and IGMP snooping/multicast routing to prevent stream freezing and eliminate packet drop. Conducted deep-packet protocol inspection using Wireshark for Voice-over-Broadband (VoBB); analyzed SIP signaling handshakes (RFC 3261 REGISTER/INVITE/200 OK), NAT traversal, RTP stream jitter, and G.711a/u codec negotiation against Telkom IMS/Softswitch infrastructure to resolve registration drops, one-way audio, and call anomalies. Contributed to IndiHome FTTH Pilot Project standard operating procedures (SOP) for Network &amp; Access Bearer creation and auto-provisioning workflows (OMCI Layer 2 transport provisioning combined with TR-069 CWMP/ACS parameter configuration), reconciling GE Smallworld PNI GIS physical plant records (Datek) with logical service instances (Dalay) to mitigate billing revenue leakage. Conducted structured Root Cause Analysis (RCA) and failure-mode auditing on fulfillment bottlenecks (optical attenuation drops &gt;-24 dBm, BSS/OSS API timeouts, and inventory mismatches), later formalized via Fault Tree Analysis (IEC 61025) and Failure Mode and Effects Analysis (IEC 60812) in the 2018 B.Sc. Operational Management thesis, driving a 20% defect reduction during trial integration testing with zero capital asset discrepancy. Developed automated extract, transform, load (ETL) reconciliation scripts (Oracle, PostgreSQL, SOAP XML APIs) hosted on Red Hat Enterprise Linux (RHEL 6) linking physical field inventory with BSS/OSS platforms (I-Sisca, TenOSS) to maintain audit-compliant asset registers and valid BAST sign-offs.
           </p>
           <div class="flex flex-wrap gap-1.5 sm:gap-2">
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">GE Smallworld PNI (GIS)</span>
@@ -3587,9 +3593,8 @@
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">VLAN Segregation (802.1Q/Q-in-Q)</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">IGMP Snooping &amp; Multicast Routing</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">FTTH Rollout ($93M CAPEX)</span>
-            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Fault Tree Analysis (FTA)</span>
-            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Failure Mode &amp; Effects Analysis (FMEA)</span>
-            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">ISO 31000 Risk Governance</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Structured Field RCA</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">IndiHome FTTH Pilot SOP</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Database Reconciliation</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">Oracle Database</span>
             <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] font-normal px-2.5 py-1 rounded">PostgreSQL</span>
@@ -3680,39 +3685,39 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <div class="skill-card">
         <div class="skill-title">1.0 Multi-Cloud &amp; Migration</div>
-        <div class="skill-content">Monolith Decomposition &middot; GCP &middot; AWS &middot; Azure &middot; Alibaba Cloud &middot; Controlled Low-Downtime Cutover</div>
+        <div class="skill-content">Monolith Decomposition &middot; GCP (Compute Engine, Cloud Run, Cloud Storage) &middot; AWS &middot; Azure &middot; Alibaba Cloud &middot; Workload Migration &middot; Controlled Low-Downtime Cutover</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">2.0 IaC &amp; Platform Automation</div>
-        <div class="skill-content">HashiCorp Terraform (Advanced) &middot; GitHub Actions &middot; Ansible &middot; Zero-Touch Provisioning (ZTP) &middot; Self-Service Infra</div>
+        <div class="skill-content">HashiCorp Terraform (Advanced) &middot; GitHub Actions &middot; Ansible &middot; Python &middot; Bash &amp; PowerShell &middot; Linux/RHEL &middot; Zero-Touch Provisioning (ZTP)</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">3.0 Containers &amp; GitOps</div>
-        <div class="skill-content">Kubernetes (GKE/EKS/ACK) &middot; Docker &middot; Flux CD &middot; Harbor &middot; Helm &middot; Pod Autoscaling (HPA / PDB)</div>
+        <div class="skill-content">Kubernetes (GKE/EKS/ACK) &middot; Docker &middot; Serverless Containers (Cloud Run) &middot; Flux CD &middot; Harbor &middot; Helm &middot; Pod Autoscaling (HPA / PDB)</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">4.0 Platform Security &amp; IAM</div>
-        <div class="skill-content">Zero Trust &middot; Workload Identity / RRSA &middot; RBAC &middot; GitLab SAST/DAST &middot; Snyk &middot; OWASP ZAP &middot; SonarQube &middot; ELK / OpenSearch</div>
+        <div class="skill-content">Zero Trust &middot; IAM / Workload Identity / RRSA &middot; RBAC &middot; GitLab SAST/DAST &middot; Snyk &middot; OWASP ZAP &middot; SonarQube &middot; Threat Detection &middot; ELK / OpenSearch</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">5.0 Reliability Engineering &amp; Risk</div>
-        <div class="skill-content">IEC 60812 (FMEA) &middot; IEC 61025 (FTA) &middot; ISO 31000 Governance &middot; SRE &middot; Root Cause Analysis (RCA)</div>
+        <div class="skill-content">IEC 60812 (FMEA) &middot; IEC 61025 (FTA) &middot; ISO 31000 Governance &middot; Site Reliability Engineering (SRE) &middot; High Availability &amp; DR &middot; Root Cause Analysis (RCA)</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">6.0 Data Infrastructure &amp; DBRE</div>
-        <div class="skill-content">PostgreSQL HA (repmgr / repmgrd / Barman) &middot; Oracle &middot; MySQL &middot; Cloud SQL &middot; BigQuery &middot; Database Migration &middot; ETL Reconciliation</div>
+        <div class="skill-content">PostgreSQL HA (repmgr / repmgrd / Barman) &middot; Oracle &middot; MySQL &middot; Cloud SQL &middot; BigQuery &middot; Pub/Sub &amp; Event-Driven Pipelines &middot; ETL Reconciliation</div>
       </div>
       <div class="skill-card border-steel/30">
-        <div class="skill-title text-steel">7.0 Agentic AI &amp; Enterprise LLMOps</div>
-        <div class="skill-content">Azure AI Studio &middot; Semantic Kernel &middot; Autonomous Agent Architecture &middot; Prompt Defense &amp; Token Governance</div>
+        <div class="skill-title text-steel">7.0 Agentic AI &amp; Enterprise LLMOps (AI-103)</div>
+        <div class="skill-content">Azure AI Studio &middot; Azure OpenAI &middot; Semantic Kernel &middot; Document Intelligence &middot; LLM Orchestration &middot; Autonomous AI Agents &middot; Prompt Defense &amp; AI Ethics</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">8.0 Compliance &amp; Multi-Environment Assurance</div>
-        <div class="skill-content">ISO 31000 &middot; ISO/IEC 20000 &middot; OJK Compliance &middot; Bank Indonesia Data Governance &middot; FinOps Cost Governance</div>
+        <div class="skill-content">ISO 31000 &middot; ISO/IEC 20000 &middot; OJK &amp; Bank Indonesia Compliance &middot; FinOps Cost Governance &middot; Technical Due Diligence &middot; Capital Governance</div>
       </div>
       <div class="skill-card">
         <div class="skill-title">9.0 Telecommunication &amp; Network</div>
-        <div class="skill-content">GE Smallworld PNI (GIS) &middot; GPON Commissioning &middot; Triple-Play Fulfillment &middot; Wireshark DPI &middot; VoBB SIP (RFC 3261) &middot; IGMP Multicast &middot; MPLS</div>
+        <div class="skill-content">GE Smallworld PNI (GIS) &middot; GPON Commissioning &middot; Triple-Play Fulfillment &middot; Wireshark DPI &middot; VoBB SIP (RFC 3261) &middot; IGMP Multicast &middot; MPLS &middot; BGP AS Failover &middot; Proxmox Enterprise</div>
       </div>
     </div>
   </div>
@@ -3868,6 +3873,104 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Curated Credential-Validated Skill Wallet (Credly & Microsoft Learn) -->
+    <div class="mt-12 bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <div class="font-mono text-[10px] font-bold uppercase tracking-widest text-steel mb-1">Curated Skill Wallet &middot; Credly &amp; Microsoft Learn</div>
+          <h3 class="font-display text-xl font-bold text-navy">Certification &amp; Lab-Validated Competencies</h3>
+        </div>
+        <span class="inline-flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1 rounded shrink-0">
+          <i class="fa-solid fa-circle-check text-uptime"></i> Audit-Mapped to Issued Credentials
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Track 1: Google Cloud PCA & ACE -->
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="cert-dot" style="background:#34A853;"></span>
+            <h4 class="font-mono text-xs font-bold text-navy uppercase tracking-wider">Google Cloud (PCA &amp; ACE Credly Wallet)</h4>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Google Cloud Platform (GCP)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Google Kubernetes Engine (GKE)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Cloud Run</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Serverless Container Architecture</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Compute Engine &amp; VMs</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Cloud Storage</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Pub/Sub</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Event-Driven Architecture</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">BigQuery &amp; Data Pipelines</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Cloud SQL &amp; Data Migration</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Workload Migration</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">IAM &amp; Cloud Security</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Site Reliability Engineering (SRE)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">High Availability (HA) &amp; DR</span>
+          </div>
+        </div>
+
+        <!-- Track 2: Microsoft Azure AI-103 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="cert-dot" style="background:#0078D4;"></span>
+            <h4 class="font-mono text-xs font-bold text-navy uppercase tracking-wider">Microsoft Azure (AI-103 Credential Scope)</h4>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Microsoft Azure AI</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Azure AI Studio</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Azure OpenAI</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Semantic Kernel</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Autonomous Agent Architecture</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">AI Agents &amp; LLM Orchestration</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Document Intelligence</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Generative AI Knowledge Mining</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Natural Language Processing (NLP)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Computer Vision</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Prompt Engineering</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Prompt Defense &amp; Safety</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">AI Ethics &amp; Governance</span>
+          </div>
+        </div>
+
+        <!-- Track 3: AWS Cloud Practitioner & Cloud Quest -->
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="cert-dot" style="background:#FF9900;"></span>
+            <h4 class="font-mono text-xs font-bold text-navy uppercase tracking-wider">Amazon Web Services (CCP &amp; Cloud Quest)</h4>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Amazon Web Services (AWS)</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Amazon EKS &amp; EC2</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Cloud Architecture &amp; FinOps</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Generative AI Foundations</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Multi-Cloud Security &amp; IAM</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">High Availability &amp; Backup</span>
+          </div>
+        </div>
+
+        <!-- Track 4: Cisco DevNet & CyberOps -->
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="cert-dot" style="background:#1BA0D7;"></span>
+            <h4 class="font-mono text-xs font-bold text-navy uppercase tracking-wider">Cisco Systems (DevNet &amp; CyberOps Associate)</h4>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">RESTful APIs &amp; JSON / YAML</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Python &amp; Network Automation</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Cisco Network Programmability</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Network &amp; Application Security</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">Threat Detection &amp; Incident Triage</span>
+            <span class="inline-block bg-[#E6EFF5] text-[#2C3E50] text-[11px] px-2.5 py-1 rounded">SDLC &amp; Deployment Security</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-5 pt-4 border-t border-slate-200 font-mono text-[11px] text-slate-500 leading-relaxed">
+        <strong class="text-slate-700">Scope Transparency:</strong> Competencies in this wallet reflect exam- and lab-validated skills tied to verified Credly and Microsoft Learn credentials, distinctly separated from production enterprise delivery scopes documented in <a href="#experience" class="text-steel hover:underline font-semibold">Work History</a>.
+      </p>
     </div>
   </div>
 </section>
