@@ -22,8 +22,6 @@
     "name": "Lukmanul Hakim",
     "jobTitle": "Principal Solutions Architect & Cloud Modernization Strategist",
     "url": "https://lukmanulhakim.devstackops.my.id/",
-    "email": "lukmanulhakim@devstackops.my.id",
-    "telephone": "+6282110458448",
     "sameAs": [
       "https://www.linkedin.com/in/lukmanulhakimdevops/"
     ],
@@ -888,7 +886,7 @@
         <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="btn-ink">Download CV (PDF)</a>
         <a href="#notes" class="btn-ghost">Read Architecture Notes</a>
         <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="text-link">LinkedIn &#8599;</a>
-        <a href="mailto:lukmanulhakim@devstackops.my.id" class="text-link">lukmanulhakim@devstackops.my.id</a>
+        <button type="button" onclick="openInquiry()" class="text-link" style="background:none; border:none; cursor:pointer; font-family:inherit;">Start an Inquiry</button>
       </div>
 
       <div class="pillars">
@@ -1990,13 +1988,13 @@
           Available for institutional technical due diligence, cloud modernization strategy, Kubernetes/GitOps reviews, PostgreSQL HA architecture, and operational risk assessments under NDA.
         </p>
         <div class="actions">
-          <a href="mailto:lukmanulhakim@devstackops.my.id?subject=Advisory%20%2F%20Technical%20Review%20Inquiry" class="btn-ink">Send an Email</a>
+          <button type="button" onclick="openInquiry()" class="btn-ink" style="cursor:pointer; font-family:inherit;">Start an Inquiry</button>
           <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" class="btn-ghost">LinkedIn &#8599;</a>
           <a href="./CV_Lukmanul_Hakim.pdf" target="_blank" class="text-link">Verified CV (PDF) &#8599;</a>
         </div>
       </div>
       <div class="footer-meta">
-        <div><strong>Email:</strong> <a href="mailto:lukmanulhakim@devstackops.my.id">lukmanulhakim@devstackops.my.id</a></div>
+        <div><strong>Contact:</strong> <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or Inquiry Widget (Direct details in CV)</div>
         <div><strong>Location:</strong> Bogor Regency, West Java, Indonesia</div>
         <div><strong>Practice:</strong> Independent Advisory &amp; Expert Networks</div>
         <div><strong>Credentials:</strong> GCP PCA &middot; GCP ACE &middot; Azure AI-103 &middot; AWS CCP</div>
@@ -2113,10 +2111,19 @@
     });
   }
 
+  // Inquiry trigger (opens Typebot bubble; falls back to LinkedIn if blocked)
+  function openInquiry() {
+    if (typeof window.openTypebot === 'function') {
+      window.openTypebot();
+    } else {
+      window.open('https://www.linkedin.com/in/lukmanulhakimdevops/', '_blank', 'noopener,noreferrer');
+    }
+  }
+
   // Existing Typebot bubble preserved in muted slate ink
   var tb = document.createElement('script');
   tb.type = 'module';
-  tb.innerHTML = "import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js';\nTypebot.initBubble({ typebot:'my-typebot-7p0gecb', theme:{ button:{ backgroundColor:'#1B4965' }, chatWindow:{ backgroundColor:'#FAF8F4' } } });";
+  tb.innerHTML = "import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js';\nTypebot.initBubble({ typebot:'my-typebot-7p0gecb', theme:{ button:{ backgroundColor:'#1B4965' }, chatWindow:{ backgroundColor:'#FAF8F4' } } });\nwindow.openTypebot = () => Typebot.open();";
   document.body.append(tb);
 </script>
 </body>
