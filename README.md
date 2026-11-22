@@ -1,41 +1,68 @@
-# ⚡ Lukmanul Hakim
+# Lukmanul Hakim
 
-**Principal Solutions Architect & Systems Modernization Strategist**  
-*Empaneled Subject Matter Expert at VisasQ & Coleman Research Group | GCP Professional Cloud Architect | Multi-Cloud & GitOps | IEC 61025 (FTA), IEC 60812 (FMEA), and ISO 31000 Risk Governance*
-
----
-
-### Executive Profile
-15 years of ground-truth systems engineering practice spanning the full failure-mode stack, from Layer 1 physical infrastructure mechanics ($93M CAPEX scope) to Layer 7 cloud-native microservices and production AI workflows. Specializing in legacy monolithic decomposition, declarative GitOps automation, and standardized reliability engineering (IEC 61025 FTA, IEC 60812 FMEA, and ISO 31000 Risk Governance). Combining deep technical diagnostic capability with formal capital governance, translating distributed systems error budgets, failover domains, and security controls directly into financial balance-sheet impact, CAPEX risk pricing, and EBITDA protection metrics.
+**Principal Solutions Architect & Cloud Modernization Strategist**  
+Bogor Regency, West Java, Indonesia | [Portfolio](https://lukmanulhakim.devstackops.my.id/) | [LinkedIn](https://www.linkedin.com/in/lukmanulhakimdevops/) | [CV (PDF)](https://lukmanulhakim.devstackops.my.id/CV_Lukmanul_Hakim.pdf)
 
 ---
 
-### 🎯 Core Architecture & Advisory Domains
-* **Legacy Modernization & Multi-Cloud Platforms:** Monolith-to-microservices decomposition, multi-cloud architectures (GCP, AWS, Azure, Alibaba Cloud), high-availability distributed systems (99.9%+ SLA), and FinOps workload rightsizing (up to 40% OPEX reduction).
-* **Platform Engineering & GitOps:** Immutable Infrastructure as Code (Terraform), declarative continuous delivery (Flux CD), container orchestration (Kubernetes GKE/EKS/AKS), and Zero-Touch Provisioning (ZTP) pipelines.
-* **Standardized Reliability & Risk Modeling:** Mathematical failure mode analysis applying IEC 60812 (FMEA) and IEC 61025 (FTA) to eliminate single points of failure (SPOF) and enforce deterministic recovery windows (MTTR <300ms).
-* **Enterprise DevSecOps & Governance:** Zero Trust architectures (mTLS, IAM Least Privilege, automated SAST/DAST via OWASP ZAP and SonarQube) aligned with OJK, Bank Indonesia, ISO 27001, and ISO 31000 frameworks.
-* **Institutional Technical Due Diligence:** Retained advisory for Private Equity sponsors and enterprise investors evaluating technical debt, modernization feasibility, and infrastructure risk across target assets.
+### Profile
+
+Solutions Architect Consultant with **9+ years of hands-on telecom, DevOps, and multi-cloud delivery across a 15-year technology career span** (since 2011, including my Bachelor of Economics (S.E.) in Operational Management study from Mar 2016 to Oct 2018). My work bridges physical infrastructure failure modes (Layer 1 FTTH/GPON commissioning and bare-metal Proxmox PostgreSQL HA) with distributed cloud platforms (Layer 7 Kubernetes, GitOps, DevSecOps, and regulated financial systems).
+
+I currently operate an **Independent Technical Advisory Practice**, including on-demand, NDA-governed Subject Matter Expert consultations via global expert networks (such as VisasQ / Coleman Research), advising institutional investors and engineering teams on technical due diligence, legacy modernization feasibility, and operational risk governance (**ISO 31000**, **ISO/IEC 20000**, **IEC 60812 FMEA**, and **IEC 61025 FTA**).
 
 ---
 
-### 🚀 Key Technical Highlights & Milestones
-* **National FTTH Infrastructure Governance ($93M CAPEX):** Assigned within the Directorate of Operation at Telkom Akses to govern field quality compliance, service fulfillment testing, and BSS/OSS ETL data reconciliation (Oracle, PostgreSQL, SOAP) across nationwide rollout programs.
-* **Carrier-Grade ZTP Orchestration:** Engineered and validated a production DAG pipeline executing complete Zero-Touch Provisioning in **1 minute 54 seconds**, eliminating high-risk manual handoffs and decoupled BSS-OSS revenue leakage.
-* **Zero-Downtime Multi-Cloud Migrations:** Executed legacy migrations for high-concurrency FinTech and national logistics platforms (120+ microservices), cutting deployment lead times by 70% while maintaining zero regulatory audit findings.
-* **Institutional Advisory Mandates:** Deliver NDA-governed technical assessments through global expert networks (VisasQ, Coleman Research Group) on telecom backbones and enterprise cloud investments.
+### Core Practice Areas
+
+- **Multi-Cloud & Legacy Modernization:** Monolith decomposition, controlled low-downtime migrations across GCP, AWS, Alibaba Cloud, and Azure, plus FinOps cost governance.
+- **Kubernetes, GitOps & DevSecOps:** Multi-cluster container orchestration (GKE, Amazon EKS, ACK), pull-based GitOps (Flux CD), immutable registry controls (Harbor), and automated CI/CD security gating (GitLab SAST/DAST/Secret Detection, SonarQube, OWASP ZAP, Snyk).
+- **Infrastructure Automation & High-Availability Data:** HashiCorp Terraform (multi-cloud IaC), Ansible (Odoo provisioning and configuration), AWS CLI/Bash automation, WHM/cPanel (CentOS 7), and bare-metal Proxmox VE Enterprise PostgreSQL HA (`repmgr`, `repmgrd`, `Barman PITR`, `HAProxy`, `Keepalived`, multi-ISP BGP AS failover).
+- **Operational Risk & Regulated Governance:** Quantitative risk modeling (IEC 60812 FMEA, IEC 61025 FTA), ISO 31000 and ISO/IEC 20000 alignment, and OJK / Bank Indonesia regulatory controls (`POJK 10/2022`, `POJK 4/2021`, `POJK 35/2018`).
+- **Exam-Validated Cloud AI Architecture (AI-103):** Azure AI Studio, Azure OpenAI, Semantic Kernel, Document Intelligence, LLM orchestration, and prompt safety guardrails (exam- and lab-validated scope, distinct from production enterprise delivery).
 
 ---
 
-### 🏆 Verified Credentials & Academic Rigor
-* **Microsoft Azure:** Certified Azure AI Apps & Agents Developer Associate (AI-103) · elevAIte Enterprise AI (Semantic Kernel SDK, LLMOps)
-* **Google Cloud:** Professional Cloud Architect (PCA) · Associate Cloud Engineer (ACE)
-* **Amazon Web Services:** AWS Certified Cloud Practitioner · AWS Generative AI Practitioner
-* **Cisco Systems:** Cisco CyberOps Associate · Cisco DevNet Associate
-* **Academic Degree:** Bachelor of Economics (S.E. Management), Universitas Mercu Buana Jakarta (Thesis: *Operational Risk Analysis Using FTA & FMEA in FTTH Fulfillment Systems*, ID: 44912)
+### Selected Delivery Highlights (NDA-Sanitized)
+
+- **Regulated FinTech Lending (Jul - Sep 2022):** Standardized GitLab DevSecOps pipelines (SAST, staging DAST, Secret Detection, MR SoD approvals) with Snyk, Harbor, pull-based Flux CD GitOps on Alibaba Cloud, ELK/OpenSearch zero-trust observability, and domestic FinTech DR readiness aligned with OJK (`POJK 10/2022`, `POJK 4/2021`) and Bank Indonesia standards.
+- **Nationwide Express Logistics (Nov 2021 - Jul 2022):** Scaled 120 containerized microservices (122 API endpoints) across GKE (validation) and Amazon EKS (peak production) via centralized Azure DevOps, Nexus, and Rancher; eliminated **60% of critical vulnerabilities** before production (SonarQube, OWASP ZAP) while sustaining sub-second API latency.
+- **Odoo Cloud ERP & Dual-Site F&B POS HA (May - Oct 2020):** Migrated on-premise VPS ERP workloads to AWS EC2 with GitHub Enterprise, cutting setup time by **50%** via AWS CLI + Bash (`AWS Odoo Marketplace` and `EC2 Instance Snapshots`), Ansible (`odoo.conf`), WHM/cPanel on CentOS 7 (AWS Marketplace), and S3 PostgreSQL backups. Architected a dual-site bare-metal Proxmox VE Enterprise PostgreSQL HA cluster (`repmgr`, `repmgrd`, `Barman PITR`, `HAProxy`/`Keepalived`) over distinct ISP vendors with BGP AS failover.
+- **Regulated Multifinance Hybrid HA (Jun - Sep 2019):** Hardened hybrid cloud and on-premise VPS environments under `POJK 35/2018`, accelerated release cycles by **40%** via containerized Jenkins + Jira/Trello/Bitbucket/Docker with non-PII GCS artifact offload, and deployed a containerized ELK Stack to lower MTTR.
+- **Nationwide Copper-to-FTTH Rollout (Apr 2013 - Oct 2014 | Standalone L1/L2 Telecom):** Project Officer of Construction Management (`POCM`, Directorate of Operation) at PT Telkom Akses across an IDR 1.5T (~$93M) CAPEX program scope. Governed ODN optical audits (`<= -24 dBm`), GPON Triple-Play commissioning, Wireshark VoBB SIP (RFC 3261) inspection, and RHEL 6 ETL reconciliation between GE Smallworld PNI (GIS) and I-Sisca/TenOSS; structured field RCA (later formalized via FTA/FMEA in my 2018 S.E. thesis) drove a **20% trial defect reduction** with zero asset discrepancy.
 
 ---
 
-> *"True system resilience is never accidental. It is the calculated product of ground-truth operational experience, standardized failure-mode engineering, and relentless capital governance."*
+### Independent Clean-Room Reference
 
-📫 **Connect & Advisory Inquiries:** [LinkedIn Profile](https://www.linkedin.com/in/lukmanulhakimdevops/) | [Architectural Portfolio](https://lukmanulhakim.devstackops.my.id/) | [VisasQ Expert Network](https://service.visasq.com/)
+- **Clean-Room BSS/OSS & ZTP Reconstruction:** Retrospective, zero-client-IP autonomous provisioning workflow demonstrating parallel DAG orchestration (**1m 54s** benchmark) and immutable audit artifact generation (`BAST-WorkOrder.json`) modeled on field-derived fulfillment failure modes. Full case notes and diagrams are published at [lukmanulhakim.devstackops.my.id](https://lukmanulhakim.devstackops.my.id/).
+
+---
+
+### Verified Certifications
+
+Proctored vendor certification exams with public verification:
+
+- **Microsoft Certified:** Azure AI Apps and Agents Developer Associate (AI-103) - Sep 2026 (`MS1100623380`)
+- **Google Cloud Certified:** Professional Cloud Architect (PCA) - Feb 2026 (`ac6c40d564fc4911b48506b04f269dac`)
+- **Google Cloud Certified:** Associate Cloud Engineer (ACE) - Dec 2024 (`55864fb403294d648d9d213032600842`)
+- **AWS Certified:** Cloud Practitioner - Jun 2023 (`YT3X1MX1VFBE1K5V`)
+
+### Training Certificates & Badges
+
+Structured government training completions and hands-on lab badges (distinct from proctored vendor certifications):
+
+- **Cisco DevNet Associate - Training Certificate (DTS / Komdigi):** Completed Mar 2024 (`1987298840-45/PROA/BLSDM/2024`)
+- **Cisco CyberOps Associate - Training Certificate (DTS / Komdigi):** Completed Jul 2020 (`0447256131-103/OA.DTS/2020`)
+- **AWS Cloud Quest:** Generative AI Practitioner & Cloud Practitioner Training Badges
+
+---
+
+### Education
+
+- **Bachelor of Economics (S.E.) in Operational Management** - Universitas Mercu Buana, Jakarta (Mar 2016 - Oct 2018 | GPA: 3.17 / 4.00)
+- **Undergraduate Thesis:** *Operational Risk Analysis Using Fault Tree Analysis (FTA) and Failure Mode and Effect Analysis (FMEA) in the Process Testing of the FTTH Triple Play (IndiHome) Fulfillment System* ([Repository ID: 44912](https://repository.mercubuana.ac.id/44912/))
+
+---
+
+**Contact:** [lukmanulhakim@devstackops.my.id](mailto:lukmanulhakim@devstackops.my.id) | [LinkedIn](https://www.linkedin.com/in/lukmanulhakimdevops/) | [Portfolio](https://lukmanulhakim.devstackops.my.id/)
