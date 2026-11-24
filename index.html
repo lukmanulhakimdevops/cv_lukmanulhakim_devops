@@ -6,7 +6,7 @@
   <title>Lukmanul Hakim - Principal Solutions Architect &amp; Cloud Modernization Strategist</title>
 
   <meta name="description" content="Lukmanul Hakim: Independent Solutions Architect with 9+ years of hands-on telecom, DevOps, and multi-cloud delivery across a 15-year career span (since 2011), bridging L1 FTTH infrastructure ($93M program scope) to L7 Kubernetes, GitOps, PostgreSQL HA, Azure AI (AI-103), and risk governance (IEC 60812 FMEA, IEC 61025 FTA, ISO 31000).">
-  <meta name="keywords" content="Lukmanul Hakim, Principal Solutions Architect, Interim Head of DevOps, Enterprise IT Advisory Consultant, Cloud Modernization, Monolith to Microservices, DevSecOps, Google Cloud Platform (GCP), Professional Cloud Architect, Associate Cloud Engineer, Compute Engine, Cloud Storage, GKE, Pub/Sub, IAM, Workload Migration, Azure AI-103, Azure AI, AI Agents, Generative AI, Computer Vision, Machine Vision, Data Extraction, Information Extraction, Text Analysis, Python, AWS Certified Cloud Practitioner, Kubernetes, EKS, GitOps, Flux CD, HashiCorp Terraform, Ansible, AWS CLI, WHM/cPanel CentOS 7, AWS Odoo Marketplace, PostgreSQL HA, repmgr, Barman, Proxmox Enterprise, BGP AS Failover, IEC 60812 FMEA, IEC 61025 FTA, ISO 31000, ISO/IEC 20000, FinOps, OJK Compliance, Telkom Akses, FTTH, Zero-Touch Provisioning">
+  <meta name="keywords" content="Lukmanul Hakim, Principal Solutions Architect, Interim Head of DevOps, Enterprise IT Advisory Consultant, Cloud Modernization, Monolith to Microservices, DevSecOps, Google Cloud Platform (GCP), Professional Cloud Architect, Associate Cloud Engineer, Compute Engine, Cloud Storage, GKE, Pub/Sub, IAM, Workload Migration, Azure AI-103, Azure AI, AI Agents, Generative AI, Computer Vision, Machine Vision, Data Extraction, Information Extraction, Text Analysis, Python, AWS Certified Cloud Practitioner, Kubernetes, EKS, GitOps, Flux CD, HashiCorp Terraform, Ansible, AWS CLI, WHM/cPanel CentOS 7, AWS Odoo Marketplace, PostgreSQL HA, Sovereign DBaaS, Docker Swarm, OpenVPN PKI, PgBouncer, Alertmanager, repmgr, Barman, Proxmox Enterprise, BGP AS Failover, IEC 60812 FMEA, IEC 61025 FTA, ISO 31000, ISO/IEC 20000, FinOps, OJK Compliance, Telkom Akses, FTTH, Zero-Touch Provisioning">
   <meta name="author" content="Lukmanul Hakim">
   <meta name="robots" content="index, follow">
 
@@ -40,7 +40,8 @@
       "Multi-Cloud Architecture & Workload Migration (GCP, AWS, Azure, Alibaba Cloud)",
       "Kubernetes, Helm & Pull-Based GitOps (Flux CD)",
       "Infrastructure as Code (HashiCorp Terraform) & Ansible Automation",
-      "PostgreSQL High Availability (repmgr, repmgrd, Barman PITR) & Bare-Metal Proxmox Enterprise",
+      "PostgreSQL High Availability (repmgr, repmgrd, Barman PITR, PgBouncer) & Bare-Metal Proxmox Enterprise",
+      "Docker Swarm, OpenVPN PKI Hub-and-Spoke & Multi-Tenant Odoo ERP Reference Architecture",
       "Multi-ISP BGP AS Failover, HAProxy & Keepalived",
       "Platform & Application Security (OWASP ZAP, SonarQube, Snyk, GitLab SAST/DAST)",
       "Identity And Access Management (IAM, RBAC, Workload Identity)",
@@ -346,6 +347,126 @@
       color: var(--muted);
     }
 
+    /* Two-Layer Editorial Transparency Legend (Delivered vs. Target-State Reference) */
+    .scope-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      padding: 11px 15px;
+      margin: 0 0 18px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 3px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+    .scope-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-right: 6px;
+      vertical-align: baseline;
+    }
+    .scope-badge.delivered {
+      background: #E8F3EE;
+      color: var(--forest);
+      border: 1px solid #C2DDD0;
+    }
+    .scope-badge.ref {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #C4D9E6;
+    }
+    .scope-badge.constraint {
+      background: var(--warn-bg);
+      color: var(--warn);
+      border: 1px solid #E8C7B6;
+    }
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 16px;
+      margin-top: 10px;
+    }
+    .ref-card {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-left: 2px solid var(--accent);
+      border-radius: 3px;
+      padding: 11px 13px;
+      font-size: 0.83rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+    .ref-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.84rem;
+      margin-bottom: 3px;
+    }
+    @media (max-width: 820px) {
+      .ref-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 6-Step Principal Migration Framework Strip */
+    .framework-bar {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 6px;
+      margin: 0 0 18px;
+      padding: 10px 12px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+    }
+    .fw-item {
+      font-size: 0.72rem;
+      line-height: 1.35;
+      color: var(--ink-soft);
+      padding-right: 6px;
+    }
+    .fw-item + .fw-item {
+      border-left: 1px solid var(--rule-strong);
+      padding-left: 8px;
+    }
+    .fw-item .fw-num {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .fw-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.74rem;
+    }
+    .step-code {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    @media (max-width: 820px) {
+      .framework-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .fw-item + .fw-item { border-left: none; padding-left: 0; }
+    }
+
     /* Progressive Maturity Strip (Principal Architect Perspective) */
     .prog-strip {
       display: grid;
@@ -367,6 +488,24 @@
       transition: border-color 0.15s ease, background 0.15s ease;
     }
     .prog-step:hover { border-color: var(--ink); background: var(--surface); }
+    .prog-step.active {
+      border-color: var(--accent);
+      border-top-width: 3px;
+      background: var(--accent-soft);
+    }
+    .map-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      background: #F4F1EA;
+    }
     .prog-step .p-stage {
       display: block;
       font-family: var(--mono);
@@ -927,11 +1066,11 @@
       <div class="metrics-strip" aria-label="Key career figures">
         <div class="metric-cell">
           <div class="metric-val">15</div>
-          <div class="metric-lbl">Years Evolution</div>
+          <div class="metric-lbl">Years Career Span</div>
         </div>
         <div class="metric-cell">
           <div class="metric-val">$93M</div>
-          <div class="metric-lbl">CAPEX Governed</div>
+          <div class="metric-lbl">FTTH Program Scope</div>
         </div>
         <div class="metric-cell">
           <div class="metric-val">120</div>
@@ -939,7 +1078,7 @@
         </div>
       </div>
       <p class="metric-footnote">
-        * 2011-2026 career span (9+ yrs hands-on; Bachelor of Economics (S.E.) study Mar 2016-Oct 2018) &middot; Nationwide FTTH program QA/audit scope (POCM, IDR 1.5T) &middot; Multi-cluster GKE/Amazon EKS logistics production.
+        * 2011-2026 career span (9+ yrs hands-on; Bachelor of Economics (S.E.) study Mar 2016-Oct 2018) &middot; Nationwide FTTH program QA/audit scope (POCM individual assignment, IDR 1.5T) &middot; Multi-cluster GKE/Amazon EKS logistics production (13-person DevOps team collaboration).
       </p>
 
       <div class="actions">
@@ -980,29 +1119,134 @@
         </p>
       </div>
 
+      <!-- Two-Layer Principal Transparency Legend -->
+      <div class="scope-legend" aria-label="Architecture scope transparency legend">
+        <div><span class="scope-badge delivered">Delivered As-Built</span>Verified production execution delivered within the engagement window and explicit team boundary.</div>
+        <div><span class="scope-badge ref">Target-State Reference</span>Independent Principal reference patterns &amp; clean-room labs (e.g., Sovereign Core Reference, Multi-Tenant Terraform ZTP, Sovereign PostgreSQL DBaaS v3, 5-Plane Hardening, ZTP DAG) documented with <strong>zero client IP</strong> to close real-world HQ, executive, or time-boxed gaps without overclaiming production history.</div>
+        <div><span class="scope-badge constraint">Real-World Constraint</span>Organizational, executive, or regulatory trade-offs navigated transparently in production.</div>
+      </div>
+
+      <!-- Standardized 6-Step Principal Migration Review Framework -->
+      <div class="framework-bar" aria-label="Standardized 6-step migration architecture review methodology">
+        <div class="fw-item"><span class="fw-num">Step 01</span><strong>As-Is Assessment</strong>Weaknesses &amp; Day-0</div>
+        <div class="fw-item"><span class="fw-num">Step 02</span><strong>To-Be Architecture</strong>As-Built &amp; Reference</div>
+        <div class="fw-item"><span class="fw-num">Step 03</span><strong>Design Trade-Offs</strong>Options &amp; Constraints</div>
+        <div class="fw-item"><span class="fw-num">Step 04</span><strong>Cutover &amp; Soak</strong>Rollback &amp; Decomm</div>
+        <div class="fw-item"><span class="fw-num">Step 05</span><strong>Risk &amp; FinOps</strong>Compliance &amp; Controls</div>
+        <div class="fw-item"><span class="fw-num">Step 06</span><strong>Handover &amp; Scope</strong>Operational Readiness</div>
+      </div>
+
+      <!-- Cross-Cutting Reference: Day-0 Hybrid Landing Zone & Post-Cutover Soak Gate -->
+      <details class="ed-detail" style="margin:0 0 22px;">
+        <summary>Cross-Cutting Migration Playbook: Day-0 Hybrid Landing Zone (IPAM / Split-Horizon DNS / Interconnect) &amp; 24-72h Post-Cutover Soak Gate</summary>
+        <div class="detail-body">
+          <p style="margin-top:0;">
+            <span class="scope-badge ref">Target-State Reference</span> Every hybrid or multi-cloud migration succeeds or fails at two bookends rarely shown in high-level diagrams: <strong>Day-0 network/identity readiness</strong> before moving the first workload, and a <strong>quantitative post-cutover soak gate</strong> before retiring legacy infrastructure. This cross-cutting checklist completes the closed-loop migration lifecycle across all five blueprints without claiming permanent 24/7 SRE on-call ownership.
+          </p>
+
+          <figure class="figure-frame" style="margin:14px 0 16px;">
+            <div class="figure-cap">
+              <span>Figure 0.1 [Closed-Loop Migration Lifecycle] - Day-0 Landing Zone -&gt; Phased Cutover -&gt; 24-72h Soak -&gt; Legacy Decommission</span>
+              <span>VENDOR-NEUTRAL PRINCIPAL MIGRATION STANDARD</span>
+            </div>
+            <div class="figure-body">
+              <svg viewBox="0 0 920 170" role="img" aria-label="Closed-loop hybrid cloud migration lifecycle from Day-0 Landing Zone IPAM and Split-Horizon DNS to Phased Cutover, 24-72h Quantitative Soak Window, and Legacy Decommission Handover">
+                <defs>
+                  <marker id="ink-arr-0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1B4965"/>
+                  </marker>
+                </defs>
+                <!-- Stage 1 -->
+                <rect x="12" y="14" width="208" height="142" rx="4" fill="#FAF8F4" stroke="#1B4965" stroke-width="1.2"/>
+                <text x="116" y="33" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.4" font-weight="600">1. DAY-0 LANDING ZONE</text>
+                <text x="116" y="54" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.5" font-weight="600">Network &amp; Identity Prep</text>
+                <text x="116" y="74" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Disjoint RFC 1918 IPAM</text>
+                <text x="116" y="90" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Split-Horizon DNS + Low TTL</text>
+                <text x="116" y="106" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">VPN / TGW / Private Link</text>
+                <text x="116" y="122" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">IAM Baseline &amp; FinOps Tags</text>
+                <text x="116" y="142" text-anchor="middle" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.5" font-weight="600">Zero CIDR Overlap</text>
+
+                <!-- Stage 2 -->
+                <rect x="242" y="14" width="208" height="142" rx="4" fill="#F2EFE9" stroke="#245C45" stroke-width="1.2"/>
+                <text x="346" y="33" text-anchor="middle" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="8.4" font-weight="600">2. PHASED CUTOVER</text>
+                <text x="346" y="54" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.5" font-weight="600">Controlled Transition</text>
+                <text x="346" y="74" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Parallel / Shadow Validation</text>
+                <text x="346" y="90" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Security &amp; Schema Go/No-Go</text>
+                <text x="346" y="106" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Incremental Traffic Shift</text>
+                <text x="346" y="122" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Warm Legacy Rollback Path</text>
+                <text x="346" y="142" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="7.5" font-weight="600">Reversible Cutover</text>
+
+                <!-- Stage 3 -->
+                <rect x="472" y="14" width="214" height="142" rx="4" fill="#FDF5F0" stroke="#8C3B19" stroke-width="1.2"/>
+                <text x="579" y="33" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8.4" font-weight="600">3. 24-72H SOAK WINDOW</text>
+                <text x="579" y="54" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.5" font-weight="600">Quantitative Verification</text>
+                <text x="579" y="74" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">p95 / p99 Latency Parity</text>
+                <text x="579" y="90" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">5xx Error Rate (&lt; 0.1%)</text>
+                <text x="579" y="106" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">DB Pool Saturation (&lt; 70%)</text>
+                <text x="579" y="122" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Row-Count / Checksum Parity</text>
+                <text x="579" y="142" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="7.5" font-weight="600">Exit Gate Before Decomm</text>
+
+                <!-- Stage 4 -->
+                <rect x="708" y="14" width="200" height="142" rx="4" fill="#FAF8F4" stroke="#1B4965" stroke-width="1.2"/>
+                <text x="808" y="33" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.4" font-weight="600">4. DECOMM &amp; HANDOVER</text>
+                <text x="808" y="54" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.5" font-weight="600">Clean Closure</text>
+                <text x="808" y="74" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Written Stakeholder Sign-Off</text>
+                <text x="808" y="90" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Final Archive Snapshot</text>
+                <text x="808" y="106" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Legacy Host / IP Teardown</text>
+                <text x="808" y="122" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Runbooks -&gt; Internal Team</text>
+                <text x="808" y="142" text-anchor="middle" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.5" font-weight="600">Zero Cloud Orphans</text>
+
+                <line x1="220" y1="85" x2="240" y2="85" stroke="#1B4965" stroke-width="1.3" marker-end="url(#ink-arr-0)"/>
+                <line x1="450" y1="85" x2="470" y2="85" stroke="#1B4965" stroke-width="1.3" marker-end="url(#ink-arr-0)"/>
+                <line x1="686" y1="85" x2="706" y2="85" stroke="#1B4965" stroke-width="1.3" marker-end="url(#ink-arr-0)"/>
+              </svg>
+            </div>
+          </figure>
+
+          <div class="ref-grid">
+            <div class="ref-card">
+              <strong>A. Day-0 CIDR / IPAM &amp; Split-Horizon DNS</strong>
+              Pre-allocate non-overlapping RFC 1918 CIDRs across on-premise data centers, cloud VPCs, and Kubernetes Pod/Service pools so peering or future M&amp;A never triggers NAT workarounds. Enforce Split-Horizon DNS separating internal private endpoints (DBs, Harbor, GitLab) from public ingress, lowering DNS TTLs (e.g., 60s) 24-48h before cutover.
+            </div>
+            <div class="ref-card">
+              <strong>B. Private Interconnect &amp; Zero Public DB Exposure</strong>
+              Anchor hybrid traffic over redundant private links (route-based IPsec VTI with DPD/MSS clamping, AWS Transit Gateway / PrivateLink, GCP Cloud Interconnect, or Alibaba Express Connect) with strict security groups and zero direct public internet exposure on database tiers.
+            </div>
+            <div class="ref-card">
+              <strong>C. 24-72h Quantitative Post-Cutover Soak Window</strong>
+              Validate cutover stability against hard exit criteria before closure: <code>p95 / p99</code> API latency parity against pre-migration baseline, <code>5xx</code> error ratio below threshold (<code>&lt; 0.1%</code>), DB connection pool saturation below ceiling (<code>&lt; 70%</code>), zero replication lag drift, and verified <code>row-count / checksum</code> parity.
+            </div>
+            <div class="ref-card">
+              <strong>D. Controlled Legacy Decommission Gate</strong>
+              Keep legacy VPS/VMs in warm read-only standby throughout the soak window to guarantee instant rollback. Execute deterministic teardown (final immutable backup snapshot, DNS/SSL revocation, orphan volume/EIP removal) only after written soak sign-off and internal team handover.
+            </div>
+          </div>
+        </div>
+      </details>
+
       <!-- Progressive Maturity Arc (Chronological Stage 1 -> Stage 5) -->
       <div class="prog-strip" aria-label="Progressive cloud infrastructure maturity stages">
-        <button type="button" class="prog-step" onclick="openNote('multifinance', false)">
+        <button type="button" class="prog-step" id="pstep-multifinance" onclick="openNote('multifinance', false)">
           <span class="p-stage">Stage 1 &middot; 2019</span>
           <strong>Hybrid HA &amp; CI Baseline</strong>
           Containerized Jenkins, ELK &amp; GCS offload (+40% release speed).
         </button>
-        <button type="button" class="prog-step" onclick="openNote('erp', false)">
+        <button type="button" class="prog-step" id="pstep-erp" onclick="openNote('erp', false)">
           <span class="p-stage">Stage 2 &middot; 2020</span>
           <strong>Cloud Shift &amp; Data HA</strong>
           AWS EC2/Ansible (-50% setup) + Dual-Site Proxmox PG HA.
         </button>
-        <button type="button" class="prog-step" onclick="openNote('logistics', false)">
+        <button type="button" class="prog-step" id="pstep-logistics" onclick="openNote('logistics', false)">
           <span class="p-stage">Stage 3 &middot; 2021-2022</span>
           <strong>Multi-Cloud DevSecOps</strong>
           120 services across GKE &amp; EKS with SAST/DAST (-60% CVEs).
         </button>
-        <button type="button" class="prog-step" onclick="openNote('fintech', false)">
+        <button type="button" class="prog-step active" id="pstep-fintech" onclick="openNote('fintech', false)">
           <span class="p-stage">Stage 4 &middot; 2022</span>
-          <strong>Regulated GitOps &amp; DR</strong>
-          GitLab CI, Harbor/Snyk, Flux CD &amp; OJK domestic readiness.
+          <strong>GitOps &amp; Multi-Cloud IaC</strong>
+          FinTech Flux CD/DR + Meteor Multi-Cloud K8s &amp; Terraform IaC.
         </button>
-        <button type="button" class="prog-step" onclick="openNote('ztp', false)">
+        <button type="button" class="prog-step" id="pstep-ztp" onclick="openNote('ztp', false)">
           <span class="p-stage">Stage 5 &middot; Clean-Room</span>
           <strong>Autonomous ZTP Model</strong>
           Retrospective parallel DAG (1m 54s) &amp; immutable BAST JSON.
@@ -1027,32 +1271,35 @@
         </button>
       </div>
 
-      <!-- NOTE 01: FINTECH GITOPS & DR (STAGE 4 MATURITY) -->
+      <!-- NOTE 01: FINTECH GITOPS & DR (STAGE 4 MATURITY + SOVEREIGN CORE REFERENCE ARCHITECTURE) -->
       <article id="npanel-fintech" class="note-panel active" role="tabpanel">
         <div class="note-header">
           <div style="flex:1; min-width:260px;">
             <p class="kicker" style="margin-bottom:6px;">Stage 4 Maturity &middot; July - September 2022 &middot; OJK-Licensed FinTech (LPBBTI)</p>
-            <h3 class="note-title">Regulated FinTech Lending: GitLab DevSecOps, Flux CD GitOps, Harbor/Snyk &amp; DR Readiness</h3>
+            <h3 class="note-title">Regulated FinTech Lending: Delivered Alibaba Cloud GitOps Perimeter &amp; Sovereign Core Reference Architecture</h3>
           </div>
           <div class="note-meta-box">
             <strong>Role:</strong> FinTech Solutions &amp; DevSecOps Lead<br>
             <strong>Window:</strong> Jul 2022 - Sep 2022 (3 mos)<br>
-            <strong>Platform:</strong> Alibaba Cloud (Jakarta / NKRI)<br>
-            <strong>Scope:</strong> Cross-functional lead (6-person team)
+            <strong>Delivered:</strong> Alibaba Cloud (Jakarta / NKRI)<br>
+            <strong>Reference Model:</strong> Clean-Room Sovereign Core (Zero IP)
           </div>
         </div>
 
         <p class="note-summary">
-          In a Principal Architect's progressive cloud journey, Stage 4 moves an organization from imperative push deployments to <strong>declarative, auditable pull-based GitOps</strong> under strict financial regulation (<strong>POJK No. 10/POJK.05/2022</strong>, <strong>POJK 4/2021</strong>, and <strong>Bank Indonesia</strong> standards). Leading a 6-person cross-functional effort over a focused 3-month engagement, I contributed to standardizing GitLab SCM and DevSecOps security pipelines (SAST, DAST, Secret Detection, Merge Request approvals), Harbor private registry and Snyk vulnerability gates, pull-based Flux CD delivery on Alibaba Cloud, RBAC and container hardening, FinTech Disaster Recovery readiness, and centralized observability across ELK Stack and OpenSearch.
+          <span class="scope-badge delivered">Delivered As-Built</span> In Stage 4 of progressive cloud maturity, a Principal Architect transitions delivery from imperative push pipelines to <strong>auditable, pull-based GitOps</strong> under strict financial oversight (<strong>POJK No. 10/POJK.05/2022</strong> effective July 2022, <strong>POJK 4/2021</strong>, and <strong>Bank Indonesia</strong> standards). Collaborating with a <strong>6-person cross-functional team</strong> over a focused 3-month mandate on <strong>Alibaba Cloud (Jakarta / NKRI)</strong>, I standardized GitLab SCM and DevSecOps CI pipelines (SAST, staging DAST, Secret Detection, Merge Request segregation-of-duties approvals), integrated Snyk vulnerability gating and Harbor private registry controls, designed pull-based Flux CD delivery, defined container hardening and RBAC baselines, strengthened FinTech Disaster Recovery readiness, and unified observability across ELK Stack and OpenSearch.
+        </p>
+        <p class="note-summary">
+          <span class="scope-badge ref">Target-State Reference</span> Because cross-border HQ governance kept core lending logic and core business infrastructure restricted outside local engineering access, I independently validated the missing sovereign core puzzle in a <strong>zero-client-IP clean-room reference architecture</strong> - covering Strangler Fig core monolith decoupling, isolated identity and ledger transactional database domains, keyless OIDC Workload Identity, and 2-cluster Service Mesh failover - paired with a vendor-agnostic FinTech target-state hardening checklist.
         </p>
 
         <figure class="figure-frame">
           <div class="figure-cap">
-            <span>Figure 1.1 - FinTech Delivery &amp; Observability Context (GitLab -> Snyk/Harbor -> Flux CD -> Alibaba Cloud)</span>
-            <span>PULL-BASED GITOPS &middot; OJK &amp; BI ALIGNMENT</span>
+            <span>Figure 1.1 [Delivered Production Scope] - Alibaba Cloud Jakarta Perimeter (GitLab -> Snyk/Harbor -> Flux CD)</span>
+            <span>6-PERSON TEAM &middot; JUL - SEP 2022 &middot; OJK &amp; BI ALIGNMENT</span>
           </div>
           <div class="figure-body">
-            <svg viewBox="0 0 920 315" role="img" aria-label="FinTech GitLab DevSecOps, Snyk, Harbor, Flux CD on Alibaba Cloud, DR readiness, and ELK OpenSearch observability diagram">
+            <svg viewBox="0 0 920 315" role="img" aria-label="Delivered production scope at PT Kredit Pintar: GitLab DevSecOps, Snyk, Harbor, Flux CD on Alibaba Cloud, DR readiness, and ELK OpenSearch observability">
               <defs>
                 <marker id="ink-arr-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M 0 1 L 10 5 L 0 9 z" fill="#1B4965"/>
@@ -1060,7 +1307,7 @@
               </defs>
               <!-- Layer 1 -->
               <rect x="12" y="12" width="896" height="80" rx="4" fill="#FAF8F4" stroke="#C6C0B4" stroke-width="1.2"/>
-              <text x="24" y="30" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">1. SOURCE &amp; DEVSECOPS PIPELINE (GITLAB + SNYK + HARBOR)</text>
+              <text x="24" y="30" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">1. DELIVERED SOURCE &amp; DEVSECOPS PIPELINE (GITLAB + SNYK + HARBOR)</text>
               <rect x="24" y="40" width="255" height="42" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
               <text x="151" y="57" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="10.2" font-weight="600">GitLab SCM &amp; MR Controls</text>
               <text x="151" y="73" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="8.2">Protected Branches · MR SoD Reviews</text>
@@ -1082,7 +1329,7 @@
 
               <!-- Layer 2 -->
               <rect x="12" y="114" width="896" height="86" rx="4" fill="#F2EFE9" stroke="#C6C0B4" stroke-width="1.2"/>
-              <text x="24" y="132" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">2. ALIBABA CLOUD RUNTIME, GITOPS DELIVERY &amp; DR READINESS</text>
+              <text x="24" y="132" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">2. DELIVERED ALIBABA CLOUD RUNTIME, GITOPS DELIVERY &amp; DR READINESS</text>
               <rect x="24" y="142" width="270" height="46" rx="3" fill="#FFFFFF" stroke="#245C45" stroke-width="1.1"/>
               <text x="159" y="160" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="10.2" font-weight="600">Flux CD Pull Controllers</text>
               <text x="159" y="176" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="8.2">Declarative Sync from GitLab</text>
@@ -1100,7 +1347,7 @@
 
               <!-- Layer 3 -->
               <rect x="12" y="216" width="896" height="86" rx="4" fill="#FAF8F4" stroke="#C6C0B4" stroke-width="1.2"/>
-              <text x="24" y="234" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">3. CENTRALIZED ZERO-TRUST TELEMETRY &amp; REGULATORY GOVERNANCE</text>
+              <text x="24" y="234" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600">3. CENTRALIZED TELEMETRY &amp; OJK / BANK INDONESIA GOVERNANCE</text>
               <rect x="24" y="244" width="420" height="46" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
               <text x="234" y="262" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="10.2" font-weight="600">ELK Stack &amp; OpenSearch Observability</text>
               <text x="234" y="278" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="8.2">Centralized Log Analytics · Access-Controlled Telemetry</text>
@@ -1115,47 +1362,142 @@
           </div>
         </figure>
 
+        <figure class="figure-frame">
+          <div class="figure-cap">
+            <span>Figure 1.2 [Independent Reference Puzzle] - Vendor-Neutral Sovereign Core Decoupling Model (Clean-Room)</span>
+            <span>ZERO CLIENT IP &middot; NOT DEPLOYED TO KREDIT PINTAR PROD</span>
+          </div>
+          <div class="figure-body">
+            <svg viewBox="0 0 920 262" role="img" aria-label="Independent vendor-neutral Sovereign Core reference architecture solving HQ core infrastructure restriction: Strangler Fig monolith decoupling, isolated identity and ledger databases, keyless OIDC Workload Identity, and 2-cluster Service Mesh failover">
+              <defs>
+                <marker id="ink-arr-1b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#1B4965"/>
+                </marker>
+              </defs>
+              <rect x="12" y="14" width="236" height="234" rx="4" fill="#FDF5F0" stroke="#8C3B19" stroke-width="1.2"/>
+              <text x="24" y="34" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8.8" font-weight="600">REAL-WORLD PUZZLE (2022)</text>
+              <text x="24" y="56" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="10.2" font-weight="700">Cross-Border HQ Restriction</text>
+              <text x="24" y="76" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.8">Core lending engine &amp; ledger</text>
+              <text x="24" y="91" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.8">infra remained HQ-restricted</text>
+              <text x="24" y="106" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.8">outside local engineer access.</text>
+
+              <rect x="24" y="122" width="212" height="52" rx="3" fill="#FFFFFF" stroke="#8C3B19" stroke-opacity="0.5"/>
+              <text x="130" y="140" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8" font-weight="600">REGULATORY TENSION</text>
+              <text x="130" y="155" text-anchor="middle" fill="#44403C" font-family="IBM Plex Mono, monospace" font-size="7.6">POJK 10/2022 mandates domestic</text>
+              <text x="130" y="167" text-anchor="middle" fill="#44403C" font-family="IBM Plex Mono, monospace" font-size="7.6">control over core IT systems.</text>
+
+              <rect x="24" y="184" width="212" height="52" rx="3" fill="#EAF1F6" stroke="#1B4965" stroke-width="1"/>
+              <text x="130" y="202" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8" font-weight="600">PRINCIPAL RESPONSE</text>
+              <text x="130" y="217" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Mono, monospace" font-size="7.6">Validated sovereign core patterns</text>
+              <text x="130" y="229" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Mono, monospace" font-size="7.6">independently (zero client IP).</text>
+
+              <line x1="248" y1="131" x2="274" y2="131" stroke="#1B4965" stroke-width="1.4" marker-end="url(#ink-arr-1b)"/>
+
+              <rect x="276" y="14" width="632" height="234" rx="4" fill="#FAF8F4" stroke="#1B4965" stroke-width="1.3"/>
+              <text x="290" y="34" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.2" font-weight="600">INDEPENDENT REFERENCE MODEL: CLEAN-ROOM SOVEREIGN CORE ARCHITECTURE (ZERO IP)</text>
+
+              <rect x="290" y="48" width="292" height="84" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="302" y="66" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.2" font-weight="600">A. STRANGLER FIG MONOLITH DECOUPLING</text>
+              <text x="302" y="84" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Core Monolith -&gt; K8s Microservices</text>
+              <text x="302" y="100" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Legacy VM + Pod CIDR firewall boundary</text>
+              <text x="302" y="114" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Decoupled Ledger, Balance &amp; Tx Services</text>
+              <text x="302" y="126" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.5">Automated CI/CD · Static QA · Unit &amp; E2E Gates</text>
+
+              <rect x="600" y="48" width="294" height="84" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="612" y="66" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.2" font-weight="600">B. SPLIT TRANSACTIONAL DATABASES</text>
+              <text x="612" y="84" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Domain Data Isolation (PostgreSQL 14)</text>
+              <text x="612" y="100" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Identity Domain DB (Accounts &amp; Users)</text>
+              <text x="612" y="114" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Ledger Domain DB (Double-Entry Core)</text>
+              <text x="612" y="126" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.5">Prevents coupled schema blast-radius</text>
+
+              <rect x="290" y="148" width="292" height="86" rx="3" fill="#FFFFFF" stroke="#245C45" stroke-width="1.1"/>
+              <text x="302" y="166" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="8.2" font-weight="600">C. KEYLESS WORKLOAD IDENTITY</text>
+              <text x="302" y="184" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Zero Static DB / Service Keys</text>
+              <text x="302" y="200" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">K8s ServiceAccount &lt;-&gt; Cloud IAM OIDC</text>
+              <text x="302" y="214" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Least-Privilege DB, Trace &amp; Metrics Roles</text>
+              <text x="302" y="226" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.5">Portable: ACK RRSA / AWS IRSA / GCP WI</text>
+
+              <rect x="600" y="148" width="294" height="86" rx="3" fill="#FFFFFF" stroke="#1B4965" stroke-width="1.1"/>
+              <text x="612" y="166" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.2" font-weight="600">D. 2-CLUSTER SERVICE MESH FAILOVER</text>
+              <text x="612" y="184" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Managed Service Mesh + Multi-Cluster Ingress</text>
+              <text x="612" y="200" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Primary &amp; Standby Cluster Mesh Discovery</text>
+              <text x="612" y="214" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.7">Cross-cluster pod firewall + IngressGateway</text>
+              <text x="612" y="226" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="7.5">Validates active-active sovereign DR design</text>
+            </svg>
+          </div>
+        </figure>
+
         <div class="table-wrap">
           <table class="ed-table">
             <thead>
               <tr>
-                <th style="width:24%">Architectural Focus</th>
-                <th style="width:42%">Verified Contribution &amp; Stack</th>
-                <th style="width:34%">Principal Architect Progressive Lens</th>
+                <th style="width:23%">Migration Review Step</th>
+                <th style="width:45%">Architectural Assessment, Design &amp; Controls</th>
+                <th style="width:32%">Scope Tag &amp; Principal Rationale</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="col-key">DevSecOps &amp; Artifact Gate</td>
-                <td>Standardized GitLab CI security stages (SAST, DAST, Secret Detection, Merge Request approvals) integrated with Snyk scanning and Harbor private registry.</td>
-                <td>Embeds security checks and four-eyes governance directly inside the commit-to-artifact path before workloads ever reach a cluster.</td>
+                <td class="col-key"><span class="step-code">01 / As-Is Assessment</span><br>Current Weaknesses</td>
+                <td>Imperative push-based release workflows exposed cluster credentials and lacked four-eyes Merge Request governance; container images lacked centralized vulnerability gating; cross-border HQ access restrictions created a domestic sovereignty gap under <code>POJK No. 10/POJK.05/2022</code> (effective Jul 2022) and <code>POJK 4/2021</code>.</td>
+                <td><span class="scope-badge constraint">Real-World Constraint</span><br>Regulatory deadline plus multinational HQ boundary required separating local delivery control from HQ-owned core lending code.</td>
               </tr>
               <tr>
-                <td class="col-key">Pull-Based GitOps Delivery</td>
-                <td>Designed pull-based GitOps workflows using Flux CD on Alibaba Cloud alongside stateless microservice decoupling.</td>
-                <td>Eliminates imperative push-CI credential sprawl and enforces Git as the single auditable source of truth for regulated releases.</td>
+                <td class="col-key"><span class="step-code">02 / To-Be Architecture</span><br>Delivered &amp; Reference</td>
+                <td><strong>Production Perimeter (Alibaba Cloud Jakarta / NKRI):</strong> GitLab SCM/CI (SAST, staging DAST, Secret Detection, MR SoD) -> Snyk &amp; Harbor private registry -> pull-based Flux CD GitOps -> hardened stateless microservices + ELK/OpenSearch + FinTech DR readiness.<br><strong>Sovereign Core Reference (Figure 1.2):</strong> Strangler Fig monolith decoupling, isolated Identity &amp; Ledger DB domains, keyless OIDC Workload Identity, and 2-cluster Service Mesh failover.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Keeps 3-month production handover strictly distinct from zero-client-IP sovereign core validation.</td>
               </tr>
               <tr>
-                <td class="col-key">Access, Telemetry &amp; DR Readiness</td>
-                <td>Defined RBAC and container hardening baselines, centralized ELK Stack &amp; OpenSearch telemetry, and FinTech Disaster Recovery readiness aligned with OJK &amp; BI rules.</td>
-                <td>Aligns domestic operational sovereignty (POJK 10/2022 &amp; POJK 4/2021) with repeatable recovery rather than ad-hoc incident response.</td>
+                <td class="col-key"><span class="step-code">03 / Trade-Off Analysis</span><br>Key Design Choices</td>
+                <td>Selected <strong>pull-based Flux CD</strong> over push-based CI scripts or click-heavy GitOps UIs to keep Kubernetes cluster APIs unreachable from external CI runners and enforce Git as the single auditable change log. Paired <strong>Harbor + Snyk</strong> inside NKRI instead of unvetted public registries, trading slightly longer CI build times for deterministic CVE blocking.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Prioritizes OJK auditability and blast-radius reduction over ad-hoc manual deployment speed.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">04 / Migration &amp; Rollback</span><br>Cutover &amp; De-Risking</td>
+                <td>Onboarded stateless microservices incrementally from imperative scripts into GitLab-driven Flux CD reconciliation namespaces (Go/No-Go gates: clean SAST/DAST/Snyk scan, signed MR approval, Harbor image availability). Rollback relies on deterministic <code>git revert</code> triggering Flux CD pull reconciliation back to the last verified image tag without manual cluster patching. Post-cutover soak verification confirms clean Flux reconciliation health, Harbor image digest parity, and stable ELK/OpenSearch error rates before retiring legacy imperative push scripts.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Converts high-risk emergency rollbacks into auditable, repeatable Git state reversions.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">05 / Risk &amp; Compliance</span><br>Preventive Governance</td>
+                <td>Aligned CI/CD segregation of duties, least-privilege RBAC, container hardening, centralized ELK/OpenSearch telemetry, and domestic NKRI FinTech DR readiness with <code>POJK 10/2022</code>, <code>POJK 4/2021</code>, and Bank Indonesia standards. Target-state checklist extends to WORM audit storage, OPA/PSA restricted policies, and BI SNAP idempotency.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Shifts compliance verification left into CI rather than scrambling before OJK audits.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">06 / Handover &amp; Scope</span><br>Operational Readiness</td>
+                <td>Delivered standardized GitLab CI templates, Harbor/Snyk gate policies, Flux CD GitOps repository structure, RBAC/hardening baselines, ELK/OpenSearch observability configs, and FinTech DR readiness documentation with a 6-person cross-functional team through September 2022 handover. Core lending logic and HQ-managed infrastructure stayed with internal IT.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Clean knowledge transfer with zero ongoing dependency on external consultants.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <details class="ed-detail">
-          <summary>Principal Architect Design Principle: Domestic Sovereignty vs. Cross-Border HQ Restrictions</summary>
+          <summary>Principal Target-State Hardening Reference: Sovereign FinTech Controls Beyond a 3-Month Window</summary>
           <div class="detail-body">
-            <ul>
-              <li><strong>Why GitOps matters in regulated FinTech:</strong> Under <code>POJK No. 10/POJK.05/2022</code> (effective July 2022) and <code>POJK 4/2021</code>, OJK-licensed entities must retain domestic control and auditability over electronic systems. Decoupling CI build/scan (GitLab + Snyk + Harbor) from in-cluster pull reconciliation (Flux CD) establishes clear segregation of duties even inside multinational structures.</li>
-              <li><strong>Target-state evolution beyond a 3-month window:</strong> As a conceptual roadmap for organizations scaling this baseline further, next-stage hardening adds split transactional database boundaries, workload-identity auth without static keys, and periodic multi-cluster failover drills strictly inside NKRI.</li>
-            </ul>
+            <p style="margin-top:0;">To avoid overclaiming what could fit inside a 3-month engagement while demonstrating Principal-level architecture depth, the patterns below represent my <strong>target-state reference blueprint</strong> for OJK-regulated FinTech platforms evolving past the delivered GitOps perimeter:</p>
+            <div class="ref-grid">
+              <div class="ref-card">
+                <strong>1. Headless Pull-Based GitOps &amp; Supply Chain</strong>
+                Enforce headless Flux CD (eliminating manual Web UI click-bypass that breaks Git four-eyes SoD), GPG-signed commit verification, continuous drift healing, immutable <code>@sha256</code> image digest promotion in Harbor, and scoped robot-account RBAC.
+              </div>
+              <div class="ref-card">
+                <strong>2. Zero-Trust Pod Networking &amp; Keyless Identity</strong>
+                Replace static cloud API keys with OIDC workload identity (Alibaba ACK RRSA, AWS IRSA, or GCP Workload Identity), pair with ENI-native pod networking (e.g., Terway) and strict mutual TLS (mTLS) Service Mesh across sovereign clusters.
+              </div>
+              <div class="ref-card">
+                <strong>3. Policy-as-Code &amp; Immutable Audit Storage</strong>
+                Enforce Pod Security Admission (<code>restricted</code>) and OPA Gatekeeper admission guardrails, scrub/mask PII before centralized log indexing, and route compliance audit trails to write-once-read-many (WORM) object storage (e.g., Bucket WORM / ActionTrail) for OJK inspection.
+              </div>
+              <div class="ref-card">
+                <strong>4. Core Ledger Integrity &amp; BI SNAP Readiness</strong>
+                Apply Strangler Fig decoupling from core monoliths into isolated identity and financial ledger database domains with double-entry ledger invariants, idempotent API keys (<code>X-EXTERNAL-ID</code> / <code>409</code> conflict handling for BI SNAP), and CDC / Transactional Outbox replication inside NKRI.
+              </div>
+            </div>
           </div>
         </details>
 
         <div class="boundary-note">
-          <strong>Role &amp; Collaboration Boundary (Jul - Sep 2022):</strong> Served in a 3-month FinTech architecture and DevSecOps leadership role collaborating with a 6-person cross-functional team on GitLab CI/CD security baselines, Flux CD GitOps, Harbor/Snyk integration, ELK/OpenSearch telemetry, and DR readiness. Core lending application logic, broader HQ-managed infrastructure, and post-September 2022 production operations remained under the organization's internal IT ownership.
+          <strong>Strict Production vs. Reference Boundary (Jul - Sep 2022):</strong> Delivered production work at PT Kredit Pintar Indonesia ran on <strong>Alibaba Cloud (Jakarta / NKRI)</strong> collaborating with a 6-person cross-functional team on GitLab DevSecOps, Snyk/Harbor, Flux CD GitOps, RBAC/hardening, ELK/OpenSearch, and FinTech DR readiness through September 2022 handover. Core lending logic, HQ-managed infrastructure, and post-handover operations remained under internal IT ownership. Both the <strong>Sovereign Core Reference Model</strong> and the <strong>Target-State Hardening Reference</strong> above are strictly <strong>independent, zero-client-IP clean-room architectural validations</strong> and are explicitly separated from the 2022 Alibaba Cloud production handover. <strong>Stage 4 Multi-Cloud Continuity:</strong> Immediately following this Sep 2022 handover, I completed Stage 4 cloud-native maturation as Interim Head of DevOps at <a href="#exp-meteor">PT Meteor Inovasi Digital (Sep - Dec 2022)</a> delivering hands-on multi-cloud Kubernetes and HashiCorp Terraform IaC/DR baselines across AWS, GCP, and Alibaba Cloud.
         </div>
       </article>
 
@@ -1175,7 +1517,7 @@
         </div>
 
         <p class="note-summary">
-          Stage 3 of progressive cloud architecture solves <strong>multi-cluster consistency and shift-left security at scale</strong>. Working alongside application developers and a 13-person DevOps team, I contributed to scaling container orchestration across <strong>Google Kubernetes Engine (pre-production validation)</strong> and <strong>Amazon EKS (nationwide peak production)</strong> for <strong>120 logistics microservices</strong>. We unified delivery under Azure DevOps, Nexus Repository Manager, and Rancher, embedded SonarQube (SAST) and OWASP ZAP (DAST) security gates (<strong>eliminating 60% of critical vulnerabilities</strong> before production), tuned pod autoscaling to sustain <strong>sub-second API latency</strong>, and connected ELK + Prometheus/Grafana observability to Slack, Microsoft Teams, Pushover on-call alerts, and Microsoft App Center mobile delivery.
+          <span class="scope-badge delivered">Delivered As-Built</span> Stage 3 of progressive cloud architecture solves <strong>multi-cluster consistency and shift-left security at scale</strong>. Working alongside application developers and a 13-person DevOps team, I contributed to scaling container orchestration across <strong>Google Kubernetes Engine (pre-production validation)</strong> and <strong>Amazon EKS (nationwide peak production)</strong> for <strong>120 logistics microservices</strong>. We unified delivery under Azure DevOps, Nexus Repository Manager, and Rancher, embedded SonarQube (SAST) and OWASP ZAP (DAST) security gates (<strong>eliminating 60% of critical vulnerabilities</strong> before production), tuned pod autoscaling to sustain <strong>sub-second API latency</strong>, and connected ELK + Prometheus/Grafana observability to Slack, Microsoft Teams, Pushover on-call alerts, and Microsoft App Center mobile delivery.
         </p>
 
         <figure class="figure-frame">
@@ -1275,38 +1617,72 @@
           <table class="ed-table">
             <thead>
               <tr>
-                <th style="width:24%">Architectural Focus</th>
-                <th style="width:42%">Verified Contribution &amp; Stack</th>
-                <th style="width:34%">Principal Architect Progressive Lens</th>
+                <th style="width:23%">Migration Review Step</th>
+                <th style="width:45%">Architectural Assessment, Design &amp; Controls</th>
+                <th style="width:32%">Scope Tag &amp; Principal Rationale</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="col-key">Multi-Cluster Orchestration</td>
-                <td>Collaborated across GKE (pre-production validation) and Amazon EKS (peak production) with Rancher for 120 containerized logistics microservices.</td>
-                <td>Separates staging validation from production peak load while keeping container runtime behavior portable across cloud providers.</td>
+                <td class="col-key"><span class="step-code">01 / As-Is Assessment</span><br>Current Weaknesses</td>
+                <td>Rapid nationwide parcel growth across 120 microservices (122 API endpoints) exposed deployment drift between pre-production and production clusters, late-stage security findings reaching staging/prod, compute oversizing alongside peak latency spikes, and fragmented incident visibility across backend and courier/customer mobile apps.</td>
+                <td><span class="scope-badge constraint">Real-World Constraint</span><br>High-velocity logistics releases could not tolerate downtime windows during nationwide peak surges.</td>
               </tr>
               <tr>
-                <td class="col-key">Automated DevSecOps Gating</td>
-                <td>Integrated SonarQube (SAST) and OWASP ZAP (DAST) into centralized Azure DevOps CI/CD pipelines with Nexus Repository Manager, cutting critical pre-prod CVEs by 60%.</td>
-                <td>Turns security from a late manual sign-off into an automated quality gate enforced uniformly across all service teams.</td>
+                <td class="col-key"><span class="step-code">02 / To-Be Architecture</span><br>Delivered &amp; Reference</td>
+                <td><strong>Delivered Multi-Cluster Platform:</strong> Centralized Azure DevOps CI/CD + Nexus Repository Manager + Rancher managing <strong>GKE (pre-production validation)</strong> and <strong>Amazon EKS (peak production)</strong>, with SonarQube (SAST), OWASP ZAP (DAST), tuned HPA, ELK + Prometheus/Grafana -> Slack/MS Teams/Pushover alerting, and Microsoft App Center mobile delivery.<br><strong>Reference Playbook:</strong> Immutable <code>@sha256</code> promotion, CFS/JVM tuning, Asymmetric HPA + Pause Pods, and ALB Readiness Gates.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Embedded collaboration with application developers and a 13-person DevOps team.</td>
               </tr>
               <tr>
-                <td class="col-key">Scaling, Observability &amp; Mobile</td>
-                <td>Tuned pod autoscaling (HPA) and compute allocation for sub-second peak API latency; integrated ELK, Prometheus/Grafana, Slack/MS Teams, Pushover, and MS App Center.</td>
-                <td>Closes the loop between infrastructure rightsizing, real-time on-call visibility, and synchronized mobile/backend delivery.</td>
+                <td class="col-key"><span class="step-code">03 / Trade-Off Analysis</span><br>Key Design Choices</td>
+                <td>Kept <strong>Azure DevOps CI/CD external</strong> to both GKE and Amazon EKS rather than running self-hosted builders inside production clusters: trades minor cross-network image transfer latency for strict blast-radius isolation and unified mobile build signing via MS App Center. Separated <strong>GKE validation from Amazon EKS peak prod</strong> to prevent staging load tests from contending with live shipment APIs.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Isolates build-plane instability from revenue-generating logistics traffic.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">04 / Migration &amp; Rollback</span><br>Cutover &amp; De-Risking</td>
+                <td>Standardized progressive promotion: services built once into Nexus/Docker Registry -> deployed and validated on GKE with automated SonarQube SAST and OWASP ZAP DAST Go/No-Go gates -> promoted to Amazon EKS under Rancher governance. Rollback redeploys the prior verified Nexus image artifact via Azure DevOps release history with Kubernetes rolling-update controls. Post-promotion soak checks validate p95/p99 sub-second API latency, zero 5xx error spikes, and stable HPA pod utilization on Amazon EKS prior to phasing out legacy release replicas.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Eliminates environment-specific rebuild drift between staging validation and production cutover.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">05 / Risk &amp; FinOps</span><br>Preventive Governance</td>
+                <td>Automated SAST + DAST security gating <strong>eliminated 60% of critical vulnerabilities prior to production</strong>. HPA pod autoscaling and compute rightsizing curbed idle cluster overhead while sustaining <strong>sub-second API latency</strong> at nationwide peak load. Evaluated enterprise APM, Edge CDN, and PAM PoCs (NDA-sanitized) to guide next-phase resilience investment.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Balances shift-left security, peak latency SLAs, and cloud compute efficiency.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">06 / Handover &amp; Scope</span><br>Operational Readiness</td>
+                <td>Unified ELK Stack and Prometheus/Grafana alerting into Slack, Microsoft Teams, and Pushover on-call channels, documented CI/CD security templates and Rancher multi-cluster workflows, and completed structured handover in July 2022 with ongoing operations retained by the internal 13-person DevOps and engineering teams.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Internal engineering teams retained full operational ownership post-July 2022.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <details class="ed-detail">
-          <summary>Control-Plane Rationale &amp; Sanitized Enterprise PoC Scope (NDA-Safe)</summary>
+          <summary>Principal Multi-Cluster 5-Plane Reference &amp; Peak-Surge Scaling Playbook (plus Sanitized PoC Scope)</summary>
           <div class="detail-body">
             <ul>
-              <li><strong>Centralized Azure DevOps rationale:</strong> Consolidating CI/CD outside both GKE and Amazon EKS kept pipeline failures isolated from live logistics traffic and supported hosted mobile build/signing workflows into Microsoft App Center.</li>
-              <li><strong>Sanitized PoC / Trial Scope Evaluated (NDA-safe):</strong> Separate from the production stack, participated in architectural trial/PoC evaluations across three enterprise capability tracks: (1) Enterprise APM &amp; distributed tracing, (2) Edge CDN &amp; perimeter caching, and (3) Privileged Access Management (PAM). Commercial terms and procurement decisions remain confidential under NDA.</li>
+              <li><strong><span class="scope-badge delivered">Delivered</span> Centralized Azure DevOps isolation:</strong> Consolidating CI/CD outside both GKE and Amazon EKS kept pipeline failures isolated from live parcel traffic while unifying backend microservices and mobile signing into Microsoft App Center.</li>
+              <li><strong><span class="scope-badge delivered">Delivered</span> Sanitized PoC / Trial Scope Evaluated (NDA-safe):</strong> Separate from the production stack, participated in architectural trial evaluations across three enterprise capability tracks: (1) Enterprise APM &amp; distributed tracing, (2) Edge CDN &amp; perimeter caching, and (3) Privileged Access Management (PAM). Commercial vendor names, scoring, and procurement decisions remain strictly confidential under NDA.</li>
             </ul>
+            <p style="margin:12px 0 6px;"><strong><span class="scope-badge ref">Target-State Reference</span> Principal Multi-Cluster &amp; Flash-Surge Playbook (e.g., Harbolnas Scale):</strong> When auditing or architecting 100+ microservice GKE-to-EKS platforms today, my reference design applies four concrete guardrails to prevent cross-cloud drift and HTTP 502/503 spikes:</p>
+            <div class="ref-grid">
+              <div class="ref-card">
+                <strong>1. "Build Once, Deploy Many" Pipeline Governance</strong>
+                Enforce centralized Azure DevOps <code>YAML extends</code> with Required Template Checks, shared Parent POM / BOM dependency governance, ephemeral artifact auth tokens (avoiding static PATs), and immutable <code>@sha256</code> image digest promotion from GKE validation to Amazon EKS production.
+              </div>
+              <div class="ref-card">
+                <strong>2. Container CPU/JVM &amp; Peak-Surge Headroom</strong>
+                Monitor Linux CFS CPU throttling (keeping throttled periods below 10%), align JVM heap via <code>MaxRAMPercentage</code>, pair Asymmetric HPA (fast scale-out, conservative scale-in) with low-priority Pause Pods for instant buffer capacity during nationwide flash surges.
+              </div>
+              <div class="ref-card">
+                <strong>3. Zero-502 Rolling Cutover &amp; API Contracts</strong>
+                Combine AWS ALB Pod Readiness Gates with graceful <code>preStop</code> connection draining so load balancers deregister pods cleanly before shutdown, alongside additive-only OpenAPI schema checks across 120+ service endpoints.
+              </div>
+              <div class="ref-card">
+                <strong>4. Tiered DAST &amp; Incident Escalation Hygiene</strong>
+                Run fast baseline OWASP ZAP checks on every staging deploy with deeper authenticated API active scans on scheduled off-peak windows, routing correlated ELK &amp; Prometheus/Grafana alerts to Slack/MS Teams war rooms and Pushover on-call responders.
+              </div>
+            </div>
           </div>
         </details>
 
@@ -1326,17 +1702,21 @@
             <strong>Role:</strong> Cloud Automation &amp; Infrastructure Lead<br>
             <strong>Window:</strong> May 2020 - Oct 2020 (6 mos)<br>
             <strong>Cloud ERP:</strong> AWS CLI + Bash + Ansible + WHM/cPanel<br>
-            <strong>Database HA:</strong> Proxmox VE + repmgr/Barman + BGP
+            <strong>Database HA:</strong> Proxmox VE + repmgr/Barman + BGP<br>
+            <strong>Reference Model:</strong> Sovereign DBaaS v3 (Zero IP)
           </div>
         </div>
 
         <p class="note-summary">
-          Stage 2 illustrates a core Principal Architect lesson: <strong>pragmatic automation under executive constraints paired with resilient data-tier engineering</strong>. Leading an 11-person cross-functional effort, I migrated legacy Odoo ERP workloads from on-premise VPS hosts to <strong>AWS EC2</strong> with <strong>GitHub Enterprise</strong>. When executive leadership (CEO) declined declarative Terraform adoption to stay close to familiar AWS Marketplace workflows, I automated provisioning with <strong>AWS CLI + Bash</strong> using <strong>AWS Odoo Marketplace</strong> images and <strong>EC2 Instance Snapshots</strong> (cutting client setup time by <strong>50%</strong>), layered <strong>Ansible</strong> for Odoo code and <code>odoo.conf</code> configuration, operated <strong>WHM / cPanel on CentOS 7 (AWS Marketplace)</strong> for multi-tenant domain/DNS management, and scheduled PostgreSQL backups via AWS CLI cron to Amazon S3. On a parallel NDA-protected custom Odoo F&amp;B POS track, I engineered a <strong>dual-site bare-metal Proxmox VE Enterprise PostgreSQL HA</strong> cluster across Site A and Site B over distinct ISP vendors with <strong>BGP AS failover</strong>.
+          <span class="scope-badge delivered">Delivered As-Built</span> <span class="scope-badge constraint">Executive Trade-Off</span> Stage 2 illustrates a core Principal Architect lesson: <strong>pragmatic automation under executive constraints paired with resilient data-tier engineering</strong>. Leading an 11-person cross-functional effort, I migrated legacy Odoo ERP workloads from on-premise VPS hosts to <strong>AWS EC2</strong> with <strong>GitHub Enterprise</strong>. When executive leadership (CEO) declined declarative Terraform adoption to stay close to familiar AWS Marketplace workflows, I automated provisioning with <strong>AWS CLI + Bash</strong> using <strong>AWS Odoo Marketplace</strong> images and <strong>EC2 Instance Snapshots</strong> (cutting client setup time by <strong>50%</strong>), layered <strong>Ansible</strong> for Odoo code and <code>odoo.conf</code> configuration, operated <strong>WHM / cPanel on CentOS 7 (AWS Marketplace)</strong> for multi-tenant domain/DNS management, and scheduled PostgreSQL backups via AWS CLI cron to Amazon S3. On a parallel NDA-protected custom Odoo F&amp;B POS track, I engineered a <strong>dual-site bare-metal Proxmox VE Enterprise PostgreSQL HA</strong> cluster across Site A and Site B over distinct ISP vendors with <strong>BGP AS failover</strong>.
+        </p>
+        <p class="note-summary">
+          <span class="scope-badge ref">Target-State Reference</span> Building independently on those 2020 multi-tenant ERP and dual-site PostgreSQL HA lessons (with <strong>zero client IP</strong>), I authored a clean-room <strong>Sovereign PostgreSQL DBaaS v3 &amp; Pattern 1 (Isolated DB-per-Store)</strong> reference architecture for cross-ISP environments with dynamic IPs: pairing an <strong>OpenVPN PKI Hub-and-Spoke</strong> underlay (<code>AES-256-GCM</code>, <code>tls-crypt</code>, static CCD) with <strong>Docker Swarm</strong> bound to <code>tun0</code> (Overlay MTU <code>1300</code>, zero <code>iptables</code> NAT), Role-Aware <strong>HAProxy</strong> + <strong>PgBouncer</strong>, 13+ <strong>Docker Secrets</strong>, external <code>repmgrd</code> auto-failover + <strong>Barman PITR</strong>, <strong>Prometheus/Alertmanager/Grafana/ELK</strong>, a Flask <strong>Control Plane Web UI</strong>, isolated <strong>Odoo 17 Retail Store POS</strong> instances (<code>store1..storeN</code>), and full Day-0 bootstrap + 6-stage modular <strong>Ansible</strong> automation.
         </p>
 
         <figure class="figure-frame">
           <div class="figure-cap">
-            <span>Figure 3.1 - AWS EC2 Odoo Automation (AWS CLI + Bash + Ansible + WHM/cPanel) &amp; Dual-Site Bare-Metal PG HA</span>
+            <span>Figure 3.1 [Delivered Production Scope] - AWS EC2 Odoo Automation (AWS CLI + Bash + Ansible + WHM/cPanel) &amp; Dual-Site Bare-Metal PG HA</span>
             <span>NO TERRAFORM (CEO CONSTRAINT) &middot; -50% SETUP TIME &middot; NDA-SAFE</span>
           </div>
           <div class="figure-body">
@@ -1435,48 +1815,212 @@
           </div>
         </figure>
 
+        <figure class="figure-frame">
+          <div class="figure-cap">
+            <span>Figure 3.2 [Independent Target-State Reference] - Sovereign PostgreSQL DBaaS v3 (Swarm + OpenVPN + Pattern 1 DB-per-Store)</span>
+            <span>ZERO CLIENT IP &middot; NOT DEPLOYED TO HASHMICRO PROD &middot; 6-STAGE ANSIBLE</span>
+          </div>
+          <div class="figure-body">
+            <svg viewBox="0 0 920 278" role="img" aria-label="Independent Target-State Reference Model: Sovereign PostgreSQL DBaaS v3 on Docker Swarm over OpenVPN PKI Hub-and-Spoke with Role-Aware HAProxy, PgBouncer, Docker Secrets, External repmgrd, Barman PITR, Pattern 1 Isolated Odoo 17 Retail Stores, Control Plane Web UI, and Observability">
+              <defs>
+                <marker id="ink-arr-3b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#1B4965"/>
+                </marker>
+              </defs>
+              <!-- Left Column: Real-World Multi-ISP & Retail Puzzle -->
+              <rect x="12" y="14" width="236" height="250" rx="4" fill="#FDF5F0" stroke="#8C3B19" stroke-width="1.2"/>
+              <text x="24" y="34" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8.6" font-weight="600">MULTI-ISP &amp; RETAIL PUZZLE</text>
+              <text x="24" y="55" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="10" font-weight="700">Sovereign Scale Constraints</text>
+              <text x="24" y="74" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.6">Dynamic ISP IPs break bare</text>
+              <text x="24" y="88" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.6">Swarm Raft; iptables creates</text>
+              <text x="24" y="102" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.6">entry SPOF; shared NFS risks</text>
+              <text x="24" y="116" fill="#44403C" font-family="IBM Plex Sans, sans-serif" font-size="8.6">Odoo filestore corruption.</text>
+
+              <rect x="24" y="130" width="212" height="54" rx="3" fill="#FFFFFF" stroke="#8C3B19" stroke-opacity="0.5"/>
+              <text x="130" y="148" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="7.9" font-weight="600">DATA INTEGRITY PRIORITY</text>
+              <text x="130" y="163" text-anchor="middle" fill="#44403C" font-family="IBM Plex Mono, monospace" font-size="7.4">Avoid multi-master POS sync</text>
+              <text x="130" y="175" text-anchor="middle" fill="#44403C" font-family="IBM Plex Mono, monospace" font-size="7.4">conflicts &amp; DBaaS paywalls.</text>
+
+              <rect x="24" y="194" width="212" height="58" rx="3" fill="#EAF1F6" stroke="#1B4965" stroke-width="1"/>
+              <text x="130" y="212" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="7.9" font-weight="600">REFERENCE EVOLUTION</text>
+              <text x="130" y="227" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Mono, monospace" font-size="7.4">OpenVPN CCD + Swarm MTU 1300</text>
+              <text x="130" y="239" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Mono, monospace" font-size="7.4">Pattern 1 DB-per-Store + Ansible</text>
+
+              <line x1="248" y1="139" x2="274" y2="139" stroke="#1B4965" stroke-width="1.4" marker-end="url(#ink-arr-3b)"/>
+
+              <!-- Right Box: 4-Quadrant Sovereign DBaaS v3 Target-State Model -->
+              <rect x="276" y="14" width="632" height="250" rx="4" fill="#FAF8F4" stroke="#1B4965" stroke-width="1.3"/>
+              <text x="290" y="34" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="9.1" font-weight="600">INDEPENDENT REFERENCE MODEL: SOVEREIGN POSTGRESQL DBAAS V3 + PATTERN 1 (ZERO IP)</text>
+
+              <!-- Quadrant A -->
+              <rect x="290" y="46" width="292" height="94" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="302" y="64" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.1" font-weight="600">A. OPENVPN UNDERLAY &amp; SWARM MESH</text>
+              <text x="302" y="81" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.3" font-weight="600">PKI Hub-and-Spoke -&gt; Swarm tun0</text>
+              <text x="302" y="96" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">AES-256-GCM · tls-crypt · CCD 10.88.0.x</text>
+              <text x="302" y="110" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">Swarm advertise/data-path on tun0 (MTU 1300)</text>
+              <text x="302" y="124" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.4">3+ Manager Raft Quorum · Zero iptables NAT</text>
+
+              <!-- Quadrant B -->
+              <rect x="600" y="46" width="294" height="94" rx="3" fill="#FFFFFF" stroke="#245C45" stroke-width="1.1"/>
+              <text x="612" y="64" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="8.1" font-weight="600">B. ROLE-AWARE DATA PLANE &amp; HA</text>
+              <text x="612" y="81" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.3" font-weight="600">HAProxy + PgBouncer + PG db1..dbN</text>
+              <text x="612" y="96" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">HAProxy :54322 RW / :54323 RO (Probe :9201)</text>
+              <text x="612" y="110" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">PgBouncer :6432 (session/tx) · 13+ Secrets</text>
+              <text x="612" y="124" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.4">Ext. repmgrd + Barman PITR · restart: none</text>
+
+              <!-- Quadrant C -->
+              <rect x="290" y="154" width="292" height="96" rx="3" fill="#FFFFFF" stroke="#1B4965" stroke-width="1.1"/>
+              <text x="302" y="172" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.1" font-weight="600">C. PATTERN 1: ISOLATED DB-PER-STORE</text>
+              <text x="302" y="189" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.3" font-weight="600">Odoo 17 Retail POS (store1..storeN)</text>
+              <text x="302" y="204" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">Dedicated DB/Role (REVOKE ALL FROM PUBLIC)</text>
+              <text x="302" y="218" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">Isolated Local Filestore (Zero NFS Lock Risk)</text>
+              <text x="302" y="232" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.4">Zero-Downtime add_store.yml + POS Offline Queue</text>
+
+              <!-- Quadrant D -->
+              <rect x="600" y="154" width="294" height="96" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="612" y="172" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.1" font-weight="600">D. DAY-0 ANSIBLE, PORTAL &amp; OBS SUITE</text>
+              <text x="612" y="189" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.3" font-weight="600">Self-Service DBaaS &amp; Full Telemetry</text>
+              <text x="612" y="204" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">bootstrap-1st-install.sh + 6-Stage Ansible</text>
+              <text x="612" y="218" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.5">Flask Control Plane (:8080) + pgAdmin (:5050)</text>
+              <text x="612" y="232" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="7.4">Prom + Alertmanager (:9093) + Grafana + ELK</text>
+            </svg>
+          </div>
+        </figure>
+
         <div class="table-wrap">
           <table class="ed-table">
             <thead>
               <tr>
-                <th style="width:24%">Architectural Focus</th>
-                <th style="width:42%">Verified Contribution &amp; Stack</th>
-                <th style="width:34%">Principal Architect Progressive Lens</th>
+                <th style="width:23%">Migration Review Step</th>
+                <th style="width:45%">Architectural Assessment, Design &amp; Controls</th>
+                <th style="width:32%">Scope Tag &amp; Principal Rationale</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="col-key">VPS-to-AWS EC2 &amp; Automation</td>
-                <td>Migrated VPS ERP workloads to <code>AWS EC2</code> with <code>GitHub Enterprise</code>; automated setup (-50% time) via <code>AWS CLI + Bash</code> (<code>AWS Odoo Marketplace</code> &amp; <code>EC2 Snapshots</code>) + <code>Ansible</code> (Odoo code &amp; <code>odoo.conf</code>).</td>
-                <td>Proves automation value does not wait for ideal greenfield IaC; repeatable scripting cuts toil immediately within executive constraints.</td>
+                <td class="col-key"><span class="step-code">01 / As-Is Assessment</span><br>Current Weaknesses</td>
+                <td>Multi-tenant Odoo ERP instances running on legacy on-premise VPS hosts suffered slow manual provisioning, inconsistent client domain/SSL setup, and fragile local backup hygiene. In parallel, a custom Odoo F&amp;B POS platform (NDA) faced single-site and single-ISP database SPOFs risking outlet transaction disruption.</td>
+                <td><span class="scope-badge constraint">Real-World Constraint</span><br>Executive leadership (CEO) deferred HashiCorp Terraform in 2020 to stay close to AWS Marketplace workflows.</td>
               </tr>
               <tr>
-                <td class="col-key">Multi-Tenant Domain &amp; S3 Backups</td>
-                <td>Operated <code>WHM / cPanel on CentOS 7 (AWS Marketplace)</code> for client domain/DNS/SSL routing and scheduled ERP PostgreSQL backups via <code>cron + AWS CLI</code> to <code>Amazon S3</code>.</td>
-                <td>Standardizes client domain administration and off-host database backup durability before adopting cloud-native managed databases.</td>
+                <td class="col-key"><span class="step-code">02 / To-Be Architecture</span><br>Delivered &amp; Reference</td>
+                <td><strong>Delivered Cloud ERP:</strong> VPS-to-AWS EC2 migration with GitHub Enterprise, versioned <code>AWS CLI + Bash</code> scripts on <code>AWS Odoo Marketplace</code> + <code>EC2 Snapshots</code>, <code>Ansible</code> (Odoo code &amp; <code>odoo.conf</code>), <code>WHM / cPanel (CentOS 7 AWS Marketplace)</code>, and scheduled S3 PostgreSQL cron backups.<br><strong>Delivered Dual-Site PG HA:</strong> Site A &amp; Site B bare-metal <code>Proxmox VE Enterprise</code> over distinct ISPs (<code>BGP AS Failover</code>), <code>repmgr</code> sync (<code>0s lag</code>), <code>repmgrd</code>, <code>HAProxy 1.8 / Keepalived 1.3</code> VIPs, and <code>Barman</code> PITR.<br><strong>Target References:</strong> Multi-tenant Terraform ZTP blueprint (theoretical -70% model) + <strong>Sovereign PostgreSQL DBaaS v3</strong> (Figure 3.2: OpenVPN PKI + Docker Swarm MTU <code>1300</code> + Role-Aware HAProxy/PgBouncer + Docker Secrets + external <code>repmgrd</code>/Barman + Pattern 1 DB-per-Store Odoo 17 + 6-stage Ansible &amp; Day-0 bootstrap).</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Led 11-person cross-functional effort over 6 months (May - Oct 2020).</td>
               </tr>
               <tr>
-                <td class="col-key">Dual-Site Bare-Metal PostgreSQL HA</td>
-                <td>Built Site A &amp; Site B bare-metal <code>Proxmox VE Enterprise</code> clusters over distinct ISPs (<code>BGP AS Failover</code>) with <code>repmgr</code> (sync <code>0s lag</code>), <code>repmgrd</code>, <code>HAProxy 1.8</code> + <code>Keepalived 1.3</code> VIPs, and <code>Barman</code> WAL/PITR.</td>
-                <td>Demonstrates ground-truth data-tier resilience across physical hypervisors, WAN routing, and synchronous failover without hiding behind managed cloud abstractions.</td>
+                <td class="col-key"><span class="step-code">03 / Trade-Off Analysis</span><br>Key Design Choices</td>
+                <td>Accepted <strong>AWS CLI + Bash + EC2 Snapshots + Ansible</strong> instead of pushing blocked Terraform adoption: traded declarative state-graph drift detection for immediate executive buy-in and a verified <strong>50% reduction in client setup time</strong>. For F&amp;B POS, chose <strong>synchronous <code>repmgr</code> (0s lag) across dual bare-metal sites + multi-ISP BGP</strong> over async replication, accepting slight cross-site write latency to guarantee zero transaction loss (RPO=0).</td>
+                <td><span class="scope-badge constraint">Executive Trade-Off</span><br>Pragmatic engineering delivers measurable business value inside real governance boundaries.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">04 / Migration &amp; Rollback</span><br>Cutover &amp; De-Risking</td>
+                <td>Executed phased tenant cutover from VPS to AWS EC2: golden EC2 Snapshot baseline -> Ansible Odoo deployment -> database dump/restore integrity verification -> WHM/cPanel DNS/SSL switchover (with pre-cutover TTL lowering and legacy VPS retained warm as immediate DNS rollback target). Dual-site PG HA validated via controlled primary-failure promotion tests (<code>repmgrd</code> + VIP takeover) and Barman PITR recovery checks. Legacy VPS hosts were retired only after a post-cutover soak check confirmed Odoo transactional parity, healthy PostgreSQL connection pool headroom, and verified Amazon S3 cron backups.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Preserves transactional integrity and instant fallback during ERP tenant cutovers.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">05 / Risk &amp; FinOps</span><br>Preventive Governance</td>
+                <td>Eliminated single-host backup loss via automated AWS CLI cron backups to Amazon S3, standardized multi-tenant domain/SSL lifecycle via WHM/cPanel, and removed both single-DC and single-ISP SPOFs for F&amp;B POS outlets. Target-state references extend this with per-tenant Terraform remote state, anti-orphan teardown, and Sovereign DBaaS v3 guardrails (13+ Docker Secrets, <code>restart: none</code> split-brain lock, <code>REVOKE ALL FROM PUBLIC</code> per-store DB isolation, and Alertmanager split-brain/Barman-slot alerts).</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Protects data durability and eliminates catastrophic site-level downtime.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">06 / Handover &amp; Scope</span><br>Operational Readiness</td>
+                <td>Delivered versioned GitHub Enterprise automation repos (AWS CLI/Bash scripts, Ansible playbooks), WHM/cPanel onboarding runbooks, S3 backup schedules, and dual-site Proxmox/repmgr/Barman operational playbooks through October 2020 handover. Proprietary ERP code, facility identifiers, and ongoing ops remained internally owned.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Declarative Terraform was subsequently delivered hands-on at PT Meteor Inovasi Digital (2022).</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <details class="ed-detail">
-          <summary>Principal Architect Trade-Off: Navigating Executive Constraints (Why Terraform Was Deferred)</summary>
+          <summary>Principal Trade-Off &amp; Target-State Multi-Tenant Terraform ZTP Blueprint (Delivered -50% vs. Proposed -70% IaC Model)</summary>
           <div class="detail-body">
             <ul>
-              <li><strong>Proposal vs. business reality:</strong> During the May-October 2020 mandate, I proposed HashiCorp Terraform for declarative cloud provisioning. The CEO declined Terraform to keep operations anchored on AWS Marketplace workflows the team already understood.</li>
-              <li><strong>Pragmatic delivery:</strong> Rather than stalling execution, I delivered versioned <code>AWS CLI + Bash</code> + <code>EC2 Snapshot</code> automation, <code>Ansible</code> Odoo configuration, and <code>WHM / cPanel (CentOS 7, AWS Marketplace)</code> domain control, cutting onboarding setup time by 50%.</li>
-              <li><strong>Progressive continuity:</strong> Declarative HashiCorp Terraform IaC was later delivered in production during my multi-cloud Kubernetes migration mandate at PT Meteor Inovasi Digital (Sep - Dec 2022).</li>
+              <li><strong><span class="scope-badge constraint">Executive Constraint</span> Why Terraform was deferred in 2020:</strong> During May-October 2020, I proposed HashiCorp Terraform for declarative multi-tenant cloud onboarding. Executive leadership (CEO) deferred Terraform to keep daily operations anchored on familiar AWS Marketplace workflows.</li>
+              <li><strong><span class="scope-badge delivered">Delivered</span> Pragmatic 2020 production fit (-50% setup time):</strong> Rather than blocking business velocity, I built versioned <code>AWS CLI + Bash</code> + <code>EC2 Snapshot</code> automation, <code>Ansible</code> Odoo configuration, and <code>WHM / cPanel (CentOS 7, AWS Marketplace)</code> domain governance (cutting onboarding setup time by 50%), alongside the dual-site bare-metal Proxmox PostgreSQL HA cluster. Declarative HashiCorp Terraform IaC was subsequently executed hands-on in production at <strong>PT Meteor Inovasi Digital (Sep - Dec 2022)</strong>.</li>
             </ul>
+            <p style="margin:12px 0 6px;"><strong><span class="scope-badge ref">Target-State Reference</span> Multi-Tenant Cloud ERP Terraform ZTP Blueprint (Theoretical -70% Lead-Time Model):</strong> To show how a Principal Architect scales SaaS ERP onboarding beyond scripted EC2 provisioning once executive buy-in exists (collapsing cross-team ticket queues via parallel DAG execution), my reference blueprint specifies four controls:</p>
+            <div class="ref-grid">
+              <div class="ref-card">
+                <strong>1. Isolated Per-Tenant &amp; Per-Volatility State</strong>
+                Reject coarse shared Terraform CLI Workspaces; compose flat SemVer modules backed by isolated remote state per tenant and volatility tier (Stateful VPC/DB vs. Stateless Compute) with KMS CMK encryption, state versioning, and distributed locking.
+              </div>
+              <div class="ref-card">
+                <strong>2. Silo / Bridge / Pool Tenancy Isolation</strong>
+                Match client SLA/compliance tiers across Silo, Bridge, and Pool models; for pooled PostgreSQL behind PgBouncer, prohibit unsafe <code>SET SESSION</code> variables and enforce transaction-local <code>set_config(..., true)</code> Row-Level Security (RLS).
+              </div>
+              <div class="ref-card">
+                <strong>3. 6-Gate Shift-Left IaC CI Pipeline</strong>
+                Enforce automated <code>terraform fmt</code>, <code>validate</code>, <code>tflint</code>, static policy scanning (<code>tfsec</code> / Checkov), immutable saved <code>tfplan.binary</code> approval artifacts, and post-apply smoke plus negative cross-tenant isolation tests.
+              </div>
+              <div class="ref-card">
+                <strong>4. Anti-Orphan Offboarding &amp; Cost Governance</strong>
+                Pair automated tenant provisioning with deterministic teardown checklists (backups verified before destroy, DNS/SSL revocation, snapshot cleanup) so churned SaaS tenants never leave unbilled cloud orphans or lingering security exposures.
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="ed-detail">
+          <summary>Sovereign PostgreSQL DBaaS v3 &amp; Pattern 1 Multi-Store Trade-Off Matrix (Why DB-per-Store + Swarm/OpenVPN)</summary>
+          <div class="detail-body">
+            <p style="margin-top:0;">
+              <span class="scope-badge ref">Target-State Reference</span> Evaluating how multi-store retail Odoo 17 POS scales across separate ISPs with dynamic IPs without sacrificing ACID accounting integrity or risking database corruption:
+            </p>
+            <div class="table-wrap" style="margin:12px 0 14px;">
+              <table class="ed-table">
+                <thead>
+                  <tr>
+                    <th style="width:22%">Retail Store Pattern</th>
+                    <th style="width:26%">Data Corruption &amp; Blast Radius</th>
+                    <th style="width:26%">Filestore &amp; PITR Hygiene</th>
+                    <th style="width:26%">ISP Outage Resilience</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-key">Pattern 1: Isolated DB-per-Store (Selected)</td>
+                    <td><strong>Highest integrity:</strong> single-primary ACID write path, zero multi-master conflicts, 100% tenant blast-radius isolation (<code>store1..storeN</code>).</td>
+                    <td>1 container = 1 local volume (zero NFS lock corruption); independent per-store Barman PITR recovery.</td>
+                    <td>Cashier resilience via Odoo 17 POS browser IndexedDB offline queue + 4G/5G router failover.</td>
+                  </tr>
+                  <tr>
+                    <td class="col-key">Pattern 2: Single Shared DB (Multi-Branch)</td>
+                    <td>Single ACID source, but schema upgrades or bad queries impact every branch simultaneously.</td>
+                    <td>Multi-replica Odoo requires shared NFS/GlusterFS filestore, risking attachment/PDF desync on lock stalls.</td>
+                    <td>Same POS IndexedDB queue, but single-DB maintenance freezes all branches together.</td>
+                  </tr>
+                  <tr>
+                    <td class="col-key">Pattern 3: Autonomous Edge DB + Sync</td>
+                    <td><strong>Highest corruption risk:</strong> bidirectional sync risks sequence collisions, negative stock, and partial accounting journal entries.</td>
+                    <td>Each store requires local HA + backup governance; attachment/receipt sync adds operational fragility.</td>
+                    <td>Full back-office continuity during long ISP blackouts, at steep reconciliation complexity.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ref-grid">
+              <div class="ref-card">
+                <strong>1. Multi-ISP OpenVPN PKI + Swarm Overlay (MTU 1300)</strong>
+                Hub-and-Spoke OpenVPN (<code>AES-256-GCM</code>, <code>tls-crypt</code>, <code>float</code>, static CCD <code>10.88.0.x</code>) stabilizes Swarm Raft (<code>--advertise-addr</code> / <code>--data-path-addr</code> on <code>tun0</code>) across rotating ISP IPs, disabling redundant IPsec ESP encryption and clamping overlay MTU to <code>1300</code> to prevent VXLAN WAL fragmentation.
+              </div>
+              <div class="ref-card">
+                <strong>2. Zero-iptables Routing, PgBouncer &amp; Docker Secrets</strong>
+                Replaces OS-level <code>iptables</code> DNAT SPOFs with multi-replica Role-Aware HAProxy (HTTP <code>:9201</code> probe separating <code>:54322</code> RW, <code>:54323</code> RO, and overlay-only <code>:54321</code> Barman), PgBouncer (<code>:6432</code> per-store <code>session</code> pool + <code>*</code> <code>transaction</code> pool via <code>SECURITY DEFINER</code> lookup), and 13+ Docker Secrets.
+              </div>
+              <div class="ref-card">
+                <strong>3. External repmgrd Auto-Failover &amp; Sync Fallback</strong>
+                Runs external <code>repmgrd</code> daemons inside <code>barman_control</code> using SSH keypair secrets with <code>synchronous_standby_names = 'FIRST 1 (&lt;peers&gt;, barman_receive_wal)'</code> and <code>restart_policy: none</code> on <code>pg_db1..dbN</code> to prevent split-brain on host reboot.
+              </div>
+              <div class="ref-card">
+                <strong>4. Day-0 Bootstrap, 6-Stage Ansible &amp; Control Plane</strong>
+                Automates bare Debian/Ubuntu VMs via <code>bootstrap-1st-install.sh</code> and 6-stage Ansible (<code>prereq_node</code> -&gt; <code>openvpn_hub/client</code> -&gt; <code>swarm_cluster</code> -&gt; <code>swarm_secrets</code> -&gt; <code>dbaas_stack</code>), zero-downtime store onboarding (<code>add_store.yml</code> without restarting <code>pg_db*</code>), Flask Portal (<code>:8080</code>), and Prometheus/Alertmanager/Grafana/ELK.
+              </div>
+            </div>
           </div>
         </details>
 
         <div class="boundary-note">
-          <strong>Role &amp; Collaboration Boundary (May - Oct 2020):</strong> Led cloud automation and infrastructure delivery alongside an 11-person cross-functional team for VPS-to-AWS EC2 migration, AWS CLI/Bash + Snapshot scripts, Ansible Odoo configuration, WHM/cPanel (CentOS 7 AWS Marketplace) domain control, S3 PostgreSQL backups, and the NDA-protected dual-site Proxmox Enterprise PostgreSQL HA cluster through handover. Proprietary ERP code, facility identifiers, and post-October 2020 operations remain internally owned.
+          <strong>Strict Production vs. Reference Boundary (May - Oct 2020):</strong> Delivered production work at PT Hashmicro Solusi Indonesia (leading an 11-person cross-functional team) covered VPS-to-AWS EC2 migration, AWS CLI/Bash + Snapshot scripts (-50% setup time), Ansible Odoo configuration, WHM/cPanel (CentOS 7 AWS Marketplace) domain control, S3 PostgreSQL cron backups, and the NDA-protected dual-site Proxmox Enterprise PostgreSQL HA cluster through October 2020 handover. Proprietary ERP code, facility identifiers, and post-October 2020 operations remain internally owned. Both the <strong>Multi-Tenant Terraform ZTP Blueprint</strong> and the <strong>Sovereign PostgreSQL DBaaS v3 + Pattern 1 Multi-Store Reference Model</strong> (Figure 3.2) are strictly <strong>independent, zero-client-IP post-engagement reference architectures</strong> and were not deployed to HashMicro production.
         </div>
       </article>
 
@@ -1496,7 +2040,7 @@
         </div>
 
         <p class="note-summary">
-          Every progressive cloud modernization starts at Stage 1: <strong>stabilizing hybrid on-premise VPS environments, removing manual release friction, and establishing centralized visibility</strong>. During a 4-month consulting engagement for a regulated Indonesian multifinance institution under <strong>POJK No. 35/POJK.05/2018</strong>, I worked with the engineering team to optimize hybrid cloud and on-premise VPS availability, accelerate release cycles by <strong>40%</strong> through containerized Jenkins CI integrated with Jira, Trello, Docker, and Bitbucket (including Android CI/CD), deploy a containerized ELK Stack to lower MTTR, and offload non-PII build artifacts and logs to Google Cloud Storage.
+          <span class="scope-badge delivered">Delivered As-Built</span> Every progressive cloud modernization starts at Stage 1: <strong>stabilizing hybrid on-premise VPS environments, removing manual release friction, and establishing centralized visibility</strong>. During a 4-month consulting engagement for a regulated Indonesian multifinance institution under <strong>POJK No. 35/POJK.05/2018</strong>, I worked with the engineering team to optimize hybrid cloud and on-premise VPS availability, accelerate release cycles by <strong>40%</strong> through containerized Jenkins CI integrated with Jira, Trello, Docker, and Bitbucket (including Android CI/CD), deploy a containerized ELK Stack to lower MTTR, and offload non-PII build artifacts and logs to Google Cloud Storage.
         </p>
 
         <figure class="figure-frame">
@@ -1564,38 +2108,72 @@
           <table class="ed-table">
             <thead>
               <tr>
-                <th style="width:24%">Architectural Focus</th>
-                <th style="width:42%">Verified Contribution &amp; Stack</th>
-                <th style="width:34%">Principal Architect Progressive Lens</th>
+                <th style="width:23%">Migration Review Step</th>
+                <th style="width:45%">Architectural Assessment, Design &amp; Controls</th>
+                <th style="width:32%">Scope Tag &amp; Principal Rationale</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="col-key">Containerized CI/CD Foundation</td>
-                <td>Built containerized Jenkins pipelines integrated with Jira, Trello, Docker, and Bitbucket (including Android CI/CD), accelerating release cycles by 40%.</td>
-                <td>Establishes repeatable, containerized builds before attempting larger microservices or Kubernetes transformations.</td>
+                <td class="col-key"><span class="step-code">01 / As-Is Assessment</span><br>Current Weaknesses</td>
+                <td>Regulated multifinance workloads on hybrid cloud and on-premise VPS environments faced manual, inconsistent release steps, fragmented log files inflating MTTR during incidents, and local VPS disk-pressure risk from accumulating build artifacts and logs under <code>POJK No. 35/POJK.05/2018</code> and <code>PP 82/2012</code>.</td>
+                <td><span class="scope-badge constraint">Real-World Constraint</span><br>GCP Jakarta region only launched in June 2020; raw financial PII had to stay strictly inside Indonesian DC/DRC facilities in 2019.</td>
               </tr>
               <tr>
-                <td class="col-key">Hybrid &amp; On-Premise VPS HA</td>
-                <td>Optimized hybrid cloud and on-premise VPS availability aligned with OJK (<code>POJK 35/2018</code>) domestic data center and DRC requirements.</td>
-                <td>Eliminates immediate availability bottlenecks inside legacy estates without forcing an unrealistic big-bang cloud rewrite.</td>
+                <td class="col-key"><span class="step-code">02 / To-Be Architecture</span><br>Delivered &amp; Reference</td>
+                <td><strong>Delivered Stage 1 Foundation:</strong> Optimized hybrid cloud &amp; on-premise VPS HA, containerized Jenkins CI/CD integrated with Jira, Trello, Docker, and Bitbucket (including Android CI/CD), containerized ELK Stack (Elasticsearch, Logstash, Kibana), and Google Cloud Storage offload strictly for non-PII artifacts and archival logs.<br><strong>Reference Hardening:</strong> 0-executor Jenkins controller, Unicast VRRP/IPsec VTI, Logstash PII HMAC masking + PQ/DLQ, and non-destructive <code>gsutil</code> archival.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br><span class="scope-badge ref">Target-State Reference</span><br>Right-sized Stage 1 modernization inside a 4-month engagement window.</td>
               </tr>
               <tr>
-                <td class="col-key">ELK Telemetry &amp; GCS Offload</td>
-                <td>Deployed a containerized ELK Stack to improve incident visibility and lower MTTR, paired with Google Cloud Storage offload for non-PII artifacts and logs.</td>
-                <td>Prevents VPS disk exhaustion while respecting 2019 Indonesian financial data residency boundaries (pre-GCP Jakarta region).</td>
+                <td class="col-key"><span class="step-code">03 / Trade-Off Analysis</span><br>Key Design Choices</td>
+                <td>Chose <strong>containerized Jenkins + Dockerized ELK on existing hybrid VPS</strong> over forcing an immediate Kubernetes rewrite: avoided heavy control-plane learning curve inside a 4-month mandate while immediately capturing <strong>+40% release speed</strong> and unified log triage. Restricted GCS offload strictly to non-PII build/log archives rather than cloud-hosted databases to uphold 2019 OJK domestic residency.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Incremental modernization delivers fast ROI without triggering regulatory non-compliance.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">04 / Migration &amp; Rollback</span><br>Cutover &amp; De-Risking</td>
+                <td>Rolled out containerized Jenkins and ELK in parallel alongside legacy manual scripts before cutting over service pipelines one repository at a time (Go/No-Go: repeatable Docker build parity, verified Jira/Bitbucket webhook audit trail, intact Android signing output). Rollback preserved prior Bitbucket release tags and container image versions for rapid restoration on hybrid VPS targets. Legacy manual scripts were retired only after soak verification confirmed repeatable Docker builds, intact Jira/Bitbucket audit trails, stable ELK log ingestion, and healthy local VPS disk headroom.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Zero big-bang disruption to live multifinance lending operations.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">05 / Risk &amp; Compliance</span><br>Preventive Governance</td>
+                <td>Protected local VPS storage stability via non-PII GCS offload, linked Jira/Trello change tickets directly to Bitbucket/Jenkins builds for change auditability, centralized hybrid log troubleshooting to lower MTTR, and preserved 100% domestic DC/DRC residency for raw customer financial records under <code>POJK 35/2018</code> and <code>PP 82/2012</code>.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Proves early regulatory residency discipline well before Jakarta hyperscaler regions opened.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">06 / Handover &amp; Scope</span><br>Operational Readiness</td>
+                <td>Handed over containerized Jenkins pipeline definitions, Dockerized ELK deployment configs, GCS non-PII offload routines, and operational documentation to internal IT and application engineering teams in September 2019. Core financial systems and customer data remained strictly under institutional ownership.</td>
+                <td><span class="scope-badge delivered">Delivered As-Built</span><br>Clean 4-month consulting handover with self-sufficient internal team operations.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <details class="ed-detail">
-          <summary>Principal Architect Design Principle: 2019 Data Residency &amp; Incremental Modernization</summary>
+          <summary>Principal Hybrid Hardening Reference &amp; 2019 Data Residency Rationale (Delivered vs. Target Checklist)</summary>
           <div class="detail-body">
             <ul>
-              <li><strong>Why non-PII GCS offload only (2019 context):</strong> Because Google Cloud Jakarta only launched in June 2020, cloud object storage offload during Jun-Sep 2019 had to stay strictly scoped to non-PII build artifacts and archival debris while customer financial data remained domestic under <code>POJK 35/2018</code>.</li>
-              <li><strong>Progressive architecture takeaway:</strong> Containerizing CI (Jenkins + Docker) and observability (ELK) first delivers measurable speed (+40%) and MTTR gains inside a 4-month window, creating the operational maturity needed before adopting Kubernetes in later stages.</li>
+              <li><strong><span class="scope-badge delivered">Delivered</span> 2019 Data Residency Context (Pre-GCP Jakarta):</strong> Because Google Cloud Jakarta only launched in June 2020, cloud object storage offload during Jun-Sep 2019 stayed strictly scoped to non-PII build artifacts and archival logs while raw customer financial records remained domestic under <code>POJK 35/2018</code> and <code>PP 82/2012</code>.</li>
+              <li><strong><span class="scope-badge delivered">Delivered</span> Stage 1 Incremental Payoff:</strong> Containerizing CI (Jenkins + Docker) and observability (ELK) first delivered measurable release acceleration (+40%) and lower MTTR inside a 4-month mandate without a high-risk big-bang rewrite.</li>
             </ul>
+            <p style="margin:12px 0 6px;"><strong><span class="scope-badge ref">Target-State Reference</span> Principal Hybrid VPS &amp; CI/CD Hardening Checklist:</strong> When auditing or hardening regulated hybrid multifinance estates today, my reference checklist enforces four deep operational safeguards:</p>
+            <div class="ref-grid">
+              <div class="ref-card">
+                <strong>1. Hardened Containerized Jenkins Topology</strong>
+                Run 0 build executors on the Jenkins controller, avoid mounting <code>docker.sock</code> on the controller host, isolate ephemeral build agents with proper PID 1 reaping (e.g., <code>tini</code>), and scope Android <code>.jks</code> signing keystores inside Folder-level RBAC with Jira audit writeback.
+              </div>
+              <div class="ref-card">
+                <strong>2. Hybrid Network &amp; Reverse-Proxy Resilience</strong>
+                Eliminate reverse-proxy SPOFs via active/standby HAProxy or NGINX pairs backed by Unicast VRRP (Keepalived), and stabilize site-to-cloud tunnels using route-based IPsec VTI, Dead Peer Detection (DPD), and TCP MSS clamping.
+              </div>
+              <div class="ref-card">
+                <strong>3. Resilient ELK Pipeline &amp; PII Sanitization</strong>
+                Ship logs over TLS (Filebeat), apply lightweight structured parsing (Logstash <code>dissect</code>), scrub or HMAC-mask customer PII prior to archival, protect ingestion spikes with Persistent Queues / Dead-Letter Queues (PQ/DLQ), and automate 4-phase ILM storage tiers.
+              </div>
+              <div class="ref-card">
+                <strong>4. Non-Destructive Non-PII Archival Sync</strong>
+                Offload strictly non-PII build artifacts (<code>.apk</code>/<code>.aab</code>, <code>mapping.txt</code>) and sanitized log archives to GCS Nearline/Coldline via non-destructive sync (<code>gsutil -m rsync -r</code> without the <code>-d</code> delete flag) so local VPS disks never lock out live services.
+              </div>
+            </div>
           </div>
         </details>
 
@@ -1620,8 +2198,105 @@
         </div>
 
         <p class="note-summary">
-          Stage 5 closes the cross-layer loop: taking real-world Layer 1-2 FTTH fulfillment bottlenecks and BAST compliance friction experienced in the field and re-architecting them independently from scratch using modern cloud-native automation. Demonstrates parallel DAG orchestration (<strong>1 minute 54 seconds</strong> execution benchmark) and immutable audit output generation (<code>BAST-WorkOrder.json</code>) with zero employer source code, schemas, or proprietary datasets.
+          <span class="scope-badge ref">Target-State Reference</span> Stage 5 closes the cross-layer loop: taking real-world Layer 1-2 FTTH fulfillment bottlenecks and BAST compliance friction experienced in the field and re-architecting them independently from scratch using modern cloud-native automation. Demonstrates parallel DAG orchestration (<strong>1 minute 54 seconds</strong> execution benchmark) and immutable audit output generation (<code>BAST-WorkOrder.json</code>) with zero employer source code, schemas, or proprietary datasets.
         </p>
+
+        <figure class="figure-frame">
+          <div class="figure-cap">
+            <span>Figure 5.1 [Independent Clean-Room Reference] - Parallel ZTP DAG &amp; Immutable BAST Verification Flow</span>
+            <span>1m 54s BENCHMARK &middot; ZERO CLIENT IP &middot; POST-ENGAGEMENT MODEL</span>
+          </div>
+          <div class="figure-body">
+            <svg viewBox="0 0 920 205" role="img" aria-label="Clean-room Zero-Touch Provisioning parallel DAG pipeline generating immutable BAST-WorkOrder.json in 1 minute 54 seconds">
+              <defs>
+                <marker id="ink-arr-5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#1B4965"/>
+                </marker>
+              </defs>
+              <rect x="12" y="14" width="188" height="176" rx="4" fill="#FAF8F4" stroke="#1B4965" stroke-width="1.2"/>
+              <text x="106" y="34" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="8.6" font-weight="600">1. ORDER INTAKE</text>
+              <text x="106" y="58" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.8" font-weight="600">Synthetic Work Order</text>
+              <text x="106" y="80" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.8">Clean-Room Input Schema</text>
+              <text x="106" y="98" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.8">Zero Employer Data</text>
+              <text x="106" y="122" text-anchor="middle" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.8" font-weight="600">Deterministic Trigger</text>
+
+              <!-- Parallel DAG Stage -->
+              <rect x="224" y="14" width="444" height="176" rx="4" fill="#F2EFE9" stroke="#245C45" stroke-width="1.2"/>
+              <text x="238" y="34" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="8.8" font-weight="600">2. PARALLEL DAG VERIFICATION TRACKS (1m 54s TOTAL BENCHMARK)</text>
+
+              <rect x="238" y="46" width="200" height="58" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="338" y="66" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Optical &amp; GIS Gate</text>
+              <text x="338" y="82" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">ODN Budget (&lt;= -24 dBm)</text>
+              <text x="338" y="95" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Physical-Logical Coordinate Sync</text>
+
+              <rect x="454" y="46" width="200" height="58" rx="3" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1"/>
+              <text x="554" y="66" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Service Profile Gate</text>
+              <text x="554" y="82" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Triple-Play Policy Validation</text>
+              <text x="554" y="95" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">HSI / VoBB / IPTV Parameters</text>
+
+              <rect x="238" y="118" width="416" height="58" rx="3" fill="#FFFFFF" stroke="#245C45" stroke-width="1.1"/>
+              <text x="446" y="138" text-anchor="middle" fill="#245C45" font-family="IBM Plex Sans, sans-serif" font-size="9.4" font-weight="600">Quantitative FMEA / FTA Risk Guardrail</text>
+              <text x="446" y="154" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.6">Blocks incomplete fulfillment before capital asset handover (IEC 61025 / IEC 60812)</text>
+              <text x="446" y="168" text-anchor="middle" fill="#1B4965" font-family="IBM Plex Mono, monospace" font-size="7.6">Modeled from 2018 S.E. Operational Risk Research (Repo ID: 44912)</text>
+
+              <!-- Immutable Output -->
+              <rect x="692" y="14" width="216" height="176" rx="4" fill="#FDF5F0" stroke="#8C3B19" stroke-width="1.2"/>
+              <text x="800" y="34" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8.6" font-weight="600">3. IMMUTABLE AUDIT OUTPUT</text>
+              <text x="800" y="60" text-anchor="middle" fill="#1C1B19" font-family="IBM Plex Sans, sans-serif" font-size="9.8" font-weight="600">BAST-WorkOrder.json</text>
+              <text x="800" y="82" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.8">Machine-Verifiable Artifact</text>
+              <text x="800" y="100" text-anchor="middle" fill="#6B6660" font-family="IBM Plex Mono, monospace" font-size="7.8">Zero Asset Discrepancy Model</text>
+              <text x="800" y="126" text-anchor="middle" fill="#8C3B19" font-family="IBM Plex Mono, monospace" font-size="8" font-weight="600">Spec: Carrier-Grade_ZTP</text>
+              <text x="800" y="142" text-anchor="middle" fill="#245C45" font-family="IBM Plex Mono, monospace" font-size="7.8" font-weight="600">100% Independent IP</text>
+
+              <line x1="200" y1="102" x2="222" y2="102" stroke="#1B4965" stroke-width="1.3" marker-end="url(#ink-arr-5)"/>
+              <line x1="668" y1="102" x2="690" y2="102" stroke="#1B4965" stroke-width="1.3" marker-end="url(#ink-arr-5)"/>
+            </svg>
+          </div>
+        </figure>
+
+        <div class="table-wrap">
+          <table class="ed-table">
+            <thead>
+              <tr>
+                <th style="width:23%">Migration Review Step</th>
+                <th style="width:45%">Clean-Room Modernization Pattern (Zero Client IP)</th>
+                <th style="width:32%">Scope Tag &amp; Principal Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-key"><span class="step-code">01 / As-Is Assessment</span><br>Field Bottlenecks Modeled</td>
+                <td>Models classic L1-L2 FTTH rollout bottlenecks observed in telecom fulfillment: sequential manual handoffs between optical QA, GIS inventory updates, and Triple-Play activation causing slow provisioning, physical-to-logical asset drift, and invalid BAST handovers.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>Grounded in field risk patterns formalized in 2018 S.E. thesis (Repo ID: 44912).</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">02 / To-Be Architecture</span><br>Autonomous ZTP DAG</td>
+                <td>Event-driven parallel DAG orchestration (Figure 5.1) validating ODN optical budgets (<code>&lt;= -24 dBm</code>), coordinate sync, and Triple-Play service profiles concurrently before emitting a machine-verifiable immutable <code>BAST-WorkOrder.json</code> artifact.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>100% clean-room independent reference; zero employer code or schemas.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">03 / Trade-Off Analysis</span><br>Key Design Choices</td>
+                <td>Replaced sequential ticket-by-ticket validation with <strong>parallel DAG fan-out/fan-in gates</strong>: trades upfront schema strictness for predictable <strong>1m 54s</strong> end-to-end execution and hard-stop prevention of partial/corrupt BAST records.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>Applies cloud-native CI/CD determinism to physical telecom fulfillment.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">04 / Migration &amp; Rollback</span><br>Cutover &amp; De-Risking</td>
+                <td>Designed for shadow-mode parallel runs alongside legacy BSS/OSS provisioning: synthetic/pilot work orders verify 100% artifact parity before cutover; any failed optical or GIS gate aborts BAST emission cleanly without mutating downstream billing records. Target soak exit criteria require 100% synthetic <code>BAST-WorkOrder.json</code> parity against legacy manual verification across a pilot batch before retiring manual spreadsheet handoffs.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>Fail-closed atomic gate eliminates half-provisioned subscriber states.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">05 / Risk &amp; Compliance</span><br>Preventive Governance</td>
+                <td>Encodes quantitative <strong>IEC 61025 (FTA)</strong> and <strong>IEC 60812 (FMEA)</strong> failure thresholds directly into automated pipeline checks, preventing billing revenue leakage and capital asset discrepancies before BAST sign-off.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>Translates academic operational risk models into executable code guardrails.</td>
+              </tr>
+              <tr>
+                <td class="col-key"><span class="step-code">06 / Handover &amp; Proof</span><br>Verifiable Public Artifacts</td>
+                <td>Publicly verifiable beyond client NDAs via live benchmark captures (1m 54s DAG run), generated <code>BAST-WorkOrder.json</code> sample, architecture specification (<code>Carrier-Grade_ZTP_Blueprint.pdf</code>), and 17-minute walkthrough video below.</td>
+                <td><span class="scope-badge ref">Target-State Reference</span><br>Provides transparent public proof of systems thinking without NDA risk.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <div class="boundary-note warn" style="margin-top:0; margin-bottom:20px;">
           <strong>Historical Boundary (Non-Correlation with 2013 - 2014):</strong> This is a post-engagement modernization exercise, not a system built during employment. The 2013-2014 PT Telkom Akses role had <strong>zero correlation with DevOps, GitHub Actions, or cloud-native platforms</strong>; it was strictly Layer 1-2 physical telecom operations archived below in <a href="#archive-2014">Section 03</a>.
@@ -1668,7 +2343,7 @@
           <div class="exp-content">
             <h3>Independent Solutions Architect &amp; Technical Due Diligence Advisor</h3>
             <div class="exp-org">Independent Practice (Global Expert Networks)</div>
-            <p>Deliver on-demand, NDA-governed technical due diligence, commercial viability, and cloud modernization consultations for institutional investors and enterprise teams (including ad-hoc SME sessions via global expert networks such as VisasQ / Coleman Research, operating independently outside their corporate structure). Evaluate multi-cloud migration readiness (AWS, GCP, Azure), FTTH/GPON infrastructure acquisitions, and multi-environment Service Assurance using ISO 31000, ISO/IEC 20000, IEC 60812 (FMEA), and IEC 61025 (FTA), alongside FinOps cost governance and SPOF mitigation.</p>
+            <p>Operate an independent advisory practice delivering on-demand, NDA-governed technical due diligence, commercial viability, and cloud modernization consultations for institutional investors and enterprise teams. Includes ad-hoc Subject Matter Expert (SME) calls matched through international expert networks (such as VisasQ / Coleman Research, which serve strictly as matching platforms while I operate independently outside their employment, Advisory Council, or management structure). Evaluate multi-cloud migration readiness (AWS, GCP, Azure), FTTH/GPON infrastructure acquisitions, and multi-environment Service Assurance using ISO 31000, ISO/IEC 20000, IEC 60812 (FMEA), and IEC 61025 (FTA), alongside FinOps cost governance and SPOF mitigation.</p>
             <div class="exp-stack"><strong>Focus:</strong> Technical Due Diligence, ISO 31000, ISO/IEC 20000, IEC 60812 FMEA, IEC 61025 FTA, AWS, GCP, Azure, FinOps, FTTH/GPON.</div>
           </div>
         </div>
@@ -1679,19 +2354,19 @@
           <div class="exp-content">
             <h3>Enterprise IT Advisory Consultant</h3>
             <div class="exp-org">PT Altha Dyanusa Consulting</div>
-            <p>Designed enterprise multi-cloud blueprints and ISO 31000-aligned IT risk governance frameworks for clients modernizing monolithic core systems into cloud-native platforms. Advised engineering leadership on controlled, low-downtime migration pathways, container security baselines, and standardized hybrid DevSecOps compliance policies. (Advisory stewardship; ongoing execution and IP remained with client teams.)</p>
+            <p>Served across a full 26-month advisory stewardship mandate designing enterprise multi-cloud blueprints and ISO 31000-aligned IT risk governance frameworks for institutional clients modernizing monolithic core systems into cloud-native platforms. Advised engineering leadership on controlled, low-downtime migration pathways, container security compliance baselines, standardized hybrid DevSecOps governance policies, and cloud FinOps / delivery alignment targets. <em>(Advisory stewardship under client NDA; production execution, internal IP, and realized P&amp;L remained with client teams, with no commercial pre-sales quota ownership.)</em></p>
             <div class="exp-stack"><strong>Focus:</strong> Multi-Cloud Strategy, ISO 31000 Risk Governance, DevSecOps Policy, Container Security, Controlled Migration Planning.</div>
           </div>
         </div>
 
         <!-- 3 -->
-        <div class="exp-row">
+        <div class="exp-row" id="exp-meteor">
           <div class="exp-date">Sep 2022 - Dec 2022<span class="loc">Jakarta, Indonesia</span></div>
           <div class="exp-content">
             <h3>Interim Head of DevOps &amp; Cloud Migration Lead</h3>
             <div class="exp-org">PT Meteor Inovasi Digital</div>
-            <p>Led hands-on legacy virtual machine containerization and multi-cloud infrastructure engineering across AWS, Google Cloud Platform, and Alibaba Cloud during a 4-month interim mandate. Built HashiCorp Terraform IaC baselines, reusable CI/CD templates, and structured technical handover documentation through December 2022.</p>
-            <div class="exp-stack"><strong>Focus:</strong> Kubernetes, HashiCorp Terraform, CI/CD Templates, AWS, GCP, Alibaba Cloud, Legacy VM Containerization.</div>
+            <p>Directed a 3-person engineering team (2 senior engineers and 1 junior engineer) across a 4-month interim mandate supporting multi-user / multi-client NDA cloud environments on AWS, Google Cloud Platform, and Alibaba Cloud. Coordinated multi-cloud migration workflows using Jira and Trello, led hands-on legacy virtual machine containerization toward Kubernetes orchestration, built declarative HashiCorp Terraform IaC baselines, automated disaster recovery workflows, and reusable CI/CD templates, integrated SonarQube static analysis and GitLab CI security checks (SAST &amp; DAST), mentored junior engineering staff, and authored structured technical handover documentation through December 2022. <em>(Diverse toolchain reflected multi-user NDA client stacks; post-handover production cutover and availability SLAs sit outside the 4-month interim mandate and are intentionally not claimed.)</em></p>
+            <div class="exp-stack"><strong>Focus:</strong> Kubernetes, HashiCorp Terraform (IaC &amp; Automated DR), GitLab CI (SAST/DAST), SonarQube, Jira &amp; Trello, AWS, GCP, Alibaba Cloud, Legacy VM Containerization.</div>
           </div>
         </div>
 
@@ -1701,9 +2376,9 @@
           <div class="exp-content">
             <h3>FinTech Solutions &amp; DevSecOps Architecture Lead</h3>
             <div class="exp-org">PT Kredit Pintar Indonesia</div>
-            <p>Collaborated with a 6-person cross-functional team to standardize GitLab SCM and DevSecOps CI pipelines (SAST, DAST, Secret Detection, Merge Request approvals) feeding Snyk and Harbor private registry controls into pull-based Flux CD GitOps on Alibaba Cloud. Defined container hardening, RBAC, FinTech Disaster Recovery readiness, and centralized ELK Stack / OpenSearch observability aligned with OJK (POJK 10/POJK.05/2022 &amp; POJK 4/POJK.05/2021) and Bank Indonesia governance through handover.</p>
-            <div class="exp-stack"><strong>Focus:</strong> GitLab CI/CD (SAST/DAST), Flux CD, Alibaba Cloud, Harbor, Snyk, ELK, OpenSearch, RBAC, FinTech DR, OJK &amp; BI Compliance.</div>
-            <a href="#notes" onclick="event.preventDefault(); openNote('fintech', true);" class="exp-link">Read Case Note 01: FinTech GitOps &amp; DR &rarr;</a>
+            <p>Collaborated with a 6-person cross-functional team on Alibaba Cloud (Jakarta / NKRI) to standardize GitLab SCM and DevSecOps CI pipelines (SAST, staging DAST, Secret Detection, Merge Request segregation-of-duties approvals) feeding Snyk and Harbor private registry controls into pull-based Flux CD GitOps. Defined container hardening, RBAC, FinTech Disaster Recovery readiness, and centralized ELK Stack / OpenSearch observability aligned with OJK (POJK 10/POJK.05/2022 &amp; POJK 4/POJK.05/2021) and Bank Indonesia governance through September 2022 handover. Because cross-border HQ restrictions kept core lending infrastructure outside local access, I independently validated the missing sovereign core decoupling puzzle in a zero-client-IP clean-room reference lab (Strangler Fig monolith decoupling, isolated identity and ledger database domains, keyless OIDC Workload Identity, and 2-cluster Service Mesh failover).</p>
+            <div class="exp-stack"><strong>Focus:</strong> GitLab CI/CD (SAST/DAST/SoD), Flux CD, Alibaba Cloud, Harbor, Snyk, ELK, OpenSearch, RBAC, FinTech DR, OJK &amp; BI Compliance, Sovereign Core Reference Architecture (Zero IP).</div>
+            <a href="#notes" onclick="event.preventDefault(); openNote('fintech', true);" class="exp-link">Read Case Note 01: FinTech GitOps &amp; Sovereign Core Reference &rarr;</a>
           </div>
         </div>
 
@@ -1725,7 +2400,7 @@
           <div class="exp-content">
             <h3>Cloud Automation &amp; Infrastructure Lead</h3>
             <div class="exp-org">PT Hashmicro Solusi Indonesia</div>
-            <p>Migrated legacy Odoo ERP workloads from on-premise VPS environments to AWS EC2 using GitHub Enterprise for versioned source control. Automated cloud provisioning via AWS CLI and Bash scripts built on AWS Odoo Marketplace images and EC2 Instance Snapshots (cutting client environment setup time by 50%), paired with Ansible playbooks for Odoo code deployment and <code>odoo.conf</code> configuration, WHM / cPanel on CentOS 7 (AWS Marketplace) for multi-tenant domain &amp; DNS management, and scheduled PostgreSQL backups via AWS CLI cron to Amazon S3. (Proposed HashiCorp Terraform IaC standardization, which was deferred by executive leadership in favor of AWS Marketplace tooling.) Also architected a dual-site PostgreSQL High Availability cluster for an NDA-protected custom Odoo F&amp;B POS deployment across geographically separated Data Centers (Site A and Site B) on bare-metal Proxmox VE Enterprise over distinct ISP vendors with BGP AS failover, using <code>repmgr</code> synchronous streaming replication, <code>repmgrd</code> auto-failover, HAProxy/Keepalived VIP pairs, and Barman WAL backup &amp; PITR.</p>
+            <p>Led an 11-person cross-functional effort migrating legacy Odoo ERP workloads from on-premise VPS environments to AWS EC2 using GitHub Enterprise for versioned source control. Automated cloud provisioning via AWS CLI and Bash scripts built on AWS Odoo Marketplace images and EC2 Instance Snapshots (cutting client environment setup time by 50%), paired with Ansible playbooks for Odoo code deployment and <code>odoo.conf</code> configuration, WHM / cPanel on CentOS 7 (AWS Marketplace) for multi-tenant domain &amp; DNS management, and scheduled PostgreSQL backups via AWS CLI cron to Amazon S3. (Proposed HashiCorp Terraform IaC standardization, which was deferred by executive leadership in favor of AWS Marketplace tooling.) Also architected a dual-site PostgreSQL High Availability cluster for an NDA-protected custom Odoo F&amp;B POS deployment across geographically separated Data Centers (Site A and Site B) on bare-metal Proxmox VE Enterprise over distinct ISP vendors with BGP AS failover, using <code>repmgr</code> synchronous streaming replication, <code>repmgrd</code> auto-failover, HAProxy/Keepalived VIP pairs, and Barman WAL backup &amp; PITR.</p>
             <div class="exp-stack"><strong>Focus:</strong> AWS EC2, AWS CLI &amp; Bash, AWS Odoo Marketplace, EC2 Snapshots, GitHub Enterprise, Ansible (Odoo), WHM / cPanel (CentOS 7 AWS Marketplace), PostgreSQL S3 Cron, Proxmox Enterprise, repmgr/repmgrd/Barman PITR, HAProxy, Keepalived, BGP AS Failover.</div>
             <a href="#notes" onclick="event.preventDefault(); openNote('erp', true);" class="exp-link">Read Case Note 03: Odoo ERP AWS &amp; Dual-Site PG HA &rarr;</a>
           </div>
@@ -1771,7 +2446,7 @@
           <div class="exp-content">
             <h3>Project Officer of Construction Management | FTTH Commissioning &amp; OSS/BSS | Directorate of Operation</h3>
             <div class="exp-org">PT Telkom Akses (Telkom Indonesia Group)</div>
-            <p>Official employment certificate (paklaring) code: <strong>POCM</strong>. Held an individual assignment under the Directorate of Operation, collaborating across OEM vendors, Telkom Indonesia Group units, and parent company (PT Telkom Indonesia) teams, including direct executive sounding to Telkom Indonesia Vice President (VP) leadership on field rollout risks and findings. Governed field quality compliance audits, ODN optical budget verification (&le; -24 dBm), and service fulfillment testing for the nationwide copper-to-FTTH rollout (IDR 1.5T / ~$93M CAPEX program scope). Conducted joint GPON commissioning and Triple-Play (HSI, VoBB/VoIP, IPTV) acceptance testing with OEM vendors (T-CONT DBA profiles, GEM ports, 802.1Q/Q-in-Q VLAN segregation, IGMP multicast) and ran Wireshark DPI on VoBB SIP (RFC 3261), RTP jitter, and G.711 codecs. Contributed to IndiHome FTTH Pilot SOPs (OMCI/TR-069) and built RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML) synchronizing GE Smallworld PNI (GIS) physical records (Datek) with I-Sisca/TenOSS (Dalay). Conducted structured field Root Cause Analysis (RCA) on fulfillment bottlenecks (later formalized via IEC 61025 FTA and IEC 60812 FMEA in my 2018 S.E. thesis), driving a 20% trial defect reduction with zero capital asset discrepancy. <em>(Standalone L1/L2 telecom scope; non-DevOps / non-cloud-native.)</em></p>
+            <p>Official employment certificate (paklaring) code: <strong>POCM</strong>. Held an individual assignment under the Directorate of Operation, collaborating across OEM vendors, Telkom Indonesia Group units, and parent company (PT Telkom Indonesia) teams, including direct executive sounding to Telkom Indonesia Vice President (VP) leadership on field rollout risks and findings. Governed field quality compliance audits, ODN optical budget verification (&le; -24 dBm), and service fulfillment testing for the nationwide copper-to-FTTH rollout (IDR 1.5T / ~$93M CAPEX program scope). Conducted joint GPON commissioning and Triple-Play (HSI, VoBB/VoIP, IPTV) acceptance testing with OEM vendors (T-CONT DBA profiles, GEM ports, 802.1Q/Q-in-Q VLAN segregation, IGMP multicast) and ran Wireshark DPI on VoBB SIP (RFC 3261), RTP jitter, and G.711 codecs. Contributed to IndiHome FTTH Pilot SOPs (OMCI/TR-069) and built RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML) synchronizing GE Smallworld PNI (GIS) physical records (Datek) with I-Sisca/TenOSS (Dalay). Conducted structured field Root Cause Analysis (RCA) on fulfillment bottlenecks (later formalized via IEC 61025 FTA and IEC 60812 FMEA in my 2018 S.E. thesis), driving a 20% trial defect reduction with zero capital asset discrepancy. <em>(Standalone L1/L2 telecom scope; non-DevOps / non-cloud-native; VoBB scope covers PSTN-to-VoIP/SIP over GPON, not commercial hosted Cloud PBX packages on AWS EC2.)</em></p>
             <div class="exp-stack"><strong>Focus:</strong> GE Smallworld PNI (GIS), GPON Commissioning, IndiHome Pilot SOP, Wireshark DPI, VoBB SIP (RFC 3261), OMCI/TR-069, Oracle, PostgreSQL, SOAP XML, RHEL 6.</div>
             <a href="#archive-2014" class="exp-link">Inspect 2013 - 2014 Field Audit &amp; Smallworld PNI GIS Archive &rarr;</a>
           </div>
@@ -1783,8 +2458,8 @@
           <div class="exp-content">
             <h3>Electronic Data Processing Specialist</h3>
             <div class="exp-org">Circus Waterpark Kuta</div>
-            <p>Secured Point of Sale (POS) and electronic ticketing networks with MikroTik firewalls, automated daily transactional data synchronization using Bash and PowerShell scripting, and administered Windows Server and CCTV telemetry within an IDR 200M infrastructure upgrade.</p>
-            <div class="exp-stack"><strong>Focus:</strong> MikroTik Firewalls, Bash &amp; PowerShell, Windows Server, POS &amp; E-Ticketing Security, CCTV Telemetry.</div>
+            <p>Secured Point of Sale (POS) and electronic ticketing networks with MikroTik firewalls and process integration upgrades (accounting for ~IDR 50M direct upgrade scope within an estimated IDR 200M CAPEX infrastructure upgrade supporting daily operational reliability for a high-footfall recreational venue estimated at ~IDR 50B in asset scale). Applied basic Bash and PowerShell scripting to support daily transactional synchronization for IFCA Software POS and the Ticketing Gateway Paradise System, maintained Microsoft / Windows Server and CCTV monitoring, and contributed cross-functional promotional collateral (brochures, flyers, newspaper ads) through March 2013 handover. <em>(Standalone on-premise EDP scope.)</em></p>
+            <div class="exp-stack"><strong>Focus:</strong> MikroTik Firewalls, Basic Bash &amp; PowerShell, IFCA Software POS, Ticketing Gateway Paradise System, Windows Server, CCTV Telemetry.</div>
           </div>
         </div>
 
@@ -1794,8 +2469,8 @@
           <div class="exp-content">
             <h3>Customer Care Specialist</h3>
             <div class="exp-org">Biznet Networks</div>
-            <p>Resolved enterprise network and fiber infrastructure incidents and SLA escalations, coordinating cross-functional root cause analysis (RCA) and ticket resolution via enterprise CRM platforms.</p>
-            <div class="exp-stack"><strong>Focus:</strong> L1/L2 Network Support, Fiber SLAs, Escalation Management, Root Cause Analysis, Enterprise CRM.</div>
+            <p>Handled frontline L1/L2 troubleshooting, SLA escalation prioritization, and structured incident evidence intake for enterprise and broadband access (ADSL / HFC) disruptions via enterprise CRM platforms through October 2012. Documented recurring fault chronologies and customer-impact telemetry to supply clean frontline evidence into engineering Root Cause Analysis (RCA) and verified ticket closure, building early operational empathy for SLA impact before advancing into telecom QA governance and cloud architecture. <em>(Standalone frontline L1/L2 support scope; formal engineering CAPA ownership sat with NOC/engineering teams.)</em></p>
+            <div class="exp-stack"><strong>Focus:</strong> Frontline L1/L2 Support, ADSL / HFC Broadband SLAs, SLA Escalation &amp; Incident Evidence Intake, CRM Fault Chronology, Engineering RCA Handoff.</div>
           </div>
         </div>
       </div>
@@ -1815,11 +2490,12 @@
 
       <figure class="figure-frame">
         <div class="figure-cap">
-          <span>Figure 3.2 - 2014 National Optical Fiber Footprint Context (Telkom Indonesia)</span>
+          <span>Figure A.1 - 2014 National Optical Fiber Footprint Context (Telkom Indonesia)</span>
           <span>GE SMALLWORLD PNI (GIS) &middot; DATEK &harr; DALAY AUDIT</span>
         </div>
         <div class="map-stage" id="map-stage">
-          <img id="map-img" src="https://www.indotelko.com/images/media/201601/ori/grafisFo-tlkm.jpg" alt="Telkom Indonesia 2014 National Optical Fiber Backbone Footprint" draggable="false" onerror="this.alt='[2014 National Optical Fiber Footprint Archive]';">
+          <img id="map-img" src="https://www.indotelko.com/images/media/201601/ori/grafisFo-tlkm.jpg" alt="Telkom Indonesia 2014 National Optical Fiber Backbone Footprint" draggable="false" onerror="this.style.display='none'; var fb=document.getElementById('map-fallback'); if(fb) fb.style.display='flex';">
+          <div id="map-fallback" class="map-fallback">2014 National Optical Fiber Footprint Context (Telkom Indonesia) &middot; GE Smallworld PNI (GIS) Datek &harr; I-Sisca / TenOSS Dalay Audit Archive</div>
           <div class="map-controls">
             <button type="button" onclick="zoomMap(0.25)" aria-label="Zoom in">+</button>
             <button type="button" onclick="zoomMap(-0.25)" aria-label="Zoom out">-</button>
@@ -1855,6 +2531,45 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div style="margin:26px 0 18px;">
+        <h3 style="font-family:var(--serif); font-size:1.22rem; margin:0 0 6px; color:var(--ink);">Structured Field Post-Mortem &amp; Preventive Action (CAPA / FMEA / FTA)</h3>
+        <p style="font-size:0.88rem; color:var(--ink-soft); margin:0 0 12px; max-width:74ch;">
+          While my modern cloud mandate focuses on migration architecture rather than 24/7 live SRE on-call operations, my preventive post-mortem discipline was forged directly in the field under the Directorate of Operation (<code>POCM</code>) at PT Telkom Akses - connecting field Root Cause Analysis, IndiHome Pilot SOP revisions, and VP-level executive sounding to quantitative <strong>IEC 61025 (FTA)</strong> and <strong>IEC 60812 (FMEA)</strong> research (2018 S.E. thesis, Repo ID: 44912).
+        </p>
+        <div class="table-wrap" style="margin-top:0;">
+          <table class="ed-table">
+            <thead>
+              <tr>
+                <th style="width:21%">Observed Failure Mode</th>
+                <th style="width:24%">Post-Mortem Root Cause (Field RCA)</th>
+                <th style="width:27%">Corrective Action (Field &amp; ETL)</th>
+                <th style="width:28%">Preventive Action (CAPA / SOP / FMEA)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-key">Physical-to-Logical GIS Drift (Datek vs. Dalay)</td>
+                <td>Manual field construction updates lagged behind OSS/BSS inventory entries, risking invalid BAST sign-offs and billing revenue leakage across IDR 1.5T program scope.</td>
+                <td>Built automated RHEL 6 ETL reconciliation scripts (Oracle, PostgreSQL, SOAP XML) synchronizing GE Smallworld PNI GIS (Datek) with I-Sisca/TenOSS (Dalay).</td>
+                <td>Enforced pre-BAST automated inventory reconciliation checkpoints and escalated systemic data-gap risks directly via VP-level executive sounding (zero capital asset discrepancy).</td>
+              </tr>
+              <tr>
+                <td class="col-key">ODN Optical Budget Drops (&gt; -24 dBm)</td>
+                <td>Inconsistent splicing quality, dirty connectors, and unverified field optical attenuation caused downstream GPON Triple-Play instability during integration trials.</td>
+                <td>Governed field QA compliance audits rejecting ODN handovers exceeding the <code>&le; -24 dBm</code> optical budget threshold until physically remediated with OEM/field teams.</td>
+                <td>Embedded optical budget verification gates into IndiHome FTTH Pilot SOPs and formalized optical attenuation failure trees via IEC 61025 FTA &amp; IEC 60812 FMEA (contributing to -20% trial defects).</td>
+              </tr>
+              <tr>
+                <td class="col-key">VoBB SIP / IPTV Fulfillment Fallout</td>
+                <td>Misaligned VLAN tagging (802.1Q / Q-in-Q), IGMP multicast profiles, and VoBB SIP signaling anomalies disrupted copper-to-FTTH Triple-Play acceptance testing.</td>
+                <td>Executed joint GPON Triple-Play commissioning with OEM vendors and ran Wireshark DPI on VoBB SIP (RFC 3261), RTP jitter, and G.711 codecs to isolate provisioning faults.</td>
+                <td>Contributed standardized OMCI / TR-069 auto-provisioning checks to IndiHome Pilot SOPs so recurring configuration defects were caught before mass subscriber cutover.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <details class="ed-detail">
@@ -2065,6 +2780,10 @@
         </div>
       </details>
 
+      <div class="boundary-note" style="margin-top:22px;">
+        <strong>Principal Scope &amp; Verification Boundaries:</strong> Every engagement above distinguishes <em>Delivered As-Built</em> production scope (with explicit team sizes and NDA-sanitized handovers) from <em>Target-State Reference</em> models (such as the clean-room <strong>Sovereign Core</strong> reference lab, multi-tenant Terraform ZTP blueprint, <strong>Sovereign PostgreSQL DBaaS v3</strong> Swarm/OpenVPN/Pattern 1 multi-store lab, and 1m 54s Clean-Room ZTP DAG). My verified architecture certifications focus on <strong>Google Cloud (PCA &amp; ACE)</strong>, <strong>AWS (CCP)</strong>, and <strong>Microsoft Azure AI Apps &amp; Agents (AI-103)</strong>; I explicitly do not claim Azure Solutions Architect Expert (AZ-305), production Golang software engineering, commercial hosted Cloud PBX administration on AWS EC2, production AI GPU cluster operations, or commercial pre-sales quota roles.
+      </div>
+
       <div style="margin-top:36px; padding-top:28px; border-top:1px solid var(--rule);">
         <h3 style="font-family:var(--serif); font-size:1.3rem; margin:0 0 12px;">Education</h3>
         <div class="exp-row" style="border-top:none; padding:6px 0 0;">
@@ -2135,19 +2854,23 @@
     noteOrder.forEach(function(id) {
       var panel = document.getElementById('npanel-' + id);
       var tab   = document.getElementById('ntab-' + id);
+      var pstep = document.getElementById('pstep-' + id);
       if (panel) panel.classList.remove('active');
       if (tab) {
         tab.classList.remove('active');
         tab.setAttribute('aria-selected', 'false');
       }
+      if (pstep) pstep.classList.remove('active');
     });
     var activePanel = document.getElementById('npanel-' + key);
     var activeTab   = document.getElementById('ntab-' + key);
+    var activeStep  = document.getElementById('pstep-' + key);
     if (activePanel) activePanel.classList.add('active');
     if (activeTab) {
       activeTab.classList.add('active');
       activeTab.setAttribute('aria-selected', 'true');
     }
+    if (activeStep) activeStep.classList.add('active');
     if (shouldScroll) {
       var sec = document.getElementById('notes');
       if (sec) {
