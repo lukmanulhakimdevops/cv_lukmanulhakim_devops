@@ -14,6 +14,16 @@
   <meta property="og:title" content="Lukmanul Hakim - Principal Solutions Architect &amp; Cloud Modernization Strategist">
   <meta property="og:description" content="Independent Solutions Architect specializing in legacy workload modernization, multi-cloud Kubernetes and GitOps, PostgreSQL HA, and ISO 31000 / IEC 60812 reliability risk governance.">
   <meta property="og:url" content="https://lukmanulhakim.devstackops.my.id/">
+  <meta property="og:image" content="https://lukmanulhakim.devstackops.my.id/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lukmanul Hakim — Principal Solutions Architect & Cloud Modernization Strategist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lukmanul Hakim - Principal Solutions Architect &amp; Cloud Modernization Strategist">
+  <meta name="twitter:description" content="Independent Solutions Architect specializing in legacy workload modernization, multi-cloud Kubernetes and GitOps, PostgreSQL HA, and ISO 31000 / IEC 60812 reliability risk governance.">
+  <meta name="twitter:image" content="https://lukmanulhakim.devstackops.my.id/og-image.jpg">
+  <link rel="canonical" href="https://lukmanulhakim.devstackops.my.id/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B4965'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23FAF8F4' text-anchor='middle'%3ELH%3C/text%3E%3C/svg%3E">
 
   <script type="application/ld+json">
   {
@@ -1415,6 +1425,32 @@
               Keep legacy VPS/VMs in warm read-only standby throughout the soak window to guarantee instant rollback. Execute deterministic teardown (final immutable backup snapshot, DNS/SSL revocation, orphan volume/EIP removal) only after written soak sign-off and internal team handover.
             </div>
           </div>
+
+          <p style="margin:20px 0 10px; font-size:0.95rem; color:var(--ink-soft);">
+            <strong style="color:var(--ink);">Governance Model &amp; Decision Authority</strong> &mdash; a checklist without a named owner at each gate is advisory noise. Accountability deliberately shifts phase to phase so no single architect self-certifies their own migration end-to-end:
+          </p>
+          <div class="table-wrap" style="margin:0 0 4px;">
+            <table class="ed-table">
+              <thead>
+                <tr>
+                  <th style="width:22%">Phase</th>
+                  <th style="width:24%">Responsible</th>
+                  <th style="width:24%">Accountable (Go/No-Go)</th>
+                  <th style="width:15%">Consulted</th>
+                  <th style="width:15%">Informed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="col-key">Day-0 Landing Zone</td><td>Migration/Network Architect</td><td>Infrastructure Lead</td><td>Security &amp; Compliance Officer, Cloud Vendor TAM</td><td>Business Stakeholder</td></tr>
+                <tr><td class="col-key">Phased Cutover</td><td>Migration Architect + Application Owner</td><td>Security &amp; Compliance Officer (security gate) &middot; Infra Lead (schema gate)</td><td>DBA, SRE/On-call Lead</td><td>Business Stakeholder, Legacy Ops Team</td></tr>
+                <tr><td class="col-key">24&ndash;72h Soak Window</td><td>SRE/On-call Lead</td><td>Infrastructure Lead</td><td>Migration Architect, Application Owner</td><td>Business Stakeholder</td></tr>
+                <tr><td class="col-key">Decommission &amp; Handover</td><td>Migration Architect</td><td>Business Stakeholder (final sign-off)</td><td>Security &amp; Compliance Officer, Internal Ops Team</td><td>All parties</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin:12px 0 0; font-size:0.82rem; color:var(--muted); line-height:1.6;">
+            No gate above may be waived by the role Responsible for it &mdash; only by the role Accountable, in writing, with the compensating control logged. This RACI structure follows directly from <strong>ISO 31000</strong>: risk-ownership diffusion (one self-certifying owner) is treated as a governance gap in its own right, not an efficiency gain.
+          </p>
         </div>
       </details>
 
